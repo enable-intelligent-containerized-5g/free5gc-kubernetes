@@ -1,0 +1,19 @@
+# Define variables
+version_ubuntu = "generic/ubuntu2004"
+
+# Define the VM
+Vagrant.configure("2") do |config|
+  # Set the box and provider
+  config.vm.box = version_ubuntu
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "9216"
+    vb.cpus = "6"
+  end
+
+  # Set the hostname and network configuration
+  config.vm.hostname = "nodemaster"
+  config.vm.network "private_network", ip: "192.168.56.20"
+
+  # Shared folder config
+  config.vm.synced_folder "../", "/vagrant-data/"
+end
