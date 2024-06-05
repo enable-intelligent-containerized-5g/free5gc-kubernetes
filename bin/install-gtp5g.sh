@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Define variables for clarity and easy updates
-BUILD_DIR="../build"
+BUILD_DIR="/build"
 GTP5G_REPO="https://github.com/free5gc/gtp5g.git"
-GTP5G_BRANCH="v0.8.2"
+GTP5G_BRANCH="v0.8.9"
 
 if [ ! -d "$BUILD_DIR" ]; then
   mkdir -p "$BUILD_DIR"
