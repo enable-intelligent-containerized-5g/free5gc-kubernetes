@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: free5gc-amf
+  name: free5gc-amf2
   labels:
     app: free5gc
     nf: amf
-    name: amf
+    name: amf2
 spec:
   selector:
     matchLabels:
       app: free5gc
       nf: amf
-      name: amf
+      name: amf2
   replicas: 1
   template:
     metadata:
       labels:
         app: free5gc
         nf: amf
-        name: amf
+        name: amf2
       annotations:
         k8s.v1.cni.cncf.io/networks: '[
-          { "name": "n2network", "interface": "n3", "ips": [ "10.10.2.1/24" ] }
+          { "name": "n2network", "interface": "n3", "ips": [ "10.10.2.2/24" ] }
           ]'
     spec:
       initContainers:
@@ -45,7 +45,7 @@ spec:
             value: release
         volumeMounts:
         - mountPath: /free5gc/config/
-          name: amf-volume
+          name: amf2-volume
         resources:
           requests:
             memory: "100Mi"
@@ -56,8 +56,8 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
-      - name: amf-volume
+      - name: amf2-volume
         projected:
           sources:
           - configMap:
-              name: amf-configmap
+              name: amf2-configmap

@@ -1,8 +1,9 @@
 resources:
-- amf
-- ausf
-- nrf
-- nssf
-- pcf
-- udr
-- udm
+  - amf
+  # - amf2
+  - ausf
+  - nrf
+  - nssf
+  - pcf
+  - udr
+  - udm

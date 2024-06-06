@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: free5gc-webui
+  labels:
+    app: free5gc
+spec:
+  selector:
+    matchLabels:
+      app: free5gc
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: free5gc
+      # annotations:
+      #   k8s.v1.cni.cncf.io/networks: '[
+      #     { "name": "n3network", "interface": "webui", "ips": [ "10.10.3.5/24" ] }
+      #     ]'
+    spec:
+      initContainers:
+      - name: wait-mongo
+        image: busybox:1.32.0
+        env:
+        - name: DEPENDENCIES
+          value: db:27017
+        command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MongoDB; sleep 2; done;"]
+      containers:
+      - image: free5gc/webui:v3.4.1
+        imagePullPolicy: Always
+        name: webui
+        ports:
+        - containerPort: 5000
+        - containerPort: 2121
+        - containerPort: 2122
+        command: ["./webui", "-c", "./config/webuicfg.yaml"]
+        env:
+          - name: GIN_MODE
+            value: release
+        volumeMounts:
+        - mountPath: /free5gc/config/
+          name: webui-volume
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: webui-volume
+        projected:
+          sources:
+          - configMap:
+              name: webui-configmap
