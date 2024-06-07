@@ -44,7 +44,7 @@ data:
             # the NRF to be used to select the NFs/services within the selected NSI, and an optonal ID
             - nrfId: http://nrf-nnrf:8000/nnrf-nfm/v1/nf-instances
               nsiId: 10
-      amfSetList: # List of AMF Sets that my be assigned by this NSSF
+      amfSetList: # List of AMF Sets that may be assigned by this NSSF
         - amfSetId: 1 # the AMF Set identifier
           amfList: # Instance ID of the AMFs in this set
             - ffa2e8d7-3275-49c7-8631-6af1df1d9d26
