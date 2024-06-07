@@ -1,6 +1,5 @@
 # Build stage for Free5GC
 FROM golang:1.14.4-stretch AS builder
-LABEL maintainer="Niloy Saha <niloysaha.ns@gmail.com>"
 
 # Rename repo after Debian bulls-eye release
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
@@ -22,13 +21,12 @@ RUN apt-get update \
 
 # Get and build Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -b v3.2.0 -j `nproc` https://github.com/free5gc/free5gc.git \
+    && git clone --recursive -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
     && make all
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL maintainer="Niloy Saha <niloysaha.ns@gmail.com>"
 LABEL description="Free5GC v3.2.0"
 ENV DEBIAN_FRONTEND=noninteractive
 
