@@ -31,7 +31,7 @@ spec:
       #     value: amf2-namf:8000
       #   command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF; sleep 2; done;"]
       containers:
-      - image: ghcr.io/niloysh/free5gc:v3.2.0
+      - image: edierbra/free5gc:v3.2.0
         name: ausf
         ports:
         - containerPort: 8000

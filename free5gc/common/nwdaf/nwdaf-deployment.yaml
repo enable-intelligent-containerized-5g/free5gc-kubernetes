@@ -18,7 +18,7 @@ spec:
         nf: nwdaf
     spec:
       containers:
-      - image: ghcr.io/niloysh/free5gc:v3.2.0
+      - image: edierbra/free5gc:v3.2.0
         name: nwdaf
         ports:
         - containerPort: 29531
