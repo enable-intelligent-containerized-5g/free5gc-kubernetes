@@ -21,7 +21,7 @@ RUN apt-get update \
 
 # Get and build Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
+    && git clone --recursive -b v3.2.0 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
     && make all
 
