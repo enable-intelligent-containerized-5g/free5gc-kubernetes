@@ -1,5 +1,5 @@
 # Build stage for Free5GC
-FROM golang:1.14.4-stretch AS builder
+FROM golang:1.19rc1-stretch AS builder
 
 # Rename repo after Debian bulls-eye release
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
@@ -19,15 +19,16 @@ RUN apt-get update \
     && apt-get install -y nodejs yarn \
     && apt-get clean
 
-# Get and build Free5GC
+    # Get and build Free5GC
 RUN cd $GOPATH/src \
+    && git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/openapi ./openapi \
     && git clone --recursive -b v3.2.0 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
     && make nfs
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL description="Free5GC v3.2.0"
+LABEL description="Free5GC v3.2.1"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install runtime dependencies
@@ -44,6 +45,7 @@ COPY --from=builder /go/src/free5gc/bin/* ./
 # COPY --from=builder /go/src/free5gc/webconsole/public ./public
 COPY --from=builder /go/src/free5gc/config/* ./config/
 COPY --from=builder /go/src/free5gc/config/TLS/* ./config/TLS/
+COPY --from=builder /go/src/openapi ./
 
 VOLUME [ "/free5gc/config"]
 
