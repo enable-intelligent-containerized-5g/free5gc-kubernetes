@@ -30,7 +30,7 @@ spec:
               "until nc -z $DEPENDENCIES; do echo waiting for the SMF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/free5gc:v3.2.0
+        - image: edierbra/free5gc:v3.2.1
           name: nwdaf
           ports:
             - containerPort: 29531
