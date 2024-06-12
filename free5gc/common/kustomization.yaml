@@ -1,6 +1,6 @@
 resources:
   - amf
-  # - amf2
+  - amf2
   - ausf
   - nrf
   - nssf
