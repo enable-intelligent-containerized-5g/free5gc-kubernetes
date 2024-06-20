@@ -1,0 +1,768 @@
+22:34:54.253034 IP nodemaster.52792 > 10.244.0.176.5000: Flags [S], seq 2979732277, win 64860, options [mss 1410,sackOK,TS val 1697631012 ecr 0,nop,wscale 7], length 0
+22:34:54.253162 IP 10.244.0.176.5000 > nodemaster.52792: Flags [S.], seq 2981804444, ack 2979732278, win 64308, options [mss 1410,sackOK,TS val 2973946885 ecr 1697631012,nop,wscale 7], length 0
+22:34:54.253191 IP nodemaster.52792 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697631012 ecr 2973946885], length 0
+22:34:54.253729 IP nodemaster.52792 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697631013 ecr 2973946885], length 104
+22:34:54.253776 IP 10.244.0.176.5000 > nodemaster.52792: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973946886 ecr 1697631013], length 0
+22:34:54.254512 IP 10.244.0.176.5000 > nodemaster.52792: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973946886 ecr 1697631013], length 1433
+22:34:54.254549 IP nodemaster.52792 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697631014 ecr 2973946886], length 0
+22:34:54.254802 IP 10.244.0.176.5000 > nodemaster.52792: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973946887 ecr 1697631014], length 0
+22:34:54.255054 IP nodemaster.52792 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697631014 ecr 2973946887], length 0
+22:34:54.255205 IP 10.244.0.176.5000 > nodemaster.52792: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973946887 ecr 1697631014], length 0
+22:34:54.543324 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1633100868:1633100907, ack 2031941100, win 10142, options [nop,nop,TS val 2061574467 ecr 2544391528], length 39
+22:34:54.547750 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 2031941100:2031941189, ack 1633100907, win 501, options [nop,nop,TS val 2544393534 ecr 2061574467], length 89
+22:34:54.547971 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 89:880, ack 1, win 501, options [nop,nop,TS val 2544393534 ecr 2061574467], length 791
+22:34:54.548215 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 881, win 10142, options [nop,nop,TS val 2061574472 ecr 2544393534], length 0
+22:34:54.548896 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 39:78, ack 881, win 10142, options [nop,nop,TS val 2061574473 ecr 2544393534], length 39
+22:34:54.553938 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 880:947, ack 40, win 501, options [nop,nop,TS val 2544393540 ecr 2061574473], length 67
+22:34:54.554119 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 947:1750, ack 40, win 501, options [nop,nop,TS val 2544393540 ecr 2061574473], length 803
+22:34:54.554196 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 1751, win 10142, options [nop,nop,TS val 2061574478 ecr 2544393540], length 0
+22:34:54.554537 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 78:113, ack 1751, win 10142, options [nop,nop,TS val 2061574478 ecr 2544393540], length 35
+22:34:54.555266 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 113:154, ack 1751, win 10142, options [nop,nop,TS val 2061574479 ecr 2544393540], length 41
+22:34:54.555396 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 154:945, ack 1751, win 10142, options [nop,nop,TS val 2061574479 ecr 2544393540], length 791
+22:34:54.555405 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 116, win 501, options [nop,nop,TS val 2544393541 ecr 2061574478], length 0
+22:34:54.563642 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 1750:1816, ack 907, win 501, options [nop,nop,TS val 2544393550 ecr 2061574479], length 66
+22:34:54.563840 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 1816:2607, ack 907, win 501, options [nop,nop,TS val 2544393550 ecr 2061574479], length 791
+22:34:54.563998 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 2608, win 10142, options [nop,nop,TS val 2061574488 ecr 2544393550], length 0
+22:34:54.564355 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 945:984, ack 2608, win 10142, options [nop,nop,TS val 2061574488 ecr 2544393550], length 39
+22:34:54.568179 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 2607:2673, ack 946, win 501, options [nop,nop,TS val 2544393554 ecr 2061574488], length 66
+22:34:54.568421 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 2673:3476, ack 946, win 501, options [nop,nop,TS val 2544393554 ecr 2061574488], length 803
+22:34:54.568504 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 3477, win 10142, options [nop,nop,TS val 2061574492 ecr 2544393554], length 0
+22:34:54.569161 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 984:1025, ack 3477, win 10142, options [nop,nop,TS val 2061574493 ecr 2544393554], length 41
+22:34:54.569259 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1025:1828, ack 3477, win 10142, options [nop,nop,TS val 2061574493 ecr 2544393554], length 803
+22:34:54.569446 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 1790, win 501, options [nop,nop,TS val 2544393555 ecr 2061574493], length 0
+22:34:54.580360 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 3476:3542, ack 1790, win 501, options [nop,nop,TS val 2544393566 ecr 2061574493], length 66
+22:34:54.580504 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 3542:4345, ack 1790, win 501, options [nop,nop,TS val 2544393566 ecr 2061574493], length 803
+22:34:54.580611 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 4346, win 10142, options [nop,nop,TS val 2061574505 ecr 2544393566], length 0
+22:34:54.828099 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:54.828151 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:54.828304 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:54.828367 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:55.071346 IP 10.96.0.1.https > 10.244.0.160.56398: Flags [P.], seq 3708049829:3708049934, ack 2085701578, win 9693, options [nop,nop,TS val 4071863661 ecr 1928899743], length 105
+22:34:55.114251 IP 10.244.0.160.56398 > nodemaster.6443: Flags [.], ack 3708049934, win 3848, options [nop,nop,TS val 1928909929 ecr 4071863661], length 0
+22:34:55.252210 IP nodemaster.52798 > 10.244.0.176.5000: Flags [S], seq 931056158, win 64860, options [mss 1410,sackOK,TS val 1697632011 ecr 0,nop,wscale 7], length 0
+22:34:55.252270 IP 10.244.0.176.5000 > nodemaster.52798: Flags [S.], seq 18433197, ack 931056159, win 64308, options [mss 1410,sackOK,TS val 2973947884 ecr 1697632011,nop,wscale 7], length 0
+22:34:55.252286 IP nodemaster.52798 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697632011 ecr 2973947884], length 0
+22:34:55.252471 IP nodemaster.52798 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697632011 ecr 2973947884], length 104
+22:34:55.252485 IP 10.244.0.176.5000 > nodemaster.52798: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973947884 ecr 1697632011], length 0
+22:34:55.252991 IP 10.244.0.176.5000 > nodemaster.52798: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973947885 ecr 1697632011], length 1433
+22:34:55.253004 IP nodemaster.52798 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697632012 ecr 2973947885], length 0
+22:34:55.253074 IP 10.244.0.176.5000 > nodemaster.52798: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973947885 ecr 1697632012], length 0
+22:34:55.253284 IP nodemaster.52798 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697632012 ecr 2973947885], length 0
+22:34:55.253319 IP 10.244.0.176.5000 > nodemaster.52798: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973947885 ecr 1697632012], length 0
+22:34:55.646330 IP 10.244.0.162.27017 > 10.244.0.171.53600: Flags [P.], seq 70229678:70229982, ack 2467393050, win 501, options [nop,nop,TS val 2431188997 ecr 3551594429], length 304
+22:34:55.646389 IP 10.244.0.171.53600 > 10.244.0.162.27017: Flags [.], ack 304, win 2252, options [nop,nop,TS val 3551604440 ecr 2431188997], length 0
+22:34:55.646393 IP 10.244.0.171.53600 > 10.244.0.162.27017: Flags [.], ack 304, win 2252, options [nop,nop,TS val 3551604440 ecr 2431188997], length 0
+22:34:55.726318 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [P.], seq 691333934:691333999, ack 2402306387, win 2168, options [nop,nop,TS val 3747324485 ecr 2777574881], length 65
+22:34:55.726336 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [P.], seq 0:65, ack 1, win 2168, options [nop,nop,TS val 3747324485 ecr 2777574881], length 65
+22:34:55.726381 IP 10.244.0.162.27017 > 10.244.0.176.53760: Flags [.], ack 65, win 501, options [nop,nop,TS val 2777584880 ecr 3747324485,nop,nop,sack 1 {0:65}], length 0
+22:34:55.726623 IP 10.244.0.162.27017 > 10.244.0.176.53760: Flags [P.], seq 1:305, ack 65, win 501, options [nop,nop,TS val 2777584881 ecr 3747324485], length 304
+22:34:55.726657 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [.], ack 305, win 2177, options [nop,nop,TS val 3747324486 ecr 2777584881], length 0
+22:34:55.726661 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [.], ack 305, win 2177, options [nop,nop,TS val 3747324486 ecr 2777584881], length 0
+22:34:55.831612 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:55.831618 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:55.831765 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:55.831814 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:55.969271 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [P.], seq 1120638534:1120638599, ack 4036230610, win 2252, options [nop,nop,TS val 3468842899 ecr 2116580241], length 65
+22:34:55.969281 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [P.], seq 0:65, ack 1, win 2252, options [nop,nop,TS val 3468842899 ecr 2116580241], length 65
+22:34:55.969388 IP 10.244.0.162.27017 > 10.244.0.167.34704: Flags [.], ack 65, win 501, options [nop,nop,TS val 2116590237 ecr 3468842899,nop,nop,sack 1 {0:65}], length 0
+22:34:55.969826 IP 10.244.0.162.27017 > 10.244.0.167.34704: Flags [P.], seq 1:305, ack 65, win 501, options [nop,nop,TS val 2116590238 ecr 3468842899], length 304
+22:34:55.969894 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [.], ack 305, win 2260, options [nop,nop,TS val 3468842900 ecr 2116590238], length 0
+22:34:55.969899 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [.], ack 305, win 2260, options [nop,nop,TS val 3468842900 ecr 2116590238], length 0
+22:34:56.187101 IP 10.244.0.167.55518 > 10.244.0.162.27017: Flags [.], ack 457657008, win 505, options [nop,nop,TS val 3468843117 ecr 2116575355], length 0
+22:34:56.187109 IP 10.244.0.167.55518 > 10.244.0.162.27017: Flags [.], ack 1, win 505, options [nop,nop,TS val 3468843117 ecr 2116575355], length 0
+22:34:56.187152 IP 10.244.0.162.27017 > 10.244.0.167.55518: Flags [.], ack 1, win 501, options [nop,nop,TS val 2116590455 ecr 3468570480], length 0
+22:34:56.189356 IP 10.244.0.171.44386 > 10.244.0.162.27017: Flags [.], ack 2246571678, win 502, options [nop,nop,TS val 3551604983 ecr 2431174438], length 0
+22:34:56.189384 IP 10.244.0.171.44386 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3551604983 ecr 2431174438], length 0
+22:34:56.189416 IP 10.244.0.162.27017 > 10.244.0.171.44386: Flags [.], ack 1, win 501, options [nop,nop,TS val 2431189540 ecr 3551332344], length 0
+22:34:56.253672 IP nodemaster.52802 > 10.244.0.176.5000: Flags [S], seq 3703867105, win 64860, options [mss 1410,sackOK,TS val 1697633013 ecr 0,nop,wscale 7], length 0
+22:34:56.253750 IP 10.244.0.176.5000 > nodemaster.52802: Flags [S.], seq 450082614, ack 3703867106, win 64308, options [mss 1410,sackOK,TS val 2973948886 ecr 1697633013,nop,wscale 7], length 0
+22:34:56.253777 IP nodemaster.52802 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697633013 ecr 2973948886], length 0
+22:34:56.254265 IP nodemaster.52802 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697633013 ecr 2973948886], length 104
+22:34:56.254321 IP 10.244.0.176.5000 > nodemaster.52802: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973948886 ecr 1697633013], length 0
+22:34:56.255094 IP 10.244.0.176.5000 > nodemaster.52802: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973948887 ecr 1697633013], length 1433
+22:34:56.255119 IP nodemaster.52802 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697633014 ecr 2973948887], length 0
+22:34:56.255343 IP 10.244.0.176.5000 > nodemaster.52802: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973948887 ecr 1697633014], length 0
+22:34:56.255429 IP nodemaster.52802 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697633014 ecr 2973948887], length 0
+22:34:56.255488 IP 10.244.0.176.5000 > nodemaster.52802: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973948887 ecr 1697633014], length 0
+22:34:56.441877 IP 10.244.0.164.45018 > 10.244.0.162.27017: Flags [.], ack 290129426, win 502, options [nop,nop,TS val 3720928407 ecr 3059960630], length 0
+22:34:56.441884 IP 10.244.0.164.45018 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3720928407 ecr 3059960630], length 0
+22:34:56.441935 IP 10.244.0.162.27017 > 10.244.0.164.45018: Flags [.], ack 1, win 501, options [nop,nop,TS val 3059975734 ecr 3720655515], length 0
+22:34:56.508848 IP nodemaster.58934 > 10.244.0.158.8585: Flags [S], seq 3131228601, win 64860, options [mss 1410,sackOK,TS val 4205032780 ecr 0,nop,wscale 7], length 0
+22:34:56.508902 IP nodemaster.58942 > 10.244.0.158.8585: Flags [S], seq 3300210040, win 64860, options [mss 1410,sackOK,TS val 4205032780 ecr 0,nop,wscale 7], length 0
+22:34:56.508906 IP 10.244.0.158.8585 > nodemaster.58934: Flags [S.], seq 2778560104, ack 3131228602, win 64308, options [mss 1410,sackOK,TS val 652985421 ecr 4205032780,nop,wscale 7], length 0
+22:34:56.508959 IP nodemaster.58934 > 10.244.0.158.8585: Flags [.], ack 1, win 507, options [nop,nop,TS val 4205032780 ecr 652985421], length 0
+22:34:56.508965 IP 10.244.0.158.8585 > nodemaster.58942: Flags [S.], seq 3503494663, ack 3300210041, win 64308, options [mss 1410,sackOK,TS val 652985421 ecr 4205032780,nop,wscale 7], length 0
+22:34:56.508999 IP nodemaster.58942 > 10.244.0.158.8585: Flags [.], ack 1, win 507, options [nop,nop,TS val 4205032780 ecr 652985421], length 0
+22:34:56.509199 IP nodemaster.58934 > 10.244.0.158.8585: Flags [P.], seq 1:112, ack 1, win 507, options [nop,nop,TS val 4205032780 ecr 652985421], length 111
+22:34:56.509218 IP 10.244.0.158.8585 > nodemaster.58934: Flags [.], ack 112, win 502, options [nop,nop,TS val 652985421 ecr 4205032780], length 0
+22:34:56.509263 IP nodemaster.58942 > 10.244.0.158.8585: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 4205032780 ecr 652985421], length 110
+22:34:56.509287 IP 10.244.0.158.8585 > nodemaster.58942: Flags [.], ack 111, win 502, options [nop,nop,TS val 652985421 ecr 4205032780], length 0
+22:34:56.509598 IP 10.244.0.158.8585 > nodemaster.58942: Flags [P.], seq 1:171, ack 111, win 502, options [nop,nop,TS val 652985422 ecr 4205032780], length 170
+22:34:56.509630 IP nodemaster.58942 > 10.244.0.158.8585: Flags [.], ack 171, win 506, options [nop,nop,TS val 4205032781 ecr 652985422], length 0
+22:34:56.509635 IP 10.244.0.158.8585 > nodemaster.58934: Flags [P.], seq 1:171, ack 112, win 502, options [nop,nop,TS val 652985422 ecr 4205032780], length 170
+22:34:56.509660 IP nodemaster.58934 > 10.244.0.158.8585: Flags [.], ack 171, win 506, options [nop,nop,TS val 4205032781 ecr 652985422], length 0
+22:34:56.509758 IP 10.244.0.158.8585 > nodemaster.58934: Flags [F.], seq 171, ack 112, win 502, options [nop,nop,TS val 652985422 ecr 4205032781], length 0
+22:34:56.509798 IP 10.244.0.158.8585 > nodemaster.58942: Flags [F.], seq 171, ack 111, win 502, options [nop,nop,TS val 652985422 ecr 4205032781], length 0
+22:34:56.509924 IP nodemaster.58934 > 10.244.0.158.8585: Flags [F.], seq 112, ack 172, win 506, options [nop,nop,TS val 4205032781 ecr 652985422], length 0
+22:34:56.509950 IP nodemaster.58942 > 10.244.0.158.8585: Flags [F.], seq 111, ack 172, win 506, options [nop,nop,TS val 4205032781 ecr 652985422], length 0
+22:34:56.509963 IP 10.244.0.158.8585 > nodemaster.58934: Flags [.], ack 113, win 502, options [nop,nop,TS val 652985422 ecr 4205032781], length 0
+22:34:56.509991 IP 10.244.0.158.8585 > nodemaster.58942: Flags [.], ack 112, win 502, options [nop,nop,TS val 652985422 ecr 4205032781], length 0
+22:34:56.596327 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1828:1867, ack 4346, win 10142, options [nop,nop,TS val 2061576518 ecr 2544393566], length 39
+22:34:56.600145 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 4345:4434, ack 1829, win 501, options [nop,nop,TS val 2544395586 ecr 2061576518], length 89
+22:34:56.600280 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 4434:5225, ack 1829, win 501, options [nop,nop,TS val 2544395586 ecr 2061576518], length 791
+22:34:56.601780 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 5226, win 10142, options [nop,nop,TS val 2061576526 ecr 2544395586], length 0
+22:34:56.602953 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1867:1906, ack 5226, win 10142, options [nop,nop,TS val 2061576527 ecr 2544395586], length 39
+22:34:56.606258 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 5225:5292, ack 1868, win 501, options [nop,nop,TS val 2544395592 ecr 2061576527], length 67
+22:34:56.606321 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 5292:6095, ack 1868, win 501, options [nop,nop,TS val 2544395592 ecr 2061576527], length 803
+22:34:56.606438 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 6096, win 10142, options [nop,nop,TS val 2061576530 ecr 2544395592], length 0
+22:34:56.606660 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1906:1941, ack 6096, win 10142, options [nop,nop,TS val 2061576531 ecr 2544395592], length 35
+22:34:56.607096 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1941:1982, ack 6096, win 10142, options [nop,nop,TS val 2061576531 ecr 2544395592], length 41
+22:34:56.607140 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 1982:2773, ack 6096, win 10142, options [nop,nop,TS val 2061576531 ecr 2544395592], length 791
+22:34:56.607151 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 1944, win 501, options [nop,nop,TS val 2544395593 ecr 2061576531], length 0
+22:34:56.612119 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 6095:6161, ack 2735, win 501, options [nop,nop,TS val 2544395598 ecr 2061576531], length 66
+22:34:56.612289 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 6161:6952, ack 2735, win 501, options [nop,nop,TS val 2544395598 ecr 2061576531], length 791
+22:34:56.612339 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 6953, win 10142, options [nop,nop,TS val 2061576536 ecr 2544395598], length 0
+22:34:56.612686 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 2773:2812, ack 6953, win 10142, options [nop,nop,TS val 2061576537 ecr 2544395598], length 39
+22:34:56.615312 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 6952:7018, ack 2774, win 501, options [nop,nop,TS val 2544395601 ecr 2061576537], length 66
+22:34:56.615372 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 7018:7821, ack 2774, win 501, options [nop,nop,TS val 2544395601 ecr 2061576537], length 803
+22:34:56.615475 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 7822, win 10142, options [nop,nop,TS val 2061576539 ecr 2544395601], length 0
+22:34:56.616340 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 2812:2853, ack 7822, win 10142, options [nop,nop,TS val 2061576540 ecr 2544395601], length 41
+22:34:56.616405 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 2853:3656, ack 7822, win 10142, options [nop,nop,TS val 2061576540 ecr 2544395601], length 803
+22:34:56.616445 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 3618, win 501, options [nop,nop,TS val 2544395602 ecr 2061576540], length 0
+22:34:56.617819 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 7821:7856, ack 3618, win 501, options [nop,nop,TS val 2544395604 ecr 2061576540], length 35
+22:34:56.622894 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 7856:7922, ack 3618, win 501, options [nop,nop,TS val 2544395609 ecr 2061576540], length 66
+22:34:56.622990 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 7922:8725, ack 3618, win 501, options [nop,nop,TS val 2544395609 ecr 2061576540], length 803
+22:34:56.623077 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 8726, win 10142, options [nop,nop,TS val 2061576547 ecr 2544395604], length 0
+22:34:56.835064 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:56.835071 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:56.835274 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:56.835367 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:56.875529 IP 10.96.0.1.https > 10.244.0.160.56398: Flags [P.], seq 105:204, ack 1, win 9693, options [nop,nop,TS val 4071865465 ecr 1928909929], length 99
+22:34:56.875639 IP 10.244.0.160.56398 > nodemaster.6443: Flags [.], ack 100, win 3848, options [nop,nop,TS val 1928911691 ecr 4071865465], length 0
+22:34:57.252460 IP nodemaster.52816 > 10.244.0.176.5000: Flags [S], seq 2114435280, win 64860, options [mss 1410,sackOK,TS val 1697634011 ecr 0,nop,wscale 7], length 0
+22:34:57.252539 IP 10.244.0.176.5000 > nodemaster.52816: Flags [S.], seq 2846282967, ack 2114435281, win 64308, options [mss 1410,sackOK,TS val 2973949885 ecr 1697634011,nop,wscale 7], length 0
+22:34:57.252578 IP nodemaster.52816 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697634012 ecr 2973949885], length 0
+22:34:57.252953 IP nodemaster.52816 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697634012 ecr 2973949885], length 104
+22:34:57.253019 IP 10.244.0.176.5000 > nodemaster.52816: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973949885 ecr 1697634012], length 0
+22:34:57.253890 IP 10.244.0.176.5000 > nodemaster.52816: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973949886 ecr 1697634012], length 1433
+22:34:57.253917 IP nodemaster.52816 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697634013 ecr 2973949886], length 0
+22:34:57.254105 IP 10.244.0.176.5000 > nodemaster.52816: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973949886 ecr 1697634013], length 0
+22:34:57.254477 IP nodemaster.52816 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697634013 ecr 2973949886], length 0
+22:34:57.254550 IP 10.244.0.176.5000 > nodemaster.52816: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973949886 ecr 1697634013], length 0
+22:34:57.596963 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [P.], seq 1509312210:1509312275, ack 2081269575, win 2269, options [nop,nop,TS val 3720929562 ecr 3059966889], length 65
+22:34:57.596970 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [P.], seq 0:65, ack 1, win 2269, options [nop,nop,TS val 3720929562 ecr 3059966889], length 65
+22:34:57.597038 IP 10.244.0.162.27017 > 10.244.0.164.44990: Flags [.], ack 65, win 501, options [nop,nop,TS val 3059976889 ecr 3720929562,nop,nop,sack 1 {0:65}], length 0
+22:34:57.597351 IP 10.244.0.162.27017 > 10.244.0.164.44990: Flags [P.], seq 1:305, ack 65, win 501, options [nop,nop,TS val 3059976889 ecr 3720929562], length 304
+22:34:57.597403 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [.], ack 305, win 2277, options [nop,nop,TS val 3720929562 ecr 3059976889], length 0
+22:34:57.597421 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [.], ack 305, win 2277, options [nop,nop,TS val 3720929562 ecr 3059976889], length 0
+22:34:57.671189 IP 10.96.0.1.https > 10.244.0.157.34240: Flags [P.], seq 2131291820:2131291939, ack 3622353960, win 501, options [nop,nop,TS val 788443149 ecr 3991742983], length 119
+22:34:57.671287 IP 10.244.0.157.34240 > nodemaster.6443: Flags [.], ack 2131291939, win 502, options [nop,nop,TS val 3991757977 ecr 788443149], length 0
+22:34:57.837790 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:57.837800 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:57.837945 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:57.838098 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:58.252661 IP nodemaster.52820 > 10.244.0.176.5000: Flags [S], seq 4086531935, win 64860, options [mss 1410,sackOK,TS val 1697635012 ecr 0,nop,wscale 7], length 0
+22:34:58.252747 IP 10.244.0.176.5000 > nodemaster.52820: Flags [S.], seq 2745425618, ack 4086531936, win 64308, options [mss 1410,sackOK,TS val 2973950885 ecr 1697635012,nop,wscale 7], length 0
+22:34:58.252843 IP nodemaster.52820 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697635012 ecr 2973950885], length 0
+22:34:58.253350 IP nodemaster.52820 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697635012 ecr 2973950885], length 104
+22:34:58.253443 IP 10.244.0.176.5000 > nodemaster.52820: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973950885 ecr 1697635012], length 0
+22:34:58.254217 IP 10.244.0.176.5000 > nodemaster.52820: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973950886 ecr 1697635012], length 1433
+22:34:58.254249 IP nodemaster.52820 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697635013 ecr 2973950886], length 0
+22:34:58.254379 IP 10.244.0.176.5000 > nodemaster.52820: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973950886 ecr 1697635013], length 0
+22:34:58.254645 IP nodemaster.52820 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697635014 ecr 2973950886], length 0
+22:34:58.254732 IP 10.244.0.176.5000 > nodemaster.52820: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973950887 ecr 1697635014], length 0
+22:34:58.489810 IP 10.244.0.176.53786 > 10.244.0.162.27017: Flags [.], ack 2754121339, win 652, options [nop,nop,TS val 3747327249 ecr 2777572541], length 0
+22:34:58.489819 IP 10.244.0.176.53786 > 10.244.0.162.27017: Flags [.], ack 1, win 652, options [nop,nop,TS val 3747327249 ecr 2777572541], length 0
+22:34:58.489871 IP 10.244.0.162.27017 > 10.244.0.176.53786: Flags [.], ack 1, win 501, options [nop,nop,TS val 2777587644 ecr 3747035921], length 0
+22:34:58.624144 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 3656:3695, ack 8726, win 10142, options [nop,nop,TS val 2061578548 ecr 2544395604], length 39
+22:34:58.627939 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 8725:8814, ack 3657, win 501, options [nop,nop,TS val 2544397614 ecr 2061578548], length 89
+22:34:58.628074 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 8814:9605, ack 3657, win 501, options [nop,nop,TS val 2544397614 ecr 2061578548], length 791
+22:34:58.628273 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 9606, win 10142, options [nop,nop,TS val 2061578552 ecr 2544397614], length 0
+22:34:58.628913 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 3695:3734, ack 9606, win 10142, options [nop,nop,TS val 2061578553 ecr 2544397614], length 39
+22:34:58.631660 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 9605:9671, ack 3696, win 501, options [nop,nop,TS val 2544397618 ecr 2061578553], length 66
+22:34:58.631720 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 9671:10474, ack 3696, win 501, options [nop,nop,TS val 2544397618 ecr 2061578553], length 803
+22:34:58.631873 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 10475, win 10142, options [nop,nop,TS val 2061578556 ecr 2544397618], length 0
+22:34:58.632736 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 3734:3775, ack 10475, win 10142, options [nop,nop,TS val 2061578557 ecr 2544397618], length 41
+22:34:58.632820 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 3775:4566, ack 10475, win 10142, options [nop,nop,TS val 2061578557 ecr 2544397618], length 791
+22:34:58.632885 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 4528, win 501, options [nop,nop,TS val 2544397619 ecr 2061578557], length 0
+22:34:58.636950 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 10474:10540, ack 4528, win 501, options [nop,nop,TS val 2544397623 ecr 2061578557], length 66
+22:34:58.637011 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 10540:11331, ack 4528, win 501, options [nop,nop,TS val 2544397623 ecr 2061578557], length 791
+22:34:58.637220 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 11332, win 10142, options [nop,nop,TS val 2061578561 ecr 2544397623], length 0
+22:34:58.637496 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 4566:4601, ack 11332, win 10142, options [nop,nop,TS val 2061578561 ecr 2544397623], length 35
+22:34:58.638224 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 4601:4640, ack 11332, win 10142, options [nop,nop,TS val 2061578562 ecr 2544397623], length 39
+22:34:58.638290 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 4602, win 501, options [nop,nop,TS val 2544397624 ecr 2061578561], length 0
+22:34:58.642257 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 11331:11524, ack 4602, win 501, options [nop,nop,TS val 2544397628 ecr 2061578561], length 193
+22:34:58.642363 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 11524:12327, ack 4602, win 501, options [nop,nop,TS val 2544397628 ecr 2061578561], length 803
+22:34:58.642434 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 12328, win 10142, options [nop,nop,TS val 2061578566 ecr 2544397628], length 0
+22:34:58.643286 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 4640:4681, ack 12328, win 10142, options [nop,nop,TS val 2061578567 ecr 2544397628], length 41
+22:34:58.643354 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 4681:5484, ack 12328, win 10142, options [nop,nop,TS val 2061578567 ecr 2544397628], length 803
+22:34:58.643528 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 5446, win 501, options [nop,nop,TS val 2544397629 ecr 2061578567], length 0
+22:34:58.649728 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 12327:12394, ack 5446, win 501, options [nop,nop,TS val 2544397636 ecr 2061578567], length 67
+22:34:58.649823 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 12394:13197, ack 5446, win 501, options [nop,nop,TS val 2544397636 ecr 2061578567], length 803
+22:34:58.650051 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 13198, win 10142, options [nop,nop,TS val 2061578574 ecr 2544397636], length 0
+22:34:58.842598 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:58.842618 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:58.842853 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:58.842993 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:59.171111 IP 10.244.0.162.27017 > 10.244.0.176.53762: Flags [P.], seq 1051090438:1051090742, ack 3221421503, win 501, options [nop,nop,TS val 2777588325 ecr 3747317929], length 304
+22:34:59.171182 IP 10.244.0.176.53762 > 10.244.0.162.27017: Flags [.], ack 304, win 2177, options [nop,nop,TS val 3747327930 ecr 2777588325], length 0
+22:34:59.171186 IP 10.244.0.176.53762 > 10.244.0.162.27017: Flags [.], ack 304, win 2177, options [nop,nop,TS val 3747327930 ecr 2777588325], length 0
+22:34:59.253160 IP nodemaster.52822 > 10.244.0.176.5000: Flags [S], seq 178734239, win 64860, options [mss 1410,sackOK,TS val 1697636012 ecr 0,nop,wscale 7], length 0
+22:34:59.253237 IP 10.244.0.176.5000 > nodemaster.52822: Flags [S.], seq 233729062, ack 178734240, win 64308, options [mss 1410,sackOK,TS val 2973951885 ecr 1697636012,nop,wscale 7], length 0
+22:34:59.253275 IP nodemaster.52822 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697636012 ecr 2973951885], length 0
+22:34:59.253865 IP nodemaster.52822 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697636013 ecr 2973951885], length 104
+22:34:59.253903 IP 10.244.0.176.5000 > nodemaster.52822: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973951886 ecr 1697636013], length 0
+22:34:59.254849 IP 10.244.0.176.5000 > nodemaster.52822: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973951887 ecr 1697636013], length 1433
+22:34:59.254879 IP nodemaster.52822 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697636014 ecr 2973951887], length 0
+22:34:59.255106 IP 10.244.0.176.5000 > nodemaster.52822: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973951887 ecr 1697636014], length 0
+22:34:59.255394 IP nodemaster.52822 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697636014 ecr 2973951887], length 0
+22:34:59.255471 IP 10.244.0.176.5000 > nodemaster.52822: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973951887 ecr 1697636014], length 0
+22:34:59.368502 IP 10.96.0.1.https > 10.244.0.158.39044: Flags [P.], seq 3474979564:3474979721, ack 2773438671, win 501, options [nop,nop,TS val 3452622356 ecr 3320300823], length 157
+22:34:59.368614 IP 10.244.0.158.39044 > nodemaster.6443: Flags [.], ack 3474979721, win 502, options [nop,nop,TS val 3320321171 ecr 3452622356], length 0
+22:34:59.395333 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 13197:13395, ack 5446, win 501, options [nop,nop,TS val 2544398381 ecr 2061578574], length 198
+22:34:59.437632 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 13396, win 10142, options [nop,nop,TS val 2061579362 ecr 2544398381], length 0
+22:34:59.566079 IP 10.244.0.162.27017 > 10.244.0.167.34712: Flags [P.], seq 2608533904:2608534208, ack 3642522941, win 501, options [nop,nop,TS val 2116593834 ecr 3468836484], length 304
+22:34:59.566172 IP 10.244.0.167.34712 > 10.244.0.162.27017: Flags [.], ack 304, win 2260, options [nop,nop,TS val 3468846496 ecr 2116593834], length 0
+22:34:59.566178 IP 10.244.0.167.34712 > 10.244.0.162.27017: Flags [.], ack 304, win 2260, options [nop,nop,TS val 3468846496 ecr 2116593834], length 0
+22:34:59.846223 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:59.846232 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:34:59.846426 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:59.846509 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:34:59.918709 IP nodemaster.33104 > 10.244.0.156.8181: Flags [S], seq 1397164664, win 64860, options [mss 1410,sackOK,TS val 3193725925 ecr 0,nop,wscale 7], length 0
+22:34:59.918717 IP nodemaster.57342 > 10.244.0.156.http-alt: Flags [S], seq 2112183307, win 64860, options [mss 1410,sackOK,TS val 3193725925 ecr 0,nop,wscale 7], length 0
+22:34:59.918782 IP 10.244.0.156.8181 > nodemaster.33104: Flags [S.], seq 1072333357, ack 1397164665, win 64308, options [mss 1410,sackOK,TS val 478345250 ecr 3193725925,nop,wscale 7], length 0
+22:34:59.918793 IP 10.244.0.156.http-alt > nodemaster.57342: Flags [S.], seq 940344584, ack 2112183308, win 64308, options [mss 1410,sackOK,TS val 478345250 ecr 3193725925,nop,wscale 7], length 0
+22:34:59.918812 IP nodemaster.57342 > 10.244.0.156.http-alt: Flags [.], ack 1, win 507, options [nop,nop,TS val 3193725925 ecr 478345250], length 0
+22:34:59.918825 IP nodemaster.33104 > 10.244.0.156.8181: Flags [.], ack 1, win 507, options [nop,nop,TS val 3193725925 ecr 478345250], length 0
+22:34:59.919405 IP nodemaster.57342 > 10.244.0.156.http-alt: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 3193725925 ecr 478345250], length 110: HTTP: GET /health HTTP/1.1
+22:34:59.919412 IP nodemaster.33104 > 10.244.0.156.8181: Flags [P.], seq 1:110, ack 1, win 507, options [nop,nop,TS val 3193725925 ecr 478345250], length 109
+22:34:59.919470 IP 10.244.0.156.http-alt > nodemaster.57342: Flags [.], ack 111, win 502, options [nop,nop,TS val 478345250 ecr 3193725925], length 0
+22:34:59.919472 IP 10.244.0.156.8181 > nodemaster.33104: Flags [.], ack 110, win 502, options [nop,nop,TS val 478345250 ecr 3193725925], length 0
+22:34:59.919781 IP 10.244.0.156.http-alt > nodemaster.57342: Flags [P.], seq 1:138, ack 111, win 502, options [nop,nop,TS val 478345251 ecr 3193725925], length 137: HTTP: HTTP/1.1 200 OK
+22:34:59.919796 IP 10.244.0.156.8181 > nodemaster.33104: Flags [P.], seq 1:138, ack 110, win 502, options [nop,nop,TS val 478345251 ecr 3193725925], length 137
+22:34:59.919803 IP nodemaster.57342 > 10.244.0.156.http-alt: Flags [.], ack 138, win 506, options [nop,nop,TS val 3193725926 ecr 478345251], length 0
+22:34:59.919837 IP nodemaster.33104 > 10.244.0.156.8181: Flags [.], ack 138, win 506, options [nop,nop,TS val 3193725926 ecr 478345251], length 0
+22:34:59.919935 IP 10.244.0.156.http-alt > nodemaster.57342: Flags [F.], seq 138, ack 111, win 502, options [nop,nop,TS val 478345251 ecr 3193725926], length 0
+22:34:59.920004 IP 10.244.0.156.8181 > nodemaster.33104: Flags [F.], seq 138, ack 110, win 502, options [nop,nop,TS val 478345251 ecr 3193725926], length 0
+22:34:59.920198 IP nodemaster.33104 > 10.244.0.156.8181: Flags [F.], seq 110, ack 139, win 506, options [nop,nop,TS val 3193725926 ecr 478345251], length 0
+22:34:59.920198 IP nodemaster.57342 > 10.244.0.156.http-alt: Flags [F.], seq 111, ack 139, win 506, options [nop,nop,TS val 3193725926 ecr 478345251], length 0
+22:34:59.920263 IP 10.244.0.156.http-alt > nodemaster.57342: Flags [.], ack 112, win 502, options [nop,nop,TS val 478345251 ecr 3193725926], length 0
+22:34:59.920278 IP 10.244.0.156.8181 > nodemaster.33104: Flags [.], ack 111, win 502, options [nop,nop,TS val 478345251 ecr 3193725926], length 0
+22:35:00.198819 IP nodemaster.36842 > 10.244.0.157.8181: Flags [S], seq 1985990307, win 64860, options [mss 1410,sackOK,TS val 2362516305 ecr 0,nop,wscale 7], length 0
+22:35:00.198825 IP nodemaster.39428 > 10.244.0.157.http-alt: Flags [S], seq 1096267882, win 64860, options [mss 1410,sackOK,TS val 2362516305 ecr 0,nop,wscale 7], length 0
+22:35:00.198891 IP 10.244.0.157.8181 > nodemaster.36842: Flags [S.], seq 3849909431, ack 1985990308, win 64308, options [mss 1410,sackOK,TS val 1017834188 ecr 2362516305,nop,wscale 7], length 0
+22:35:00.198892 IP 10.244.0.157.http-alt > nodemaster.39428: Flags [S.], seq 863345218, ack 1096267883, win 64308, options [mss 1410,sackOK,TS val 1017834188 ecr 2362516305,nop,wscale 7], length 0
+22:35:00.198917 IP nodemaster.39428 > 10.244.0.157.http-alt: Flags [.], ack 1, win 507, options [nop,nop,TS val 2362516305 ecr 1017834188], length 0
+22:35:00.198929 IP nodemaster.36842 > 10.244.0.157.8181: Flags [.], ack 1, win 507, options [nop,nop,TS val 2362516305 ecr 1017834188], length 0
+22:35:00.199230 IP nodemaster.39428 > 10.244.0.157.http-alt: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 2362516305 ecr 1017834188], length 110: HTTP: GET /health HTTP/1.1
+22:35:00.199256 IP nodemaster.36842 > 10.244.0.157.8181: Flags [P.], seq 1:110, ack 1, win 507, options [nop,nop,TS val 2362516305 ecr 1017834188], length 109
+22:35:00.199266 IP 10.244.0.157.http-alt > nodemaster.39428: Flags [.], ack 111, win 502, options [nop,nop,TS val 1017834188 ecr 2362516305], length 0
+22:35:00.199306 IP 10.244.0.157.8181 > nodemaster.36842: Flags [.], ack 110, win 502, options [nop,nop,TS val 1017834188 ecr 2362516305], length 0
+22:35:00.199514 IP 10.244.0.157.8181 > nodemaster.36842: Flags [P.], seq 1:138, ack 110, win 502, options [nop,nop,TS val 1017834188 ecr 2362516305], length 137
+22:35:00.199517 IP 10.244.0.157.http-alt > nodemaster.39428: Flags [P.], seq 1:138, ack 111, win 502, options [nop,nop,TS val 1017834188 ecr 2362516305], length 137: HTTP: HTTP/1.1 200 OK
+22:35:00.199536 IP nodemaster.39428 > 10.244.0.157.http-alt: Flags [.], ack 138, win 506, options [nop,nop,TS val 2362516306 ecr 1017834188], length 0
+22:35:00.199544 IP nodemaster.36842 > 10.244.0.157.8181: Flags [.], ack 138, win 506, options [nop,nop,TS val 2362516306 ecr 1017834188], length 0
+22:35:00.199651 IP 10.244.0.157.http-alt > nodemaster.39428: Flags [F.], seq 138, ack 111, win 502, options [nop,nop,TS val 1017834189 ecr 2362516306], length 0
+22:35:00.199666 IP 10.244.0.157.8181 > nodemaster.36842: Flags [F.], seq 138, ack 110, win 502, options [nop,nop,TS val 1017834189 ecr 2362516306], length 0
+22:35:00.199817 IP nodemaster.39428 > 10.244.0.157.http-alt: Flags [F.], seq 111, ack 139, win 506, options [nop,nop,TS val 2362516306 ecr 1017834189], length 0
+22:35:00.199873 IP 10.244.0.157.http-alt > nodemaster.39428: Flags [.], ack 112, win 502, options [nop,nop,TS val 1017834189 ecr 2362516306], length 0
+22:35:00.199880 IP nodemaster.36842 > 10.244.0.157.8181: Flags [F.], seq 110, ack 139, win 506, options [nop,nop,TS val 2362516306 ecr 1017834189], length 0
+22:35:00.199946 IP 10.244.0.157.8181 > nodemaster.36842: Flags [.], ack 111, win 502, options [nop,nop,TS val 1017834189 ecr 2362516306], length 0
+22:35:00.252488 IP nodemaster.52834 > 10.244.0.176.5000: Flags [S], seq 4272400787, win 64860, options [mss 1410,sackOK,TS val 1697637011 ecr 0,nop,wscale 7], length 0
+22:35:00.252565 IP 10.244.0.176.5000 > nodemaster.52834: Flags [S.], seq 229578737, ack 4272400788, win 64308, options [mss 1410,sackOK,TS val 2973952885 ecr 1697637011,nop,wscale 7], length 0
+22:35:00.252608 IP nodemaster.52834 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697637012 ecr 2973952885], length 0
+22:35:00.253124 IP nodemaster.52834 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697637012 ecr 2973952885], length 104
+22:35:00.253228 IP 10.244.0.176.5000 > nodemaster.52834: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973952885 ecr 1697637012], length 0
+22:35:00.254313 IP 10.244.0.176.5000 > nodemaster.52834: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973952886 ecr 1697637012], length 1433
+22:35:00.254353 IP nodemaster.52834 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697637013 ecr 2973952886], length 0
+22:35:00.254545 IP 10.244.0.176.5000 > nodemaster.52834: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973952886 ecr 1697637013], length 0
+22:35:00.254861 IP nodemaster.52834 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697637014 ecr 2973952886], length 0
+22:35:00.254958 IP 10.244.0.176.5000 > nodemaster.52834: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973952887 ecr 1697637014], length 0
+22:35:00.651568 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 5484:5523, ack 13396, win 10142, options [nop,nop,TS val 2061580576 ecr 2544398381], length 39
+22:35:00.655061 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 13395:13484, ack 5485, win 501, options [nop,nop,TS val 2544399641 ecr 2061580576], length 89
+22:35:00.655111 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 13485, win 10142, options [nop,nop,TS val 2061580579 ecr 2544399641], length 0
+22:35:00.655149 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 13484:14275, ack 5485, win 501, options [nop,nop,TS val 2544399641 ecr 2061580579], length 791
+22:35:00.655158 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 14276, win 10142, options [nop,nop,TS val 2061580579 ecr 2544399641], length 0
+22:35:00.655927 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 5523:5562, ack 14276, win 10142, options [nop,nop,TS val 2061580580 ecr 2544399641], length 39
+22:35:00.659609 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 14275:14342, ack 5524, win 501, options [nop,nop,TS val 2544399646 ecr 2061580580], length 67
+22:35:00.659663 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 14343, win 10142, options [nop,nop,TS val 2061580584 ecr 2544399646], length 0
+22:35:00.659699 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 14342:15145, ack 5524, win 501, options [nop,nop,TS val 2544399646 ecr 2061580584], length 803
+22:35:00.659708 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 15146, win 10142, options [nop,nop,TS val 2061580584 ecr 2544399646], length 0
+22:35:00.660659 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 5562:5603, ack 15146, win 10142, options [nop,nop,TS val 2061580585 ecr 2544399646], length 41
+22:35:00.660825 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 5603:6394, ack 15146, win 10142, options [nop,nop,TS val 2061580585 ecr 2544399646], length 791
+22:35:00.661083 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 6356, win 501, options [nop,nop,TS val 2544399647 ecr 2061580585], length 0
+22:35:00.666614 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 15145:15211, ack 6356, win 501, options [nop,nop,TS val 2544399653 ecr 2061580585], length 66
+22:35:00.666674 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 15212, win 10142, options [nop,nop,TS val 2061580591 ecr 2544399653], length 0
+22:35:00.666720 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 15211:16002, ack 6356, win 501, options [nop,nop,TS val 2544399653 ecr 2061580591], length 791
+22:35:00.666731 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 16003, win 10142, options [nop,nop,TS val 2061580591 ecr 2544399653], length 0
+22:35:00.667132 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 6394:6429, ack 16003, win 10142, options [nop,nop,TS val 2061580591 ecr 2544399653], length 35
+22:35:00.667486 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 6429:6468, ack 16003, win 10142, options [nop,nop,TS val 2061580591 ecr 2544399653], length 39
+22:35:00.667726 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 6430, win 501, options [nop,nop,TS val 2544399654 ecr 2061580591], length 0
+22:35:00.671852 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 16002:16069, ack 6430, win 501, options [nop,nop,TS val 2544399658 ecr 2061580591], length 67
+22:35:00.671922 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 16069:16872, ack 6430, win 501, options [nop,nop,TS val 2544399658 ecr 2061580591], length 803
+22:35:00.671967 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 16873, win 10142, options [nop,nop,TS val 2061580596 ecr 2544399658], length 0
+22:35:00.672543 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 6468:6509, ack 16873, win 10142, options [nop,nop,TS val 2061580596 ecr 2544399658], length 41
+22:35:00.672605 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 6509:7312, ack 16873, win 10142, options [nop,nop,TS val 2061580597 ecr 2544399658], length 803
+22:35:00.673025 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 7274, win 501, options [nop,nop,TS val 2544399659 ecr 2061580596], length 0
+22:35:00.678870 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 16872:16938, ack 7274, win 501, options [nop,nop,TS val 2544399665 ecr 2061580596], length 66
+22:35:00.679037 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 16938:17741, ack 7274, win 501, options [nop,nop,TS val 2544399665 ecr 2061580596], length 803
+22:35:00.679142 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 17742, win 10142, options [nop,nop,TS val 2061580603 ecr 2544399665], length 0
+22:35:00.848109 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:00.848116 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:00.848283 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:00.848351 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:01.088344 IP 10.244.0.162.27017 > 10.244.0.164.44992: Flags [P.], seq 2028519109:2028519413, ack 1464294290, win 501, options [nop,nop,TS val 3059980380 ecr 3720923036], length 304
+22:35:01.088391 IP 10.244.0.164.44992 > 10.244.0.162.27017: Flags [.], ack 304, win 2277, options [nop,nop,TS val 3720933053 ecr 3059980380], length 0
+22:35:01.088395 IP 10.244.0.164.44992 > 10.244.0.162.27017: Flags [.], ack 304, win 2277, options [nop,nop,TS val 3720933053 ecr 3059980380], length 0
+22:35:01.253392 IP nodemaster.52838 > 10.244.0.176.5000: Flags [S], seq 1597019026, win 64860, options [mss 1410,sackOK,TS val 1697638012 ecr 0,nop,wscale 7], length 0
+22:35:01.253468 IP 10.244.0.176.5000 > nodemaster.52838: Flags [S.], seq 1091387805, ack 1597019027, win 64308, options [mss 1410,sackOK,TS val 2973953885 ecr 1697638012,nop,wscale 7], length 0
+22:35:01.253495 IP nodemaster.52838 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697638012 ecr 2973953885], length 0
+22:35:01.253968 IP nodemaster.52838 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697638013 ecr 2973953885], length 104
+22:35:01.254022 IP 10.244.0.176.5000 > nodemaster.52838: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973953886 ecr 1697638013], length 0
+22:35:01.254671 IP 10.244.0.176.5000 > nodemaster.52838: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973953887 ecr 1697638013], length 1433
+22:35:01.254714 IP nodemaster.52838 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697638014 ecr 2973953887], length 0
+22:35:01.254895 IP 10.244.0.176.5000 > nodemaster.52838: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973953887 ecr 1697638014], length 0
+22:35:01.255135 IP nodemaster.52838 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697638014 ecr 2973953887], length 0
+22:35:01.255197 IP 10.244.0.176.5000 > nodemaster.52838: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973953887 ecr 1697638014], length 0
+22:35:01.817739 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 29
+22:35:01.817811 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 114
+22:35:02.020756 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:02.020764 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:02.020990 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:02.021104 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:02.045267 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [P.], seq 1448281107:1448281172, ack 4279021784, win 2252, options [nop,nop,TS val 3551610839 ecr 2431185396], length 65
+22:35:02.045275 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [P.], seq 0:65, ack 1, win 2252, options [nop,nop,TS val 3551610839 ecr 2431185396], length 65
+22:35:02.045374 IP 10.244.0.162.27017 > 10.244.0.171.53606: Flags [.], ack 65, win 501, options [nop,nop,TS val 2431195396 ecr 3551610839,nop,nop,sack 1 {0:65}], length 0
+22:35:02.045848 IP 10.244.0.162.27017 > 10.244.0.171.53606: Flags [P.], seq 1:305, ack 65, win 501, options [nop,nop,TS val 2431195397 ecr 3551610839], length 304
+22:35:02.045911 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [.], ack 305, win 2260, options [nop,nop,TS val 3551610840 ecr 2431195397], length 0
+22:35:02.045929 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [.], ack 305, win 2260, options [nop,nop,TS val 3551610840 ecr 2431195397], length 0
+22:35:02.140986 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 17741:17933, ack 7274, win 501, options [nop,nop,TS val 2544401127 ecr 2061580603], length 192
+22:35:02.181758 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 17934, win 10142, options [nop,nop,TS val 2061582106 ecr 2544401127], length 0
+22:35:02.252547 IP nodemaster.52854 > 10.244.0.176.5000: Flags [S], seq 697558506, win 64860, options [mss 1410,sackOK,TS val 1697639011 ecr 0,nop,wscale 7], length 0
+22:35:02.252547 IP nodemaster.52852 > 10.244.0.176.5000: Flags [S], seq 2600475043, win 64860, options [mss 1410,sackOK,TS val 1697639011 ecr 0,nop,wscale 7], length 0
+22:35:02.252614 IP 10.244.0.176.5000 > nodemaster.52852: Flags [S.], seq 1572575075, ack 2600475044, win 64308, options [mss 1410,sackOK,TS val 2973954885 ecr 1697639011,nop,wscale 7], length 0
+22:35:02.252615 IP 10.244.0.176.5000 > nodemaster.52854: Flags [S.], seq 2470527768, ack 697558507, win 64308, options [mss 1410,sackOK,TS val 2973954885 ecr 1697639011,nop,wscale 7], length 0
+22:35:02.252639 IP nodemaster.52854 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697639012 ecr 2973954885], length 0
+22:35:02.252650 IP nodemaster.52852 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697639012 ecr 2973954885], length 0
+22:35:02.253009 IP nodemaster.52854 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697639012 ecr 2973954885], length 104
+22:35:02.253046 IP 10.244.0.176.5000 > nodemaster.52854: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973954885 ecr 1697639012], length 0
+22:35:02.253079 IP nodemaster.52852 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697639012 ecr 2973954885], length 104
+22:35:02.253178 IP 10.244.0.176.5000 > nodemaster.52852: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973954885 ecr 1697639012], length 0
+22:35:02.253861 IP 10.244.0.176.5000 > nodemaster.52852: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973954886 ecr 1697639012], length 1433
+22:35:02.253902 IP nodemaster.52852 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697639013 ecr 2973954886], length 0
+22:35:02.254228 IP nodemaster.52852 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1434, win 502, options [nop,nop,TS val 1697639013 ecr 2973954886], length 0
+22:35:02.254321 IP 10.244.0.176.5000 > nodemaster.52854: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973954886 ecr 1697639012], length 1433
+22:35:02.254345 IP nodemaster.52854 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697639013 ecr 2973954886], length 0
+22:35:02.254449 IP 10.244.0.176.5000 > nodemaster.52852: Flags [F.], seq 1434, ack 106, win 502, options [nop,nop,TS val 2973954886 ecr 1697639013], length 0
+22:35:02.254492 IP nodemaster.52852 > 10.244.0.176.5000: Flags [.], ack 1435, win 502, options [nop,nop,TS val 1697639013 ecr 2973954886], length 0
+22:35:02.254499 IP 10.244.0.176.5000 > nodemaster.52854: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973954886 ecr 1697639013], length 0
+22:35:02.254581 IP nodemaster.52854 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697639014 ecr 2973954886], length 0
+22:35:02.254644 IP 10.244.0.176.5000 > nodemaster.52854: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973954887 ecr 1697639014], length 0
+22:35:02.681038 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 7312:7351, ack 17934, win 10142, options [nop,nop,TS val 2061582605 ecr 2544401127], length 39
+22:35:02.685362 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 17933:18022, ack 7313, win 501, options [nop,nop,TS val 2544401671 ecr 2061582605], length 89
+22:35:02.685451 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 18023, win 10142, options [nop,nop,TS val 2061582609 ecr 2544401671], length 0
+22:35:02.685527 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 18022:18813, ack 7313, win 501, options [nop,nop,TS val 2544401672 ecr 2061582609], length 791
+22:35:02.685619 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 18814, win 10142, options [nop,nop,TS val 2061582610 ecr 2544401672], length 0
+22:35:02.686536 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 7351:7390, ack 18814, win 10142, options [nop,nop,TS val 2061582610 ecr 2544401672], length 39
+22:35:02.690338 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 18813:18880, ack 7352, win 501, options [nop,nop,TS val 2544401676 ecr 2061582610], length 67
+22:35:02.690418 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 18881, win 10142, options [nop,nop,TS val 2061582614 ecr 2544401676], length 0
+22:35:02.690531 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 18880:19683, ack 7352, win 501, options [nop,nop,TS val 2544401677 ecr 2061582614], length 803
+22:35:02.690558 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 19684, win 10142, options [nop,nop,TS val 2061582615 ecr 2544401677], length 0
+22:35:02.691307 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 7390:7431, ack 19684, win 10142, options [nop,nop,TS val 2061582615 ecr 2544401677], length 41
+22:35:02.691370 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 7431:8222, ack 19684, win 10142, options [nop,nop,TS val 2061582615 ecr 2544401677], length 791
+22:35:02.691448 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 8184, win 501, options [nop,nop,TS val 2544401677 ecr 2061582615], length 0
+22:35:02.698519 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 19683:19749, ack 8184, win 501, options [nop,nop,TS val 2544401684 ecr 2061582615], length 66
+22:35:02.698591 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 19750, win 10142, options [nop,nop,TS val 2061582623 ecr 2544401684], length 0
+22:35:02.698684 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 19749:20540, ack 8184, win 501, options [nop,nop,TS val 2544401685 ecr 2061582623], length 791
+22:35:02.698727 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 20541, win 10142, options [nop,nop,TS val 2061582623 ecr 2544401685], length 0
+22:35:02.699453 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 8222:8261, ack 20541, win 10142, options [nop,nop,TS val 2061582623 ecr 2544401685], length 39
+22:35:02.703096 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 20540:20606, ack 8223, win 501, options [nop,nop,TS val 2544401689 ecr 2061582623], length 66
+22:35:02.703238 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 20606:21409, ack 8223, win 501, options [nop,nop,TS val 2544401689 ecr 2061582623], length 803
+22:35:02.703387 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 21410, win 10142, options [nop,nop,TS val 2061582627 ecr 2544401689], length 0
+22:35:02.703533 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 8261:8296, ack 21410, win 10142, options [nop,nop,TS val 2061582627 ecr 2544401689], length 35
+22:35:02.703990 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 8296:8337, ack 21410, win 10142, options [nop,nop,TS val 2061582628 ecr 2544401689], length 41
+22:35:02.704029 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 8337:9140, ack 21410, win 10142, options [nop,nop,TS val 2061582628 ecr 2544401689], length 803
+22:35:02.704083 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 9102, win 501, options [nop,nop,TS val 2544401690 ecr 2061582627], length 0
+22:35:02.705557 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 21409:21444, ack 9102, win 501, options [nop,nop,TS val 2544401691 ecr 2061582627], length 35
+22:35:02.710893 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 21444:21510, ack 9102, win 501, options [nop,nop,TS val 2544401697 ecr 2061582627], length 66
+22:35:02.710999 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 21511, win 10142, options [nop,nop,TS val 2061582635 ecr 2544401691], length 0
+22:35:02.711021 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 21510:22313, ack 9102, win 501, options [nop,nop,TS val 2544401697 ecr 2061582627], length 803
+22:35:02.755853 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 22314, win 10142, options [nop,nop,TS val 2061582680 ecr 2544401697], length 0
+22:35:03.026227 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:03.026235 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:03.026374 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:03.026438 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:03.252259 IP nodemaster.40352 > 10.244.0.176.5000: Flags [S], seq 3867353134, win 64860, options [mss 1410,sackOK,TS val 1697640011 ecr 0,nop,wscale 7], length 0
+22:35:03.252319 IP 10.244.0.176.5000 > nodemaster.40352: Flags [S.], seq 2997283007, ack 3867353135, win 64308, options [mss 1410,sackOK,TS val 2973955884 ecr 1697640011,nop,wscale 7], length 0
+22:35:03.252338 IP nodemaster.40352 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697640011 ecr 2973955884], length 0
+22:35:03.252737 IP nodemaster.40352 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697640012 ecr 2973955884], length 104
+22:35:03.252797 IP 10.244.0.176.5000 > nodemaster.40352: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973955885 ecr 1697640012], length 0
+22:35:03.253823 IP 10.244.0.176.5000 > nodemaster.40352: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973955886 ecr 1697640012], length 1433
+22:35:03.253856 IP nodemaster.40352 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697640013 ecr 2973955886], length 0
+22:35:03.254078 IP 10.244.0.176.5000 > nodemaster.40352: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973955886 ecr 1697640013], length 0
+22:35:03.254184 IP nodemaster.40352 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697640013 ecr 2973955886], length 0
+22:35:03.254270 IP 10.244.0.176.5000 > nodemaster.40352: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973955886 ecr 1697640013], length 0
+22:35:03.355130 IP 10.244.0.164.42636 > 10.244.0.162.27017: Flags [.], ack 1134284265, win 505, options [nop,nop,TS val 3720935320 ecr 3059967542], length 0
+22:35:03.355136 IP 10.244.0.164.42636 > 10.244.0.162.27017: Flags [.], ack 1, win 505, options [nop,nop,TS val 3720935320 ecr 3059967542], length 0
+22:35:03.355147 IP 10.244.0.164.42632 > 10.244.0.162.27017: Flags [.], ack 1514814112, win 505, options [nop,nop,TS val 3720935320 ecr 3059967542], length 0
+22:35:03.355151 IP 10.244.0.164.42632 > 10.244.0.162.27017: Flags [.], ack 1, win 505, options [nop,nop,TS val 3720935320 ecr 3059967542], length 0
+22:35:03.355198 IP 10.244.0.162.27017 > 10.244.0.164.42636: Flags [.], ack 1, win 501, options [nop,nop,TS val 3059982647 ecr 3720737431], length 0
+22:35:03.355205 IP 10.244.0.162.27017 > 10.244.0.164.42632: Flags [.], ack 1, win 501, options [nop,nop,TS val 3059982647 ecr 3720737431], length 0
+22:35:04.028029 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:04.028049 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:04.028249 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:04.028358 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:04.253136 IP nodemaster.40358 > 10.244.0.176.5000: Flags [S], seq 2565327320, win 64860, options [mss 1410,sackOK,TS val 1697641012 ecr 0,nop,wscale 7], length 0
+22:35:04.253279 IP 10.244.0.176.5000 > nodemaster.40358: Flags [S.], seq 873296772, ack 2565327321, win 64308, options [mss 1410,sackOK,TS val 2973956885 ecr 1697641012,nop,wscale 7], length 0
+22:35:04.253304 IP nodemaster.40358 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697641012 ecr 2973956885], length 0
+22:35:04.253809 IP nodemaster.40358 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697641013 ecr 2973956885], length 104
+22:35:04.253884 IP 10.244.0.176.5000 > nodemaster.40358: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973956886 ecr 1697641013], length 0
+22:35:04.254510 IP 10.244.0.176.5000 > nodemaster.40358: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973956886 ecr 1697641013], length 1433
+22:35:04.254548 IP nodemaster.40358 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697641014 ecr 2973956886], length 0
+22:35:04.254748 IP 10.244.0.176.5000 > nodemaster.40358: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973956887 ecr 1697641014], length 0
+22:35:04.254885 IP nodemaster.40358 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697641014 ecr 2973956887], length 0
+22:35:04.254976 IP 10.244.0.176.5000 > nodemaster.40358: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973956887 ecr 1697641014], length 0
+22:35:04.713108 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 9140:9179, ack 22314, win 10142, options [nop,nop,TS val 2061584637 ecr 2544401697], length 39
+22:35:04.718127 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 22313:22402, ack 9141, win 501, options [nop,nop,TS val 2544403704 ecr 2061584637], length 89
+22:35:04.718238 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 22403, win 10142, options [nop,nop,TS val 2061584642 ecr 2544403704], length 0
+22:35:04.718343 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 22402:23193, ack 9141, win 501, options [nop,nop,TS val 2544403704 ecr 2061584642], length 791
+22:35:04.718383 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 23194, win 10142, options [nop,nop,TS val 2061584642 ecr 2544403704], length 0
+22:35:04.719007 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 9179:9218, ack 23194, win 10142, options [nop,nop,TS val 2061584643 ecr 2544403704], length 39
+22:35:04.722813 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 23193:23260, ack 9180, win 501, options [nop,nop,TS val 2544403709 ecr 2061584643], length 67
+22:35:04.722881 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 23261, win 10142, options [nop,nop,TS val 2061584647 ecr 2544403709], length 0
+22:35:04.722960 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 23260:24063, ack 9180, win 501, options [nop,nop,TS val 2544403709 ecr 2061584647], length 803
+22:35:04.722994 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 24064, win 10142, options [nop,nop,TS val 2061584647 ecr 2544403709], length 0
+22:35:04.723710 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 9218:9259, ack 24064, win 10142, options [nop,nop,TS val 2061584648 ecr 2544403709], length 41
+22:35:04.723795 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 9259:10050, ack 24064, win 10142, options [nop,nop,TS val 2061584648 ecr 2544403709], length 791
+22:35:04.723842 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 10012, win 501, options [nop,nop,TS val 2544403710 ecr 2061584648], length 0
+22:35:04.731090 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 24063:24129, ack 10012, win 501, options [nop,nop,TS val 2544403717 ecr 2061584648], length 66
+22:35:04.731173 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 24130, win 10142, options [nop,nop,TS val 2061584655 ecr 2544403717], length 0
+22:35:04.731253 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 24129:24920, ack 10012, win 501, options [nop,nop,TS val 2544403717 ecr 2061584655], length 791
+22:35:04.731272 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 24921, win 10142, options [nop,nop,TS val 2061584655 ecr 2544403717], length 0
+22:35:04.732423 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 10050:10089, ack 24921, win 10142, options [nop,nop,TS val 2061584656 ecr 2544403717], length 39
+22:35:04.738940 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 24920:24985, ack 10051, win 501, options [nop,nop,TS val 2544403725 ecr 2061584656], length 65
+22:35:04.739003 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 24985:25788, ack 10051, win 501, options [nop,nop,TS val 2544403725 ecr 2061584656], length 803
+22:35:04.739148 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 25789, win 10142, options [nop,nop,TS val 2061584663 ecr 2544403725], length 0
+22:35:04.739389 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 10089:10124, ack 25789, win 10142, options [nop,nop,TS val 2061584663 ecr 2544403725], length 35
+22:35:04.739720 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 10124:10165, ack 25789, win 10142, options [nop,nop,TS val 2061584664 ecr 2544403725], length 41
+22:35:04.739752 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 10165:10968, ack 25789, win 10142, options [nop,nop,TS val 2061584664 ecr 2544403725], length 803
+22:35:04.739836 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 10930, win 501, options [nop,nop,TS val 2544403726 ecr 2061584663], length 0
+22:35:04.747135 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 25788:25855, ack 10930, win 501, options [nop,nop,TS val 2544403733 ecr 2061584663], length 67
+22:35:04.747253 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 25855:26658, ack 10930, win 501, options [nop,nop,TS val 2544403733 ecr 2061584663], length 803
+22:35:04.747316 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 26659, win 10142, options [nop,nop,TS val 2061584671 ecr 2544403733], length 0
+22:35:05.036255 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:05.036269 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:05.036406 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:05.036481 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:05.252814 IP nodemaster.40374 > 10.244.0.176.5000: Flags [S], seq 3651817149, win 64860, options [mss 1410,sackOK,TS val 1697642012 ecr 0,nop,wscale 7], length 0
+22:35:05.252880 IP 10.244.0.176.5000 > nodemaster.40374: Flags [S.], seq 1655944013, ack 3651817150, win 64308, options [mss 1410,sackOK,TS val 2973957885 ecr 1697642012,nop,wscale 7], length 0
+22:35:05.252902 IP nodemaster.40374 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697642012 ecr 2973957885], length 0
+22:35:05.253228 IP nodemaster.40374 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697642012 ecr 2973957885], length 104
+22:35:05.253265 IP 10.244.0.176.5000 > nodemaster.40374: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973957885 ecr 1697642012], length 0
+22:35:05.254105 IP 10.244.0.176.5000 > nodemaster.40374: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973957886 ecr 1697642012], length 1433
+22:35:05.254140 IP nodemaster.40374 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697642013 ecr 2973957886], length 0
+22:35:05.254292 IP 10.244.0.176.5000 > nodemaster.40374: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973957886 ecr 1697642013], length 0
+22:35:05.254475 IP nodemaster.40374 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697642013 ecr 2973957886], length 0
+22:35:05.254545 IP 10.244.0.176.5000 > nodemaster.40374: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973957886 ecr 1697642013], length 0
+22:35:05.657726 IP 10.244.0.162.27017 > 10.244.0.171.53600: Flags [P.], seq 304:608, ack 1, win 501, options [nop,nop,TS val 2431199009 ecr 3551604440], length 304
+22:35:05.657815 IP 10.244.0.171.53600 > 10.244.0.162.27017: Flags [.], ack 608, win 2260, options [nop,nop,TS val 3551614452 ecr 2431199009], length 0
+22:35:05.657835 IP 10.244.0.171.53600 > 10.244.0.162.27017: Flags [.], ack 608, win 2260, options [nop,nop,TS val 3551614452 ecr 2431199009], length 0
+22:35:05.726273 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2177, options [nop,nop,TS val 3747334485 ecr 2777584881], length 65
+22:35:05.726286 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2177, options [nop,nop,TS val 3747334485 ecr 2777584881], length 65
+22:35:05.726403 IP 10.244.0.162.27017 > 10.244.0.176.53760: Flags [.], ack 130, win 501, options [nop,nop,TS val 2777594880 ecr 3747334485], length 0
+22:35:05.726411 IP 10.244.0.162.27017 > 10.244.0.176.53760: Flags [.], ack 130, win 501, options [nop,nop,TS val 2777594880 ecr 3747334485,nop,nop,sack 1 {65:130}], length 0
+22:35:05.726795 IP 10.244.0.162.27017 > 10.244.0.176.53760: Flags [P.], seq 305:609, ack 130, win 501, options [nop,nop,TS val 2777594881 ecr 3747334485], length 304
+22:35:05.726865 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [.], ack 609, win 2185, options [nop,nop,TS val 3747334486 ecr 2777594881], length 0
+22:35:05.726871 IP 10.244.0.176.53760 > 10.244.0.162.27017: Flags [.], ack 609, win 2185, options [nop,nop,TS val 3747334486 ecr 2777594881], length 0
+22:35:05.969503 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2260, options [nop,nop,TS val 3468852899 ecr 2116590238], length 65
+22:35:05.969556 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2260, options [nop,nop,TS val 3468852899 ecr 2116590238], length 65
+22:35:05.969652 IP 10.244.0.162.27017 > 10.244.0.167.34704: Flags [.], ack 130, win 501, options [nop,nop,TS val 2116600238 ecr 3468852899], length 0
+22:35:05.969660 IP 10.244.0.162.27017 > 10.244.0.167.34704: Flags [.], ack 130, win 501, options [nop,nop,TS val 2116600238 ecr 3468852899,nop,nop,sack 1 {65:130}], length 0
+22:35:05.970043 IP 10.244.0.162.27017 > 10.244.0.167.34704: Flags [P.], seq 305:609, ack 130, win 501, options [nop,nop,TS val 2116600238 ecr 3468852899], length 304
+22:35:05.970107 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [.], ack 609, win 2269, options [nop,nop,TS val 3468852900 ecr 2116600238], length 0
+22:35:05.970113 IP 10.244.0.167.34704 > 10.244.0.162.27017: Flags [.], ack 609, win 2269, options [nop,nop,TS val 3468852900 ecr 2116600238], length 0
+22:35:06.039465 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:06.039472 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:06.039604 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:06.039679 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:06.253247 IP nodemaster.40388 > 10.244.0.176.5000: Flags [S], seq 406882494, win 64860, options [mss 1410,sackOK,TS val 1697643012 ecr 0,nop,wscale 7], length 0
+22:35:06.253374 IP 10.244.0.176.5000 > nodemaster.40388: Flags [S.], seq 2913177812, ack 406882495, win 64308, options [mss 1410,sackOK,TS val 2973958885 ecr 1697643012,nop,wscale 7], length 0
+22:35:06.253416 IP nodemaster.40388 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697643012 ecr 2973958885], length 0
+22:35:06.253807 IP nodemaster.40388 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697643013 ecr 2973958885], length 104
+22:35:06.253868 IP 10.244.0.176.5000 > nodemaster.40388: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973958886 ecr 1697643013], length 0
+22:35:06.254619 IP 10.244.0.176.5000 > nodemaster.40388: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973958887 ecr 1697643013], length 1433
+22:35:06.254639 IP nodemaster.40388 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697643014 ecr 2973958887], length 0
+22:35:06.254785 IP 10.244.0.176.5000 > nodemaster.40388: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973958887 ecr 1697643014], length 0
+22:35:06.255249 IP nodemaster.40388 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697643014 ecr 2973958887], length 0
+22:35:06.255321 IP 10.244.0.176.5000 > nodemaster.40388: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973958887 ecr 1697643014], length 0
+22:35:06.451284 IP 10.96.0.1.https > 10.244.0.160.56398: Flags [P.], seq 204:400, ack 1, win 9693, options [nop,nop,TS val 4071875041 ecr 1928911691], length 196
+22:35:06.451392 IP 10.244.0.160.56398 > nodemaster.6443: Flags [.], ack 296, win 3847, options [nop,nop,TS val 1928921266 ecr 4071875041], length 0
+22:35:06.510191 IP nodemaster.40654 > 10.244.0.158.8585: Flags [S], seq 1552523426, win 64860, options [mss 1410,sackOK,TS val 4205042781 ecr 0,nop,wscale 7], length 0
+22:35:06.510268 IP 10.244.0.158.8585 > nodemaster.40654: Flags [S.], seq 949853550, ack 1552523427, win 64308, options [mss 1410,sackOK,TS val 652995422 ecr 4205042781,nop,wscale 7], length 0
+22:35:06.510309 IP nodemaster.40654 > 10.244.0.158.8585: Flags [.], ack 1, win 507, options [nop,nop,TS val 4205042781 ecr 652995422], length 0
+22:35:06.510785 IP nodemaster.40654 > 10.244.0.158.8585: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 4205042782 ecr 652995422], length 110
+22:35:06.510869 IP 10.244.0.158.8585 > nodemaster.40654: Flags [.], ack 111, win 502, options [nop,nop,TS val 652995423 ecr 4205042782], length 0
+22:35:06.511300 IP 10.244.0.158.8585 > nodemaster.40654: Flags [P.], seq 1:171, ack 111, win 502, options [nop,nop,TS val 652995423 ecr 4205042782], length 170
+22:35:06.511337 IP nodemaster.40654 > 10.244.0.158.8585: Flags [.], ack 171, win 506, options [nop,nop,TS val 4205042782 ecr 652995423], length 0
+22:35:06.511590 IP 10.244.0.158.8585 > nodemaster.40654: Flags [F.], seq 171, ack 111, win 502, options [nop,nop,TS val 652995424 ecr 4205042782], length 0
+22:35:06.511672 IP nodemaster.40654 > 10.244.0.158.8585: Flags [F.], seq 111, ack 172, win 506, options [nop,nop,TS val 4205042783 ecr 652995424], length 0
+22:35:06.511768 IP 10.244.0.158.8585 > nodemaster.40654: Flags [.], ack 112, win 502, options [nop,nop,TS val 652995424 ecr 4205042783], length 0
+22:35:06.751454 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 10968:11007, ack 26659, win 10142, options [nop,nop,TS val 2061586675 ecr 2544403733], length 39
+22:35:06.757212 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 26658:26747, ack 10969, win 501, options [nop,nop,TS val 2544405743 ecr 2061586675], length 89
+22:35:06.757430 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 26747:27538, ack 10969, win 501, options [nop,nop,TS val 2544405743 ecr 2061586675], length 791
+22:35:06.757729 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 27539, win 10142, options [nop,nop,TS val 2061586682 ecr 2544405743], length 0
+22:35:06.758521 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11007:11046, ack 27539, win 10142, options [nop,nop,TS val 2061586682 ecr 2544405743], length 39
+22:35:06.762528 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 27538:27605, ack 11008, win 501, options [nop,nop,TS val 2544405749 ecr 2061586682], length 67
+22:35:06.762611 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 27605:28408, ack 11008, win 501, options [nop,nop,TS val 2544405749 ecr 2061586682], length 803
+22:35:06.762707 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 28409, win 10142, options [nop,nop,TS val 2061586687 ecr 2544405749], length 0
+22:35:06.763591 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11046:11087, ack 28409, win 10142, options [nop,nop,TS val 2061586688 ecr 2544405749], length 41
+22:35:06.763679 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11087:11878, ack 28409, win 10142, options [nop,nop,TS val 2061586688 ecr 2544405749], length 791
+22:35:06.763744 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 11840, win 501, options [nop,nop,TS val 2544405750 ecr 2061586688], length 0
+22:35:06.772271 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 28408:28474, ack 11840, win 501, options [nop,nop,TS val 2544405758 ecr 2061586688], length 66
+22:35:06.772395 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 28474:29265, ack 11840, win 501, options [nop,nop,TS val 2544405758 ecr 2061586688], length 791
+22:35:06.772472 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 29266, win 10142, options [nop,nop,TS val 2061586696 ecr 2544405758], length 0
+22:35:06.773346 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11878:11917, ack 29266, win 10142, options [nop,nop,TS val 2061586697 ecr 2544405758], length 39
+22:35:06.777065 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 29265:29331, ack 11879, win 501, options [nop,nop,TS val 2544405763 ecr 2061586697], length 66
+22:35:06.777202 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 29331:30134, ack 11879, win 501, options [nop,nop,TS val 2544405763 ecr 2061586697], length 803
+22:35:06.777293 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 30135, win 10142, options [nop,nop,TS val 2061586701 ecr 2544405763], length 0
+22:35:06.778107 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11917:11958, ack 30135, win 10142, options [nop,nop,TS val 2061586702 ecr 2544405763], length 41
+22:35:06.778174 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 11958:12761, ack 30135, win 10142, options [nop,nop,TS val 2061586702 ecr 2544405763], length 803
+22:35:06.778223 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 12723, win 501, options [nop,nop,TS val 2544405764 ecr 2061586702], length 0
+22:35:06.785923 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 30134:30199, ack 12723, win 501, options [nop,nop,TS val 2544405772 ecr 2061586702], length 65
+22:35:06.786068 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 30199:31002, ack 12723, win 501, options [nop,nop,TS val 2544405772 ecr 2061586702], length 803
+22:35:06.786249 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 31003, win 10142, options [nop,nop,TS val 2061586710 ecr 2544405772], length 0
+22:35:06.786403 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 12761:12796, ack 31003, win 10142, options [nop,nop,TS val 2061586710 ecr 2544405772], length 35
+22:35:06.829696 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 12758, win 501, options [nop,nop,TS val 2544405816 ecr 2061586710], length 0
+22:35:07.043681 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:07.043688 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:07.043864 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:07.043975 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:07.252415 IP nodemaster.40396 > 10.244.0.176.5000: Flags [S], seq 1390840229, win 64860, options [mss 1410,sackOK,TS val 1697644011 ecr 0,nop,wscale 7], length 0
+22:35:07.252503 IP 10.244.0.176.5000 > nodemaster.40396: Flags [S.], seq 2524250357, ack 1390840230, win 64308, options [mss 1410,sackOK,TS val 2973959884 ecr 1697644011,nop,wscale 7], length 0
+22:35:07.252543 IP nodemaster.40396 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697644012 ecr 2973959884], length 0
+22:35:07.252897 IP nodemaster.40396 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697644012 ecr 2973959884], length 104
+22:35:07.252987 IP 10.244.0.176.5000 > nodemaster.40396: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973959885 ecr 1697644012], length 0
+22:35:07.253731 IP 10.244.0.176.5000 > nodemaster.40396: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973959886 ecr 1697644012], length 1433
+22:35:07.253771 IP nodemaster.40396 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697644013 ecr 2973959886], length 0
+22:35:07.253995 IP 10.244.0.176.5000 > nodemaster.40396: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973959886 ecr 1697644013], length 0
+22:35:07.254127 IP nodemaster.40396 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697644013 ecr 2973959886], length 0
+22:35:07.254210 IP 10.244.0.176.5000 > nodemaster.40396: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973959886 ecr 1697644013], length 0
+22:35:07.595873 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2277, options [nop,nop,TS val 3720939561 ecr 3059976889], length 65
+22:35:07.595884 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2277, options [nop,nop,TS val 3720939561 ecr 3059976889], length 65
+22:35:07.595928 IP 10.244.0.162.27017 > 10.244.0.164.44990: Flags [.], ack 130, win 501, options [nop,nop,TS val 3059986888 ecr 3720939561], length 0
+22:35:07.595931 IP 10.244.0.162.27017 > 10.244.0.164.44990: Flags [.], ack 130, win 501, options [nop,nop,TS val 3059986888 ecr 3720939561,nop,nop,sack 1 {65:130}], length 0
+22:35:07.596152 IP 10.244.0.162.27017 > 10.244.0.164.44990: Flags [P.], seq 305:609, ack 130, win 501, options [nop,nop,TS val 3059986888 ecr 3720939561], length 304
+22:35:07.596182 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [.], ack 609, win 2285, options [nop,nop,TS val 3720939561 ecr 3059986888], length 0
+22:35:07.596185 IP 10.244.0.164.44990 > 10.244.0.162.27017: Flags [.], ack 609, win 2285, options [nop,nop,TS val 3720939561 ecr 3059986888], length 0
+22:35:08.046053 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:08.046062 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:08.046324 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:08.046415 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:08.252870 IP nodemaster.40404 > 10.244.0.176.5000: Flags [S], seq 359718859, win 64860, options [mss 1410,sackOK,TS val 1697645012 ecr 0,nop,wscale 7], length 0
+22:35:08.252943 IP 10.244.0.176.5000 > nodemaster.40404: Flags [S.], seq 998606306, ack 359718860, win 64308, options [mss 1410,sackOK,TS val 2973960885 ecr 1697645012,nop,wscale 7], length 0
+22:35:08.252969 IP nodemaster.40404 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697645012 ecr 2973960885], length 0
+22:35:08.253295 IP nodemaster.40404 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697645012 ecr 2973960885], length 104
+22:35:08.253340 IP 10.244.0.176.5000 > nodemaster.40404: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973960885 ecr 1697645012], length 0
+22:35:08.254188 IP 10.244.0.176.5000 > nodemaster.40404: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973960886 ecr 1697645012], length 1433
+22:35:08.254222 IP nodemaster.40404 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697645013 ecr 2973960886], length 0
+22:35:08.254467 IP nodemaster.40404 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1434, win 502, options [nop,nop,TS val 1697645013 ecr 2973960886], length 0
+22:35:08.254940 IP 10.244.0.176.5000 > nodemaster.40404: Flags [F.], seq 1434, ack 106, win 502, options [nop,nop,TS val 2973960887 ecr 1697645013], length 0
+22:35:08.254977 IP nodemaster.40404 > 10.244.0.176.5000: Flags [.], ack 1435, win 502, options [nop,nop,TS val 1697645014 ecr 2973960887], length 0
+22:35:08.593592 IP 10.96.0.1.https > 10.244.0.160.56398: Flags [P.], seq 400:583, ack 1, win 9693, options [nop,nop,TS val 4071877184 ecr 1928921266], length 183
+22:35:08.593654 IP 10.244.0.160.56398 > nodemaster.6443: Flags [.], ack 479, win 3846, options [nop,nop,TS val 1928923409 ecr 4071877184], length 0
+22:35:08.788273 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 12796:12835, ack 31003, win 10142, options [nop,nop,TS val 2061588712 ecr 2544405816], length 39
+22:35:08.788337 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 12797, win 501, options [nop,nop,TS val 2544407774 ecr 2061588712], length 0
+22:35:08.792418 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 31002:31095, ack 12797, win 501, options [nop,nop,TS val 2544407778 ecr 2061588712], length 93
+22:35:08.792560 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 31095:31886, ack 12797, win 501, options [nop,nop,TS val 2544407779 ecr 2061588712], length 791
+22:35:08.792675 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 31887, win 10142, options [nop,nop,TS val 2061588717 ecr 2544407778], length 0
+22:35:08.793740 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 12835:12874, ack 31887, win 10142, options [nop,nop,TS val 2061588718 ecr 2544407778], length 39
+22:35:08.793773 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 12836, win 501, options [nop,nop,TS val 2544407780 ecr 2061588718], length 0
+22:35:08.798135 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 31886:31957, ack 12836, win 501, options [nop,nop,TS val 2544407784 ecr 2061588718], length 71
+22:35:08.798280 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 31957:32760, ack 12836, win 501, options [nop,nop,TS val 2544407784 ecr 2061588718], length 803
+22:35:08.798476 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 32761, win 10142, options [nop,nop,TS val 2061588722 ecr 2544407784], length 0
+22:35:08.799156 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 12874:12915, ack 32761, win 10142, options [nop,nop,TS val 2061588723 ecr 2544407784], length 41
+22:35:08.799168 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 12877, win 501, options [nop,nop,TS val 2544407785 ecr 2061588723], length 0
+22:35:08.799283 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 12915:13706, ack 32761, win 10142, options [nop,nop,TS val 2061588723 ecr 2544407785], length 791
+22:35:08.799309 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 13668, win 501, options [nop,nop,TS val 2544407785 ecr 2061588723], length 0
+22:35:08.808460 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 32760:32827, ack 13668, win 501, options [nop,nop,TS val 2544407794 ecr 2061588723], length 67
+22:35:08.808669 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 32827:33618, ack 13668, win 501, options [nop,nop,TS val 2544407795 ecr 2061588723], length 791
+22:35:08.808867 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 33619, win 10142, options [nop,nop,TS val 2061588733 ecr 2544407794], length 0
+22:35:08.809587 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 13706:13745, ack 33619, win 10142, options [nop,nop,TS val 2061588733 ecr 2544407794], length 39
+22:35:08.809603 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 13707, win 501, options [nop,nop,TS val 2544407796 ecr 2061588733], length 0
+22:35:08.813111 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 33618:33684, ack 13707, win 501, options [nop,nop,TS val 2544407799 ecr 2061588733], length 66
+22:35:08.813315 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 33684:34487, ack 13707, win 501, options [nop,nop,TS val 2544407799 ecr 2061588733], length 803
+22:35:08.813539 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 34488, win 10142, options [nop,nop,TS val 2061588737 ecr 2544407799], length 0
+22:35:08.814327 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 13745:13786, ack 34488, win 10142, options [nop,nop,TS val 2061588738 ecr 2544407799], length 41
+22:35:08.814414 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 13786:14589, ack 34488, win 10142, options [nop,nop,TS val 2061588738 ecr 2544407799], length 803
+22:35:08.814658 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 14551, win 501, options [nop,nop,TS val 2544407801 ecr 2061588738], length 0
+22:35:08.815610 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 34487:34522, ack 14551, win 501, options [nop,nop,TS val 2544407802 ecr 2061588738], length 35
+22:35:08.821401 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 34522:34588, ack 14551, win 501, options [nop,nop,TS val 2544407807 ecr 2061588738], length 66
+22:35:08.821621 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 34588:35391, ack 14551, win 501, options [nop,nop,TS val 2544407808 ecr 2061588738], length 803
+22:35:08.821639 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 34589, win 10142, options [nop,nop,TS val 2061588746 ecr 2544407802], length 0
+22:35:08.821947 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 14589:14624, ack 35392, win 10142, options [nop,nop,TS val 2061588746 ecr 2544407808], length 35
+22:35:08.866745 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 14586, win 501, options [nop,nop,TS val 2544407853 ecr 2061588746], length 0
+22:35:09.049129 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:09.049138 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:09.049359 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:09.049489 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:09.177844 IP 10.244.0.162.27017 > 10.244.0.176.53762: Flags [P.], seq 304:608, ack 1, win 501, options [nop,nop,TS val 2777598332 ecr 3747327930], length 304
+22:35:09.177933 IP 10.244.0.176.53762 > 10.244.0.162.27017: Flags [.], ack 608, win 2185, options [nop,nop,TS val 3747337937 ecr 2777598332], length 0
+22:35:09.177938 IP 10.244.0.176.53762 > 10.244.0.162.27017: Flags [.], ack 608, win 2185, options [nop,nop,TS val 3747337937 ecr 2777598332], length 0
+22:35:09.253128 IP nodemaster.40416 > 10.244.0.176.5000: Flags [S], seq 3057766257, win 64860, options [mss 1410,sackOK,TS val 1697646012 ecr 0,nop,wscale 7], length 0
+22:35:09.253270 IP 10.244.0.176.5000 > nodemaster.40416: Flags [S.], seq 2563120453, ack 3057766258, win 64308, options [mss 1410,sackOK,TS val 2973961885 ecr 1697646012,nop,wscale 7], length 0
+22:35:09.253312 IP nodemaster.40416 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697646012 ecr 2973961885], length 0
+22:35:09.253866 IP nodemaster.40416 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697646013 ecr 2973961885], length 104
+22:35:09.253923 IP 10.244.0.176.5000 > nodemaster.40416: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973961886 ecr 1697646013], length 0
+22:35:09.254635 IP 10.244.0.176.5000 > nodemaster.40416: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973961887 ecr 1697646013], length 1433
+22:35:09.254656 IP nodemaster.40416 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697646014 ecr 2973961887], length 0
+22:35:09.254764 IP 10.244.0.176.5000 > nodemaster.40416: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973961887 ecr 1697646014], length 0
+22:35:09.254961 IP nodemaster.40416 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697646014 ecr 2973961887], length 0
+22:35:09.255033 IP 10.244.0.176.5000 > nodemaster.40416: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973961887 ecr 1697646014], length 0
+22:35:09.583221 IP 10.244.0.162.27017 > 10.244.0.167.34712: Flags [P.], seq 304:608, ack 1, win 501, options [nop,nop,TS val 2116603851 ecr 3468846496], length 304
+22:35:09.583275 IP 10.244.0.167.34712 > 10.244.0.162.27017: Flags [.], ack 608, win 2269, options [nop,nop,TS val 3468856513 ecr 2116603851], length 0
+22:35:09.583278 IP 10.244.0.167.34712 > 10.244.0.162.27017: Flags [.], ack 608, win 2269, options [nop,nop,TS val 3468856513 ecr 2116603851], length 0
+22:35:09.918114 IP nodemaster.35332 > 10.244.0.156.8181: Flags [S], seq 1223820711, win 64860, options [mss 1410,sackOK,TS val 3193735924 ecr 0,nop,wscale 7], length 0
+22:35:09.918184 IP nodemaster.48482 > 10.244.0.156.http-alt: Flags [S], seq 169574630, win 64860, options [mss 1410,sackOK,TS val 3193735924 ecr 0,nop,wscale 7], length 0
+22:35:09.918188 IP 10.244.0.156.8181 > nodemaster.35332: Flags [S.], seq 1672477113, ack 1223820712, win 64308, options [mss 1410,sackOK,TS val 478355249 ecr 3193735924,nop,wscale 7], length 0
+22:35:09.918223 IP nodemaster.35332 > 10.244.0.156.8181: Flags [.], ack 1, win 507, options [nop,nop,TS val 3193735924 ecr 478355249], length 0
+22:35:09.918246 IP 10.244.0.156.http-alt > nodemaster.48482: Flags [S.], seq 3269922813, ack 169574631, win 64308, options [mss 1410,sackOK,TS val 478355249 ecr 3193735924,nop,wscale 7], length 0
+22:35:09.918272 IP nodemaster.48482 > 10.244.0.156.http-alt: Flags [.], ack 1, win 507, options [nop,nop,TS val 3193735924 ecr 478355249], length 0
+22:35:09.918469 IP nodemaster.35332 > 10.244.0.156.8181: Flags [P.], seq 1:110, ack 1, win 507, options [nop,nop,TS val 3193735924 ecr 478355249], length 109
+22:35:09.918490 IP 10.244.0.156.8181 > nodemaster.35332: Flags [.], ack 110, win 502, options [nop,nop,TS val 478355249 ecr 3193735924], length 0
+22:35:09.918536 IP nodemaster.48482 > 10.244.0.156.http-alt: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 3193735925 ecr 478355249], length 110: HTTP: GET /health HTTP/1.1
+22:35:09.918574 IP 10.244.0.156.http-alt > nodemaster.48482: Flags [.], ack 111, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 0
+22:35:09.918987 IP 10.244.0.156.http-alt > nodemaster.48482: Flags [P.], seq 1:138, ack 111, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 137: HTTP: HTTP/1.1 200 OK
+22:35:09.919005 IP 10.244.0.156.8181 > nodemaster.35332: Flags [P.], seq 1:138, ack 110, win 502, options [nop,nop,TS val 478355250 ecr 3193735924], length 137
+22:35:09.919017 IP nodemaster.48482 > 10.244.0.156.http-alt: Flags [.], ack 138, win 506, options [nop,nop,TS val 3193735925 ecr 478355250], length 0
+22:35:09.919040 IP nodemaster.35332 > 10.244.0.156.8181: Flags [.], ack 138, win 506, options [nop,nop,TS val 3193735925 ecr 478355250], length 0
+22:35:09.919112 IP 10.244.0.156.http-alt > nodemaster.48482: Flags [F.], seq 138, ack 111, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 0
+22:35:09.919164 IP 10.244.0.156.8181 > nodemaster.35332: Flags [F.], seq 138, ack 110, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 0
+22:35:09.919321 IP nodemaster.48482 > 10.244.0.156.http-alt: Flags [F.], seq 111, ack 139, win 506, options [nop,nop,TS val 3193735925 ecr 478355250], length 0
+22:35:09.919367 IP nodemaster.35332 > 10.244.0.156.8181: Flags [F.], seq 110, ack 139, win 506, options [nop,nop,TS val 3193735925 ecr 478355250], length 0
+22:35:09.919374 IP 10.244.0.156.http-alt > nodemaster.48482: Flags [.], ack 112, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 0
+22:35:09.919433 IP 10.244.0.156.8181 > nodemaster.35332: Flags [.], ack 111, win 502, options [nop,nop,TS val 478355250 ecr 3193735925], length 0
+22:35:10.054108 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:10.054115 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:10.054215 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:10.054263 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:10.195969 IP nodemaster.51772 > 10.244.0.157.8181: Flags [S], seq 4068772197, win 64860, options [mss 1410,sackOK,TS val 2362526302 ecr 0,nop,wscale 7], length 0
+22:35:10.195974 IP nodemaster.42888 > 10.244.0.157.http-alt: Flags [S], seq 1435788685, win 64860, options [mss 1410,sackOK,TS val 2362526302 ecr 0,nop,wscale 7], length 0
+22:35:10.196030 IP 10.244.0.157.8181 > nodemaster.51772: Flags [S.], seq 187010164, ack 4068772198, win 64308, options [mss 1410,sackOK,TS val 1017844185 ecr 2362526302,nop,wscale 7], length 0
+22:35:10.196042 IP 10.244.0.157.http-alt > nodemaster.42888: Flags [S.], seq 4039075323, ack 1435788686, win 64308, options [mss 1410,sackOK,TS val 1017844185 ecr 2362526302,nop,wscale 7], length 0
+22:35:10.196063 IP nodemaster.51772 > 10.244.0.157.8181: Flags [.], ack 1, win 507, options [nop,nop,TS val 2362526302 ecr 1017844185], length 0
+22:35:10.196081 IP nodemaster.42888 > 10.244.0.157.http-alt: Flags [.], ack 1, win 507, options [nop,nop,TS val 2362526302 ecr 1017844185], length 0
+22:35:10.196362 IP nodemaster.42888 > 10.244.0.157.http-alt: Flags [P.], seq 1:111, ack 1, win 507, options [nop,nop,TS val 2362526302 ecr 1017844185], length 110: HTTP: GET /health HTTP/1.1
+22:35:10.196362 IP nodemaster.51772 > 10.244.0.157.8181: Flags [P.], seq 1:110, ack 1, win 507, options [nop,nop,TS val 2362526302 ecr 1017844185], length 109
+22:35:10.196387 IP 10.244.0.157.http-alt > nodemaster.42888: Flags [.], ack 111, win 502, options [nop,nop,TS val 1017844185 ecr 2362526302], length 0
+22:35:10.196387 IP 10.244.0.157.8181 > nodemaster.51772: Flags [.], ack 110, win 502, options [nop,nop,TS val 1017844185 ecr 2362526302], length 0
+22:35:10.196745 IP 10.244.0.157.8181 > nodemaster.51772: Flags [P.], seq 1:138, ack 110, win 502, options [nop,nop,TS val 1017844186 ecr 2362526302], length 137
+22:35:10.196762 IP 10.244.0.157.http-alt > nodemaster.42888: Flags [P.], seq 1:138, ack 111, win 502, options [nop,nop,TS val 1017844186 ecr 2362526302], length 137: HTTP: HTTP/1.1 200 OK
+22:35:10.196768 IP nodemaster.51772 > 10.244.0.157.8181: Flags [.], ack 138, win 506, options [nop,nop,TS val 2362526303 ecr 1017844186], length 0
+22:35:10.196784 IP nodemaster.42888 > 10.244.0.157.http-alt: Flags [.], ack 138, win 506, options [nop,nop,TS val 2362526303 ecr 1017844186], length 0
+22:35:10.196891 IP 10.244.0.157.8181 > nodemaster.51772: Flags [F.], seq 138, ack 110, win 502, options [nop,nop,TS val 1017844186 ecr 2362526303], length 0
+22:35:10.196906 IP 10.244.0.157.http-alt > nodemaster.42888: Flags [F.], seq 138, ack 111, win 502, options [nop,nop,TS val 1017844186 ecr 2362526303], length 0
+22:35:10.197062 IP nodemaster.42888 > 10.244.0.157.http-alt: Flags [F.], seq 111, ack 139, win 506, options [nop,nop,TS val 2362526303 ecr 1017844186], length 0
+22:35:10.197167 IP 10.244.0.157.http-alt > nodemaster.42888: Flags [.], ack 112, win 502, options [nop,nop,TS val 1017844186 ecr 2362526303], length 0
+22:35:10.197326 IP nodemaster.51772 > 10.244.0.157.8181: Flags [F.], seq 110, ack 139, win 506, options [nop,nop,TS val 2362526303 ecr 1017844186], length 0
+22:35:10.197388 IP 10.244.0.157.8181 > nodemaster.51772: Flags [.], ack 111, win 502, options [nop,nop,TS val 1017844186 ecr 2362526303], length 0
+22:35:10.253063 IP nodemaster.40432 > 10.244.0.176.5000: Flags [S], seq 606987574, win 64860, options [mss 1410,sackOK,TS val 1697647012 ecr 0,nop,wscale 7], length 0
+22:35:10.253155 IP 10.244.0.176.5000 > nodemaster.40432: Flags [S.], seq 3817921025, ack 606987575, win 64308, options [mss 1410,sackOK,TS val 2973962885 ecr 1697647012,nop,wscale 7], length 0
+22:35:10.253268 IP nodemaster.40432 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697647012 ecr 2973962885], length 0
+22:35:10.253725 IP nodemaster.40432 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697647013 ecr 2973962885], length 104
+22:35:10.253754 IP 10.244.0.176.5000 > nodemaster.40432: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973962886 ecr 1697647013], length 0
+22:35:10.254679 IP 10.244.0.176.5000 > nodemaster.40432: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973962887 ecr 1697647013], length 1433
+22:35:10.254717 IP nodemaster.40432 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697647014 ecr 2973962887], length 0
+22:35:10.254883 IP 10.244.0.176.5000 > nodemaster.40432: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973962887 ecr 1697647014], length 0
+22:35:10.255167 IP nodemaster.40432 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697647014 ecr 2973962887], length 0
+22:35:10.255229 IP 10.244.0.176.5000 > nodemaster.40432: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973962887 ecr 1697647014], length 0
+22:35:10.827486 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 14624:14663, ack 35392, win 10142, options [nop,nop,TS val 2061590751 ecr 2544407853], length 39
+22:35:10.827545 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 14625, win 501, options [nop,nop,TS val 2544409813 ecr 2061590751], length 0
+22:35:10.832444 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 35391:35480, ack 14625, win 501, options [nop,nop,TS val 2544409818 ecr 2061590751], length 89
+22:35:10.832608 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 35480:36271, ack 14625, win 501, options [nop,nop,TS val 2544409819 ecr 2061590751], length 791
+22:35:10.832810 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 36272, win 10142, options [nop,nop,TS val 2061590757 ecr 2544409818], length 0
+22:35:10.833601 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 14663:14702, ack 36272, win 10142, options [nop,nop,TS val 2061590758 ecr 2544409818], length 39
+22:35:10.833618 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 14664, win 501, options [nop,nop,TS val 2544409820 ecr 2061590758], length 0
+22:35:10.838020 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 36271:36338, ack 14664, win 501, options [nop,nop,TS val 2544409824 ecr 2061590758], length 67
+22:35:10.838159 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 36338:37141, ack 14664, win 501, options [nop,nop,TS val 2544409824 ecr 2061590758], length 803
+22:35:10.838298 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 37142, win 10142, options [nop,nop,TS val 2061590762 ecr 2544409824], length 0
+22:35:10.839303 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 14702:14743, ack 37142, win 10142, options [nop,nop,TS val 2061590763 ecr 2544409824], length 41
+22:35:10.839329 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 14705, win 501, options [nop,nop,TS val 2544409825 ecr 2061590763], length 0
+22:35:10.839417 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 14743:15534, ack 37142, win 10142, options [nop,nop,TS val 2061590763 ecr 2544409825], length 791
+22:35:10.839425 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 15496, win 501, options [nop,nop,TS val 2544409825 ecr 2061590763], length 0
+22:35:10.847490 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 37141:37207, ack 15496, win 501, options [nop,nop,TS val 2544409833 ecr 2061590763], length 66
+22:35:10.847613 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 37207:37998, ack 15496, win 501, options [nop,nop,TS val 2544409834 ecr 2061590763], length 791
+22:35:10.847744 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 37999, win 10142, options [nop,nop,TS val 2061590772 ecr 2544409833], length 0
+22:35:10.848079 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 15534:15573, ack 37999, win 10142, options [nop,nop,TS val 2061590772 ecr 2544409833], length 39
+22:35:10.848086 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 15535, win 501, options [nop,nop,TS val 2544409834 ecr 2061590772], length 0
+22:35:10.851791 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 37998:38064, ack 15535, win 501, options [nop,nop,TS val 2544409838 ecr 2061590772], length 66
+22:35:10.851896 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 38064:38867, ack 15535, win 501, options [nop,nop,TS val 2544409838 ecr 2061590772], length 803
+22:35:10.851956 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 38868, win 10142, options [nop,nop,TS val 2061590776 ecr 2544409838], length 0
+22:35:10.852769 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 15573:15614, ack 38868, win 10142, options [nop,nop,TS val 2061590777 ecr 2544409838], length 41
+22:35:10.852782 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 15576, win 501, options [nop,nop,TS val 2544409839 ecr 2061590777], length 0
+22:35:10.852855 IP 10.244.0.159.55204 > nodemaster.6443: Flags [P.], seq 15614:16417, ack 38868, win 10142, options [nop,nop,TS val 2061590777 ecr 2544409839], length 803
+22:35:10.852862 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [.], ack 16379, win 501, options [nop,nop,TS val 2544409839 ecr 2061590777], length 0
+22:35:10.859827 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 38867:38933, ack 16379, win 501, options [nop,nop,TS val 2544409846 ecr 2061590777], length 66
+22:35:10.859960 IP 10.96.0.1.https > 10.244.0.159.55204: Flags [P.], seq 38933:39736, ack 16379, win 501, options [nop,nop,TS val 2544409846 ecr 2061590777], length 803
+22:35:10.860156 IP 10.244.0.159.55204 > nodemaster.6443: Flags [.], ack 39737, win 10142, options [nop,nop,TS val 2061590784 ecr 2544409846], length 0
+22:35:11.057747 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:11.057765 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:11.057955 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:11.058049 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:11.098236 IP 10.244.0.162.27017 > 10.244.0.164.44992: Flags [P.], seq 304:608, ack 1, win 501, options [nop,nop,TS val 3059990390 ecr 3720933053], length 304
+22:35:11.098294 IP 10.244.0.164.44992 > 10.244.0.162.27017: Flags [.], ack 608, win 2285, options [nop,nop,TS val 3720943063 ecr 3059990390], length 0
+22:35:11.098297 IP 10.244.0.164.44992 > 10.244.0.162.27017: Flags [.], ack 608, win 2285, options [nop,nop,TS val 3720943063 ecr 3059990390], length 0
+22:35:11.252294 IP nodemaster.40436 > 10.244.0.176.5000: Flags [S], seq 39071657, win 64860, options [mss 1410,sackOK,TS val 1697648011 ecr 0,nop,wscale 7], length 0
+22:35:11.252382 IP 10.244.0.176.5000 > nodemaster.40436: Flags [S.], seq 1978627084, ack 39071658, win 64308, options [mss 1410,sackOK,TS val 2973963884 ecr 1697648011,nop,wscale 7], length 0
+22:35:11.252409 IP nodemaster.40436 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697648011 ecr 2973963884], length 0
+22:35:11.252781 IP nodemaster.40436 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697648012 ecr 2973963884], length 104
+22:35:11.252830 IP 10.244.0.176.5000 > nodemaster.40436: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973963885 ecr 1697648012], length 0
+22:35:11.253702 IP 10.244.0.176.5000 > nodemaster.40436: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973963886 ecr 1697648012], length 1433
+22:35:11.253735 IP nodemaster.40436 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697648013 ecr 2973963886], length 0
+22:35:11.253881 IP 10.244.0.176.5000 > nodemaster.40436: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973963886 ecr 1697648013], length 0
+22:35:11.254126 IP nodemaster.40436 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697648013 ecr 2973963886], length 0
+22:35:11.254190 IP 10.244.0.176.5000 > nodemaster.40436: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973963886 ecr 1697648013], length 0
+22:35:11.291297 IP 10.244.0.171.44386 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3551620085 ecr 2431189540], length 0
+22:35:11.291306 IP 10.244.0.167.55518 > 10.244.0.162.27017: Flags [.], ack 1, win 505, options [nop,nop,TS val 3468858221 ecr 2116590455], length 0
+22:35:11.291314 IP 10.244.0.167.55518 > 10.244.0.162.27017: Flags [.], ack 1, win 505, options [nop,nop,TS val 3468858221 ecr 2116590455], length 0
+22:35:11.291316 IP 10.244.0.171.44386 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3551620085 ecr 2431189540], length 0
+22:35:11.291352 IP 10.244.0.162.27017 > 10.244.0.171.44386: Flags [.], ack 1, win 501, options [nop,nop,TS val 2431204642 ecr 3551332344], length 0
+22:35:11.291363 IP 10.244.0.162.27017 > 10.244.0.167.55518: Flags [.], ack 1, win 501, options [nop,nop,TS val 2116605559 ecr 3468570480], length 0
+22:35:11.545693 IP 10.244.0.164.45018 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3720943511 ecr 3059975734], length 0
+22:35:11.545701 IP 10.244.0.164.45018 > 10.244.0.162.27017: Flags [.], ack 1, win 502, options [nop,nop,TS val 3720943511 ecr 3059975734], length 0
+22:35:11.545743 IP 10.244.0.162.27017 > 10.244.0.164.45018: Flags [.], ack 1, win 501, options [nop,nop,TS val 3059990838 ecr 3720655515], length 0
+22:35:11.821884 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 29
+22:35:11.821984 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 114
+22:35:12.043995 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2260, options [nop,nop,TS val 3551620838 ecr 2431195397], length 65
+22:35:12.044002 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [P.], seq 65:130, ack 305, win 2260, options [nop,nop,TS val 3551620838 ecr 2431195397], length 65
+22:35:12.044070 IP 10.244.0.162.27017 > 10.244.0.171.53606: Flags [.], ack 130, win 501, options [nop,nop,TS val 2431205395 ecr 3551620838], length 0
+22:35:12.044087 IP 10.244.0.162.27017 > 10.244.0.171.53606: Flags [.], ack 130, win 501, options [nop,nop,TS val 2431205395 ecr 3551620838,nop,nop,sack 1 {65:130}], length 0
+22:35:12.044392 IP 10.244.0.162.27017 > 10.244.0.171.53606: Flags [P.], seq 305:609, ack 130, win 501, options [nop,nop,TS val 2431205395 ecr 3551620838], length 304
+22:35:12.044442 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [.], ack 609, win 2269, options [nop,nop,TS val 3551620838 ecr 2431205395], length 0
+22:35:12.044447 IP 10.244.0.171.53606 > 10.244.0.162.27017: Flags [.], ack 609, win 2269, options [nop,nop,TS val 3551620838 ecr 2431205395], length 0
+22:35:12.057636 ARP, Request who-has 10.244.0.178 tell 10.244.0.177, length 28
+22:35:12.057670 ARP, Reply 10.244.0.178 is-at e6:e4:72:e3:4d:75 (oui Unknown), length 28
+22:35:12.222789 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:12.222795 IP 10.244.0.178.36746 > 10.244.0.177.4997: UDP, length 25
+22:35:12.222884 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:12.222933 IP 10.244.0.177.4997 > 10.244.0.178.36746: UDP, length 17
+22:35:12.252961 IP nodemaster.40440 > 10.244.0.176.5000: Flags [S], seq 1937028923, win 64860, options [mss 1410,sackOK,TS val 1697649012 ecr 0,nop,wscale 7], length 0
+22:35:12.253015 IP 10.244.0.176.5000 > nodemaster.40440: Flags [S.], seq 1489299304, ack 1937028924, win 64308, options [mss 1410,sackOK,TS val 2973964885 ecr 1697649012,nop,wscale 7], length 0
+22:35:12.253032 IP nodemaster.40440 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697649012 ecr 2973964885], length 0
+22:35:12.253090 IP nodemaster.40446 > 10.244.0.176.5000: Flags [S], seq 1117949056, win 64860, options [mss 1410,sackOK,TS val 1697649012 ecr 0,nop,wscale 7], length 0
+22:35:12.253144 IP 10.244.0.176.5000 > nodemaster.40446: Flags [S.], seq 3066239598, ack 1117949057, win 64308, options [mss 1410,sackOK,TS val 2973964885 ecr 1697649012,nop,wscale 7], length 0
+22:35:12.253167 IP nodemaster.40446 > 10.244.0.176.5000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1697649012 ecr 2973964885], length 0
+22:35:12.253316 IP nodemaster.40440 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697649012 ecr 2973964885], length 104
+22:35:12.253344 IP 10.244.0.176.5000 > nodemaster.40440: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973964885 ecr 1697649012], length 0
+22:35:12.253405 IP nodemaster.40446 > 10.244.0.176.5000: Flags [P.], seq 1:105, ack 1, win 507, options [nop,nop,TS val 1697649012 ecr 2973964885], length 104
+22:35:12.253466 IP 10.244.0.176.5000 > nodemaster.40446: Flags [.], ack 105, win 502, options [nop,nop,TS val 2973964885 ecr 1697649012], length 0
+22:35:12.253723 IP 10.244.0.176.5000 > nodemaster.40440: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973964886 ecr 1697649012], length 1433
+22:35:12.253734 IP nodemaster.40440 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697649013 ecr 2973964886], length 0
+22:35:12.253789 IP 10.244.0.176.5000 > nodemaster.40440: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973964886 ecr 1697649013], length 0
+22:35:12.253908 IP 10.244.0.176.5000 > nodemaster.40446: Flags [P.], seq 1:1434, ack 105, win 502, options [nop,nop,TS val 2973964886 ecr 1697649012], length 1433
+22:35:12.253926 IP nodemaster.40446 > 10.244.0.176.5000: Flags [.], ack 1434, win 502, options [nop,nop,TS val 1697649013 ecr 2973964886], length 0
+22:35:12.254019 IP 10.244.0.176.5000 > nodemaster.40446: Flags [F.], seq 1434, ack 105, win 502, options [nop,nop,TS val 2973964886 ecr 1697649013], length 0
+22:35:12.254033 IP nodemaster.40440 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697649013 ecr 2973964886], length 0
+22:35:12.254085 IP 10.244.0.176.5000 > nodemaster.40440: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973964886 ecr 1697649013], length 0
+22:35:12.254190 IP nodemaster.40446 > 10.244.0.176.5000: Flags [F.], seq 105, ack 1435, win 502, options [nop,nop,TS val 1697649013 ecr 2973964886], length 0
+22:35:12.254249 IP 10.244.0.176.5000 > nodemaster.40446: Flags [.], ack 106, win 502, options [nop,nop,TS val 2973964886 ecr 1697649013], length 0
+

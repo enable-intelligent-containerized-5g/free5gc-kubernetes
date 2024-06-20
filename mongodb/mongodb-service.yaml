@@ -4,6 +4,7 @@ metadata:
   name: mongodb
   labels:
     app.kubernetes.io/name: mongodb
+    name: mongodb
 spec:
   type: NodePort
   ports:
@@ -13,3 +14,4 @@ spec:
       nodePort: 30001
   selector:
     app.kubernetes.io/name: mongodb
+    name: mongodb
