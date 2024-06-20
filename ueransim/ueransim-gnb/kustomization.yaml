@@ -10,4 +10,4 @@ configMapGenerator:
     files:
       - config/free5gc-gnb.yaml
       - config/wrapper.sh
-      # - config/iptables.sh
+      - config/iptables.sh

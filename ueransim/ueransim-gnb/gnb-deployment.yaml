@@ -33,6 +33,7 @@ spec:
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]
+          privileged: true
         command: [ "/ueransim/config/wrapper.sh" ]
         volumeMounts:
         - mountPath: /ueransim/config
@@ -56,6 +57,6 @@ spec:
           - key: wrapper.sh
             path: wrapper.sh
             mode: 0777
-          # - key: iptables.sh
-          #   path: iptables.sh
-          #   mode: 0777
+          - key: iptables.sh
+            path: iptables.sh
+            mode: 0777

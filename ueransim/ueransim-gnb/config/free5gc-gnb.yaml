@@ -15,7 +15,7 @@ amfConfigs:
   #   port: 38412
   # - address: 10.10.2.3
   #   port: 38412
-  - address: 20.20.20.1
+  - address: 10.10.2.1
     port: 38412
 
 
