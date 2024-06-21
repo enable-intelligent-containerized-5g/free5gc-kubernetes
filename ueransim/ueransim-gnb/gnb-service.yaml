@@ -6,6 +6,7 @@ metadata:
   labels:
     app: ueransim
     component: gnb
+    name: gnb
 spec:
   type: ClusterIP
   ports:
@@ -15,3 +16,4 @@ spec:
   selector:
     app: ueransim
     component: gnb
+    name: gnb

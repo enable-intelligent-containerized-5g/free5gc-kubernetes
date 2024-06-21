@@ -3,17 +3,7 @@ import socket
 import os
 import pickle
 from socket import gethostbyname
-
-# Conection model
-class Conection:
-    def __init__(self, src_ip, src_p, dst_ip, dst_p):
-        self.src_ip = src_ip
-        self.src_p = src_p
-        self.dst_ip = dst_ip
-        self.dst_p = dst_p
-
-    def __str__(self):
-        return f"Conection from {self.src_ip}:{self.src_p} to {self.dst_ip}:{self.dst_p}"
+from Conection import Conection
 
 # Array of conections
 conections = []
@@ -50,8 +40,11 @@ def resolve_port(service_name, protocol='tcp'):
 def get_ip_port(cadena):
     # Fist we try to get the IP from the domain name
     name_ip_match = re.search(r'^(.*?)\.([^\.]+)$', cadena)  # r'^(.*?)\.(\d+)$'
-    domain_name = name_ip_match.group(1)
-    port = name_ip_match.group(2)
+    if name_ip_match is not None:
+        domain_name = name_ip_match.group(1)
+        port = name_ip_match.group(2)
+    else:
+        return None, None
 
     try:
         ip = gethostbyname(domain_name)
