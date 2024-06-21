@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 G = nx.Graph()
 
 # Abre el archivo JSON
-with open('resources.json') as f:
+with open('kubectldata.json') as f:
     data = json.load(f)
 
 # Agrega nodos para los pods
