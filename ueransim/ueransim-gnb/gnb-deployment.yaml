@@ -6,17 +6,20 @@ metadata:
   labels:
     app: ueransim
     component: gnb
+    name: gnb
 spec:
   selector:
     matchLabels:
       app: ueransim
       component: gnb
+      name: gnb
   replicas: 
   template:
     metadata:
       labels:
         app: ueransim
         component: gnb
+        name: gnb
       annotations:
         k8s.v1.cni.cncf.io/networks: '[
           { "name": "n2network", "interface": "n2", "ips": [ "10.10.2.22/24" ] },

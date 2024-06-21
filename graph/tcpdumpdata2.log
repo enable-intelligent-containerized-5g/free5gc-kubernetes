@@ -1,0 +1,528 @@
+22:58:56.367389 IP nodemaster.ssh > _gateway.49740: Flags [P.], seq 4221304737:4221304781, ack 171496044, win 62780, length 44
+22:58:56.367968 IP _gateway.49740 > nodemaster.ssh: Flags [.], ack 44, win 65535, length 0
+22:58:57.388196 IP nodemaster.50211 > a.resolvers.level3.net.domain: 36542+% [1au] PTR? 2.2.0.10.in-addr.arpa. (73)
+22:58:57.388742 IP nodemaster.42803 > a.resolvers.level3.net.domain: 32988+% [1au] PTR? 2.2.0.10.in-addr.arpa. (73)
+22:58:57.687534 IP a.resolvers.level3.net.domain > nodemaster.42803: 32988 NXDomain* 0/1/1 (109)
+22:58:57.687534 IP a.resolvers.level3.net.domain > nodemaster.50211: 36542 NXDomain* 0/1/1 (109)
+22:58:57.688866 IP nodemaster.49513 > a.resolvers.level3.net.domain: 60185+% [1au] PTR? 15.2.0.10.in-addr.arpa. (74)
+22:58:57.688977 IP nodemaster.39284 > a.resolvers.level3.net.domain: 47012+% [1au] PTR? 15.2.0.10.in-addr.arpa. (74)
+22:58:57.887808 IP a.resolvers.level3.net.domain > nodemaster.39284: 47012 NXDomain* 0/1/1 (110)
+22:58:57.887808 IP a.resolvers.level3.net.domain > nodemaster.49513: 60185 NXDomain* 0/1/1 (110)
+22:58:58.411166 IP nodemaster.33650 > a.resolvers.level3.net.domain: 49584+% [1au] PTR? 1.2.2.4.in-addr.arpa. (72)
+22:59:00.183429 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 5017516:5017552, ack 1032532147, win 65535, length 36
+22:59:00.184524 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1:37, ack 36, win 62780, length 36
+22:59:00.184934 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 37, win 65535, length 0
+22:59:00.940191 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 36:72, ack 37, win 65535, length 36
+22:59:00.940788 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 37:73, ack 72, win 62780, length 36
+22:59:00.941273 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 73, win 65535, length 0
+22:59:01.070195 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 73:165, ack 72, win 62780, length 92
+22:59:01.070449 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 165:233, ack 72, win 62780, length 68
+22:59:01.070572 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 165, win 65535, length 0
+22:59:01.070572 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 233, win 65535, length 0
+22:59:01.075268 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 233:269, ack 72, win 62780, length 36
+22:59:01.075635 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 269, win 65535, length 0
+22:59:01.590553 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 72:108, ack 269, win 65535, length 36
+22:59:01.591197 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 269:305, ack 108, win 62780, length 36
+22:59:01.591581 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 305, win 65535, length 0
+22:59:01.891931 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 108:144, ack 305, win 65535, length 36
+22:59:01.892638 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 305:341, ack 144, win 62780, length 36
+22:59:01.893063 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 341, win 65535, length 0
+22:59:02.476450 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 144:180, ack 341, win 65535, length 36
+22:59:02.477254 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 341:377, ack 180, win 62780, length 36
+22:59:02.477533 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 377, win 65535, length 0
+22:59:04.075671 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 180:216, ack 377, win 65535, length 36
+22:59:04.076327 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 377:413, ack 216, win 62780, length 36
+22:59:04.076603 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 413, win 65535, length 0
+22:59:04.490925 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 413:449, ack 216, win 62780, length 36
+22:59:04.491290 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 449, win 65535, length 0
+22:59:04.525421 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 449:485, ack 216, win 62780, length 36
+22:59:04.525848 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 485, win 65535, length 0
+22:59:04.553531 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 485:521, ack 216, win 62780, length 36
+22:59:04.553982 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 521, win 65535, length 0
+22:59:04.561963 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 521:557, ack 216, win 62780, length 36
+22:59:04.562318 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 557, win 65535, length 0
+22:59:05.424803 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 216:252, ack 557, win 65535, length 36
+22:59:05.425455 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 557:593, ack 252, win 62780, length 36
+22:59:05.425801 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 593, win 65535, length 0
+22:59:05.977434 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 252:288, ack 593, win 65535, length 36
+22:59:05.978060 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 593:629, ack 288, win 62780, length 36
+22:59:05.978354 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 629, win 65535, length 0
+22:59:06.339818 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 288:324, ack 629, win 65535, length 36
+22:59:06.340559 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 629:665, ack 324, win 62780, length 36
+22:59:06.340921 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 665, win 65535, length 0
+22:59:06.748027 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 324:360, ack 665, win 65535, length 36
+22:59:06.748812 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 665:701, ack 360, win 62780, length 36
+22:59:06.749390 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 701, win 65535, length 0
+22:59:07.198903 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 360:396, ack 701, win 65535, length 36
+22:59:07.199777 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 701:737, ack 396, win 62780, length 36
+22:59:07.200114 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 737, win 65535, length 0
+22:59:08.818350 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 396:432, ack 737, win 65535, length 36
+22:59:08.819071 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 737:773, ack 432, win 62780, length 36
+22:59:08.819460 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 773, win 65535, length 0
+22:59:09.935396 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 432:468, ack 773, win 65535, length 36
+22:59:09.936197 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 773:809, ack 468, win 62780, length 36
+22:59:09.936689 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 809, win 65535, length 0
+22:59:10.299508 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 809:845, ack 468, win 62780, length 36
+22:59:10.299936 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 845, win 65535, length 0
+22:59:10.322147 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 845:881, ack 468, win 62780, length 36
+22:59:10.322555 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 881, win 65535, length 0
+22:59:10.335766 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 881:917, ack 468, win 62780, length 36
+22:59:10.336510 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 917, win 65535, length 0
+22:59:11.292481 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 468:504, ack 917, win 65535, length 36
+22:59:11.293543 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 917:953, ack 504, win 62780, length 36
+22:59:11.293895 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 953, win 65535, length 0
+22:59:11.676481 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 504:540, ack 953, win 65535, length 36
+22:59:11.677072 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 953:989, ack 540, win 62780, length 36
+22:59:11.677497 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 989, win 65535, length 0
+22:59:12.008898 IP nodemaster.53061 > a.resolvers.level3.net.domain: 24166+% [1au] A? registry-1.docker.io. (72)
+22:59:12.009187 IP nodemaster.44427 > a.resolvers.level3.net.domain: 18300+% [1au] A? registry-1.docker.io. (72)
+22:59:12.009908 IP nodemaster.37171 > a.resolvers.level3.net.domain: 40957+% [1au] AAAA? registry-1.docker.io. (72)
+22:59:12.010120 IP nodemaster.36830 > a.resolvers.level3.net.domain: 20743+% [1au] AAAA? registry-1.docker.io. (72)
+22:59:12.285140 IP a.resolvers.level3.net.domain > nodemaster.36830: 20743 3/0/1 AAAA 2600:1f18:2148:bc01:20a3:9c3e:d4a7:9fb, AAAA 2600:1f18:2148:bc02:2640:1b90:cea6:b6b5, AAAA 2600:1f18:2148:bc00:41e1:f57f:e2e2:5e54 (133)
+22:59:12.285140 IP a.resolvers.level3.net.domain > nodemaster.44427: 18300 3/0/1 A 54.196.99.49, A 3.219.239.5, A 34.226.69.105 (97)
+22:59:12.285140 IP a.resolvers.level3.net.domain > nodemaster.53061: 24166 3/0/1 A 3.219.239.5, A 34.226.69.105, A 54.196.99.49 (97)
+22:59:12.285140 IP a.resolvers.level3.net.domain > nodemaster.37171: 40957 3/0/1 AAAA 2600:1f18:2148:bc01:20a3:9c3e:d4a7:9fb, AAAA 2600:1f18:2148:bc02:2640:1b90:cea6:b6b5, AAAA 2600:1f18:2148:bc00:41e1:f57f:e2e2:5e54 (133)
+22:59:12.285907 IP nodemaster.43848 > a.resolvers.level3.net.domain: 16788+% [1au] SOA? registry-1.docker.io. (72)
+22:59:12.287297 IP nodemaster.32948 > a.resolvers.level3.net.domain: 10865+% [1au] SOA? registry-1.docker.io. (72)
+22:59:12.370925 IP a.resolvers.level3.net.domain > nodemaster.43848: 16788 0/1/1 (133)
+22:59:12.371236 IP nodemaster.54852 > a.resolvers.level3.net.domain: 51140+% [1au] DS? docker.io. (61)
+22:59:12.371322 IP nodemaster.37968 > a.resolvers.level3.net.domain: 42054+% [1au] DS? registry-1.docker.io. (72)
+22:59:12.562766 IP a.resolvers.level3.net.domain > nodemaster.32948: 10865 0/1/1 (133)
+22:59:12.563472 IP nodemaster.46307 > a.resolvers.level3.net.domain: 63688+% [1au] DS? docker.io. (61)
+22:59:12.563848 IP nodemaster.58364 > a.resolvers.level3.net.domain: 35919+% [1au] DS? registry-1.docker.io. (72)
+22:59:12.574248 IP a.resolvers.level3.net.domain > nodemaster.54852: 51140 0/6/1 (751)
+22:59:12.574633 IP nodemaster.44607 > a.resolvers.level3.net.domain: 29626+% [1au] DNSKEY? io. (54)
+22:59:12.611167 IP a.resolvers.level3.net.domain > nodemaster.37968: 42054 0/1/1 (133)
+22:59:12.611669 IP nodemaster.42646 > a.resolvers.level3.net.domain: 29006+% [1au] SOA? docker.io. (61)
+22:59:12.681327 IP a.resolvers.level3.net.domain > nodemaster.58364: 35919 0/1/1 (133)
+22:59:12.681328 IP a.resolvers.level3.net.domain > nodemaster.46307: 63688 0/6/1 (751)
+22:59:12.682061 IP nodemaster.55424 > a.resolvers.level3.net.domain: 49144+% [1au] SOA? docker.io. (61)
+22:59:12.682537 IP nodemaster.37834 > a.resolvers.level3.net.domain: 50068+% [1au] DNSKEY? io. (54)
+22:59:12.711465 IP a.resolvers.level3.net.domain > nodemaster.42646: 29006 1/0/1 SOA (122)
+22:59:12.711465 IP a.resolvers.level3.net.domain > nodemaster.44607: 29626 4/0/1 DNSKEY, DNSKEY, DNSKEY, RRSIG (893)
+22:59:12.712152 IP nodemaster.43917 > a.resolvers.level3.net.domain: 6358+% [1au] DS? io. (54)
+22:59:12.771105 IP a.resolvers.level3.net.domain > nodemaster.55424: 49144 1/0/1 SOA (122)
+22:59:12.886958 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 540:576, ack 989, win 65535, length 36
+22:59:12.887508 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 989:1025, ack 576, win 62780, length 36
+22:59:12.887858 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1025, win 65535, length 0
+22:59:13.641508 IP a.resolvers.level3.net.domain > nodemaster.37834: 50068 4/0/1 DNSKEY, DNSKEY, DNSKEY, RRSIG (893)
+22:59:13.642087 IP nodemaster.36902 > a.resolvers.level3.net.domain: 47684+% [1au] DS? io. (54)
+22:59:13.661385 IP a.resolvers.level3.net.domain > nodemaster.43917: 6358 2/0/1 DS, RRSIG (366)
+22:59:13.663417 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [S], seq 1780149168, win 64240, options [mss 1460,sackOK,TS val 3531621880 ecr 0,nop,wscale 7], length 0
+22:59:13.777002 IP nodemaster.38153 > a.resolvers.level3.net.domain: 40554+% [1au] PTR? 49.99.196.54.in-addr.arpa. (77)
+22:59:13.777138 IP nodemaster.50019 > a.resolvers.level3.net.domain: 32480+% [1au] PTR? 49.99.196.54.in-addr.arpa. (77)
+22:59:13.851716 IP a.resolvers.level3.net.domain > nodemaster.36902: 47684 2/0/1 DS, RRSIG (366)
+22:59:13.851795 IP nodemaster > a.resolvers.level3.net: ICMP nodemaster udp port 36902 unreachable, length 402
+22:59:13.861488 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [S.], seq 1035136001, ack 1780149169, win 65535, options [mss 1460], length 0
+22:59:13.861633 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 1, win 64240, length 0
+22:59:13.862549 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 1:273, ack 1, win 64240, length 272
+22:59:13.863339 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 273, win 65535, length 0
+22:59:13.881506 IP a.resolvers.level3.net.domain > nodemaster.38153: 40554 1/0/1 PTR ec2-54-196-99-49.compute-1.amazonaws.com. (108)
+22:59:13.882081 IP nodemaster.55776 > a.resolvers.level3.net.domain: 30573+% [1au] SOA? 49.99.196.54.in-addr.arpa. (77)
+22:59:13.921433 IP a.resolvers.level3.net.domain > nodemaster.50019: 32480 1/0/1 PTR ec2-54-196-99-49.compute-1.amazonaws.com. (108)
+22:59:13.921983 IP nodemaster.49918 > a.resolvers.level3.net.domain: 19631+% [1au] SOA? 49.99.196.54.in-addr.arpa. (77)
+22:59:13.961463 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 1:166, ack 273, win 65535, length 165
+22:59:13.961525 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 166, win 64075, length 0
+22:59:14.031814 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 166:3062, ack 273, win 65535, length 2896
+22:59:14.031902 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 3062, win 62780, length 0
+22:59:14.063107 IP a.resolvers.level3.net.domain > nodemaster.55776: 30573 0/1/1 (139)
+22:59:14.063682 IP nodemaster.35459 > a.resolvers.level3.net.domain: 13183+% [1au] DS? 99.196.54.in-addr.arpa. (74)
+22:59:14.063986 IP nodemaster.40614 > a.resolvers.level3.net.domain: 41301+% [1au] DS? 49.99.196.54.in-addr.arpa. (77)
+22:59:14.191557 IP a.resolvers.level3.net.domain > nodemaster.40614: 41301 0/1/1 (139)
+22:59:14.191558 IP a.resolvers.level3.net.domain > nodemaster.35459: 13183 0/1/1 (138)
+22:59:14.191558 IP a.resolvers.level3.net.domain > nodemaster.49918: 19631 0/1/1 (139)
+22:59:14.191558 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 3062:4510, ack 273, win 65535, length 1448
+22:59:14.191649 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 4510, win 62780, length 0
+22:59:14.192052 IP nodemaster.44458 > a.resolvers.level3.net.domain: 46887+% [1au] SOA? 99.196.54.in-addr.arpa. (74)
+22:59:14.192200 IP nodemaster.44067 > a.resolvers.level3.net.domain: 39195+% [1au] DS? 99.196.54.in-addr.arpa. (74)
+22:59:14.192307 IP nodemaster.43648 > a.resolvers.level3.net.domain: 42857+% [1au] DS? 49.99.196.54.in-addr.arpa. (77)
+22:59:14.192619 IP nodemaster.48947 > a.resolvers.level3.net.domain: 46810+% [1au] DS? 196.54.in-addr.arpa. (71)
+22:59:14.192791 IP nodemaster.39438 > a.resolvers.level3.net.domain: 45276+% [1au] SOA? 196.54.in-addr.arpa. (71)
+22:59:14.281474 IP a.resolvers.level3.net.domain > nodemaster.44458: 46887 1/0/1 SOA (136)
+22:59:14.281475 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 4510:5585, ack 273, win 65535, length 1075
+22:59:14.281597 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 5585, win 62780, length 0
+22:59:14.291264 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 273:337, ack 5585, win 62780, length 64
+22:59:14.292078 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 337, win 65535, length 0
+22:59:14.292532 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 337:685, ack 5585, win 62780, length 348
+22:59:14.293098 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 685, win 65535, length 0
+22:59:14.301499 IP a.resolvers.level3.net.domain > nodemaster.39438: 45276 1/0/1 SOA (135)
+22:59:14.301499 IP a.resolvers.level3.net.domain > nodemaster.44067: 39195 0/1/1 (138)
+22:59:14.301499 IP a.resolvers.level3.net.domain > nodemaster.48947: 46810 0/4/1 (493)
+22:59:14.301499 IP a.resolvers.level3.net.domain > nodemaster.43648: 42857 0/1/1 (139)
+22:59:14.302049 IP nodemaster.58502 > a.resolvers.level3.net.domain: 49290+% [1au] SOA? 99.196.54.in-addr.arpa. (74)
+22:59:14.302409 IP nodemaster.45523 > a.resolvers.level3.net.domain: 39377+% [1au] DNSKEY? 54.in-addr.arpa. (67)
+22:59:14.302582 IP nodemaster.39503 > a.resolvers.level3.net.domain: 36958+% [1au] DS? 196.54.in-addr.arpa. (71)
+22:59:14.302689 IP nodemaster.60918 > a.resolvers.level3.net.domain: 13430+% [1au] SOA? 196.54.in-addr.arpa. (71)
+22:59:14.392123 IP a.resolvers.level3.net.domain > nodemaster.45523: 39377 7/0/1 DNSKEY, DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG, RRSIG[|domain]
+22:59:14.392124 IP a.resolvers.level3.net > nodemaster: udp
+22:59:14.392124 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 5585:5993, ack 685, win 65535, length 408
+22:59:14.392124 IP a.resolvers.level3.net.domain > nodemaster.60918: 13430 1/0/1 SOA (135)
+22:59:14.392125 IP a.resolvers.level3.net.domain > nodemaster.39503: 36958 0/4/1 (493)
+22:59:14.392125 IP a.resolvers.level3.net.domain > nodemaster.58502: 49290 1/0/1 SOA (136)
+22:59:14.392322 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 5993, win 62780, length 0
+22:59:14.393277 IP nodemaster.39465 > a.resolvers.level3.net.domain: 21590+% [1au] DS? 54.in-addr.arpa. (67)
+22:59:14.394453 IP nodemaster.53279 > a.resolvers.level3.net.domain: 63491+% [1au] A? auth.docker.io. (66)
+22:59:14.394648 IP nodemaster.42020 > a.resolvers.level3.net.domain: 36089+% [1au] A? auth.docker.io. (66)
+22:59:14.395162 IP nodemaster.49302 > a.resolvers.level3.net.domain: 45255+% [1au] DNSKEY? 54.in-addr.arpa. (67)
+22:59:14.395661 IP nodemaster.36425 > a.resolvers.level3.net.domain: 58568+% [1au] AAAA? auth.docker.io. (66)
+22:59:14.395810 IP nodemaster.35745 > a.resolvers.level3.net.domain: 12867+% [1au] AAAA? auth.docker.io. (66)
+22:59:14.481579 IP a.resolvers.level3.net.domain > nodemaster.42020: 36089 3/0/1 A 34.226.69.105, A 3.219.239.5, A 54.196.99.49 (91)
+22:59:14.481579 IP a.resolvers.level3.net.domain > nodemaster.53279: 63491 3/0/1 A 34.226.69.105, A 3.219.239.5, A 54.196.99.49 (91)
+22:59:14.481579 IP a.resolvers.level3.net.domain > nodemaster.39465: 21590 2/0/1 DS, RRSIG (264)
+22:59:14.481579 IP a.resolvers.level3.net.domain > nodemaster.35745: 12867 3/0/1 AAAA 2600:1f18:2148:bc00:41e1:f57f:e2e2:5e54, AAAA 2600:1f18:2148:bc02:2640:1b90:cea6:b6b5, AAAA 2600:1f18:2148:bc01:20a3:9c3e:d4a7:9fb (127)
+22:59:14.481579 IP a.resolvers.level3.net.domain > nodemaster.36425: 58568 3/0/1 AAAA 2600:1f18:2148:bc01:20a3:9c3e:d4a7:9fb, AAAA 2600:1f18:2148:bc02:2640:1b90:cea6:b6b5, AAAA 2600:1f18:2148:bc00:41e1:f57f:e2e2:5e54 (127)
+22:59:14.482214 IP nodemaster.46551 > a.resolvers.level3.net.domain: 39585+% [1au] SOA? auth.docker.io. (66)
+22:59:14.483128 IP nodemaster.51853 > a.resolvers.level3.net.domain: 4644+% [1au] SOA? auth.docker.io. (66)
+22:59:14.483826 IP nodemaster.45065 > a.resolvers.level3.net.domain: 48594+% [1au] DNSKEY? in-addr.arpa. (64)
+22:59:14.581849 IP a.resolvers.level3.net.domain > nodemaster.49302: 45255 7/0/1 DNSKEY, DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG, RRSIG[|domain]
+22:59:14.581849 IP a.resolvers.level3.net > nodemaster: udp
+22:59:14.581849 IP a.resolvers.level3.net.domain > nodemaster.45065: 48594 5/0/1 DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG (1341)
+22:59:14.581850 IP a.resolvers.level3.net.domain > nodemaster.51853: 4644 0/1/1 (127)
+22:59:14.581850 IP a.resolvers.level3.net.domain > nodemaster.46551: 39585 0/1/1 (127)
+22:59:14.582430 IP nodemaster.56480 > a.resolvers.level3.net.domain: 45796+% [1au] DS? 54.in-addr.arpa. (67)
+22:59:14.582891 IP nodemaster.55537 > a.resolvers.level3.net.domain: 26992+% [1au] DS? auth.docker.io. (66)
+22:59:14.583324 IP nodemaster.37828 > a.resolvers.level3.net.domain: 9400+% [1au] DS? docker.io. (61)
+22:59:14.583600 IP nodemaster.56579 > a.resolvers.level3.net.domain: 9461+% [1au] DS? auth.docker.io. (66)
+22:59:14.584045 IP nodemaster.35758 > a.resolvers.level3.net.domain: 33071+% [1au] DS? in-addr.arpa. (64)
+22:59:14.671516 IP a.resolvers.level3.net.domain > nodemaster.35758: 33071 5/0/1 DS, DS, DS, DS, RRSIG (525)
+22:59:14.671517 IP a.resolvers.level3.net.domain > nodemaster.56480: 45796 2/0/1 DS, RRSIG (264)
+22:59:14.672394 IP nodemaster.46562 > a.resolvers.level3.net.domain: 57197+% [1au] DNSKEY? arpa. (56)
+22:59:14.691664 IP a.resolvers.level3.net.domain > nodemaster.56579: 9461 0/1/1 (127)
+22:59:14.691664 IP a.resolvers.level3.net.domain > nodemaster.37828: 9400 0/6/1 (751)
+22:59:14.691664 IP a.resolvers.level3.net.domain > nodemaster.55537: 26992 0/1/1 (127)
+22:59:14.692426 IP nodemaster.59873 > a.resolvers.level3.net.domain: 54565+% [1au] SOA? docker.io. (61)
+22:59:14.693682 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [S], seq 3880475626, win 64240, options [mss 1460,sackOK,TS val 474740028 ecr 0,nop,wscale 7], length 0
+22:59:14.794101 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [S.], seq 1035328001, ack 3880475627, win 65535, options [mss 1460], length 0
+22:59:14.794101 IP a.resolvers.level3.net.domain > nodemaster.59873: 54565 1/0/1 SOA (122)
+22:59:14.794102 IP a.resolvers.level3.net.domain > nodemaster.46562: 57197 4/0/1 DNSKEY, DNSKEY, DNSKEY, RRSIG (1153)
+22:59:14.794220 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 1, win 64240, length 0
+22:59:14.794271 IP nodemaster > a.resolvers.level3.net: ICMP nodemaster udp port 59873 unreachable, length 158
+22:59:14.794286 IP nodemaster > a.resolvers.level3.net: ICMP nodemaster udp port 46562 unreachable, length 556
+22:59:14.795611 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [P.], seq 1:267, ack 1, win 64240, length 266
+22:59:14.797316 IP nodemaster.53302 > a.resolvers.level3.net.domain: 32041+% [1au] PTR? 105.69.226.34.in-addr.arpa. (78)
+22:59:14.797417 IP nodemaster.43834 > a.resolvers.level3.net.domain: 46047+% [1au] PTR? 105.69.226.34.in-addr.arpa. (78)
+22:59:14.797573 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [.], ack 267, win 65535, length 0
+22:59:14.981841 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 1:166, ack 267, win 65535, length 165
+22:59:14.981894 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 166, win 64075, length 0
+22:59:15.002035 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 166:3062, ack 267, win 65535, length 2896
+22:59:15.002065 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 3062, win 62780, length 0
+22:59:15.031406 IP a.resolvers.level3.net.domain > nodemaster.43834: 46047 1/0/1 PTR ec2-34-226-69-105.compute-1.amazonaws.com. (110)
+22:59:15.031406 IP a.resolvers.level3.net.domain > nodemaster.53302: 32041 1/0/1 PTR ec2-34-226-69-105.compute-1.amazonaws.com. (110)
+22:59:15.031941 IP nodemaster.53631 > a.resolvers.level3.net.domain: 65311+% [1au] SOA? 105.69.226.34.in-addr.arpa. (78)
+22:59:15.032237 IP nodemaster.59621 > a.resolvers.level3.net.domain: 31660+% [1au] SOA? 105.69.226.34.in-addr.arpa. (78)
+22:59:15.221897 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 3062:5585, ack 267, win 65535, length 2523
+22:59:15.221973 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 5585, win 62780, length 0
+22:59:15.227748 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [P.], seq 267:331, ack 5585, win 62780, length 64
+22:59:15.228156 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [.], ack 331, win 65535, length 0
+22:59:15.228213 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [P.], seq 331:525, ack 5585, win 62780, length 194
+22:59:15.228541 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [.], ack 525, win 65535, length 0
+22:59:15.252001 IP a.resolvers.level3.net.domain > nodemaster.59621: 31660 0/1/1 (140)
+22:59:15.252002 IP a.resolvers.level3.net.domain > nodemaster.53631: 65311 0/1/1 (140)
+22:59:15.252771 IP nodemaster.44674 > a.resolvers.level3.net.domain: 16186+% [1au] DS? 69.226.34.in-addr.arpa. (74)
+22:59:15.253191 IP nodemaster.55977 > a.resolvers.level3.net.domain: 38097+% [1au] DS? 105.69.226.34.in-addr.arpa. (78)
+22:59:15.253527 IP nodemaster.56411 > a.resolvers.level3.net.domain: 43828+% [1au] DS? 69.226.34.in-addr.arpa. (74)
+22:59:15.253763 IP nodemaster.40185 > a.resolvers.level3.net.domain: 40075+% [1au] DS? 105.69.226.34.in-addr.arpa. (78)
+22:59:15.331795 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 5585:7033, ack 525, win 65535, length 1448
+22:59:15.331877 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 7033, win 62780, length 0
+22:59:15.362054 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 7033:9929, ack 525, win 65535, length 2896
+22:59:15.362141 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 9929, win 62780, length 0
+22:59:15.371976 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 9929:11250, ack 525, win 65535, length 1321
+22:59:15.372034 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 11250, win 62780, length 0
+22:59:15.372860 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 685:3079, ack 5993, win 62780, length 2394
+22:59:15.373029 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 3079:3741, ack 5993, win 62780, length 662
+22:59:15.373212 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 2145, win 65535, length 0
+22:59:15.373213 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 3079, win 65535, length 0
+22:59:15.373349 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 3741, win 65535, length 0
+22:59:15.411765 IP a.resolvers.level3.net.domain > nodemaster.40185: 40075 0/1/1 (140)
+22:59:15.411765 IP a.resolvers.level3.net.domain > nodemaster.56411: 43828 0/1/1 (138)
+22:59:15.411765 IP a.resolvers.level3.net.domain > nodemaster.55977: 38097 0/1/1 (140)
+22:59:15.412220 IP nodemaster.35210 > a.resolvers.level3.net.domain: 34239+% [1au] SOA? 69.226.34.in-addr.arpa. (74)
+22:59:15.412615 IP nodemaster.57782 > a.resolvers.level3.net.domain: 60006+% [1au] SOA? 69.226.34.in-addr.arpa. (74)
+22:59:15.412807 IP nodemaster.46570 > a.resolvers.level3.net.domain: 18910+% [1au] DS? 226.34.in-addr.arpa. (71)
+22:59:15.412913 IP nodemaster.42074 > a.resolvers.level3.net.domain: 55425+% [1au] SOA? 226.34.in-addr.arpa. (71)
+22:59:15.421660 IP a.resolvers.level3.net.domain > nodemaster.44674: 16186 0/1/1 (138)
+22:59:15.422148 IP nodemaster.37810 > a.resolvers.level3.net.domain: 64538+% [1au] DS? 226.34.in-addr.arpa. (71)
+22:59:15.422351 IP nodemaster.56108 > a.resolvers.level3.net.domain: 6754+% [1au] SOA? 226.34.in-addr.arpa. (71)
+22:59:15.502001 IP a.resolvers.level3.net.domain > nodemaster.56108: 6754 1/0/1 SOA (135)
+22:59:15.552164 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 5993:6534, ack 3741, win 65535, length 541
+22:59:15.552164 IP a.resolvers.level3.net.domain > nodemaster.37810: 64538 0/4/1 (493)
+22:59:15.552164 IP a.resolvers.level3.net.domain > nodemaster.42074: 55425 1/0/1 SOA (135)
+22:59:15.552164 IP a.resolvers.level3.net.domain > nodemaster.46570: 18910 0/4/1 (493)
+22:59:15.552164 IP a.resolvers.level3.net.domain > nodemaster.57782: 60006 1/0/1 SOA (136)
+22:59:15.552164 IP a.resolvers.level3.net.domain > nodemaster.35210: 34239 1/0/1 SOA (136)
+22:59:15.552221 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 6534, win 62780, length 0
+22:59:15.552683 IP nodemaster.45035 > a.resolvers.level3.net.domain: 52102+% [1au] DNSKEY? 34.in-addr.arpa. (67)
+22:59:15.553043 IP nodemaster.48926 > a.resolvers.level3.net.domain: 37326+% [1au] DNSKEY? 34.in-addr.arpa. (67)
+22:59:15.651917 IP a.resolvers.level3.net.domain > nodemaster.45035: 52102 7/0/1 DNSKEY, DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG[|domain]
+22:59:15.651917 IP a.resolvers.level3.net > nodemaster: udp
+22:59:15.652509 IP nodemaster.56545 > a.resolvers.level3.net.domain: 57242+% [1au] DS? 34.in-addr.arpa. (67)
+22:59:15.672750 IP a.resolvers.level3.net.domain > nodemaster.48926: 37326 7/0/1 DNSKEY, DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG[|domain]
+22:59:15.672751 IP a.resolvers.level3.net > nodemaster: udp
+22:59:15.673195 IP nodemaster.38535 > a.resolvers.level3.net.domain: 28089+% [1au] DS? 34.in-addr.arpa. (67)
+22:59:15.762139 IP a.resolvers.level3.net.domain > nodemaster.56545: 57242 2/0/1 DS, RRSIG (264)
+22:59:15.762875 IP nodemaster.55095 > a.resolvers.level3.net.domain: 65200+% [1au] DNSKEY? in-addr.arpa. (64)
+22:59:15.791888 IP a.resolvers.level3.net.domain > nodemaster.38535: 28089 2/0/1 DS, RRSIG (264)
+22:59:15.865707 IP a.resolvers.level3.net.domain > nodemaster.55095: 65200 5/0/1 DNSKEY, DNSKEY, DNSKEY, RRSIG, RRSIG (1341)
+22:59:15.865787 IP nodemaster > a.resolvers.level3.net: ICMP nodemaster udp port 55095 unreachable, length 556
+22:59:16.606426 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 576:612, ack 1025, win 65535, length 36
+22:59:16.607676 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1025:1061, ack 612, win 62780, length 36
+22:59:16.608449 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1061, win 65535, length 0
+22:59:16.947906 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 612:648, ack 1061, win 65535, length 36
+22:59:16.948453 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1061:1097, ack 648, win 62780, length 36
+22:59:16.948718 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1097, win 65535, length 0
+22:59:17.395963 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 648:684, ack 1097, win 65535, length 36
+22:59:17.396597 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1097:1133, ack 684, win 62780, length 36
+22:59:17.397025 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1133, win 65535, length 0
+22:59:20.089210 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 684:720, ack 1133, win 65535, length 36
+22:59:20.090005 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1133:1169, ack 720, win 62780, length 36
+22:59:20.090405 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1169, win 65535, length 0
+22:59:20.342840 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [P.], seq 11250:11274, ack 525, win 65535, length 24
+22:59:20.342841 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [F.], seq 11274, ack 525, win 65535, length 0
+22:59:20.342923 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [.], ack 11274, win 62780, length 0
+22:59:20.343224 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [P.], seq 525:549, ack 11275, win 62780, length 24
+22:59:20.343353 IP nodemaster.48498 > ec2-34-226-69-105.compute-1.amazonaws.com.https: Flags [F.], seq 549, ack 11275, win 62780, length 0
+22:59:20.343556 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [.], ack 549, win 65535, length 0
+22:59:20.343557 IP ec2-34-226-69-105.compute-1.amazonaws.com.https > nodemaster.48498: Flags [.], ack 550, win 65535, length 0
+22:59:20.683430 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 720:756, ack 1169, win 65535, length 36
+22:59:20.684444 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1169:1205, ack 756, win 62780, length 36
+22:59:20.685086 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1205, win 65535, length 0
+22:59:20.743307 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [P.], seq 6534:6558, ack 3741, win 65535, length 24
+22:59:20.743308 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [F.], seq 6558, ack 3741, win 65535, length 0
+22:59:20.743450 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [.], ack 6558, win 62780, length 0
+22:59:20.743785 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [P.], seq 3741:3765, ack 6559, win 62780, length 24
+22:59:20.743907 IP nodemaster.48614 > ec2-54-196-99-49.compute-1.amazonaws.com.https: Flags [F.], seq 3765, ack 6559, win 62780, length 0
+22:59:20.744239 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 3765, win 65535, length 0
+22:59:20.744240 IP ec2-54-196-99-49.compute-1.amazonaws.com.https > nodemaster.48614: Flags [.], ack 3766, win 65535, length 0
+22:59:21.506330 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 756:792, ack 1205, win 65535, length 36
+22:59:21.507230 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1205:1241, ack 792, win 62780, length 36
+22:59:21.507762 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1241, win 65535, length 0
+22:59:22.318748 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 792:828, ack 1241, win 65535, length 36
+22:59:22.319434 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1241:1277, ack 828, win 62780, length 36
+22:59:22.319923 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1277, win 65535, length 0
+22:59:22.818233 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 828:864, ack 1277, win 65535, length 36
+22:59:22.818897 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1277:1313, ack 864, win 62780, length 36
+22:59:22.819205 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1313, win 65535, length 0
+22:59:22.848497 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 864:900, ack 1313, win 65535, length 36
+22:59:22.849148 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1313:1349, ack 900, win 62780, length 36
+22:59:22.849488 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1349, win 65535, length 0
+22:59:22.879109 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 900:936, ack 1349, win 65535, length 36
+22:59:22.879775 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1349:1385, ack 936, win 62780, length 36
+22:59:22.880103 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1385, win 65535, length 0
+22:59:22.909692 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 936:972, ack 1385, win 65535, length 36
+22:59:22.910327 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1385:1421, ack 972, win 62780, length 36
+22:59:22.910774 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1421, win 65535, length 0
+22:59:22.941404 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 972:1008, ack 1421, win 65535, length 36
+22:59:22.942259 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1421:1457, ack 1008, win 62780, length 36
+22:59:22.942751 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1457, win 65535, length 0
+22:59:22.970981 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1008:1044, ack 1457, win 65535, length 36
+22:59:22.971685 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1457:1493, ack 1044, win 62780, length 36
+22:59:22.972036 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1493, win 65535, length 0
+22:59:23.001651 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1044:1080, ack 1493, win 65535, length 36
+22:59:23.002210 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1493:1529, ack 1080, win 62780, length 36
+22:59:23.002624 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1529, win 65535, length 0
+22:59:23.032042 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1080:1116, ack 1529, win 65535, length 36
+22:59:23.032729 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1529:1565, ack 1116, win 62780, length 36
+22:59:23.033466 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1565, win 65535, length 0
+22:59:23.062182 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1116:1152, ack 1565, win 65535, length 36
+22:59:23.062699 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1565:1601, ack 1152, win 62780, length 36
+22:59:23.062992 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1601, win 65535, length 0
+22:59:23.091980 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1152:1188, ack 1601, win 65535, length 36
+22:59:23.092456 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1601:1637, ack 1188, win 62780, length 36
+22:59:23.092754 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1637, win 65535, length 0
+22:59:23.122923 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1188:1224, ack 1637, win 65535, length 36
+22:59:23.123698 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1637:1673, ack 1224, win 62780, length 36
+22:59:23.124040 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1673, win 65535, length 0
+22:59:23.153158 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1224:1260, ack 1673, win 65535, length 36
+22:59:23.153845 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1673:1709, ack 1260, win 62780, length 36
+22:59:23.154252 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1709, win 65535, length 0
+22:59:23.182988 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1260:1296, ack 1709, win 65535, length 36
+22:59:23.183650 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1709:1745, ack 1296, win 62780, length 36
+22:59:23.184018 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1745, win 65535, length 0
+22:59:23.213798 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1296:1332, ack 1745, win 65535, length 36
+22:59:23.214476 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1745:1781, ack 1332, win 62780, length 36
+22:59:23.214952 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1781, win 65535, length 0
+22:59:23.244194 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1332:1368, ack 1781, win 65535, length 36
+22:59:23.244921 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1781:1817, ack 1368, win 62780, length 36
+22:59:23.245325 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1817, win 65535, length 0
+22:59:23.274046 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1368:1404, ack 1817, win 65535, length 36
+22:59:23.274674 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1817:1853, ack 1404, win 62780, length 36
+22:59:23.287250 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1853, win 65535, length 0
+22:59:23.304325 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1404:1440, ack 1853, win 65535, length 36
+22:59:23.304826 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1853:1889, ack 1440, win 62780, length 36
+22:59:23.305370 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1889, win 65535, length 0
+22:59:23.334097 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1440:1476, ack 1889, win 65535, length 36
+22:59:23.334719 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1889:1925, ack 1476, win 62780, length 36
+22:59:23.335038 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1925, win 65535, length 0
+22:59:23.364840 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1476:1512, ack 1925, win 65535, length 36
+22:59:23.365594 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1925:1961, ack 1512, win 62780, length 36
+22:59:23.365905 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1961, win 65535, length 0
+22:59:23.396073 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1512:1548, ack 1961, win 65535, length 36
+22:59:23.396740 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1961:1997, ack 1548, win 62780, length 36
+22:59:23.397012 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 1997, win 65535, length 0
+22:59:23.426313 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1548:1584, ack 1997, win 65535, length 36
+22:59:23.427072 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 1997:2033, ack 1584, win 62780, length 36
+22:59:23.427354 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2033, win 65535, length 0
+22:59:23.457214 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1584:1620, ack 2033, win 65535, length 36
+22:59:23.457639 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2033:2069, ack 1620, win 62780, length 36
+22:59:23.457888 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2069, win 65535, length 0
+22:59:23.487580 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1620:1656, ack 2069, win 65535, length 36
+22:59:23.488120 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2069:2105, ack 1656, win 62780, length 36
+22:59:23.488439 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2105, win 65535, length 0
+22:59:23.517637 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1656:1692, ack 2105, win 65535, length 36
+22:59:23.518344 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2105:2141, ack 1692, win 62780, length 36
+22:59:23.518688 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2141, win 65535, length 0
+22:59:23.548074 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1692:1728, ack 2141, win 65535, length 36
+22:59:23.548599 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2141:2177, ack 1728, win 62780, length 36
+22:59:23.548991 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2177, win 65535, length 0
+22:59:23.578856 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1728:1764, ack 2177, win 65535, length 36
+22:59:23.579653 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2177:2213, ack 1764, win 62780, length 36
+22:59:23.579974 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2213, win 65535, length 0
+22:59:23.609590 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1764:1800, ack 2213, win 65535, length 36
+22:59:23.610353 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2213:2249, ack 1800, win 62780, length 36
+22:59:23.610747 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2249, win 65535, length 0
+22:59:23.639571 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1800:1836, ack 2249, win 65535, length 36
+22:59:23.640792 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2249:2285, ack 1836, win 62780, length 36
+22:59:23.641328 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2285, win 65535, length 0
+22:59:23.669779 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1836:1872, ack 2285, win 65535, length 36
+22:59:23.670495 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2285:2321, ack 1872, win 62780, length 36
+22:59:23.670920 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2321, win 65535, length 0
+22:59:23.700951 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1872:1908, ack 2321, win 65535, length 36
+22:59:23.701606 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2321:2357, ack 1908, win 62780, length 36
+22:59:23.701974 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2357, win 65535, length 0
+22:59:23.730785 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1908:1944, ack 2357, win 65535, length 36
+22:59:23.731356 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2357:2393, ack 1944, win 62780, length 36
+22:59:23.731683 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2393, win 65535, length 0
+22:59:23.761377 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1944:1980, ack 2393, win 65535, length 36
+22:59:23.762010 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2393:2429, ack 1980, win 62780, length 36
+22:59:23.762328 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2429, win 65535, length 0
+22:59:23.790989 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 1980:2016, ack 2429, win 65535, length 36
+22:59:23.793264 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2429:2465, ack 2016, win 62780, length 36
+22:59:23.793716 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2465, win 65535, length 0
+22:59:23.821577 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2016:2052, ack 2465, win 65535, length 36
+22:59:23.822277 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2465:2501, ack 2052, win 62780, length 36
+22:59:23.822615 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2501, win 65535, length 0
+22:59:23.852016 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2052:2088, ack 2501, win 65535, length 36
+22:59:23.852842 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2501:2537, ack 2088, win 62780, length 36
+22:59:23.853330 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2537, win 65535, length 0
+22:59:24.800744 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2088:2124, ack 2537, win 65535, length 36
+22:59:24.801270 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2537:2573, ack 2124, win 62780, length 36
+22:59:24.805053 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2573, win 65535, length 0
+22:59:25.011296 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2124:2160, ack 2573, win 65535, length 36
+22:59:25.018762 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2573:2609, ack 2160, win 62780, length 36
+22:59:25.020556 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2609, win 65535, length 0
+22:59:25.237235 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2160:2196, ack 2609, win 65535, length 36
+22:59:25.239536 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2609:2645, ack 2196, win 62780, length 36
+22:59:25.240134 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2645, win 65535, length 0
+22:59:25.417897 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2196:2232, ack 2645, win 65535, length 36
+22:59:25.418366 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2645:2681, ack 2232, win 62780, length 36
+22:59:25.418687 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2681, win 65535, length 0
+22:59:25.689524 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2232:2268, ack 2681, win 65535, length 36
+22:59:25.690168 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2681:2717, ack 2268, win 62780, length 36
+22:59:25.690538 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2717, win 65535, length 0
+22:59:25.855383 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2268:2304, ack 2717, win 65535, length 36
+22:59:25.856158 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2717:2753, ack 2304, win 62780, length 36
+22:59:25.856562 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2753, win 65535, length 0
+22:59:25.976171 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2304:2340, ack 2753, win 65535, length 36
+22:59:25.976806 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2753:2789, ack 2340, win 62780, length 36
+22:59:25.977123 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2789, win 65535, length 0
+22:59:26.226943 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2340:2376, ack 2789, win 65535, length 36
+22:59:26.227550 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2789:2825, ack 2376, win 62780, length 36
+22:59:26.228054 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2825, win 65535, length 0
+22:59:26.352703 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2376:2412, ack 2825, win 65535, length 36
+22:59:26.353551 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2825:2861, ack 2412, win 62780, length 36
+22:59:26.353870 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2861, win 65535, length 0
+22:59:26.900385 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2412:2448, ack 2861, win 65535, length 36
+22:59:26.944116 IP nodemaster.ssh > _gateway.50858: Flags [.], ack 2448, win 62780, length 0
+22:59:27.110945 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2861:2897, ack 2448, win 62780, length 36
+22:59:27.111373 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2897, win 65535, length 0
+22:59:27.930493 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2448:2484, ack 2897, win 65535, length 36
+22:59:27.930616 IP nodemaster.ssh > _gateway.50858: Flags [.], ack 2484, win 62780, length 0
+22:59:27.931310 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2897:2933, ack 2484, win 62780, length 36
+22:59:27.931781 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2933, win 65535, length 0
+22:59:28.041774 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2484:2520, ack 2933, win 65535, length 36
+22:59:28.041851 IP nodemaster.ssh > _gateway.50858: Flags [.], ack 2520, win 62780, length 0
+22:59:28.234637 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2933:2977, ack 2520, win 62780, length 44
+22:59:28.235081 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 2977, win 65535, length 0
+22:59:28.519002 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2520:2556, ack 2977, win 65535, length 36
+22:59:28.519129 IP nodemaster.ssh > _gateway.50858: Flags [.], ack 2556, win 62780, length 0
+22:59:28.519742 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 2977:3013, ack 2556, win 62780, length 36
+22:59:28.520074 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3013, win 65535, length 0
+22:59:28.669183 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3013:3449, ack 2556, win 62780, length 436
+22:59:28.669444 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3449:3749, ack 2556, win 62780, length 300
+22:59:28.669675 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3449, win 65535, length 0
+22:59:28.669675 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3749, win 65535, length 0
+22:59:28.673031 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3749:3785, ack 2556, win 62780, length 36
+22:59:28.673381 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3785, win 65535, length 0
+22:59:35.229552 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2556:2592, ack 3785, win 65535, length 36
+22:59:35.229653 IP nodemaster.ssh > _gateway.50858: Flags [.], ack 2592, win 62780, length 0
+22:59:35.230465 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3785:3821, ack 2592, win 62780, length 36
+22:59:35.230904 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3821, win 65535, length 0
+22:59:35.954666 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2592:2628, ack 3821, win 65535, length 36
+22:59:35.955466 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3821:3857, ack 2628, win 62780, length 36
+22:59:35.955929 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3857, win 65535, length 0
+22:59:36.777889 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2628:2664, ack 3857, win 65535, length 36
+22:59:36.778804 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3857:3893, ack 2664, win 62780, length 36
+22:59:36.798050 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3893, win 65535, length 0
+22:59:37.083887 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2664:2700, ack 3893, win 65535, length 36
+22:59:37.084551 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3893:3929, ack 2700, win 62780, length 36
+22:59:37.084914 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3929, win 65535, length 0
+22:59:37.641906 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2700:2736, ack 3929, win 65535, length 36
+22:59:37.642670 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3929:3965, ack 2736, win 62780, length 36
+22:59:37.643291 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 3965, win 65535, length 0
+22:59:39.300939 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2736:2772, ack 3965, win 65535, length 36
+22:59:39.301557 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 3965:4001, ack 2772, win 62780, length 36
+22:59:39.301813 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4001, win 65535, length 0
+22:59:39.856581 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2772:2808, ack 4001, win 65535, length 36
+22:59:39.857365 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4001:4037, ack 2808, win 62780, length 36
+22:59:39.857807 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4037, win 65535, length 0
+22:59:40.431077 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2808:2844, ack 4037, win 65535, length 36
+22:59:40.431920 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4037:4073, ack 2844, win 62780, length 36
+22:59:40.432296 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4073, win 65535, length 0
+22:59:42.181397 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2844:2880, ack 4073, win 65535, length 36
+22:59:42.182182 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4073:4109, ack 2880, win 62780, length 36
+22:59:42.182529 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4109, win 65535, length 0
+22:59:43.459315 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2880:2916, ack 4109, win 65535, length 36
+22:59:43.459979 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4109:4145, ack 2916, win 62780, length 36
+22:59:43.460455 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4145, win 65535, length 0
+22:59:43.582407 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4145:4181, ack 2916, win 62780, length 36
+22:59:43.582989 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4181, win 65535, length 0
+22:59:43.593865 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4181:4217, ack 2916, win 62780, length 36
+22:59:43.594365 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4217, win 65535, length 0
+22:59:43.606764 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4217:4253, ack 2916, win 62780, length 36
+22:59:43.607200 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4253, win 65535, length 0
+22:59:44.863980 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2916:2952, ack 4253, win 65535, length 36
+22:59:44.864935 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4253:4289, ack 2952, win 62780, length 36
+22:59:44.865436 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4289, win 65535, length 0
+22:59:45.190433 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2952:2988, ack 4289, win 65535, length 36
+22:59:45.191159 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4289:4325, ack 2988, win 62780, length 36
+22:59:45.191564 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4325, win 65535, length 0
+22:59:45.664082 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 2988:3024, ack 4325, win 65535, length 36
+22:59:45.664693 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4325:4361, ack 3024, win 62780, length 36
+22:59:45.665082 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4361, win 65535, length 0
+22:59:46.029700 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 3024:3060, ack 4361, win 65535, length 36
+22:59:46.030579 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4361:4397, ack 3060, win 62780, length 36
+22:59:46.031042 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4397, win 65535, length 0
+22:59:46.461873 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 3060:3096, ack 4397, win 65535, length 36
+22:59:46.462647 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4397:4433, ack 3096, win 62780, length 36
+22:59:46.462986 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4433, win 65535, length 0
+22:59:46.850497 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 3096:3132, ack 4433, win 65535, length 36
+22:59:46.851613 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4433:4469, ack 3132, win 62780, length 36
+22:59:46.852074 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4469, win 65535, length 0
+22:59:48.907587 IP _gateway.50858 > nodemaster.ssh: Flags [P.], seq 3132:3168, ack 4469, win 65535, length 36
+22:59:48.908766 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4469:4505, ack 3168, win 62780, length 36
+22:59:48.909287 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4505, win 65535, length 0
+22:59:49.048481 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4505:4541, ack 3168, win 62780, length 36
+22:59:49.048966 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4541, win 65535, length 0
+22:59:49.076858 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4541:4577, ack 3168, win 62780, length 36
+22:59:49.077530 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4577, win 65535, length 0
+22:59:49.086146 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4577:4613, ack 3168, win 62780, length 36
+22:59:49.086846 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4613, win 65535, length 0
+22:59:49.103969 IP nodemaster.ssh > _gateway.50858: Flags [P.], seq 4613:4649, ack 3168, win 62780, length 36
+22:59:49.104367 IP _gateway.50858 > nodemaster.ssh: Flags [.], ack 4649, win 65535, length 0
+22:59:49.677012 IP nodemaster.34580 > 10.99.121.62.4997: UDP, length 25
+22:59:50.633646 IP nodemaster.43243 > a.resolvers.level3.net.domain: 51645+% [1au] PTR? 62.121.99.10.in-addr.arpa. (77)
+22:59:50.633924 IP nodemaster.35786 > a.resolvers.level3.net.domain: 51658+% [1au] PTR? 62.121.99.10.in-addr.arpa. (77)
+22:59:50.686015 IP nodemaster.34580 > 10.99.121.62.4997: UDP, length 25
+22:59:50.714867 IP a.resolvers.level3.net.domain > nodemaster.43243: 51645 NXDomain* 0/1/1 (113)
+22:59:50.716079 IP a.resolvers.level3.net.domain > nodemaster.35786: 51658 NXDomain* 0/1/1 (113)
+22:59:51.689214 IP nodemaster.34580 > 10.99.121.

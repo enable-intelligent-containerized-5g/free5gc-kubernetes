@@ -1,33 +1,55 @@
-import json
+import os
+import pickle
 import networkx as nx
 import matplotlib.pyplot as plt
+from Pod import Pod
+from Interface import Interface
 
-# kubectl get po,svc -n test -o json > resources.json
-
-# Crea un grafo vacío
+# Create empty graph
 G = nx.Graph()
-# Abre el archivo JSON
-with open('kubectldata.json') as f:
-    data = json.load(f)
 
-# Agrega nodos para los pods
-for item in data['items']:
-    if item['kind'] == 'Pod':
-        name = item.get('metadata', {}).get('labels', {}).get('name', '')
-        if not name:
-            name = item.get('metadata', {}).get('labels', {}).get('nf', '')
+# Path to the kubectldata
+path_kubectl_results = os.path.join('kubectlresults.pkl')
+# Path to the kubectldata
+path_tcpdump_results = os.path.join('tcpdumpresults.pkl')
 
-        G.add_node(name, label=item['kind'])
+# Open results
+def get_data_pkl(path):
+    # Deserialize the array of models with pickle
+    with open(path, 'rb') as file:
+        return pickle.load(file)
 
-# # Agrega bordes para los servicios
-# for item in data['items']:
-#     if item['kind'] == 'Service':
-#         for spec in item['spec']['ports']:
-#             G.add_edge(item['metadata']['name'], spec['port'], label=item['metadata']['name'])
 
-# Imprime el grafo
-# print(nx.info(G))
+def create_free5gc_graph():
+    # Get the pods
+    pods = get_data_pkl(path_kubectl_results)
+    connections = get_data_pkl(path_tcpdump_results)
 
-nx.draw(G, with_labels=True)
-plt.savefig('free5gcgraph.png')
-plt.show()
+    # Add the nodes
+    for pod in pods:
+        G.add_node(pod.name, label=pod.kind, interfaces=pod.list_interfaces)
+
+    # Add the edge
+    for conn in connections:
+        src_pod = None
+        dst_pod = None
+        for pod in pods:
+            for interface in pod.list_interfaces:
+                if interface.ip_address == conn.src_ip:
+                    src_pod = pod
+                if interface.ip_address == conn.dst_ip:
+                    dst_pod = pod
+        if src_pod and dst_pod:
+            G.add_edge(src_pod.name, dst_pod.name)
+    
+    # # Add arist to the graph (conect all de pods)
+    # for i in range(len(pods)):
+    #     for j in range(i+1, len(pods)):
+    #         G.add_edge(pods[i].name, pods[j].name)
+
+    nx.draw(G, with_labels=True)
+    plt.savefig('free5gcgraph.png')
+    plt.show()
+
+if __name__ == "__main__":
+    create_free5gc_graph()
