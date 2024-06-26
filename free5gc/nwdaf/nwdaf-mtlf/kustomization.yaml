@@ -1,0 +1,4 @@
+resources:
+- nwdaf-mtlf-deployment.yaml
+- nwdaf-mtlf-service.yaml
+- nwdaf-mtlf-configmap.yaml

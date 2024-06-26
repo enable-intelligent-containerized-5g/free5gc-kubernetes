@@ -22,13 +22,13 @@ RUN apt-get update \
     # Get and build Free5GC
 RUN cd $GOPATH/src \
     && git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/openapi ./openapi \
-    && git clone --recursive -b v3.2.0 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
+    && git clone --recursive -b v3.2.1 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
     && make nfs
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL description="Free5GC v3.2.1"
+LABEL description="Free5GC v3.2.2"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install runtime dependencies
