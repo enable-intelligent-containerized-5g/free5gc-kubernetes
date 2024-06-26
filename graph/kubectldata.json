@@ -6,10 +6,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.232\"\n    ],\n    \"mac\": \"c6:19:b1:cd:83:b4\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.2.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:01\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.69\"\n    ],\n    \"mac\": \"22:6c:16:00:29:f2\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.2.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:01\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n2network\", \"interface\": \"n3\", \"ips\": [ \"10.10.2.1/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-amf-b8bf976d8-",
                 "labels": {
                     "app": "free5gc",
@@ -17,7 +17,7 @@
                     "nf": "amf",
                     "pod-template-hash": "b8bf976d8"
                 },
-                "name": "free5gc-amf-b8bf976d8-j9psn",
+                "name": "free5gc-amf-b8bf976d8-nqkrx",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -26,11 +26,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-amf-b8bf976d8",
-                        "uid": "4870b3f0-26ed-4bc5-b650-b2e849828b99"
+                        "uid": "e473f1cf-30bf-4180-9870-023b8a2452f6"
                     }
                 ],
-                "resourceVersion": "24199",
-                "uid": "1957aa3a-2840-42fb-8db3-1bc2bc8113c5"
+                "resourceVersion": "9014",
+                "uid": "8602071b-39b1-4f5f-bc36-abb3eef63390"
             },
             "spec": {
                 "containers": [
@@ -82,7 +82,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-kkh66",
+                                "name": "kube-api-access-9p5l5",
                                 "readOnly": true
                             }
                         ]
@@ -106,7 +106,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-kkh66",
+                                "name": "kube-api-access-9p5l5",
                                 "readOnly": true
                             }
                         ]
@@ -150,7 +150,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-kkh66",
+                        "name": "kube-api-access-9p5l5",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -193,32 +193,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:28Z",
+                        "lastTransitionTime": "2024-06-22T22:19:00Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:30Z",
+                        "lastTransitionTime": "2024-06-22T22:19:04Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:30Z",
+                        "lastTransitionTime": "2024-06-22T22:19:04Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://0b4a26c1ecb57c8969c9e99a77c3d0cf47181df4e0824e9f46d0b4fcdf80e510",
+                        "containerID": "containerd://5169d6274cf19d0506866a3f56b8fc871362bcc8181433ab94fbe3d9481a6561",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -228,7 +228,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:29Z"
+                                "startedAt": "2024-06-22T22:19:03Z"
                             }
                         }
                     }
@@ -236,7 +236,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://ca764827e4f3600aecc7ada65140908fb32020228e5b13465f2a0aca0606def2",
+                        "containerID": "containerd://041e9c8e06807bf77f5e757c186811f3539ebdfbd06e990dec08376be120f79d",
                         "image": "docker.io/appropriate/curl:latest",
                         "imageID": "docker.io/appropriate/curl@sha256:c8bf5bbec6397465a247c2bb3e589bb77e4f62ff88a027175ecb2d9e4f12c9d7",
                         "lastState": {},
@@ -246,24 +246,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://ca764827e4f3600aecc7ada65140908fb32020228e5b13465f2a0aca0606def2",
+                                "containerID": "containerd://041e9c8e06807bf77f5e757c186811f3539ebdfbd06e990dec08376be120f79d",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:27Z",
+                                "finishedAt": "2024-06-22T22:19:00Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:24Z"
+                                "startedAt": "2024-06-22T22:19:00Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.232",
+                "podIP": "10.244.0.69",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.232"
+                        "ip": "10.244.0.69"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -271,10 +271,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.233\"\n    ],\n    \"mac\": \"ba:8e:68:18:38:2b\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.2.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:02\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.65\"\n    ],\n    \"mac\": \"12:5c:9c:b7:8e:06\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.2.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:02\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n2network\", \"interface\": \"n3\", \"ips\": [ \"10.10.2.2/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-amf2-7777fc4d8-",
                 "labels": {
                     "app": "free5gc",
@@ -282,7 +282,7 @@
                     "nf": "amf",
                     "pod-template-hash": "7777fc4d8"
                 },
-                "name": "free5gc-amf2-7777fc4d8-85ckl",
+                "name": "free5gc-amf2-7777fc4d8-lllcv",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -291,11 +291,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-amf2-7777fc4d8",
-                        "uid": "eb3e2fb6-563c-4e06-9196-1fbbfb01ff2d"
+                        "uid": "e208893b-3aa0-4c42-bff8-e9c3f2167bdc"
                     }
                 ],
-                "resourceVersion": "24204",
-                "uid": "eaa5bdf8-62ce-468e-a53b-a4e108bbeecf"
+                "resourceVersion": "8995",
+                "uid": "67d62742-a974-47f8-b7c3-1d03fc858dfb"
             },
             "spec": {
                 "containers": [
@@ -347,7 +347,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-mjqks",
+                                "name": "kube-api-access-vs2tr",
                                 "readOnly": true
                             }
                         ]
@@ -371,7 +371,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-mjqks",
+                                "name": "kube-api-access-vs2tr",
                                 "readOnly": true
                             }
                         ]
@@ -415,7 +415,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-mjqks",
+                        "name": "kube-api-access-vs2tr",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -458,32 +458,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:28Z",
+                        "lastTransitionTime": "2024-06-22T22:18:59Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:30Z",
+                        "lastTransitionTime": "2024-06-22T22:19:01Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:30Z",
+                        "lastTransitionTime": "2024-06-22T22:19:01Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://979520992a0f3daa44122ce7d016472c1751011aa378e6ee49860db6a3cb892f",
+                        "containerID": "containerd://d119b7d9da290f6d73951626452909f7efe70928f2739f4b9eef656b43fdd23a",
                         "image": "docker.io/edierbra/free5gc:v3.2.0",
                         "imageID": "docker.io/edierbra/free5gc@sha256:063eec04664de2ccb8aacae180b0398760d111dd3822f6ea60eff4e7d8744fbf",
                         "lastState": {},
@@ -493,7 +493,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:30Z"
+                                "startedAt": "2024-06-22T22:19:00Z"
                             }
                         }
                     }
@@ -501,7 +501,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://22c00dec50aa8e7b50d11235cdb7b1299768516d9df1d06b4f42c6e9360c8ea9",
+                        "containerID": "containerd://b86af28f906a1c911fc6d58e3212c1795331c88f042c601caa06e411ba86d3f7",
                         "image": "docker.io/appropriate/curl:latest",
                         "imageID": "docker.io/appropriate/curl@sha256:c8bf5bbec6397465a247c2bb3e589bb77e4f62ff88a027175ecb2d9e4f12c9d7",
                         "lastState": {},
@@ -511,24 +511,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://22c00dec50aa8e7b50d11235cdb7b1299768516d9df1d06b4f42c6e9360c8ea9",
+                                "containerID": "containerd://b86af28f906a1c911fc6d58e3212c1795331c88f042c601caa06e411ba86d3f7",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:27Z",
+                                "finishedAt": "2024-06-22T22:18:59Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:27Z"
+                                "startedAt": "2024-06-22T22:18:59Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.233",
+                "podIP": "10.244.0.65",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.233"
+                        "ip": "10.244.0.65"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -536,16 +536,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.234\"\n    ],\n    \"mac\": \"3a:f8:d4:9e:35:e3\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.63\"\n    ],\n    \"mac\": \"5e:7b:fb:c6:ab:9a\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-ausf-df77f954c-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "ausf",
                     "pod-template-hash": "df77f954c"
                 },
-                "name": "free5gc-ausf-df77f954c-ztn7d",
+                "name": "free5gc-ausf-df77f954c-sn5rx",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -554,11 +554,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-ausf-df77f954c",
-                        "uid": "22887768-f64e-4940-a7e1-ba44017e4d36"
+                        "uid": "f6aa46a4-fb7d-4d17-9fc9-e3dc7684ba6c"
                     }
                 ],
-                "resourceVersion": "24234",
-                "uid": "f90b0348-fd02-4be7-991a-7edc4a4b0097"
+                "resourceVersion": "9042",
+                "uid": "de63338f-cfdd-411b-bba9-4bf2f84c2768"
             },
             "spec": {
                 "containers": [
@@ -604,7 +604,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-thfvx",
+                                "name": "kube-api-access-sjgl8",
                                 "readOnly": true
                             }
                         ]
@@ -634,7 +634,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-thfvx",
+                                "name": "kube-api-access-sjgl8",
                                 "readOnly": true
                             }
                         ]
@@ -660,7 +660,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-thfvx",
+                                "name": "kube-api-access-sjgl8",
                                 "readOnly": true
                             }
                         ]
@@ -704,7 +704,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-thfvx",
+                        "name": "kube-api-access-sjgl8",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -747,32 +747,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:32Z",
+                        "lastTransitionTime": "2024-06-22T22:19:07Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:33Z",
+                        "lastTransitionTime": "2024-06-22T22:19:08Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:33Z",
+                        "lastTransitionTime": "2024-06-22T22:19:08Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://d8da6668e5acfd1132987f5d7ff186ed663e4d432ceae18328f69e46fe7f329e",
+                        "containerID": "containerd://02a3781b476b5c7504daf4299f3baeac3ee6106f94f6e53f9b8910542a9c711e",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -782,7 +782,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:32Z"
+                                "startedAt": "2024-06-22T22:19:07Z"
                             }
                         }
                     }
@@ -790,7 +790,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://2e17d10e193a50773ae1c021d496d5213ea641d7b1b3fa2e0e0ea07b07a1c92b",
+                        "containerID": "containerd://2c7692bf75c93ca4df934ab73df19fb6e9505beb4b4a20d3086eb59e20f4a5df",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -800,16 +800,16 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://2e17d10e193a50773ae1c021d496d5213ea641d7b1b3fa2e0e0ea07b07a1c92b",
+                                "containerID": "containerd://2c7692bf75c93ca4df934ab73df19fb6e9505beb4b4a20d3086eb59e20f4a5df",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:31Z",
+                                "finishedAt": "2024-06-22T22:19:05Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:24Z"
+                                "startedAt": "2024-06-22T22:18:56Z"
                             }
                         }
                     },
                     {
-                        "containerID": "containerd://909e5a272e59e62bd82ad8e84790c98254d97a1172b71b07e6a1a59904cd0034",
+                        "containerID": "containerd://6586380e576ec6bb44537653db5cd46afefe924402a1d69bb0ae9d6a301cc2e6",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -819,24 +819,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://909e5a272e59e62bd82ad8e84790c98254d97a1172b71b07e6a1a59904cd0034",
+                                "containerID": "containerd://6586380e576ec6bb44537653db5cd46afefe924402a1d69bb0ae9d6a301cc2e6",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:31Z",
+                                "finishedAt": "2024-06-22T22:19:06Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:31Z"
+                                "startedAt": "2024-06-22T22:19:06Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.234",
+                "podIP": "10.244.0.63",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.234"
+                        "ip": "10.244.0.63"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -844,16 +844,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.236\"\n    ],\n    \"mac\": \"2e:93:7c:1c:85:cf\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.66\"\n    ],\n    \"mac\": \"e6:c8:61:a5:1e:0d\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-nrf-794f674868-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nrf",
                     "pod-template-hash": "794f674868"
                 },
-                "name": "free5gc-nrf-794f674868-8qz9m",
+                "name": "free5gc-nrf-794f674868-7c76s",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -862,11 +862,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-nrf-794f674868",
-                        "uid": "ab145ce2-20bb-42f3-a6c8-c7792a4ab7db"
+                        "uid": "c1a3d108-a0cc-446b-8d91-8697131c3606"
                     }
                 ],
-                "resourceVersion": "24140",
-                "uid": "8610f0d3-1cb2-40f0-9a68-6f291c2ab8a6"
+                "resourceVersion": "8930",
+                "uid": "5d9b683c-3618-40ea-afad-d9a24d735fea"
             },
             "spec": {
                 "containers": [
@@ -916,7 +916,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-sfqd2",
+                                "name": "kube-api-access-5gngg",
                                 "readOnly": true
                             }
                         ]
@@ -946,7 +946,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-sfqd2",
+                                "name": "kube-api-access-5gngg",
                                 "readOnly": true
                             }
                         ]
@@ -990,7 +990,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-sfqd2",
+                        "name": "kube-api-access-5gngg",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -1033,32 +1033,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:25Z",
+                        "lastTransitionTime": "2024-06-22T22:18:56Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:26Z",
+                        "lastTransitionTime": "2024-06-22T22:18:57Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:26Z",
+                        "lastTransitionTime": "2024-06-22T22:18:57Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://99c561267065f152ec9b2b30957590fb6122ad5aca8b82d89448b3d7ccbb2026",
+                        "containerID": "containerd://ed645e6a717242f866ef86807fe11525409d920877177592cc48fd0cfa2c7097",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -1068,7 +1068,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:25Z"
+                                "startedAt": "2024-06-22T22:18:56Z"
                             }
                         }
                     }
@@ -1076,7 +1076,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://3ab91583c07898782f741898c45ae665b256e50d9cd175a9b356094883b81048",
+                        "containerID": "containerd://5b558e959694808f449cef075fcf241e914f2bae8fe675df1d48445482c0da4f",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -1086,24 +1086,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://3ab91583c07898782f741898c45ae665b256e50d9cd175a9b356094883b81048",
+                                "containerID": "containerd://5b558e959694808f449cef075fcf241e914f2bae8fe675df1d48445482c0da4f",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:23Z",
+                                "finishedAt": "2024-06-22T22:18:55Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:23Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.236",
+                "podIP": "10.244.0.66",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.236"
+                        "ip": "10.244.0.66"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -1111,16 +1111,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.235\"\n    ],\n    \"mac\": \"02:d3:c4:34:c7:49\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.75\"\n    ],\n    \"mac\": \"32:25:e8:ad:95:7c\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-nssf-847bc74cbb-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nssf",
                     "pod-template-hash": "847bc74cbb"
                 },
-                "name": "free5gc-nssf-847bc74cbb-nd645",
+                "name": "free5gc-nssf-847bc74cbb-h2pcf",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -1129,11 +1129,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-nssf-847bc74cbb",
-                        "uid": "2809fa13-f6ed-47ee-ac9c-7bddc1dbc524"
+                        "uid": "6158adde-7fc7-445a-bae5-bf9626826b32"
                     }
                 ],
-                "resourceVersion": "24336",
-                "uid": "7d30a6d8-77a7-483e-9e3c-4e4a9984dd59"
+                "resourceVersion": "9144",
+                "uid": "533be0f8-6d11-4e6d-9053-a538cb1e6ffd"
             },
             "spec": {
                 "containers": [
@@ -1179,7 +1179,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-lwnhs",
+                                "name": "kube-api-access-schff",
                                 "readOnly": true
                             }
                         ]
@@ -1209,7 +1209,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-lwnhs",
+                                "name": "kube-api-access-schff",
                                 "readOnly": true
                             }
                         ]
@@ -1253,7 +1253,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-lwnhs",
+                        "name": "kube-api-access-schff",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -1296,32 +1296,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:48Z",
+                        "lastTransitionTime": "2024-06-22T22:19:23Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:49Z",
+                        "lastTransitionTime": "2024-06-22T22:19:24Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:49Z",
+                        "lastTransitionTime": "2024-06-22T22:19:24Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://878cb6de4cc422d0b55dbe01028a50eeab51d0a77733967b30255d0ef0c6d9d1",
+                        "containerID": "containerd://16f2fea7026412d3258aa6e066a46832b649a081ceb7f521db09c16de638a964",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -1331,7 +1331,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:48Z"
+                                "startedAt": "2024-06-22T22:19:23Z"
                             }
                         }
                     }
@@ -1339,7 +1339,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://d35cdee1cbfa774c8e549841972100ab5a6b50b9b29aad37ef36c6bdf3acd602",
+                        "containerID": "containerd://efb97f047bf3507a9f49631e0df26b619d348bbca9e26ac700b31e26d969bd27",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -1349,24 +1349,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://d35cdee1cbfa774c8e549841972100ab5a6b50b9b29aad37ef36c6bdf3acd602",
+                                "containerID": "containerd://efb97f047bf3507a9f49631e0df26b619d348bbca9e26ac700b31e26d969bd27",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:48Z",
+                                "finishedAt": "2024-06-22T22:19:23Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:24Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.235",
+                "podIP": "10.244.0.75",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.235"
+                        "ip": "10.244.0.75"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -1374,16 +1374,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.238\"\n    ],\n    \"mac\": \"fe:05:8d:80:99:c5\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.67\"\n    ],\n    \"mac\": \"b2:1e:44:a3:b2:c9\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-nwdaf-56689657cd-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nwdaf",
                     "pod-template-hash": "56689657cd"
                 },
-                "name": "free5gc-nwdaf-56689657cd-w8t5f",
+                "name": "free5gc-nwdaf-56689657cd-x4zwj",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -1392,11 +1392,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-nwdaf-56689657cd",
-                        "uid": "f594ea12-3da6-49f8-be9d-7a1f9671f89c"
+                        "uid": "95bfc3c9-2487-4393-80d0-127f16c2f400"
                     }
                 ],
-                "resourceVersion": "24303",
-                "uid": "f8669325-581e-47e9-846a-748d122a73e7"
+                "resourceVersion": "9103",
+                "uid": "3ca54f3b-17a0-4ab0-a681-986d42efca37"
             },
             "spec": {
                 "containers": [
@@ -1442,7 +1442,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-qb85r",
+                                "name": "kube-api-access-g9ks6",
                                 "readOnly": true
                             }
                         ]
@@ -1472,7 +1472,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-qb85r",
+                                "name": "kube-api-access-g9ks6",
                                 "readOnly": true
                             }
                         ]
@@ -1516,7 +1516,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-qb85r",
+                        "name": "kube-api-access-g9ks6",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -1559,32 +1559,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:42Z",
+                        "lastTransitionTime": "2024-06-22T22:19:16Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:43Z",
+                        "lastTransitionTime": "2024-06-22T22:19:17Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:43Z",
+                        "lastTransitionTime": "2024-06-22T22:19:17Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://24c1ceda0f1e0f5f44a3986aef0a041ac012d3b4d5b410e5794dfac052439ba9",
+                        "containerID": "containerd://f10b1fc56edd6fc422795da7f8df3803eb1bde1db63a468de5c9ceb38ebb3718",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -1594,7 +1594,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:42Z"
+                                "startedAt": "2024-06-22T22:19:17Z"
                             }
                         }
                     }
@@ -1602,7 +1602,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://19024c51c8783d6eb090a9fbe3c00d29e5d6b5ff1bf311e3cd522b4fc474390e",
+                        "containerID": "containerd://51318ae6a07b6c07cfbb24b64d45cc848340f68b9ff1a6f380ade3945eea8d26",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -1612,24 +1612,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://19024c51c8783d6eb090a9fbe3c00d29e5d6b5ff1bf311e3cd522b4fc474390e",
+                                "containerID": "containerd://51318ae6a07b6c07cfbb24b64d45cc848340f68b9ff1a6f380ade3945eea8d26",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:41Z",
+                                "finishedAt": "2024-06-22T22:19:16Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:23Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.238",
+                "podIP": "10.244.0.67",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.238"
+                        "ip": "10.244.0.67"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -1637,16 +1637,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.237\"\n    ],\n    \"mac\": \"f6:39:4a:2a:49:6f\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.72\"\n    ],\n    \"mac\": \"ba:34:70:8e:8f:84\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-pcf-5bdf594cbc-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "pcf",
                     "pod-template-hash": "5bdf594cbc"
                 },
-                "name": "free5gc-pcf-5bdf594cbc-7sj6s",
+                "name": "free5gc-pcf-5bdf594cbc-6svs4",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -1655,11 +1655,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-pcf-5bdf594cbc",
-                        "uid": "f8f67b86-14bd-46f2-83d6-c4f28b1ae637"
+                        "uid": "b1a20954-ec1d-4cad-b3a9-24108e6d3ebd"
                     }
                 ],
-                "resourceVersion": "24281",
-                "uid": "0fbec04c-f030-4bfb-a963-d5f17e931605"
+                "resourceVersion": "9090",
+                "uid": "3b83a28f-1e27-4899-ba42-16d1a2e7e7e6"
             },
             "spec": {
                 "containers": [
@@ -1705,7 +1705,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-fqg75",
+                                "name": "kube-api-access-hdcrh",
                                 "readOnly": true
                             }
                         ]
@@ -1735,7 +1735,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-fqg75",
+                                "name": "kube-api-access-hdcrh",
                                 "readOnly": true
                             }
                         ]
@@ -1779,7 +1779,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-fqg75",
+                        "name": "kube-api-access-hdcrh",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -1822,32 +1822,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:39Z",
+                        "lastTransitionTime": "2024-06-22T22:19:14Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:40Z",
+                        "lastTransitionTime": "2024-06-22T22:19:15Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:40Z",
+                        "lastTransitionTime": "2024-06-22T22:19:15Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://b4493c2b0346ddf5273e69f4d8bf82979c510ff4a8aa991c1b6bf8675f2990fb",
+                        "containerID": "containerd://06401b7961761b4cb5ba220bee172c60534498127022db2c437e067309c5665e",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -1857,7 +1857,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:39Z"
+                                "startedAt": "2024-06-22T22:19:14Z"
                             }
                         }
                     }
@@ -1865,7 +1865,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://f2471828022d7a750d927e76b191ff11fe21dd5530f60149847a5d531e677096",
+                        "containerID": "containerd://ce86421c44fadf8970f90523581971be4a70b72cb13662f210db4740f0e61dc0",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -1875,24 +1875,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://f2471828022d7a750d927e76b191ff11fe21dd5530f60149847a5d531e677096",
+                                "containerID": "containerd://ce86421c44fadf8970f90523581971be4a70b72cb13662f210db4740f0e61dc0",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:39Z",
+                                "finishedAt": "2024-06-22T22:19:13Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:23Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.237",
+                "podIP": "10.244.0.72",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.237"
+                        "ip": "10.244.0.72"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:08Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -1900,10 +1900,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.244\"\n    ],\n    \"mac\": \"9a:8d:90:d1:77:3b\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.101\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:65\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.64\"\n    ],\n    \"mac\": \"4a:a5:dd:83:9f:12\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.101\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:65\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n4network\", \"interface\": \"n4\", \"ips\": [ \"10.10.4.101/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-smf-576fbccc59-",
                 "labels": {
                     "app": "free5gc",
@@ -1911,7 +1911,7 @@
                     "nf": "smf",
                     "pod-template-hash": "576fbccc59"
                 },
-                "name": "free5gc-smf-576fbccc59-82nx7",
+                "name": "free5gc-smf-576fbccc59-6dz7s",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -1920,11 +1920,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-smf-576fbccc59",
-                        "uid": "8f58cbc9-eb26-4d97-8480-4a98e0613c53"
+                        "uid": "f75f8f5f-e3b7-4f1f-a1cb-839379cf0060"
                     }
                 ],
-                "resourceVersion": "24263",
-                "uid": "c308f861-558d-4f15-a3e1-a1a81e1c55df"
+                "resourceVersion": "9063",
+                "uid": "663b8773-6c29-465f-8874-f587f9f125ef"
             },
             "spec": {
                 "containers": [
@@ -1976,7 +1976,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-zz2vk",
+                                "name": "kube-api-access-w6v2q",
                                 "readOnly": true
                             }
                         ]
@@ -2006,7 +2006,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-zz2vk",
+                                "name": "kube-api-access-w6v2q",
                                 "readOnly": true
                             }
                         ]
@@ -2060,7 +2060,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-zz2vk",
+                        "name": "kube-api-access-w6v2q",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -2103,32 +2103,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:34Z",
+                        "lastTransitionTime": "2024-06-22T22:19:10Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:36Z",
+                        "lastTransitionTime": "2024-06-22T22:19:12Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:36Z",
+                        "lastTransitionTime": "2024-06-22T22:19:12Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:08Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://f791e700eae1640005b414aad3bc4e1a34a9106bafbbc0b0c09e028092bcfb06",
+                        "containerID": "containerd://04307fc0eb5d3529a76f77e901beae50d34e0536f86dd9bd20116f30753b2824",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -2138,7 +2138,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:36Z"
+                                "startedAt": "2024-06-22T22:19:11Z"
                             }
                         }
                     }
@@ -2146,7 +2146,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://dd0ffa25d745610666f655658c6303f7f8c405150d16a08a993f86fcff4ab919",
+                        "containerID": "containerd://0856fbffd6217a5e1ffe41a44f950ad6c7532f254bd5408dd9de6ac3e1c31e21",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -2156,24 +2156,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://dd0ffa25d745610666f655658c6303f7f8c405150d16a08a993f86fcff4ab919",
+                                "containerID": "containerd://0856fbffd6217a5e1ffe41a44f950ad6c7532f254bd5408dd9de6ac3e1c31e21",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:33Z",
+                                "finishedAt": "2024-06-22T22:19:10Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:26Z"
+                                "startedAt": "2024-06-22T22:18:58Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.244",
+                "podIP": "10.244.0.64",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.244"
+                        "ip": "10.244.0.64"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:41Z"
             }
         },
         {
@@ -2181,10 +2181,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.242\"\n    ],\n    \"mac\": \"de:16:0c:7f:c3:1e\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.102\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:66\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.71\"\n    ],\n    \"mac\": \"66:f5:60:c1:c4:0c\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.102\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:66\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n4network\", \"interface\": \"n4\", \"ips\": [ \"10.10.4.102/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:09Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "generateName": "free5gc-smf2-5d7b8c4756-",
                 "labels": {
                     "app": "free5gc",
@@ -2192,7 +2192,7 @@
                     "nf": "smf",
                     "pod-template-hash": "5d7b8c4756"
                 },
-                "name": "free5gc-smf2-5d7b8c4756-bc46h",
+                "name": "free5gc-smf2-5d7b8c4756-bd9gw",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -2201,11 +2201,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-smf2-5d7b8c4756",
-                        "uid": "bda4ec1b-e264-4099-8c00-66262ca3b6d0"
+                        "uid": "2b35bcb5-a0dd-45ec-80d1-51bbc680b24e"
                     }
                 ],
-                "resourceVersion": "24250",
-                "uid": "d282c496-6a43-45e4-8e4d-ca91f4a56df7"
+                "resourceVersion": "9076",
+                "uid": "f15cc13f-8aa5-4a36-860a-ddab9c9fb7bb"
             },
             "spec": {
                 "containers": [
@@ -2257,7 +2257,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-q4jz4",
+                                "name": "kube-api-access-7txfm",
                                 "readOnly": true
                             }
                         ]
@@ -2287,7 +2287,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-q4jz4",
+                                "name": "kube-api-access-7txfm",
                                 "readOnly": true
                             }
                         ]
@@ -2341,7 +2341,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-q4jz4",
+                        "name": "kube-api-access-7txfm",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -2384,32 +2384,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:34Z",
+                        "lastTransitionTime": "2024-06-22T22:19:10Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:35Z",
+                        "lastTransitionTime": "2024-06-22T22:19:13Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:35Z",
+                        "lastTransitionTime": "2024-06-22T22:19:13Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:09Z",
+                        "lastTransitionTime": "2024-06-22T22:18:41Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://f9b114a085409808832ec3956c4af50d207645afe56339dc654459ab531a0a0c",
+                        "containerID": "containerd://4b1a4f1f1a4b0bdc425783a741e8b3e7a968f0c69e5178493bbcbe34e31522c1",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -2419,7 +2419,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:35Z"
+                                "startedAt": "2024-06-22T22:19:13Z"
                             }
                         }
                     }
@@ -2427,7 +2427,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://17911f6d134f4e4973b24bb7c74c75f8361acc25e697455edb1b652a4a89cca6",
+                        "containerID": "containerd://67185f52534642f35d5686048623c7c4aa71521386f25f7e3094bdd71ce517bf",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -2437,24 +2437,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://17911f6d134f4e4973b24bb7c74c75f8361acc25e697455edb1b652a4a89cca6",
+                                "containerID": "containerd://67185f52534642f35d5686048623c7c4aa71521386f25f7e3094bdd71ce517bf",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:33Z",
+                                "finishedAt": "2024-06-22T22:19:10Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:26Z"
+                                "startedAt": "2024-06-22T22:18:58Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.242",
+                "podIP": "10.244.0.71",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.242"
+                        "ip": "10.244.0.71"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:42Z"
             }
         },
         {
@@ -2462,16 +2462,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.240\"\n    ],\n    \"mac\": \"a6:c3:ed:51:84:de\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.73\"\n    ],\n    \"mac\": \"16:64:e5:8c:e7:fb\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:09Z",
+                "creationTimestamp": "2024-06-22T22:18:42Z",
                 "generateName": "free5gc-udm-fd8f694c9-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "udm",
                     "pod-template-hash": "fd8f694c9"
                 },
-                "name": "free5gc-udm-fd8f694c9-56p48",
+                "name": "free5gc-udm-fd8f694c9-xzc98",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -2480,11 +2480,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-udm-fd8f694c9",
-                        "uid": "c17a15bc-d364-439b-be34-5025eac21967"
+                        "uid": "ca0be706-2ea4-4e0f-9a76-ab96de7123fb"
                     }
                 ],
-                "resourceVersion": "24299",
-                "uid": "fa2dbd26-5867-4266-bcf4-da5c128290c1"
+                "resourceVersion": "9112",
+                "uid": "eebf46eb-383c-4013-a938-fc7fb15ba073"
             },
             "spec": {
                 "containers": [
@@ -2530,7 +2530,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-svwkz",
+                                "name": "kube-api-access-4rgv9",
                                 "readOnly": true
                             }
                         ]
@@ -2560,7 +2560,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-svwkz",
+                                "name": "kube-api-access-4rgv9",
                                 "readOnly": true
                             }
                         ]
@@ -2604,7 +2604,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-svwkz",
+                        "name": "kube-api-access-4rgv9",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -2647,32 +2647,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:42Z",
+                        "lastTransitionTime": "2024-06-22T22:19:17Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:43Z",
+                        "lastTransitionTime": "2024-06-22T22:19:18Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:43Z",
+                        "lastTransitionTime": "2024-06-22T22:19:18Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:09Z",
+                        "lastTransitionTime": "2024-06-22T22:18:42Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://def0feef5bd963e40907ee269a4f1dbf325add6b8c70515fbe92a344724fed88",
+                        "containerID": "containerd://8cb58148f69dd2240dc97e58e89b05845f8f0b68fca3cd1af582273128c34bd8",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -2682,7 +2682,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:42Z"
+                                "startedAt": "2024-06-22T22:19:17Z"
                             }
                         }
                     }
@@ -2690,7 +2690,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://a1fa2262cf56619aa6309f7d5edc1d676a5ebe079bf6b3ed93b49e9cd4e5d018",
+                        "containerID": "containerd://622d568b33d0cbb26197e0c0c0008dbe7a1340e8ff878cd7fdb77227b175c710",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -2700,24 +2700,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://a1fa2262cf56619aa6309f7d5edc1d676a5ebe079bf6b3ed93b49e9cd4e5d018",
+                                "containerID": "containerd://622d568b33d0cbb26197e0c0c0008dbe7a1340e8ff878cd7fdb77227b175c710",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:41Z",
+                                "finishedAt": "2024-06-22T22:19:16Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:23Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.240",
+                "podIP": "10.244.0.73",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.240"
+                        "ip": "10.244.0.73"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:42Z"
             }
         },
         {
@@ -2725,16 +2725,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.241\"\n    ],\n    \"mac\": \"42:92:ae:90:2f:69\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.70\"\n    ],\n    \"mac\": \"e6:87:56:44:45:62\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:09Z",
+                "creationTimestamp": "2024-06-22T22:18:42Z",
                 "generateName": "free5gc-udr-6cd8d5f6ff-",
                 "labels": {
                     "app": "free5gc",
                     "nf": "udr",
                     "pod-template-hash": "6cd8d5f6ff"
                 },
-                "name": "free5gc-udr-6cd8d5f6ff-xdvhk",
+                "name": "free5gc-udr-6cd8d5f6ff-kb6hj",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -2743,11 +2743,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-udr-6cd8d5f6ff",
-                        "uid": "b3126bd1-1404-4d6d-b39a-6d631b0ecaac"
+                        "uid": "b967ec99-24a7-43f4-8bca-c38b93e62fa1"
                     }
                 ],
-                "resourceVersion": "24322",
-                "uid": "c77fff4b-a631-42b6-8810-66dd224cfd85"
+                "resourceVersion": "9130",
+                "uid": "8d6d53b8-dfab-4ae3-adae-2c3b3f491b66"
             },
             "spec": {
                 "containers": [
@@ -2797,7 +2797,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-ggdx7",
+                                "name": "kube-api-access-8mgh2",
                                 "readOnly": true
                             }
                         ]
@@ -2827,7 +2827,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-ggdx7",
+                                "name": "kube-api-access-8mgh2",
                                 "readOnly": true
                             }
                         ]
@@ -2871,7 +2871,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-ggdx7",
+                        "name": "kube-api-access-8mgh2",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -2914,32 +2914,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:45Z",
+                        "lastTransitionTime": "2024-06-22T22:19:20Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:46Z",
+                        "lastTransitionTime": "2024-06-22T22:19:21Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:46Z",
+                        "lastTransitionTime": "2024-06-22T22:19:21Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:09Z",
+                        "lastTransitionTime": "2024-06-22T22:18:42Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://be2ed997734e566fe622d28f2b886391f0afbfd7bf4c5bd9a3413d258897ccd3",
+                        "containerID": "containerd://b394b6601d8d0966407df033689cbb1ddda0244b2a64923772658501f3b49c01",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -2949,7 +2949,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:45Z"
+                                "startedAt": "2024-06-22T22:19:21Z"
                             }
                         }
                     }
@@ -2957,7 +2957,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://903411682f447bc049cd3e5e46a32747614d832de9fc7e4ee6698de54be8c5c4",
+                        "containerID": "containerd://8bf6e3e1777e3c9ae34a84c751b454e8eb52f4cc22cdce9bdc9aded4279aa748",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -2967,24 +2967,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://903411682f447bc049cd3e5e46a32747614d832de9fc7e4ee6698de54be8c5c4",
+                                "containerID": "containerd://8bf6e3e1777e3c9ae34a84c751b454e8eb52f4cc22cdce9bdc9aded4279aa748",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:44Z",
+                                "finishedAt": "2024-06-22T22:19:20Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:23Z"
+                                "startedAt": "2024-06-22T22:18:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.241",
+                "podIP": "10.244.0.70",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.241"
+                        "ip": "10.244.0.70"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:42Z"
             }
         },
         {
@@ -2992,10 +2992,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.239\"\n    ],\n    \"mac\": \"da:ec:a6:a1:3e:f8\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:01\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:01\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.68\"\n    ],\n    \"mac\": \"2a:f5:0a:ac:3e:6d\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:01\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.1\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:01\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n3network\", \"interface\": \"n3\", \"ips\": [ \"10.10.3.1/24\" ] }, { \"name\": \"n4network\", \"interface\": \"n4\", \"ips\": [ \"10.10.4.1/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:09Z",
+                "creationTimestamp": "2024-06-22T22:18:42Z",
                 "generateName": "free5gc-upf-686778cf88-",
                 "labels": {
                     "app": "free5gc",
@@ -3003,7 +3003,7 @@
                     "nf": "upf",
                     "pod-template-hash": "686778cf88"
                 },
-                "name": "free5gc-upf-686778cf88-pjk2q",
+                "name": "free5gc-upf-686778cf88-sbcgs",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -3012,11 +3012,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-upf-686778cf88",
-                        "uid": "e62afacd-b219-43f4-b4a0-40373ef8d5f2"
+                        "uid": "53848bb8-0262-42af-b554-03ab717cba73"
                     }
                 ],
-                "resourceVersion": "24213",
-                "uid": "28fb32e2-2545-4c05-bcfb-77b8ebd61d6f"
+                "resourceVersion": "9008",
+                "uid": "31b1ed30-c3d0-4e20-a008-90aafb83cbc8"
             },
             "spec": {
                 "containers": [
@@ -3060,7 +3060,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-x9hl9",
+                                "name": "kube-api-access-tb6rj",
                                 "readOnly": true
                             }
                         ]
@@ -3090,7 +3090,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-x9hl9",
+                                "name": "kube-api-access-tb6rj",
                                 "readOnly": true
                             }
                         ]
@@ -3139,7 +3139,7 @@
                         "name": "upf-volume"
                     },
                     {
-                        "name": "kube-api-access-x9hl9",
+                        "name": "kube-api-access-tb6rj",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -3182,32 +3182,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:29Z",
+                        "lastTransitionTime": "2024-06-22T22:18:59Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:31Z",
+                        "lastTransitionTime": "2024-06-22T22:19:03Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:31Z",
+                        "lastTransitionTime": "2024-06-22T22:19:03Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:09Z",
+                        "lastTransitionTime": "2024-06-22T22:18:42Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://9b7ed3ef9a3df232b58a2aa240b588fce3538959141a26ec1d10e90c1370e308",
+                        "containerID": "containerd://658c6aa4c7c9fab36888e93994ed7bda344ecf4c26709ec5a471fb90475ccef3",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -3217,7 +3217,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:30Z"
+                                "startedAt": "2024-06-22T22:19:03Z"
                             }
                         }
                     }
@@ -3225,7 +3225,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://6b4675cd63b5f500bc142812a1a7ca84429f658c22878b250cc97b179527bfd8",
+                        "containerID": "containerd://5f98eadc23789cd1f212e744eb8e24b8aa18cdef73556790d67cb31a55653b5b",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -3235,24 +3235,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://6b4675cd63b5f500bc142812a1a7ca84429f658c22878b250cc97b179527bfd8",
+                                "containerID": "containerd://5f98eadc23789cd1f212e744eb8e24b8aa18cdef73556790d67cb31a55653b5b",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:28Z",
+                                "finishedAt": "2024-06-22T22:18:59Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:28Z"
+                                "startedAt": "2024-06-22T22:18:59Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.239",
+                "podIP": "10.244.0.68",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.239"
+                        "ip": "10.244.0.68"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:42Z"
             }
         },
         {
@@ -3260,10 +3260,10 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.243\"\n    ],\n    \"mac\": \"22:50:1d:9a:fd:55\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:02\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:02\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.74\"\n    ],\n    \"mac\": \"86:3f:e2:d9:ac:64\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:02\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n4network\",\n    \"interface\": \"n4\",\n    \"ips\": [\n        \"10.10.4.2\"\n    ],\n    \"mac\": \"0a:58:0a:0a:04:02\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n3network\", \"interface\": \"n3\", \"ips\": [ \"10.10.3.2/24\" ] }, { \"name\": \"n4network\", \"interface\": \"n4\", \"ips\": [ \"10.10.4.2/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:09Z",
+                "creationTimestamp": "2024-06-22T22:18:42Z",
                 "generateName": "free5gc-upf2-8474c476dd-",
                 "labels": {
                     "app": "free5gc",
@@ -3271,7 +3271,7 @@
                     "nf": "upf",
                     "pod-template-hash": "8474c476dd"
                 },
-                "name": "free5gc-upf2-8474c476dd-cqt22",
+                "name": "free5gc-upf2-8474c476dd-8g6bt",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -3280,11 +3280,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-upf2-8474c476dd",
-                        "uid": "26f7da95-0c3d-4983-aa95-c221fdd43739"
+                        "uid": "9ead0cee-39ce-4382-9400-3d7dda8f2dee"
                     }
                 ],
-                "resourceVersion": "24229",
-                "uid": "66500402-fd35-44a2-a61f-dfdc73538ede"
+                "resourceVersion": "9026",
+                "uid": "0402ebcf-c65c-4bee-b57d-d395884f0434"
             },
             "spec": {
                 "containers": [
@@ -3328,7 +3328,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-tpmzr",
+                                "name": "kube-api-access-vtv6d",
                                 "readOnly": true
                             }
                         ]
@@ -3358,7 +3358,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-tpmzr",
+                                "name": "kube-api-access-vtv6d",
                                 "readOnly": true
                             }
                         ]
@@ -3407,7 +3407,7 @@
                         "name": "upf-volume"
                     },
                     {
-                        "name": "kube-api-access-tpmzr",
+                        "name": "kube-api-access-vtv6d",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -3450,32 +3450,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:29Z",
+                        "lastTransitionTime": "2024-06-22T22:19:00Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:32Z",
+                        "lastTransitionTime": "2024-06-22T22:19:05Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:32Z",
+                        "lastTransitionTime": "2024-06-22T22:19:05Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:09Z",
+                        "lastTransitionTime": "2024-06-22T22:18:42Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://448b91f16a605f8054127b4613d503f530b750dcba31af90670103a572ceb98e",
+                        "containerID": "containerd://6e319609ee3aef7d374ee8737326cb0e25c4714eb2adbdd661429060b5aee975",
                         "image": "docker.io/edierbra/free5gc:v3.2.1",
                         "imageID": "docker.io/edierbra/free5gc@sha256:bbfc82f1b184ba4e6b9ef6be0e956513d71c0509c66f6e3dc9f4c74799532249",
                         "lastState": {},
@@ -3485,7 +3485,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:06:31Z"
+                                "startedAt": "2024-06-22T22:19:04Z"
                             }
                         }
                     }
@@ -3493,7 +3493,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://77bbbd213f458632ec180b113d4cd1d3f46f5c529128dc267e4103984f3f72fa",
+                        "containerID": "containerd://899a82fb1ce9ead139945408616658a80b24977daa58edc43584345be66ae685",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -3503,24 +3503,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://77bbbd213f458632ec180b113d4cd1d3f46f5c529128dc267e4103984f3f72fa",
+                                "containerID": "containerd://899a82fb1ce9ead139945408616658a80b24977daa58edc43584345be66ae685",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:28Z",
+                                "finishedAt": "2024-06-22T22:18:59Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:28Z"
+                                "startedAt": "2024-06-22T22:18:59Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.243",
+                "podIP": "10.244.0.74",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.243"
+                        "ip": "10.244.0.74"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:09Z"
+                "startTime": "2024-06-22T22:18:42Z"
             }
         },
         {
@@ -3528,16 +3528,16 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.245\"\n    ],\n    \"mac\": \"2a:54:40:9f:a7:ce\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.76\"\n    ],\n    \"mac\": \"26:65:f2:45:8f:d5\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:06:57Z",
+                "creationTimestamp": "2024-06-22T22:19:53Z",
                 "generateName": "free5gc-webui-5c5dbddcc7-",
                 "labels": {
                     "app": "free5gc",
                     "name": "webui",
                     "pod-template-hash": "5c5dbddcc7"
                 },
-                "name": "free5gc-webui-5c5dbddcc7-57xxj",
+                "name": "free5gc-webui-5c5dbddcc7-gs28d",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -3546,11 +3546,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "free5gc-webui-5c5dbddcc7",
-                        "uid": "386f49ca-246c-456f-96fc-692b64fb35d6"
+                        "uid": "098eeab0-ce5b-4b50-93ff-fe87517738db"
                     }
                 ],
-                "resourceVersion": "24401",
-                "uid": "4466e377-2bf7-4683-b054-507d2b4533bc"
+                "resourceVersion": "9260",
+                "uid": "91247c59-21c5-490f-96d6-eca213f5c5f2"
             },
             "spec": {
                 "containers": [
@@ -3619,7 +3619,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-dxqkt",
+                                "name": "kube-api-access-k6m88",
                                 "readOnly": true
                             }
                         ]
@@ -3649,7 +3649,7 @@
                         "volumeMounts": [
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-dxqkt",
+                                "name": "kube-api-access-k6m88",
                                 "readOnly": true
                             }
                         ]
@@ -3693,7 +3693,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-dxqkt",
+                        "name": "kube-api-access-k6m88",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -3736,32 +3736,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:59Z",
+                        "lastTransitionTime": "2024-06-22T22:19:56Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:00Z",
+                        "lastTransitionTime": "2024-06-22T22:19:58Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:00Z",
+                        "lastTransitionTime": "2024-06-22T22:19:58Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:06:57Z",
+                        "lastTransitionTime": "2024-06-22T22:19:53Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://6be84d021e30cb9198e08640115e0fb3ad25e14df649e5ad8ef0e4df66a425b8",
+                        "containerID": "containerd://4726a179eb3b4d72f105858b90697419a3b3ffd65cb2867536ae82e38a2cb6c0",
                         "image": "ghcr.io/niloysh/free5gc:v3.2.0",
                         "imageID": "ghcr.io/niloysh/free5gc@sha256:951b90ea588adc5536f38f02dc249be45d24e2e195e4e51456476151578c7c87",
                         "lastState": {},
@@ -3771,7 +3771,7 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:07:00Z"
+                                "startedAt": "2024-06-22T22:19:57Z"
                             }
                         }
                     }
@@ -3779,7 +3779,7 @@
                 "hostIP": "10.0.2.15",
                 "initContainerStatuses": [
                     {
-                        "containerID": "containerd://da64430004359446e585b9fcb93525bf29aa675c74cb1f267230eebb36cd2448",
+                        "containerID": "containerd://471c7a1f5e9e6d842ed103adb7fa1ff34d588b99b2a64f749247c9a5ae1f3e68",
                         "image": "docker.io/library/busybox:1.32.0",
                         "imageID": "docker.io/library/busybox@sha256:bde48e1751173b709090c2539fdf12d6ba64e88ec7a4301591227ce925f3c678",
                         "lastState": {},
@@ -3789,24 +3789,24 @@
                         "started": false,
                         "state": {
                             "terminated": {
-                                "containerID": "containerd://da64430004359446e585b9fcb93525bf29aa675c74cb1f267230eebb36cd2448",
+                                "containerID": "containerd://471c7a1f5e9e6d842ed103adb7fa1ff34d588b99b2a64f749247c9a5ae1f3e68",
                                 "exitCode": 0,
-                                "finishedAt": "2024-06-21T21:06:58Z",
+                                "finishedAt": "2024-06-22T22:19:55Z",
                                 "reason": "Completed",
-                                "startedAt": "2024-06-21T21:06:58Z"
+                                "startedAt": "2024-06-22T22:19:55Z"
                             }
                         }
                     }
                 ],
                 "phase": "Running",
-                "podIP": "10.244.0.245",
+                "podIP": "10.244.0.76",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.245"
+                        "ip": "10.244.0.76"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:06:57Z"
+                "startTime": "2024-06-22T22:19:53Z"
             }
         },
         {
@@ -3814,9 +3814,9 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.231\"\n    ],\n    \"mac\": \"f2:de:2b:3d:da:75\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.62\"\n    ],\n    \"mac\": \"62:2a:31:50:05:00\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:05:41Z",
+                "creationTimestamp": "2024-06-22T22:18:16Z",
                 "generateName": "mongodb-",
                 "labels": {
                     "app.kubernetes.io/name": "mongodb",
@@ -3834,11 +3834,11 @@
                         "controller": true,
                         "kind": "StatefulSet",
                         "name": "mongodb",
-                        "uid": "60cfe5ee-25ac-492e-8515-c5a6a18625f6"
+                        "uid": "3f170f70-d73a-4f99-b259-ee9efd8e32ff"
                     }
                 ],
-                "resourceVersion": "23771",
-                "uid": "88a73ee7-0f32-4152-9cc2-a21e1d2b4119"
+                "resourceVersion": "8578",
+                "uid": "e6493df8-80b9-46ce-bfc8-752befc81511"
             },
             "spec": {
                 "containers": [
@@ -3922,7 +3922,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-f4pn2",
+                                "name": "kube-api-access-n22kh",
                                 "readOnly": true
                             }
                         ]
@@ -3965,7 +3965,7 @@
                         }
                     },
                     {
-                        "name": "kube-api-access-f4pn2",
+                        "name": "kube-api-access-n22kh",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -4008,32 +4008,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:05:47Z",
+                        "lastTransitionTime": "2024-06-22T22:18:21Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:05:58Z",
+                        "lastTransitionTime": "2024-06-22T22:18:31Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:05:58Z",
+                        "lastTransitionTime": "2024-06-22T22:18:31Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:05:47Z",
+                        "lastTransitionTime": "2024-06-22T22:18:21Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://fec324396c656908c2a84b1193ed7e8720c61c5c1b72199c0db58034d2c2c914",
+                        "containerID": "containerd://7691a66afb7c9a9740b094e3227b6540b3d00808ad5b67ab1cdc0ad0ac848f94",
                         "image": "docker.io/bitnami/mongodb:4.4.4-debian-10-r0",
                         "imageID": "docker.io/bitnami/mongodb@sha256:95abfb776bb4e6ee34f7b5b1c811f978d132136035deacdb7143f798f0343a31",
                         "lastState": {},
@@ -4043,21 +4043,21 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:05:49Z"
+                                "startedAt": "2024-06-22T22:18:22Z"
                             }
                         }
                     }
                 ],
                 "hostIP": "10.0.2.15",
                 "phase": "Running",
-                "podIP": "10.244.0.231",
+                "podIP": "10.244.0.62",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.231"
+                        "ip": "10.244.0.62"
                     }
                 ],
                 "qosClass": "BestEffort",
-                "startTime": "2024-06-21T21:05:47Z"
+                "startTime": "2024-06-22T22:18:21Z"
             }
         },
         {
@@ -4065,18 +4065,18 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.246\"\n    ],\n    \"mac\": \"4e:42:35:51:9a:9c\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n2\",\n    \"ips\": [\n        \"10.10.2.22\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:16\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.22\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:16\",\n    \"dns\": {}\n}]",
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.77\"\n    ],\n    \"mac\": \"22:1a:44:f3:ef:27\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n},{\n    \"name\": \"test/n2network\",\n    \"interface\": \"n2\",\n    \"ips\": [\n        \"10.10.2.22\"\n    ],\n    \"mac\": \"0a:58:0a:0a:02:16\",\n    \"dns\": {}\n},{\n    \"name\": \"test/n3network\",\n    \"interface\": \"n3\",\n    \"ips\": [\n        \"10.10.3.22\"\n    ],\n    \"mac\": \"0a:58:0a:0a:03:16\",\n    \"dns\": {}\n}]",
                     "k8s.v1.cni.cncf.io/networks": "[ { \"name\": \"n2network\", \"interface\": \"n2\", \"ips\": [ \"10.10.2.22/24\" ] }, { \"name\": \"n3network\", \"interface\": \"n3\", \"ips\": [ \"10.10.3.22/24\" ] } ]"
                 },
-                "creationTimestamp": "2024-06-21T21:07:09Z",
-                "generateName": "ueransim-gnb-5f84c45d8d-",
+                "creationTimestamp": "2024-06-22T22:20:12Z",
+                "generateName": "ueransim-gnb-65bb557f68-",
                 "labels": {
                     "app": "ueransim",
                     "component": "gnb",
                     "name": "gnb",
-                    "pod-template-hash": "5f84c45d8d"
+                    "pod-template-hash": "65bb557f68"
                 },
-                "name": "ueransim-gnb-5f84c45d8d-4gqtd",
+                "name": "ueransim-gnb-65bb557f68-p6j55",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -4084,12 +4084,12 @@
                         "blockOwnerDeletion": true,
                         "controller": true,
                         "kind": "ReplicaSet",
-                        "name": "ueransim-gnb-5f84c45d8d",
-                        "uid": "2945fa50-0cc1-439a-9d87-2d96c0e035bf"
+                        "name": "ueransim-gnb-65bb557f68",
+                        "uid": "2f49465c-7f60-4ed1-84c2-7c7d09debbc5"
                     }
                 ],
-                "resourceVersion": "24460",
-                "uid": "e7f5a28c-2ac7-424e-9c58-83128211fe5b"
+                "resourceVersion": "9334",
+                "uid": "7a4a813f-92ad-4296-8301-ca396546745d"
             },
             "spec": {
                 "containers": [
@@ -4133,7 +4133,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-rnqsh",
+                                "name": "kube-api-access-nnwf4",
                                 "readOnly": true
                             }
                         ]
@@ -4184,7 +4184,7 @@
                         "name": "gnb-volume"
                     },
                     {
-                        "name": "kube-api-access-rnqsh",
+                        "name": "kube-api-access-nnwf4",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -4227,32 +4227,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:09Z",
+                        "lastTransitionTime": "2024-06-22T22:20:12Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:13Z",
+                        "lastTransitionTime": "2024-06-22T22:20:17Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:13Z",
+                        "lastTransitionTime": "2024-06-22T22:20:17Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:07:09Z",
+                        "lastTransitionTime": "2024-06-22T22:20:12Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://f763a88569042ba1771e73ab94bb1ef7eb6a8d499baa58e89060c4c3f6dcefc6",
+                        "containerID": "containerd://ae693304f91c53307992681b762ae7f3d34d65ff7cbd507fb45042f2275570db",
                         "image": "docker.io/edierbra/ueransim:v3.2.6",
                         "imageID": "docker.io/edierbra/ueransim@sha256:76f22b7e0dbe5ae9050961f73af0dd691d1f5093bcf7e210f173a4e6fbffe08a",
                         "lastState": {},
@@ -4262,21 +4262,21 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:07:13Z"
+                                "startedAt": "2024-06-22T22:20:17Z"
                             }
                         }
                     }
                 ],
                 "hostIP": "10.0.2.15",
                 "phase": "Running",
-                "podIP": "10.244.0.246",
+                "podIP": "10.244.0.77",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.246"
+                        "ip": "10.244.0.77"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:07:09Z"
+                "startTime": "2024-06-22T22:20:12Z"
             }
         },
         {
@@ -4284,9 +4284,9 @@
             "kind": "Pod",
             "metadata": {
                 "annotations": {
-                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.249\"\n    ],\n    \"mac\": \"5e:ad:a0:4d:6c:3d\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.78\"\n    ],\n    \"mac\": \"9a:0e:6e:dc:a8:54\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
                 },
-                "creationTimestamp": "2024-06-21T21:23:05Z",
+                "creationTimestamp": "2024-06-22T22:21:40Z",
                 "generateName": "ueransim-ue1-9b66b5556-",
                 "labels": {
                     "app": "ueransim",
@@ -4294,7 +4294,7 @@
                     "name": "ue1",
                     "pod-template-hash": "9b66b5556"
                 },
-                "name": "ueransim-ue1-9b66b5556-xth6s",
+                "name": "ueransim-ue1-9b66b5556-bs5rt",
                 "namespace": "test",
                 "ownerReferences": [
                     {
@@ -4303,11 +4303,11 @@
                         "controller": true,
                         "kind": "ReplicaSet",
                         "name": "ueransim-ue1-9b66b5556",
-                        "uid": "61681930-5612-4835-8637-7f48cea11e11"
+                        "uid": "6eb4a405-d68d-4f06-b9d9-7e0f7f023212"
                     }
                 ],
-                "resourceVersion": "26785",
-                "uid": "07deb9ce-cb45-4457-91a1-77ccd1c20578"
+                "resourceVersion": "9560",
+                "uid": "b2f39ed0-8baf-4abf-96d7-052f36019270"
             },
             "spec": {
                 "containers": [
@@ -4355,7 +4355,7 @@
                             },
                             {
                                 "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
-                                "name": "kube-api-access-lbhsg",
+                                "name": "kube-api-access-8mf2f",
                                 "readOnly": true
                             }
                         ]
@@ -4406,7 +4406,7 @@
                         "name": "ue-volume"
                     },
                     {
-                        "name": "kube-api-access-lbhsg",
+                        "name": "kube-api-access-8mf2f",
                         "projected": {
                             "defaultMode": 420,
                             "sources": [
@@ -4449,32 +4449,32 @@
                 "conditions": [
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:23:05Z",
+                        "lastTransitionTime": "2024-06-22T22:21:40Z",
                         "status": "True",
                         "type": "Initialized"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:23:25Z",
+                        "lastTransitionTime": "2024-06-22T22:21:44Z",
                         "status": "True",
                         "type": "Ready"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:23:25Z",
+                        "lastTransitionTime": "2024-06-22T22:21:44Z",
                         "status": "True",
                         "type": "ContainersReady"
                     },
                     {
                         "lastProbeTime": null,
-                        "lastTransitionTime": "2024-06-21T21:23:05Z",
+                        "lastTransitionTime": "2024-06-22T22:21:40Z",
                         "status": "True",
                         "type": "PodScheduled"
                     }
                 ],
                 "containerStatuses": [
                     {
-                        "containerID": "containerd://536cae6be5e509ebca4a11f13319a587c9412f9a29676a8660e460c632901052",
+                        "containerID": "containerd://61b297493d002323f3278b3343505083523c404473de58a208b344af99d0f24e",
                         "image": "docker.io/edierbra/ueransim:v3.2.6",
                         "imageID": "docker.io/edierbra/ueransim@sha256:76f22b7e0dbe5ae9050961f73af0dd691d1f5093bcf7e210f173a4e6fbffe08a",
                         "lastState": {},
@@ -4484,21 +4484,237 @@
                         "started": true,
                         "state": {
                             "running": {
-                                "startedAt": "2024-06-21T21:23:24Z"
+                                "startedAt": "2024-06-22T22:21:43Z"
                             }
                         }
                     }
                 ],
                 "hostIP": "10.0.2.15",
                 "phase": "Running",
-                "podIP": "10.244.0.249",
+                "podIP": "10.244.0.78",
                 "podIPs": [
                     {
-                        "ip": "10.244.0.249"
+                        "ip": "10.244.0.78"
                     }
                 ],
                 "qosClass": "Burstable",
-                "startTime": "2024-06-21T21:23:05Z"
+                "startTime": "2024-06-22T22:21:40Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"cbr0\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.244.0.79\"\n    ],\n    \"mac\": \"fa:f2:25:4d:e8:79\",\n    \"default\": true,\n    \"dns\": {},\n    \"gateway\": [\n        \"10.244.0.1\"\n    ]\n}]"
+                },
+                "creationTimestamp": "2024-06-22T22:23:54Z",
+                "generateName": "ueransim-ue2-7b7dfb8655-",
+                "labels": {
+                    "app": "ueransim",
+                    "component": "ue",
+                    "name": "ue2",
+                    "pod-template-hash": "7b7dfb8655"
+                },
+                "name": "ueransim-ue2-7b7dfb8655-jlz87",
+                "namespace": "test",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "ueransim-ue2-7b7dfb8655",
+                        "uid": "f87160d8-a0fc-4494-8480-5fd3d251bc90"
+                    }
+                ],
+                "resourceVersion": "9889",
+                "uid": "484c7054-ca44-4bb1-967d-2799f7287b8d"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "args": [
+                            "if [ \"$DEBUG_MODE\" = \"true\" ]; then\n  while true; do sleep 30; done;\nelse\n  /ueransim/config/wrapper.sh\nfi\n"
+                        ],
+                        "command": [
+                            "/bin/bash",
+                            "-c",
+                            "--"
+                        ],
+                        "image": "edierbra/ueransim:v3.2.6",
+                        "imagePullPolicy": "Always",
+                        "name": "ue",
+                        "resources": {
+                            "limits": {
+                                "cpu": "250m",
+                                "memory": "512Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "100Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_ADMIN"
+                                ]
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/ueransim/config",
+                                "name": "ue-volume"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-bwsfr",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "nodemaster",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "items": [
+                                {
+                                    "key": "ue2.yaml",
+                                    "path": "ue2.yaml"
+                                },
+                                {
+                                    "key": "wrapper.sh",
+                                    "mode": 493,
+                                    "path": "wrapper.sh"
+                                }
+                            ],
+                            "name": "ue2-configmap-dm6b776h7b"
+                        },
+                        "name": "ue-volume"
+                    },
+                    {
+                        "name": "kube-api-access-bwsfr",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-06-22T22:23:54Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-06-22T22:23:58Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-06-22T22:23:58Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-06-22T22:23:54Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://fe673889860471f8a5d502ddec230ac94ac108262016a85f0f2071cbea6b8ee8",
+                        "image": "docker.io/edierbra/ueransim:v3.2.6",
+                        "imageID": "docker.io/edierbra/ueransim@sha256:76f22b7e0dbe5ae9050961f73af0dd691d1f5093bcf7e210f173a4e6fbffe08a",
+                        "lastState": {},
+                        "name": "ue",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-06-22T22:23:57Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.2.15",
+                "phase": "Running",
+                "podIP": "10.244.0.79",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.79"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-06-22T22:23:54Z"
             }
         },
         {
@@ -4508,7 +4724,7 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"name\":\"amf\",\"nf\":\"amf\"},\"name\":\"amf-namf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"name\":\"amf\",\"nf\":\"amf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:07Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "name": "amf",
@@ -4516,13 +4732,13 @@
                 },
                 "name": "amf-namf",
                 "namespace": "test",
-                "resourceVersion": "23814",
-                "uid": "fd7e4872-5b0b-41fd-b554-2cc51f49e085"
+                "resourceVersion": "8618",
+                "uid": "6049092e-f3ca-4488-8d2d-f9f5094407d7"
             },
             "spec": {
-                "clusterIP": "10.104.27.32",
+                "clusterIP": "10.107.227.23",
                 "clusterIPs": [
-                    "10.104.27.32"
+                    "10.107.227.23"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4555,7 +4771,7 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"name\":\"amf2\",\"nf\":\"amf\"},\"name\":\"amf2-namf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"name\":\"amf2\",\"nf\":\"amf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:07Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "name": "amf2",
@@ -4563,13 +4779,13 @@
                 },
                 "name": "amf2-namf",
                 "namespace": "test",
-                "resourceVersion": "23818",
-                "uid": "83aa72db-74d8-404c-8853-8c8a2af96613"
+                "resourceVersion": "8622",
+                "uid": "2cb48247-32dc-4cf1-88ec-ce6184fe8489"
             },
             "spec": {
-                "clusterIP": "10.97.109.189",
+                "clusterIP": "10.102.212.173",
                 "clusterIPs": [
-                    "10.97.109.189"
+                    "10.102.212.173"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4602,20 +4818,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"ausf\"},\"name\":\"ausf-nausf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"ausf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:07Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "ausf"
                 },
                 "name": "ausf-nausf",
                 "namespace": "test",
-                "resourceVersion": "23822",
-                "uid": "1da224dd-77d5-44bc-b1fe-60f357e27abf"
+                "resourceVersion": "8626",
+                "uid": "1e545202-f2b1-46b4-b3ca-d645b5d72165"
             },
             "spec": {
-                "clusterIP": "10.104.240.198",
+                "clusterIP": "10.101.67.0",
                 "clusterIPs": [
-                    "10.104.240.198"
+                    "10.101.67.0"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4645,9 +4861,9 @@
             "kind": "Service",
             "metadata": {
                 "annotations": {
-                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"ueransim\",\"component\":\"gnb\",\"name\":\"gnb\"},\"name\":\"gnb-service\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"nodePort\":null,\"port\":4997,\"protocol\":\"UDP\"}],\"selector\":{\"app\":\"ueransim\",\"component\":\"gnb\"},\"type\":\"ClusterIP\"}}\n"
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"ueransim\",\"component\":\"gnb\",\"name\":\"gnb\"},\"name\":\"gnb-service\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"nodePort\":null,\"port\":4997,\"protocol\":\"UDP\"}],\"selector\":{\"app\":\"ueransim\",\"component\":\"gnb\",\"name\":\"gnb\"},\"type\":\"ClusterIP\"}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:07:09Z",
+                "creationTimestamp": "2024-06-22T22:20:12Z",
                 "labels": {
                     "app": "ueransim",
                     "component": "gnb",
@@ -4655,13 +4871,13 @@
                 },
                 "name": "gnb-service",
                 "namespace": "test",
-                "resourceVersion": "24428",
-                "uid": "cb10916b-cfea-4d4b-a3ce-f267541d3acc"
+                "resourceVersion": "9300",
+                "uid": "0279dab1-d508-42a2-9e77-c2f06d50e533"
             },
             "spec": {
-                "clusterIP": "10.104.110.130",
+                "clusterIP": "10.102.211.246",
                 "clusterIPs": [
-                    "10.104.110.130"
+                    "10.102.211.246"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4677,8 +4893,8 @@
                 ],
                 "selector": {
                     "app": "ueransim",
-                    "name": "gnb",
-                    "component": "gnb"
+                    "component": "gnb",
+                    "name": "gnb"
                 },
                 "sessionAffinity": "None",
                 "type": "ClusterIP"
@@ -4694,20 +4910,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/name\":\"mongodb\",\"name\":\"mongodb\"},\"name\":\"mongodb\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"name\":\"mongodb\",\"nodePort\":30001,\"port\":27017,\"targetPort\":\"mongodb\"}],\"selector\":{\"app.kubernetes.io/name\":\"mongodb\",\"name\":\"mongodb\"},\"type\":\"NodePort\"}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:05:41Z",
+                "creationTimestamp": "2024-06-22T22:18:16Z",
                 "labels": {
                     "app.kubernetes.io/name": "mongodb",
                     "name": "mongodb"
                 },
                 "name": "mongodb",
                 "namespace": "test",
-                "resourceVersion": "23685",
-                "uid": "ef5d84a1-0fa3-46c8-86ee-b4cfec07d684"
+                "resourceVersion": "8495",
+                "uid": "75e260e5-9a0c-4541-892c-ed0d684e4d1e"
             },
             "spec": {
-                "clusterIP": "10.108.72.38",
+                "clusterIP": "10.98.192.76",
                 "clusterIPs": [
-                    "10.108.72.38"
+                    "10.98.192.76"
                 ],
                 "externalTrafficPolicy": "Cluster",
                 "internalTrafficPolicy": "Cluster",
@@ -4742,20 +4958,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"nrf\"},\"name\":\"nrf-nnrf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"nrf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nrf"
                 },
                 "name": "nrf-nnrf",
                 "namespace": "test",
-                "resourceVersion": "23826",
-                "uid": "58dc8f90-f896-4cb0-a497-345ef8b695b9"
+                "resourceVersion": "8630",
+                "uid": "da0ba2b2-f6dd-4c7e-a432-f6b1eceb4b4d"
             },
             "spec": {
-                "clusterIP": "10.108.63.14",
+                "clusterIP": "10.98.35.36",
                 "clusterIPs": [
-                    "10.108.63.14"
+                    "10.98.35.36"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4787,20 +5003,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"nssf\"},\"name\":\"nssf-nnssf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"nssf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nssf"
                 },
                 "name": "nssf-nnssf",
                 "namespace": "test",
-                "resourceVersion": "23830",
-                "uid": "a3c12f8a-a467-417c-bade-1062f8f5421c"
+                "resourceVersion": "8634",
+                "uid": "12b70417-8111-45de-bb28-aef1fb223259"
             },
             "spec": {
-                "clusterIP": "10.96.93.27",
+                "clusterIP": "10.96.63.244",
                 "clusterIPs": [
-                    "10.96.93.27"
+                    "10.96.63.244"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4832,20 +5048,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"nwdaf\"},\"name\":\"nwdaf-nnwdaf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":29531}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"nwdaf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:40Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "nwdaf"
                 },
                 "name": "nwdaf-nnwdaf",
                 "namespace": "test",
-                "resourceVersion": "23834",
-                "uid": "9178ebf8-4959-4c0a-af70-43a876fbae62"
+                "resourceVersion": "8638",
+                "uid": "1272d1ab-9bfe-4c2d-b3d2-39c22d29c82f"
             },
             "spec": {
-                "clusterIP": "10.106.85.103",
+                "clusterIP": "10.97.121.136",
                 "clusterIPs": [
-                    "10.106.85.103"
+                    "10.97.121.136"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4877,20 +5093,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"pcf\"},\"name\":\"pcf-npcf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"pcf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "pcf"
                 },
                 "name": "pcf-npcf",
                 "namespace": "test",
-                "resourceVersion": "23838",
-                "uid": "7cc1a498-f084-417b-af85-4d16879701af"
+                "resourceVersion": "8642",
+                "uid": "57724ac3-a93b-4e55-838b-2228e08ae602"
             },
             "spec": {
-                "clusterIP": "10.107.198.22",
+                "clusterIP": "10.107.135.151",
                 "clusterIPs": [
-                    "10.107.198.22"
+                    "10.107.135.151"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4922,7 +5138,7 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"name\":\"smf\",\"nf\":\"smf\"},\"name\":\"smf-nsmf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"name\":\"smf\",\"nf\":\"smf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "labels": {
                     "app": "free5gc",
                     "name": "smf",
@@ -4930,13 +5146,13 @@
                 },
                 "name": "smf-nsmf",
                 "namespace": "test",
-                "resourceVersion": "23842",
-                "uid": "4f5a6aa0-3faa-4d16-9bcd-d05142f61f81"
+                "resourceVersion": "8646",
+                "uid": "f5568d50-57d5-43fb-97f7-44ad287a4b2b"
             },
             "spec": {
-                "clusterIP": "10.111.18.179",
+                "clusterIP": "10.107.199.160",
                 "clusterIPs": [
-                    "10.111.18.179"
+                    "10.107.199.160"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -4969,7 +5185,7 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"name\":\"smf2\",\"nf\":\"smf\"},\"name\":\"smf2-nsmf\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"name\":\"smf2\",\"nf\":\"smf\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "labels": {
                     "app": "free5gc",
                     "name": "smf2",
@@ -4977,13 +5193,13 @@
                 },
                 "name": "smf2-nsmf",
                 "namespace": "test",
-                "resourceVersion": "23846",
-                "uid": "1c72466c-65f3-49a6-a278-6c588da6902b"
+                "resourceVersion": "8650",
+                "uid": "e0e7c738-cac1-4898-b14b-fa675b8118c9"
             },
             "spec": {
-                "clusterIP": "10.105.97.211",
+                "clusterIP": "10.101.162.28",
                 "clusterIPs": [
-                    "10.105.97.211"
+                    "10.101.162.28"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -5016,20 +5232,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"udm\"},\"name\":\"udm-nudm\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"udm\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "udm"
                 },
                 "name": "udm-nudm",
                 "namespace": "test",
-                "resourceVersion": "23850",
-                "uid": "72039f55-1e95-4c49-ab8d-a598b297aa40"
+                "resourceVersion": "8655",
+                "uid": "ecf75917-ce6c-47de-8173-a159169bfaa8"
             },
             "spec": {
-                "clusterIP": "10.101.153.98",
+                "clusterIP": "10.110.81.168",
                 "clusterIPs": [
-                    "10.101.153.98"
+                    "10.110.81.168"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -5061,20 +5277,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"nf\":\"udr\"},\"name\":\"udr-nudr\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"port\":8000}],\"selector\":{\"app\":\"free5gc\",\"nf\":\"udr\"}}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:08Z",
+                "creationTimestamp": "2024-06-22T22:18:41Z",
                 "labels": {
                     "app": "free5gc",
                     "nf": "udr"
                 },
                 "name": "udr-nudr",
                 "namespace": "test",
-                "resourceVersion": "23854",
-                "uid": "4def43f1-a4d7-4f9a-a575-8c0b4ccd7b92"
+                "resourceVersion": "8659",
+                "uid": "2a6f4736-9d31-4a45-8b7e-b199ac3b1b2d"
             },
             "spec": {
-                "clusterIP": "10.98.125.64",
+                "clusterIP": "10.98.131.80",
                 "clusterIPs": [
-                    "10.98.125.64"
+                    "10.98.131.80"
                 ],
                 "internalTrafficPolicy": "Cluster",
                 "ipFamilies": [
@@ -5106,20 +5322,20 @@
                 "annotations": {
                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"free5gc\",\"name\":\"webui\"},\"name\":\"webui-service\",\"namespace\":\"test\"},\"spec\":{\"ports\":[{\"nodePort\":30505,\"port\":5000}],\"selector\":{\"app\":\"free5gc\",\"name\":\"webui\"},\"type\":\"NodePort\"}}\n"
                 },
-                "creationTimestamp": "2024-06-21T21:06:57Z",
+                "creationTimestamp": "2024-06-22T22:19:53Z",
                 "labels": {
                     "app": "free5gc",
                     "name": "webui"
                 },
                 "name": "webui-service",
                 "namespace": "test",
-                "resourceVersion": "24362",
-                "uid": "b3ebfb02-269d-4095-855e-4269632e1863"
+                "resourceVersion": "9218",
+                "uid": "43ea564b-c5f8-4333-a2f6-c6577030ac81"
             },
             "spec": {
-                "clusterIP": "10.96.67.139",
+                "clusterIP": "10.98.41.242",
                 "clusterIPs": [
-                    "10.96.67.139"
+                    "10.98.41.242"
                 ],
                 "externalTrafficPolicy": "Cluster",
                 "internalTrafficPolicy": "Cluster",

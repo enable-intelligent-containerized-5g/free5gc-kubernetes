@@ -12,7 +12,7 @@ conections = []
 path_tcpdump_results = os.path.join('tcpdumpresults.pkl')
 
 # Path to the tcpdumpdata
-# Use: sudo tcpdump -i <interface-name> > path/to/file/tcpdumpdata.log
+# Use: sudo tcpdump -i <interface-name> > path/to/tcpdumpdata.log
 path_tcpdump_data = os.path.join('tcpdumpdata.log')
 
 # Save the results
