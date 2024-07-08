@@ -19,7 +19,6 @@ def get_data_pkl(path):
     with open(path, 'rb') as file:
         return pickle.load(file)
 
-
 def create_free5gc_graph():
     # Get the pods
     pods = get_data_pkl(path_kubectl_results)
@@ -27,7 +26,7 @@ def create_free5gc_graph():
 
     # Add the nodes
     for pod in pods:
-        G.add_node(pod.name, label=pod.kind, interfaces=pod.list_interfaces)
+        G.add_node(pod.name, label=pod.name)
 
     # Add the edge
     for conn in connections:
@@ -41,14 +40,10 @@ def create_free5gc_graph():
                     dst_pod = pod
         if src_pod and dst_pod:
             G.add_edge(src_pod.name, dst_pod.name)
-    
-    # # Add arist to the graph (conect all de pods)
-    # for i in range(len(pods)):
-    #     for j in range(i+1, len(pods)):
-    #         G.add_edge(pods[i].name, pods[j].name)
 
     nx.draw(G, with_labels=True)
     plt.savefig('free5gcgraph.png')
+    nx.write_gexf(G, 'free5gcgraph.gexf')
     plt.show()
 
 if __name__ == "__main__":

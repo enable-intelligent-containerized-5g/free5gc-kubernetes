@@ -11,4 +11,4 @@ class Pod:
         # Convert the list of interfaces in a comma separated string
         list_interfaces_str = ', '.join(str(interface) for interface in self.list_interfaces)
         # Print the Pod
-        return f"Pop {self.name} type {self.kind} with interfaces [{list_interfaces_str}]"
+        return f"{self.kind} {self.name} with interfaces [{list_interfaces_str}]"
