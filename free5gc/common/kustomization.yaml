@@ -1,9 +1,10 @@
 resources:
   - amf
-  # - amf2
+  - amf2
   - ausf
   - nrf
   - nssf
   - pcf
   - udr
   - udm
+  # - nwdaf

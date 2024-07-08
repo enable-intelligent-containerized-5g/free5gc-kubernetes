@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: free5gc-nwdaf-mtlf
+  labels:
+    app: free5gc
+    nf: nwdaf
+spec:
+  selector:
+    matchLabels:
+      app: free5gc
+      nf: nwdaf
+      name: nwdaf-mtlf
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: free5gc
+        nf: nwdaf
+        name: nwdaf-mtlf
+    spec:
+      initContainers:
+        - name: wait-nrf
+          image: busybox:1.32.0
+          env:
+            - name: DEPENDENCIES
+              value: pcf-npcf:8000
+          command:
+            [
+              "sh",
+              "-c",
+              "until nc -z $DEPENDENCIES; do echo waiting for the PCF; sleep 2; done;",
+            ]
+      containers:
+        - image: edierbra/nwdaf-mtlf:v1.0.2 # edierbra/free5gc:v3.2.2
+          imagePullPolicy: Always # IfNotPresent
+          name: nwdaf-mtlf
+          ports:
+            - containerPort: 8000
+            - containerPort: 8081
+          command: ["/bin/bash", "-c"]
+          args: ["cd /free5gc/free5gc/NFs/nwdaf-mtlf && python3 -m openapi_server"]
+          env:
+            - name: GIN_MODE
+              value: release
+          volumeMounts:
+            - mountPath: /free5gc/config/
+              name: nwdaf-mtlf-volume
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "250m"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - name: nwdaf-mtlf-volume
+          projected:
+            sources:
+              - configMap:
+                  name: nwdaf-mtlf-configmap
+      # volumes:
+      # - name: nwdaf-mtlf-volume
+      #   configMap:
+      #     name: nwdaf-mtlf-configmap
+      #     items:
+      #     - key: nwdafcfg.yaml
+      #       path: nwdafcfg.yaml
+      #     - key: nwdaf
+      #       path: nwdaf
+      #       # mode: 0755
+

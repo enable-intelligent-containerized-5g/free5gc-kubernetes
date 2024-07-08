@@ -1,4 +1,0 @@
-resources:
-- webui-configmap.yaml
-- webui-deployment.yaml
-- webui-service.yaml

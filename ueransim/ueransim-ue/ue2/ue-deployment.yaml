@@ -22,15 +22,21 @@ spec:
         name: ue2
     spec:
       containers:
-      - image: ghcr.io/niloysh/ueransim:v3.2.6
+      - image: edierbra/ueransim:v3.2.6
         imagePullPolicy: Always
         name: ue
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]
-        # command: [ "/bin/bash", "-c", "--" ]
-        # args: [ "while true; do sleep 30; done;" ]
-        command: [ "/ueransim/config/wrapper.sh" ]
+        command: [ "/bin/bash", "-c", "--" ]
+        args:
+          - |
+            if [ "$DEBUG_MODE" = "true" ]; then
+              while true; do sleep 30; done;
+            else
+              /ueransim/config/wrapper.sh
+            fi
+        # command: [ "/ueransim/config/wrapper.sh" ]
         volumeMounts:
         - mountPath: /ueransim/config
           name: ue-volume
