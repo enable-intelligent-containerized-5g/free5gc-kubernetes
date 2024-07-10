@@ -10,14 +10,14 @@ spec:
     matchLabels:
       app: free5gc
       nf: nwdaf
-      name: nwdaf-anlf
+      name: anlf
   replicas: 1
   template:
     metadata:
       labels:
         app: free5gc
         nf: nwdaf
-        name: nwdaf-anlf
+        name: anlf
     spec:
       initContainers:
         - name: wait-nrf
@@ -32,14 +32,14 @@ spec:
               "until nc -z $DEPENDENCIES; do echo waiting for the PCF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/nwdaf-anlf:v1.0.2 # edierbra/free5gc:v3.2.2
+        - image: edierbra/nwdaf-anlf:v3.0.5 # edierbra/free5gc:v3.2.2
           imagePullPolicy: Always # IfNotPresent
           name: nwdaf-anlf
           ports:
             - containerPort: 8000
             - containerPort: 8080
           command: ["/bin/bash", "-c"]
-          args: ["cd /free5gc/free5gc/NFs/nwdaf-anlf && python3 -m openapi_server"]
+          args: ["cd /free5gc/nwdafanlf && python3 -m openapi_server"]
           env:
             - name: GIN_MODE
               value: release

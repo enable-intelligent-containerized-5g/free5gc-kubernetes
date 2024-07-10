@@ -5,17 +5,17 @@ metadata:
   labels:
     app: free5gc
 data:
-  nwdafmtlfcfg.yaml: |
+  nwdafcfg-mtlf.yaml: |
     info:
       version: 1.0.1
       description: NWDAF initial local configuration
 
     configuration:
-      nwdafName: NWDAF # the name of this AMF
+      nwdafName: NWDAF # the name of this NWDAF
       
       sbi: # Service-based interface information
         scheme: http # the protocol for sbi (http or https)
-        registerIPv4: nwdaf-nnwdaf # IP used to register to NRF
+        registerIPv4: mtlf-nmtlf # IP used to register to NRF
         bindingIPv4: 0.0.0.0  # IP used to bind the service
         port: 8000 # port used to bind the service
 
