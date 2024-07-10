@@ -33,7 +33,7 @@ spec:
             ]
       containers:
         - image: edierbra/nwdaf-anlf:v3.0.5 # edierbra/free5gc:v3.2.2
-          imagePullPolicy: Always # IfNotPresent
+          imagePullPolicy: IfNotPresent
           name: nwdaf-anlf
           ports:
             - containerPort: 8000
@@ -48,11 +48,11 @@ spec:
               name: nwdaf-anlf-volume
           resources:
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "1000Mi"
+              cpu: "1000m"
             limits:
-              memory: "512Mi"
-              cpu: "250m"
+              memory: "2000Mi"
+              cpu: "2000m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

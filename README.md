@@ -117,6 +117,17 @@ Some convenience scripts are available in the `bin` folder:
 
 - **install-gtp5g.sh**: Use this script to install gtp5g v0.8.2 on nodes where UPF should run.
 
+## Troubleshots
+
+- no IP addresses available in range set:
+
+  ```bash
+  sudo su
+  cd /var/lib/cni/networks/cbr0
+  ls
+  ```
+
+  And delete folders named after IPs not used by pods. To see de IPs run `kubectl get po -o wide`
 
 ## License
 
