@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
     - port: 5000
-      nodePort: 30505
+      nodePort: 30500
   selector:
     app: free5gc
     name: webui
