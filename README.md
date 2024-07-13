@@ -29,14 +29,6 @@ The repository is organized as follows:
 
 (optional) Create a test context.
 
-```
-kubectl create ns test
-kubectl config view # See the kubectl config.
-kubectl config current-context # See the actual context.
-kubectl config set-context <context-name> --namespace=<namespace-name> --cluster=<cluster-name> --user=<user-name>  # Create a new context.
-kubectl config use-context <context-name> # Use the context created.
-```
-
 To deploy Free5GC and its components, follow the deployment steps below:
 
 1. Set up OVS bridges. On each K8s cluster node, add the OVS bridges: n2br, n3br, and n4br. Connect nodes using these bridges and OVS-based VXLAN tunnels. See [ovs-cni docs](https://github.com/k8snetworkplumbingwg/ovs-cni/blob/main/docs/demo.md#connect-bridges-using-vxlan).
@@ -125,6 +117,17 @@ Some convenience scripts are available in the `bin` folder:
 
 - **install-gtp5g.sh**: Use this script to install gtp5g v0.8.2 on nodes where UPF should run.
 
+## Troubleshots
+
+- no IP addresses available in range set:
+
+  ```bash
+  sudo su
+  cd /var/lib/cni/networks/cbr0
+  ls
+  ```
+
+  And delete folders named after IPs not used by pods. To see de IPs run `kubectl get po -o wide`
 
 ## License
 

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-07-08">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="amf" label="amf" />
+      <node id="amf2" label="amf2" />
+      <node id="ausf" label="ausf" />
+      <node id="nrf" label="nrf" />
+      <node id="nssf" label="nssf" />
+      <node id="nwdaf" label="nwdaf" />
+      <node id="pcf" label="pcf" />
+      <node id="smf" label="smf" />
+      <node id="smf2" label="smf2" />
+      <node id="udm" label="udm" />
+      <node id="udr" label="udr" />
+      <node id="upf" label="upf" />
+      <node id="upf2" label="upf2" />
+      <node id="webui" label="webui" />
+      <node id="mongodb" label="mongodb" />
+      <node id="gnb" label="gnb" />
+      <node id="ue1" label="ue1" />
+      <node id="ue2" label="ue2" />
+    </nodes>
+    <edges>
+      <edge source="amf" target="nrf" id="0" />
+      <edge source="amf" target="ausf" id="1" />
+      <edge source="amf" target="gnb" id="2" />
+      <edge source="amf2" target="ausf" id="3" />
+      <edge source="amf2" target="gnb" id="4" />
+      <edge source="amf2" target="nrf" id="5" />
+      <edge source="amf2" target="udm" id="6" />
+      <edge source="amf2" target="pcf" id="7" />
+      <edge source="amf2" target="nssf" id="8" />
+      <edge source="amf2" target="smf" id="9" />
+      <edge source="amf2" target="smf2" id="10" />
+      <edge source="ausf" target="nrf" id="11" />
+      <edge source="ausf" target="smf2" id="12" />
+      <edge source="ausf" target="smf" id="13" />
+      <edge source="ausf" target="udm" id="14" />
+      <edge source="nrf" target="mongodb" id="15" />
+      <edge source="nrf" target="smf" id="16" />
+      <edge source="nrf" target="smf2" id="17" />
+      <edge source="nrf" target="pcf" id="18" />
+      <edge source="nrf" target="nwdaf" id="19" />
+      <edge source="nrf" target="udm" id="20" />
+      <edge source="nrf" target="udr" id="21" />
+      <edge source="nrf" target="nssf" id="22" />
+      <edge source="nssf" target="udr" id="23" />
+      <edge source="nwdaf" target="pcf" id="24" />
+      <edge source="pcf" target="smf" id="25" />
+      <edge source="pcf" target="mongodb" id="26" />
+      <edge source="pcf" target="udm" id="27" />
+      <edge source="pcf" target="udr" id="28" />
+      <edge source="pcf" target="smf2" id="29" />
+      <edge source="smf" target="upf" id="30" />
+      <edge source="smf" target="udm" id="31" />
+      <edge source="smf2" target="upf2" id="32" />
+      <edge source="smf2" target="udm" id="33" />
+      <edge source="udm" target="udr" id="34" />
+      <edge source="udr" target="mongodb" id="35" />
+      <edge source="upf" target="gnb" id="36" />
+      <edge source="upf2" target="gnb" id="37" />
+      <edge source="webui" target="mongodb" id="38" />
+      <edge source="gnb" target="ue1" id="39" />
+      <edge source="gnb" target="ue2" id="40" />
+    </edges>
+  </graph>
+</gexf>

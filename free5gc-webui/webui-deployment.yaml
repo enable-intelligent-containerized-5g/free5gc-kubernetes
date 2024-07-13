@@ -4,15 +4,18 @@ metadata:
   name: free5gc-webui
   labels:
     app: free5gc
+    name: webui
 spec:
   selector:
     matchLabels:
       app: free5gc
+      name: webui
   replicas: 1
   template:
     metadata:
       labels:
         app: free5gc
+        name: webui
     spec:
       initContainers:
       - name: wait-mongo
@@ -22,7 +25,7 @@ spec:
           value: mongodb:27017
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MongoDB; sleep 2; done;"]
       containers:
-      - image: ghcr.io/niloysh/free5gc:v3.2.0
+      - image:  edierbra/webui:v3.2.5
         imagePullPolicy: Always
         name: webui
         ports:

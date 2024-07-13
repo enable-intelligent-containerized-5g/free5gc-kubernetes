@@ -1,0 +1,4 @@
+resources:
+- nwdaf-anlf-deployment.yaml
+- nwdaf-anlf-service.yaml
+- nwdaf-anlf-configmap.yaml

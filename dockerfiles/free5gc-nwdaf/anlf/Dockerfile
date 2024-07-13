@@ -1,4 +1,3 @@
-# Build stage for Free5GC
 FROM golang:1.19rc1-stretch AS builder
 
 # Rename repo after Debian bulls-eye release
@@ -6,8 +5,6 @@ RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
     && sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list \
     && sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list \
     && sed -i '/stretch-updates/d' /etc/apt/sources.list
-
-
 
 # Install dependencies for building Free5GC
 RUN apt-get update \
@@ -21,33 +18,45 @@ RUN apt-get update \
 
     # Get and build Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/openapi ./openapi \
     && git clone --recursive -b v3.2.5 -j `nproc` https://github.com/enable-intelligent-and-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
-    && make nfs 
+    && make nwdaf-anlf
 
-# Final stage based on Ubuntu 20.04
-FROM ubuntu:20.04
-LABEL description="Free5GC v3.2.2"
+# Build stage for NWDAF
+FROM python:3.7.16-slim-buster 
+LABEL description="NWDAF v3.0.5"
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install runtime dependencies
-RUN apt-get update \
-    && apt-get -y install vim net-tools curl libmnl0 libyaml-0-2 iproute2 iptables tcpdump iputils-ping \
-    && apt-get clean
-
 WORKDIR /free5gc
-RUN mkdir -p config/ log/ openapi/
+
+# Copy files from builder
+RUN mkdir -p config/ log/ nwdafanlf/
 
 # Copy artifacts from builder stage
 COPY --from=builder /go/src/free5gc/bin/* ./
-# COPY --from=builder /go/src/free5gc/webconsole/bin/webconsole ./webui
-# COPY --from=builder /go/src/free5gc/webconsole/public ./public
 COPY --from=builder /go/src/free5gc/config/. ./config/
-# COPY --from=builder /go/src/free5gc/config/TLS/* ./config/TLS/
-COPY --from=builder /go/src/openapi/. ./openapi/
+COPY --from=builder /go/src/free5gc/NFs/nwdaf-anlf/. ./nwdafanlf/
 
-VOLUME [ "/free5gc/config"]
+# Install dependencies for building Free5GC
+RUN apt-get update \
+    && apt-get -y install wget libtool libmnl-dev libyaml-dev apt-transport-https ca-certificates git vim net-tools curl libmnl0 libyaml-0-2 iproute2 iptables tcpdump iputils-ping \
+    # && pip install openssl==v1.1.1f \
+    && apt-get -y install libssl-dev \ 
+    && pip install jinja2==v2.11.1 \
+    && pip install itsdangerous==v1.1.0 \
+    && pip install werkzeug==v2.0.0 \
+    && pip install gdown==v3.10.2 \
+    && pip install matplotlib==v3.5.3 \
+    && pip install keras==v2.11.0 \
+    && pip install tensorflow-cpu \
+    && pip install pandas==v1.3.5 \
+    && pip install scikit-learn==v1.0.2 \
+    && pip install markupsafe==2.0.1 \
+    && wget https://go.dev/dl/go1.19.linux-amd64.tar.gz \
+    && tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz \
+    && cd nwdafanlf \
+    && pip install -r requirements.txt \
+    && python3 setup.py install
 
 # Expose necessary ports
-EXPOSE 8000 5000
+EXPOSE 8000 5000 8080

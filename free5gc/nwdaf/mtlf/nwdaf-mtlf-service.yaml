@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mtlf-nmtlf
+  labels:
+    app: free5gc
+    nf: nwdaf
+    name: mtlf
+spec:
+  type: NodePort
+  ports:
+    - name: mtlf
+      port: 8000
+    - name: openapi 
+      port: 8081
+      nodePort: 30081
+  selector:
+    app: free5gc
+    nf: nwdaf
+    name: mtlf
+
+# Open your browser to here: http://localhost:30081/nnwdaf-mlmodelprovision/v1/ui/
+# Your OpenAPI definition lives here: http://localhost:30081/nnwdaf-mlmodelprovision/v1/openapi.json
+# To launch the integration tests, use tox: sudo pip install tox; tox
