@@ -27,7 +27,15 @@ The repository is organized as follows:
 
 **Note**: The deployment instructions assume a working kubernetes cluster with OVS CNI installed. You can optionally use the [testbed-automator](testbed-automator/) directory to prepare the Kubernetes cluster. This includes creating the VM, setting up the K8s cluster, configuring the cluster, installing various Container Network Interfaces (CNIs), configuring OVS bridges, and preparing for the deployment of the 5G Core network.
 
-(optional) Create a test context.
+(optional) Create a test context and set it as default.
+
+```
+kubectl create ns test
+kubectl config # See the kubectl config.
+kubectl config current-context # See the actual context.
+kubectl config set-context <context-name> --namespace=<namespace-name> --cluster=<cluster-name> --user=<user-name> # Create a new context.
+kubectl config use-context <context-name> # Set teh new context as default. 
+```
 
 To deploy Free5GC and its components, follow the deployment steps below:
 
