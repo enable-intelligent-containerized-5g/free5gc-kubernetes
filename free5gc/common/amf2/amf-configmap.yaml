@@ -33,7 +33,7 @@ data:
         - plmnId: # Public Land Mobile Network ID, <PLMN ID> = <MCC><MNC>
             mcc: 001 # Mobile Country Code (3 digits string, digit: 0~9)
             mnc: 01 # Mobile Network Code (2 or 3 digits string, digit: 0~9)
-          amfId: cafe00 # AMF identifier (3 bytes hex string, range: 000000~FFFFFF)
+          amfId: cafe02 # AMF identifier (3 bytes hex string, range: 000000~FFFFFF)
       supportTaiList:  # the TAI (Tracking Area Identifier) list supported by this AMF
         - plmnId: # Public Land Mobile Network ID, <PLMN ID> = <MCC><MNC>
             mcc: 001 # Mobile Country Code (3 digits string, digit: 0~9)
@@ -44,13 +44,16 @@ data:
             mcc: 001 # Mobile Country Code (3 digits string, digit: 0~9)
             mnc: 01 # Mobile Network Code (2 or 3 digits string, digit: 0~9)
           snssaiList: # the S-NSSAI (Single Network Slice Selection Assistance Information) list supported by this AMF
-            - sst: 1 # Slice/Service Type (uinteger, range: 0~255)
-              sd: 000001 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
-            - sst: 1 # Slice/Service Type (uinteger, range: 0~255)
-              sd: 000002 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
+            # - sst: 1 # Slice/Service Type (uinteger, range: 0~255)
+            #   sd: 000001 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
+            # - sst: 1 # Slice/Service Type (uinteger, range: 0~255)
+            #   sd: 000002 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
+            - sst: 3 # Slice/Service Type (uinteger, range: 0~255)
+              sd: 000003 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
       supportDnnList:  # the DNN (Data Network Name) list supported by this AMF
-        - internet
-        - streaming
+        # - internet
+        # - streaming
+        - three
       nrfUri: http://nrf-nnrf:8000 # a valid URI of NRF
       security:  # NAS security parameters
         integrityOrder: # the priority of integrity algorithms
