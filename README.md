@@ -31,7 +31,7 @@ The repository is organized as follows:
 
 ```
 kubectl create ns test
-kubectl config # See the kubectl config.
+kubectl config view # See the kubectl config.
 kubectl config current-context # See the actual context.
 kubectl config set-context <context-name> --namespace=<namespace-name> --cluster=<cluster-name> --user=<user-name> # Create a new context.
 kubectl config use-context <context-name> # Set teh new context as default. 
