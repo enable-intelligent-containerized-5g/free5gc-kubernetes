@@ -28,6 +28,12 @@ spec:
       - name: wait-nrf
         image: appropriate/curl
         command: ['sh', '-c', 'until curl -s -o /dev/null -w "%{http_code}" http://nrf-nnrf:8000 | grep "200"; do sleep 1; done;']
+      # - name: wait-amf
+      #   image: busybox:1.32.0
+      #   env:
+      #   - name: DEPENDENCIES
+      #     value: amf-namf:8000
+      #   command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF; sleep 2; done;"]
       containers:
       - image: edierbra/free5gc:v3.2.5
         imagePullPolicy: Always

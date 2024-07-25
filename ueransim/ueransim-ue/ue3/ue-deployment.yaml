@@ -41,7 +41,7 @@ spec:
             value: "false"
         volumeMounts:
         - mountPath: /ueransim/config
-          name: ue-volume
+          name: ue3-volume
         resources:
           requests:
             memory: "100Mi"
@@ -52,7 +52,7 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
-      - name: ue-volume
+      - name: ue3-volume
         configMap:
           name: ue3-configmap
           items:
