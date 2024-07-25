@@ -24,7 +24,7 @@ RUN cd $GOPATH/src \
     && git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-containerized-5g/openapi ./openapi \
     && git clone --recursive -b v3.2.5 -j `nproc` https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
-    && make nfs 
+    && make amf 
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04
