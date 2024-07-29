@@ -49,8 +49,8 @@ data:
             - sst: 1 # Slice/Service Type (uinteger, range: 0~255)
               sd: 000002 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
       supportDnnList:  # the DNN (Data Network Name) list supported by this AMF
-        - internet
-        - streaming
+        - "internet"
+        - "streaming"
       nrfUri: http://nrf-nnrf:8000 # a valid URI of NRF
       security:  # NAS security parameters
         integrityOrder: # the priority of integrity algorithms

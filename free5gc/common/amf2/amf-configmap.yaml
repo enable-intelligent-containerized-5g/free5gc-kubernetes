@@ -53,7 +53,7 @@ data:
       supportDnnList:  # the DNN (Data Network Name) list supported by this AMF
         # - internet
         # - streaming
-        - three
+        - "three"
       nrfUri: http://nrf-nnrf:8000 # a valid URI of NRF
       security:  # NAS security parameters
         integrityOrder: # the priority of integrity algorithms
