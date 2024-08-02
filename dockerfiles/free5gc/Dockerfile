@@ -28,7 +28,7 @@ RUN cd $GOPATH/src \
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL description="Free5GC v3.2.2"
+LABEL description="Free5GC v3.2.5"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install runtime dependencies
@@ -39,12 +39,8 @@ RUN apt-get update \
 WORKDIR /free5gc
 RUN mkdir -p config/ log/ openapi/
 
-# Copy artifacts from builder stage
 COPY --from=builder /go/src/free5gc/bin/* ./
-# COPY --from=builder /go/src/free5gc/webconsole/bin/webconsole ./webui
-# COPY --from=builder /go/src/free5gc/webconsole/public ./public
 COPY --from=builder /go/src/free5gc/config/. ./config/
-# COPY --from=builder /go/src/free5gc/config/TLS/* ./config/TLS/
 COPY --from=builder /go/src/openapi/. ./openapi/
 
 VOLUME [ "/free5gc/config"]
