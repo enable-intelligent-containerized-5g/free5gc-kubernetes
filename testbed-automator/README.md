@@ -1,4 +1,5 @@
 # testbed-automator
+
 `Vagrantfile`: create the ubuntu 20.04 VM.
 
 `install.sh`: automates the deployment of a single-node k8s cluster, configures cluster, installs various CNIs, configures ovs bridges and sets everything up for deployment of 5G core.
