@@ -1,6 +1,7 @@
 # image base golang:1.15.2-alpine3.12
 # FROM golang:1.19-alpine3.15
-FROM golang:1.19rc1-stretch
+FROM golang:1.20.14-alpine 
+# golang:1.19rc1-stretch
 
 # Rename repo after Debian bulls-eye release
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
@@ -12,8 +13,9 @@ RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
 # Set the working directory
 WORKDIR /free5gc
 
-# Install required packages
-RUN apt update && \
+RUN echo "deb http://deb.debian.org/debian buster main" > /etc/apt/sources.list && \
+    echo "deb http://deb.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
+    apt update && \
     apt install -y git make gcc libc-dev
 
 RUN git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-containerized-5g/openapi ./openapi
