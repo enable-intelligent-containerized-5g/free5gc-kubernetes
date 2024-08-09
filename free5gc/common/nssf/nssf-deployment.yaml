@@ -25,17 +25,21 @@ spec:
             value: udr-nudr:8000
           command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the UDR; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc:v3.2.5
+      - image:  edierbra/free5gc-dev:v3.2.5.5
         name: nssf
         ports:
         - containerPort: 8000
-        command: ["./nssf"]
-        args: ["--config", "config/nssfcfg.yaml"]   
+        command: ["/bin/sh", "-c"]
+        args: ["cd ./src/NFs/nssf && air"]
+        # command: ["./nssf"]
+        # args: ["--config", "config/nssfcfg.yaml"]   
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/nssf/config/
           name: nssf-volume
         resources:
           requests:
@@ -52,3 +56,7 @@ spec:
           sources:
           - configMap:
               name: nssf-configmap
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory

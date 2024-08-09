@@ -4,11 +4,11 @@ resources:
 
   # NFs:
   - nrf
-  # - amf
+  - amf
   # - amf2
-  # - ausf
-  # - nssf
-  # - pcf
-  # - udr
-  # - udm
+  - ausf
+  - nssf
+  - pcf
+  - udr
+  - udm
   # - nwdaf

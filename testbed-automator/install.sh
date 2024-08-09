@@ -152,8 +152,8 @@ create-k8s-cluster() {
 
 		# Setup kubectl without sudo
 		mkdir -p $HOME/.kube
-  		sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  		sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 		timer=60
 		cecho "YELLOW" "Waiting $timer secs for cluster to be ready"

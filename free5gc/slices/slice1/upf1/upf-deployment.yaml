@@ -34,11 +34,13 @@ spec:
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;"]
       containers:
       - name: upf
-        image: edierbra/free5gc:v3.2.5
+        image: edierbra/free5gc-dev:v3.2.5.7
         imagePullPolicy: Always
-        command: [ "/free5gc/config/wrapper.sh" ]
+        command: [ "/free5gc/src/NFs/upf/config/wrapper.sh" ]
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/upf/config/
           name: upf-volume
         ports:
         - containerPort: 8805
@@ -65,3 +67,7 @@ spec:
           - key: wrapper.sh
             path: wrapper.sh
             mode: 0777
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory

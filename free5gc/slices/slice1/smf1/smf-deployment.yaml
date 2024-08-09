@@ -32,7 +32,7 @@ spec:
           value: ausf-nausf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AUSF; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc:v3.2.5
+      - image: edierbra/free5gc-dev:v3.2.5.5
         name: smf
         imagePullPolicy: Always
         ports:
@@ -41,13 +41,17 @@ spec:
         - name: pfcp
           containerPort: 8805
           protocol: UDP
-        command: ["./smf"]
-        args: ["--config", "config/smfcfg.yaml"]   
+        command: ["/bin/sh", "-c"]
+        args: ["cd ./src/NFs/smf && air"]
+        # command: ["./smf"]
+        # args: ["--config", "config/smfcfg.yaml"]   
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/smf/config/
           name: smf-volume
         resources:
           requests:
@@ -69,3 +73,7 @@ spec:
                 path: smfcfg.yaml
               - key: uerouting.yaml
                 path: uerouting.yaml
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory
