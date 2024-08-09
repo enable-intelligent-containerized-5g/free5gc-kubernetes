@@ -31,17 +31,21 @@ spec:
           value: amf2-namf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF2; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc:v3.2.5
+      - image: edierbra/free5gc-dev:v3.2.5.5
         name: ausf
         ports:
         - containerPort: 8000
-        command: ["./ausf"]
-        args: ["--config", "config/ausfcfg.yaml"]  
+        command: ["/bin/sh", "-c"]
+        args: ["cd ./src/NFs/ausf && air"]
+        # command: ["./ausf"]
+        # args: ["--config", "config/ausfcfg.yaml"]  
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/ausf/config/
           name: ausf-volume
         resources:
           requests:
@@ -58,3 +62,7 @@ spec:
           sources:
           - configMap:
               name: ausf-configmap
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory

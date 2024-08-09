@@ -29,7 +29,7 @@ spec:
         image: appropriate/curl
         command: ['sh', '-c', 'until curl -s -o /dev/null -w "%{http_code}" http://nrf-nnrf:8000 | grep "200"; do sleep 1; done;']
       containers:
-      - image: edierbra/free5gc:v3.2.5
+      - image: edierbra/free5gc-dev:v3.2.5.5
         imagePullPolicy: Always
         name: amf
         ports:
@@ -38,13 +38,17 @@ spec:
         - name: n2
           containerPort: 38412
           protocol: SCTP
-        command: ["./amf"]
-        args: ["--config", "config/amfcfg.yaml"]
+        command: ["/bin/sh", "-c"]
+        args: ["cd ./src/NFs/amf && air"]
+        # command: ["./amf"]
+        # args: ["--config", "config/amfcfg.yaml"]
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/amf/config/
           name: amf-volume
         resources:
           requests:
@@ -61,3 +65,7 @@ spec:
           sources:
           - configMap:
               name: amf-configmap
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory

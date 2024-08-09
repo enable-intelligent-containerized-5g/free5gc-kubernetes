@@ -25,17 +25,21 @@ spec:
           value: pcf-npcf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the SMF; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc:v3.2.5
+      - image: edierbra/free5gc-dev:v3.2.5.5
         name: udm
         ports:
         - containerPort: 8000
-        command: ["./udm"]
-        args: ["--config", "config/udmcfg.yaml"]   
+        command: ["/bin/sh", "-c"]
+        args: ["cd ./src/NFs/udm && air"]
+        # command: ["./udm"]
+        # args: ["--config", "config/udmcfg.yaml"]   
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/config/
+        - mountPath: /free5gc/src/
+          name: free5gc-vanilla-volume
+        - mountPath: /free5gc/src/NFs/udm/config/
           name: udm-volume
         resources:
           requests:
@@ -52,3 +56,7 @@ spec:
           sources:
           - configMap:
               name: udm-configmap
+      - name: free5gc-vanilla-volume
+        hostPath:
+          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory

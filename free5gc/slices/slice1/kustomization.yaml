@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - smf1
-  - upf1
+  # - upf1
