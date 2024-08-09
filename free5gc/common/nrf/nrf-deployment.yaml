@@ -30,14 +30,7 @@ spec:
         name: nrf
         ports:
         - containerPort: 8000
-        command: ["sh", "-c"]
-        args:
-          - |
-            cd ./free5gc/NFs/nrf/ && \
-            CompileDaemon -build="go build -o ./tmp/main2 ./cmd/main.go" -command="./tmp/main2 --config ../../config/nrfcfg.yaml" -exclude="tmp,vendor" -polling-interval=1000
-        # args: ["cd ./free5gc/NFs/nrf && air"]
-        # command: ["./nrf"]
-        # args: ["--config", "config/nrfcfg.yaml"]
+       
         env: 
           - name: DB_URI
             value: mongodb://mongodb/free5gc
