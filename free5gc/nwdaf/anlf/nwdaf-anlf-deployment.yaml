@@ -50,7 +50,6 @@ spec:
               name: free5gc-vanilla-volume
             - mountPath: /free5gc/src/NFs/nwdaf-anlf/config/
               name: nwdaf-anlf-volume
-              subPath: nwdafcfg-anlf.yaml
           resources:
             requests:
               memory: "1000Mi"
@@ -67,8 +66,8 @@ spec:
             items:
             - key: nwdafcfg-anlf.yaml
               path: nwdafcfg-anlf.yaml
-            - key: wrapper
-              path: wrapper
+            - key: wrapper.sh
+              path: wrapper.sh
               mode: 0755
         - name: free5gc-vanilla-volume
           hostPath:

@@ -57,7 +57,7 @@ data:
         debugLevel: info
         ReportCaller: false
 
-  wrapper: |
+  wrapper.sh: |
     #!/bin/bash
 
     # Cambiar al directorio deseado
