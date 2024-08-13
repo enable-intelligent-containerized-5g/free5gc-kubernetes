@@ -21,15 +21,15 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install runtime dependencies + debug tools
 RUN apt-get update \
-    && apt-get install libsctp-dev lksctp-tools iproute2 iputils-ping -y \
-    && apt-get install vim iperf3 net-tools tcpdump -y \
+    && apt-get -y install libsctp-dev lksctp-tools iproute2 iputils-ping \
+    && apt-get -y install vim iperf3 net-tools tcpdump \
     && apt-get clean
 
 WORKDIR /ueransim
 
 RUN mkdir -p config/ binder/
 
-COPY /app/* ./
+COPY /tun/* ./
 RUN chmod +x init.sh
 
 COPY --from=builder /UERANSIM/build/nr-gnb .

@@ -58,5 +58,6 @@ RUN apt-get update \
     && pip install -r requirements.txt \
     && python3 setup.py install
 
+
 # Expose necessary ports
 EXPOSE 8000 5000 8080

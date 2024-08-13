@@ -30,16 +30,17 @@ spec:
         name: nrf
         ports:
         - containerPort: 8000
-       
+        command: ["sh", "-c"]
+        args: ["cd ./src/NFs/nrf && air"]
         env: 
           - name: DB_URI
             value: mongodb://mongodb/free5gc
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /free5gc/free5gc/
+        - mountPath: /free5gc/src/
           name: free5gc-vanilla-volume
-        - mountPath: /free5gc/free5gc/NFs/nrf/config/
+        - mountPath: /free5gc/src/NFs/nrf/config/
           name: nrf-volume
         - mountPath: /free5gc/config/
           name: nrf-volume
@@ -78,5 +79,5 @@ spec:
               name: nrf-configmap
       - name: free5gc-vanilla-volume
         hostPath:
-          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          path: "/home/edier/Tesis/5g-monarch2/free5gc-vanilla"
           type: Directory
