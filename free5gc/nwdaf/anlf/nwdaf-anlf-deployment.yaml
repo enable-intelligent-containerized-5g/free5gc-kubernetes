@@ -39,7 +39,7 @@ spec:
             - containerPort: 8000
             - containerPort: 8080
           command: ["/bin/bash", "-c"]
-          args: ["cd /free5gc/nwdafanlf && python3 -m openapi_server"]
+          args: ["cd /free5gc/config/ && ./wrapper.sh"]
           env:
             - name: GIN_MODE
               value: release
