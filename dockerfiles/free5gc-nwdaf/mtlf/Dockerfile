@@ -49,7 +49,7 @@ RUN apt-get update \
     && pip install gdown==v3.10.2 \
     && pip install matplotlib==v3.5.3 \
     && pip install keras==v2.11.0 \
-    && pip install tensorflow \
+    && pip install tensorflow-cpu \
     && pip install pandas==v1.3.5 \
     && pip install scikit-learn==v1.0.2 \
     && pip install markupsafe==2.0.1 \

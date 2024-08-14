@@ -56,3 +56,16 @@ data:
       OpenApi:
         debugLevel: info
         ReportCaller: false
+  
+  wrapper.sh: |
+    #!/bin/bash
+
+    # Cambiar al directorio deseado
+    cd /free5gc/src/NFs/nwdaf-mtlf/ || { echo "Directorio no encontrado"; exit 1; }
+    # Instalar las dependencias
+    pip install -r requirements.txt || { echo "Error al instalar las dependencias"; exit 1; }
+    # Ejecutar el script de instalación
+    python3 setup.py install || { echo "Error al instalar el paquete"; exit 1; }
+
+    # Run mtlf
+    air
