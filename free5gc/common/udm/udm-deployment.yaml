@@ -37,6 +37,8 @@ spec:
           - name: GIN_MODE
             value: release
         volumeMounts:
+        - mountPath: /root/go/
+          name: go-path-volume
         - mountPath: /free5gc/src/
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/udm/config/
@@ -59,4 +61,8 @@ spec:
       - name: free5gc-vanilla-volume
         hostPath:
           path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
+          type: Directory
+      - name: go-path-volume
+        hostPath:
+          path: "/home/jnicolaschc/go/"
           type: Directory
