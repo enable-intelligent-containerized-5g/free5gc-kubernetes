@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: free5gc-vanilla-volume
+spec:
+  capacity:
+    storage: 5Gi # Ajusta el tamaño según tus necesidades
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  hostPath:
+    path: "/home/edier/Tesis/5g-monarch2/free5gc-vanilla/"
+    type: 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: go-path-volume
+spec:
+  capacity:
+    storage: 5Gi # Ajusta el tamaño según tus necesidades
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  hostPath:
+    path: "/home/edier/go/"
+    type: Directory

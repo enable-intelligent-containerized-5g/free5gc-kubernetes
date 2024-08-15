@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-1
+  template:
+    metadata:
+      labels:
+        app: app-1
+    spec:
+      containers:
+      - name: container-1
+        image: ubuntu:20.04
+        command: ["/bin/sh", "-c"]
+        args: ["sleep infinity"]
+        volumeMounts:
+        - mountPath: /root/go/
+          name: go-path-volume
+        - mountPath: /root/vanilla/
+          name: free5gc-vanilla-volume
+      volumes:
+      - name: free5gc-vanilla-volume
+        persistentVolumeClaim:
+          claimName: free5gc-vanilla-volume-claim
+      - name: go-path-volume
+        persistentVolumeClaim:
+          claimName: go-path-volume-claim
