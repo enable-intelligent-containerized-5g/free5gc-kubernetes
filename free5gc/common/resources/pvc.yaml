@@ -1,10 +1,25 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: free5gc-vanilla-pvc
+  name: free5gc-vanilla-volume-claim
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
+  storageClassName: manual
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: go-path-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: manual

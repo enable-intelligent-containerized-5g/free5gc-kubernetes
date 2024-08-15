@@ -68,10 +68,8 @@ spec:
           - configMap:
               name: amf-configmap
       - name: free5gc-vanilla-volume
-        hostPath:
-          path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-vanilla/"
-          type: Directory
+        persistentVolumeCahim:
+          claimName: free5gc-vanilla-volume-claim
       - name: go-path-volume
-        hostPath:
-          path: "/home/jnicolaschc/go/"
-          type: Directory
+        persistentVolumeCahim:
+          claimName: go-path-volume-claim
