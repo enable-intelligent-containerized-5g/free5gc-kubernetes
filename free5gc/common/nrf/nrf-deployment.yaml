@@ -85,5 +85,5 @@ spec:
           type: Directory
       - name: go-path-volume
         hostPath:
-          path: "/home/edier/go/"
+          path: "/home/jnicolaschc/go/"
           type: Directory

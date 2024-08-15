@@ -5,7 +5,7 @@ resources:
   # NFs:
   - nrf
   - amf
-  # - amf2
+  - amf2
   - ausf
   - nssf
   - pcf
