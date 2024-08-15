@@ -68,8 +68,8 @@ spec:
           - configMap:
               name: amf-configmap
       - name: free5gc-vanilla-volume
-        persistentVolumeCahim:
+        persistentVolumeClaim:
           claimName: free5gc-vanilla-volume-claim
       - name: go-path-volume
-        persistentVolumeCahim:
+        persistentVolumeClaim:
           claimName: go-path-volume-claim
