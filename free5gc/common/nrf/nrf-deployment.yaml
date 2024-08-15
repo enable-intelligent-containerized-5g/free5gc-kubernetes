@@ -32,6 +32,7 @@ spec:
         - containerPort: 8000
         command: ["/bin/sh", "-c"]
         args: ["cd ./src/NFs/nrf && air"]
+        # args: ["sleep infinity"]
         env: 
           - name: DB_URI
             value: mongodb://mongodb/free5gc
@@ -80,10 +81,8 @@ spec:
           - configMap:
               name: nrf-configmap
       - name: free5gc-vanilla-volume
-        hostPath:
-          path: "/home/edier/Tesis/5g-monarch2/free5gc-vanilla/"
-          type: Directory
+        persistentVolumeClaim:
+          claimName: free5gc-vanilla-volume-claim
       - name: go-path-volume
-        hostPath:
-          path: "/home/edier/go/"
-          type: Directory
+        persistentVolumeClaim:
+          claimName: go-path-volume-claim
