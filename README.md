@@ -13,13 +13,16 @@ For more information about Free5GC, please visit the [Free5GC GitHub repository]
 ## Directory Structure
 
 The repository is organized as follows:
-
-- `free5gc/`: Contains Kubernetes manifest files for deploying Free5GC using a microservices architecture.
-- `free5gc-metrics/`: Contains Kubernetes manifest files for deploying Free5GC with custom UPF and SMF which expose metrics.
-- `free5gc-webui/`: Contains Kubernetes manifest files for deploying the Free5GC WebUI.
-- `mongodb/`: Contains Kubernetes manifest files for deploying the MongoDB database, which is a prerequisite for deploying Free5GC.
-- `networks5g/`: Contains network attachment definitions for Free5GC. 
-- `ueransim/`: Contains Kubernetes files for running UERANSIM-based simulated gNB and UEs.
+- [bin](bin/): Contains some useful tools like installing **gpt5g**.
+- [dockerfiles](dockerfiles/): Contains the dockerfiles to create the images of each of the **free5gc** and **ueransim** components..
+- [free5gc](free5gc/): Contains Kubernetes manifest files for deploying Free5GC using a microservices architecture.
+- [free5gc-metrics](free5gc-metrics/): Contains Kubernetes manifest files for deploying Free5GC with custom UPF and SMF which expose metrics.
+- [free5gc-webui](free5gc-webui/): Contains Kubernetes manifest files for deploying the Free5GC WebUI.
+- [graph](graph/): Contains the files to create the free5gc graph.
+- [mongodb](mongodb/): Contains Kubernetes manifest files for deploying the MongoDB database, which is a prerequisite for deploying Free5GC.
+- [networks5g](networks5g/): Contains network attachment definitions for Free5GC.
+- [testbed-automator](testbed-automator/): Contains the files to prepare the Kubernetes cluster.
+- [ueransim](ueransim/): Contains Kubernetes files for running UERANSIM-based simulated gNB and UEs.
 
 ## Deployment
 
@@ -27,10 +30,10 @@ The repository is organized as follows:
 
 **Note**: The deployment instructions assume a working kubernetes cluster with OVS CNI installed. You can optionally use the [testbed-automator](testbed-automator/) directory to prepare the Kubernetes cluster. This includes creating the VM, setting up the K8s cluster, configuring the cluster, installing various Container Network Interfaces (CNIs), configuring OVS bridges, and preparing for the deployment of the 5G Core network.
 
-(optional) Create a test context and set it as default.
+(optional) Create a free5gc context and set it as default.
 
 ```
-kubectl create ns test
+kubectl create ns free5gc
 kubectl config view # See the kubectl config.
 kubectl config current-context # See the actual context.
 kubectl config set-context <context-name> --namespace=<namespace-name> --cluster=<cluster-name> --user=<user-name> # Create a new context.
@@ -49,9 +52,9 @@ To deploy Free5GC and its components, follow the deployment steps below:
     ```
     </details>  
 
-<br>
+    <br>
 
-**Note**: The testbed-automator scripts automatically configures the OVS bridges for a single-node cluster setup, and VXLAN tunnel creation is not required. For a multi-node cluster configuration, VXLAN tunnels are used for node interconnectivity.
+    **Note**: The testbed-automator scripts automatically configures the OVS bridges for a single-node cluster setup, and VXLAN tunnel creation is not required. For a multi-node cluster configuration, VXLAN tunnels are used for node interconnectivity.
 
 2. Deploy the MongoDB database using the Kubernetes manifest files provided in the `mongodb/` directory. See [deploying components](#deploying-components). Wait for the mongodb pod to be in the `Running` state before proceeding to the next step.
 
@@ -59,24 +62,41 @@ To deploy Free5GC and its components, follow the deployment steps below:
 
 4. Install the gtp5g kernel module for Free5GC. Use the `install-gtp5g.sh` script to install gtp5g v0.8.2 on nodes where UPF should run. This is a prerequisite for deploying the UPF. 
 
-```bash
-cd bin
-./install-gtp5g.sh
-```
+    ```bash
+    cd bin
+    ./install-gtp5g.sh
+    ```
 
-5. Deploy Free5GC using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state. 
+5. Change the **Free5GC-Vanilla** and **Go** paths in `resources/pv.yaml and resources/pvc.yaml` files.
 
-6. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
+6. Deploy Free5GC using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state. 
 
-7. The `ueransim` directory contains Kubernetes manifest files for both gNB and UEs. First, deploy UERANSIM gNB using `ueransim/ueransim-gnb` directory and wait for NGAP connection to succeed. You should see the following in the gNB log.
+7. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
 
-![NGAP connection success](images/gnb-log.png)
+8. The `ueransim` directory contains Kubernetes manifest files for both gNB and UEs. First, deploy UERANSIM gNB using `ueransim/ueransim-gnb` directory and wait for NGAP connection to succeed. You should see the following in the gNB log.
+
+    <details>
+    <summary>gNB log</summary>
+
+    ![NGAP connection success](images/gnb-log.png)
+
+    </details>
+
+<br>
 
 7. Ensure correct UE subscriber information is inserted. You can enter subscription information using the web UI (see [accessing the Free5GC webui](#accessing-the-Free5GC-webui)). Subscriber details can be found in UE config files (e.g., [ue1.yaml](ueransim/ueransim-ue/ue1/ue1.yaml)).
 
 8. Deploy UERANSIM UEs using `ueransim/ueransim-ue/` directory. Once the UE is connected, you should see the following logs:
 
-![UE connection success](images/ue-log.png)
+
+    <details>
+    <summary>UE log</summary>
+
+    ![UE connection success](images/ue-log.png)
+
+    </details>
+
+<br>
 
 ### Check successful deployment
 
