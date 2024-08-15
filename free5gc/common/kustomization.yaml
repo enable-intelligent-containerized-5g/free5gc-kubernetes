@@ -1,7 +1,4 @@
 resources:
-  # Resources:
-  - resources
-
   # NFs:
   - nrf
   - amf
