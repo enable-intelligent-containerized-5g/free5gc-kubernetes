@@ -20,5 +20,5 @@ spec:
           mountPath: /home/
       volumes:
       - name: shared-volume
-        persistentVolume:
-          claimName: shared-hostpath-volume
+        persistentVolumeClaim:
+          claimName: shared-hostpath-volume-claim

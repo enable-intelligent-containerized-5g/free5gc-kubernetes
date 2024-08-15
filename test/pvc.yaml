@@ -3,6 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: shared-hostpath-volume-claim
 spec:
+  selector:
+    matchLabels:
+      type: local
   accessModes:
     - ReadWriteMany
   resources:
