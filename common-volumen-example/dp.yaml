@@ -19,13 +19,13 @@ spec:
         args: ["sleep infinity"]
         volumeMounts:
         - mountPath: /root/go/
-          name: go-path-volume
+          name: volume2
         - mountPath: /root/vanilla/
-          name: free5gc-vanilla-volume
+          name: volume1
       volumes:
-      - name: free5gc-vanilla-volume
+      - name: volume1
         persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
+          claimName: volume1-claim
+      - name: volume2
         persistentVolumeClaim:
-          claimName: go-path-volume-claim
+          claimName: volume2-claim

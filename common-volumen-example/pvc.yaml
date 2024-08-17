@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: free5gc-vanilla-volume-claim
+  name: volume1-claim
 spec:
   accessModes:
     - ReadWriteMany
@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: go-path-volume-claim
+  name: volume2-claim
 spec:
   accessModes:
     - ReadWriteMany
