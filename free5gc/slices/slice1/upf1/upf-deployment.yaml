@@ -33,7 +33,7 @@ spec:
           value: nrf-nnrf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;"]
       containers:
-      - name: upf
+      - name: upf1
         image: edierbra/free5gc-dev:v3.2.5.7
         imagePullPolicy: Always
         command: [ "/free5gc/src/NFs/upf/config/wrapper.sh" ]

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
+  labels:
+    app: prometheus
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: free5gc
+  labels:
+    app: prometheus

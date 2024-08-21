@@ -67,10 +67,10 @@ spec:
         #     port: 8000
         resources:
           requests:
-            memory: "500Mi"
+            memory: "800Mi"
             cpu: "500m"
           limits:
-            memory: "512Mi"
+            memory: "815Mi"
             cpu: "550m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always

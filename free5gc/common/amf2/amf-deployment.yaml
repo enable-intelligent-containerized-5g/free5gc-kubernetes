@@ -37,7 +37,7 @@ spec:
       containers:
       - image: edierbra/free5gc-dev:v3.2.5.5
         imagePullPolicy: Always
-        name: amf
+        name: amf2
         ports:
         - name: namf
           containerPort: 8000

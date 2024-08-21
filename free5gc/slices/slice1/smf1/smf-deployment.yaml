@@ -33,7 +33,7 @@ spec:
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AUSF; sleep 2; done;"]
       containers:
       - image: edierbra/free5gc-dev:v3.2.5.7
-        name: smf
+        name: smf1
         imagePullPolicy: Always
         ports:
         - name: nsmf

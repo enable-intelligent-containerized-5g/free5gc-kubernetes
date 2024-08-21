@@ -1,0 +1,5 @@
+resources:
+  - grafana-pv.yaml
+  - grafana-pvc.yaml
+  - grafana-deployment.yaml
+  - grafana-service.yaml
