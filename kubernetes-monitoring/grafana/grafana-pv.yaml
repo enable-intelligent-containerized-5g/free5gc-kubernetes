@@ -11,6 +11,6 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: manual
   hostPath:
-    # path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-kubernetes/kubernetes-prometheus/grafana/data/"
-    path: "/home/edier/Tesis/5g-monarch2/free5gc-kubernetes/kubernetes-prometheus/grafana/data/"
+    # path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-kubernetes/kubernetes-kubernetes-monitoring/grafana/data/"
+    path: "/home/edier/Tesis/5g-monarch2/free5gc-kubernetes/kubernetes-monitoring/grafana/data/"
     type: Directory
