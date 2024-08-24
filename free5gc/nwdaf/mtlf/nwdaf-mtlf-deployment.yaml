@@ -54,11 +54,11 @@ spec:
               name: nwdaf-mtlf-volume
           resources:
             requests:
-              memory: "1000Mi"
-              cpu: "1000m"
+              memory: "250Mi"
+              cpu: "700m"
             limits:
-              memory: "2000Mi"
-              cpu: "2000m"
+              memory: "300Mi"
+              cpu: "1000m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
