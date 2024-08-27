@@ -30,9 +30,9 @@ columns = [
 def input_dataset_path():
     input_dataset =  input(f"Ingresa el nombre del archivo CSV (sin la extensión). Presiona Enter para usar '{dataset_path_default}'): \n").strip()
     if input_dataset == "" and is_valid_name(dataset_path_default):
-        return dataset_path_default + ".csv"
+        return dataset_path_default
     elif is_valid_name(input_dataset):
-        return  input_dataset + ".csv"
+        return  input_dataset
     else:
         print("Asegúrate de que el nombre solo contenga letras, números, guiones y guiones bajos, sin espacios.")
         return input_dataset_path()  # Vuelve a pedir el nombre
@@ -65,9 +65,9 @@ def is_valid_name(name):
         print(f"El nombre '{name}' no es un nombre valido.")
         return False
 
-def exist_dataset():
+def exist_dataset(dataset_path):
     # Verifica si existe el archivo dataset
-    if not os.path.exists(dataset_path):
+    if os.path.exists(dataset_path):
         return True
     else:
         return False
@@ -108,9 +108,9 @@ def read_csv_files(folder_path, dataset_df):
                 if df.empty:
                     print(f"El archivo '{csv_file}' está vacío.\n")
                 else:
-                    # Mostrar las primeras filas del DataFrame
+                    # Mostrar las primera fila del DataFrame
                     print(f"Contenido de {csv_file}:")
-                    print(df.head(3))
+                    print(df.head(1))
                     print()  # Imprimir una línea en blanco
 
                     # Recorrer cada fila del archivo CSV
@@ -130,54 +130,67 @@ def read_csv_files(folder_path, dataset_df):
                         # Verificar si el valor de Time no está en la columna 'time' del dataset
                         if not is_time_present:                
                             # Concatena el DataFrame new_row_df con el dataset
-                            print("not present")
+                            print("Not present")
                             dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=True)
                             # print(f"Fila con Time '{time_value}' añadida desde '{csv_file}'.")
                         else:
                             print("Present")
-                            rows_found_dataset = dataset_df[dataset_df['time'] == time_value]
-                            print(f"Found: {rows_found_dataset}")
+                            ### Option 1.1
+                            dataset_df = dataset_df.set_index(['time', 'pod', 'namespace'])
+                            new_row_df = new_row_df.set_index(['time', 'pod', 'namespace'])
+                            dataset_df.update(new_row_df)
+                            # Restaura el índice para volver a tener las columnas originales
+                            dataset_df = dataset_df.reset_index()
 
-                            for index, row_found in rows_found_dataset.iterrows():
-                                pod_dataset = row_found['pod']
-                                ns_dataset = row_found['namespace']
+                            ### OPTION 1
+                            # dataset_merged_df = pd.merge(dataset_df, new_row_df, on=['time', 'pod', 'namespace'], how='left')
+                            # dataset_df = dataset_merged_df
+                            # print(f"Update Fila con (time, pod, namespace) = {time_value, nf, namespace}' desde '{csv_file}'.")
+
+                            ### OPTION 2
+                            # rows_found_dataset = dataset_df[dataset_df['time'] == time_value]
+                            # print(f"Found: {rows_found_dataset}")
+
+                            # for index, row_found in rows_found_dataset.iterrows():
+                            #     pod_dataset = row_found['pod']
+                            #     ns_dataset = row_found['namespace']
                                 
-                                # Comparar los valores de pod y namespace con los valores especificados
-                                if (pod_dataset == nf) and (ns_dataset == namespace):
-                                    print(f"Ya existe Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}'")
-                                    # print(f"Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' ya existe en el dataset")
-                                else:
-                                    dataset_df = dataset_df[~(
-                                        (dataset_df['time'] == time_value) &
-                                        (dataset_df['pod'] == nf) &
-                                        (dataset_df['namespace'] == namespace)
-                                    )]
-                                    dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=True)
-                                    print(f"Update Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' desde '{csv_file}'.")
+                            #     # Comparar los valores de pod y namespace con los valores especificados
+                            #     if (pod_dataset == nf) and (ns_dataset == namespace):
+                            #         print(f"Ya existe Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}'")
+                            #         # print(f"Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' ya existe en el dataset")
+                            #     else:
+                            #         dataset_df = dataset_df[~(
+                            #             (dataset_df['time'] == time_value) &
+                            #             (dataset_df['pod'] == nf) &
+                            #             (dataset_df['namespace'] == namespace)
+                            #         )]
+                            #         dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=True)
+                            #         print(f"Update Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' desde '{csv_file}'.")
 
                     print()
         
             except pd.errors.EmptyDataError:
                 print(f"El archivo '{csv_file}' no tiene datos o está vacío.\n")
-            
         else:
             print(f"Nombre de archivo no esperado: {csv_file}\n")
     
     # Guardar el dataset actualizado en el archivo CSV
     dataset_df.to_csv(dataset_path, index=False)
+    # dataset_merged_df.to_csv(dataset_path, index=False)
     print(f"El archivo '{dataset_path}' ha sido actualizado.")
 
-dataset_path = input_dataset_path()
+dataset_path = input_dataset_path() + ".csv"
 data_path = input_data_path()
-if exist_dataset():
+
+if not exist_dataset(dataset_path):
     # Crear el archivo CSV y escribir la fila de encabezado
     with open(dataset_path, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(columns)
     print(f"File '{dataset_path}' created.\n")
 else:
-    print(f"El archivo '{dataset_path} no existe.")
-    sys.exit()
+    print(f"El archivo '{dataset_path}' ya existe.")
 
 # Leer el dataset.csv
 dataset_df = pd.read_csv(dataset_path)
