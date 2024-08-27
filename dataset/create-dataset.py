@@ -73,11 +73,12 @@ def exist_dataset(dataset_path):
         return False
     
 def read_csv_files(folder_path, dataset_df):
-    # Obtener la columna 'time' del dataset existente
-    if 'time' in dataset_df.columns:
-        existing_times = dataset_df['time'].tolist()
-    else:
-        existing_times = []
+    # Asegurarse de que las columnas usadas para el índice sean del tipo `str`
+    dataset_df['time'] = dataset_df['time'].astype(str)
+    dataset_df['pod'] = dataset_df['pod'].astype(str)
+    dataset_df['namespace'] = dataset_df['namespace'].astype(str)
+
+    dataset_df = dataset_df.set_index(['time', 'pod', 'namespace'])
 
     # Obtener la lista de archivos en la carpeta
     files = os.listdir(folder_path)
@@ -87,98 +88,51 @@ def read_csv_files(folder_path, dataset_df):
     
     # Leer cada archivo CSV y procesar los datos
     for csv_file in csv_files:
-        # Extraer el nombre base del archivo sin la extensión
         base_name = os.path.splitext(csv_file)[0]
-        # Dividir el nombre base en partes usando puntos como separadores
         parts = base_name.split('_')
         
-        # Verificar que el archivo tenga al menos 4 partes
         if len(parts) == 5:
             namespace, nf, metric, date, time = parts[:5]
-            print(f"Archivo: {csv_file}")
-            print(f"Namespace: {namespace}, NF: {nf}, Metric: {metric}, Date: {date}, Time: {time}")
-
             file_path = os.path.join(folder_path, csv_file)
         
             try:
-                # Leer el archivo CSV usando pandas
                 df = pd.read_csv(file_path)
                 
-                # Verificar si el DataFrame está vacío
                 if df.empty:
                     print(f"El archivo '{csv_file}' está vacío.\n")
                 else:
-                    # Mostrar las primera fila del DataFrame
-                    print(f"Contenido de {csv_file}:")
-                    print(df.head(1))
-                    print()  # Imprimir una línea en blanco
+                    # Asegurarse de que las columnas usadas para el índice sean del tipo `str`
+                    df['time'] = df['time'].astype(str)
+                    df['pod'] = nf
+                    df['namespace'] = namespace
+                    df['pod'] = df['pod'].astype(str)
+                    df['namespace'] = df['namespace'].astype(str)
 
-                    # Recorrer cada fila del archivo CSV
                     for index, row_df in df.iterrows():
-                        # Agrega las nuevas claves al diccionario
-                        row_df['pod'] = nf
-                        row_df['namespace'] = namespace
-                        
-                        # Time value
-                        time_value = row_df['time']
-
-                        # Crear un DataFrame con una sola fila
                         new_row_df = pd.DataFrame([row_df])
-                        # Is time_value present
-                        is_time_present = time_value in existing_times
+                        new_row_df = new_row_df.set_index(['time', 'pod', 'namespace'])
+
+                        # Verificar si las filas en new_row_df están en dataset_df
+                        rows_missing = ~new_row_df.index.isin(dataset_df.index)
                         
-                        # Verificar si el valor de Time no está en la columna 'time' del dataset
-                        if not is_time_present:                
-                            # Concatena el DataFrame new_row_df con el dataset
-                            print("Not present")
-                            dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=True)
-                            # print(f"Fila con Time '{time_value}' añadida desde '{csv_file}'.")
-                        else:
-                            print("Present")
-                            ### Option 1.1
-                            dataset_df = dataset_df.set_index(['time', 'pod', 'namespace'])
-                            new_row_df = new_row_df.set_index(['time', 'pod', 'namespace'])
+                         # Verificar si la fila ya existe en dataset_df
+                        if new_row_df.index.isin(dataset_df.index).any():
                             dataset_df.update(new_row_df)
-                            # Restaura el índice para volver a tener las columnas originales
-                            dataset_df = dataset_df.reset_index()
+                        else:
+                            dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=False)
 
-                            ### OPTION 1
-                            # dataset_merged_df = pd.merge(dataset_df, new_row_df, on=['time', 'pod', 'namespace'], how='left')
-                            # dataset_df = dataset_merged_df
-                            # print(f"Update Fila con (time, pod, namespace) = {time_value, nf, namespace}' desde '{csv_file}'.")
-
-                            ### OPTION 2
-                            # rows_found_dataset = dataset_df[dataset_df['time'] == time_value]
-                            # print(f"Found: {rows_found_dataset}")
-
-                            # for index, row_found in rows_found_dataset.iterrows():
-                            #     pod_dataset = row_found['pod']
-                            #     ns_dataset = row_found['namespace']
-                                
-                            #     # Comparar los valores de pod y namespace con los valores especificados
-                            #     if (pod_dataset == nf) and (ns_dataset == namespace):
-                            #         print(f"Ya existe Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}'")
-                            #         # print(f"Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' ya existe en el dataset")
-                            #     else:
-                            #         dataset_df = dataset_df[~(
-                            #             (dataset_df['time'] == time_value) &
-                            #             (dataset_df['pod'] == nf) &
-                            #             (dataset_df['namespace'] == namespace)
-                            #         )]
-                            #         dataset_df = pd.concat([dataset_df, new_row_df], ignore_index=True)
-                            #         print(f"Update Fila con (time, pod, namespace) = {time_value, pod_dataset, ns_dataset}' desde '{csv_file}'.")
-
-                    print()
-        
             except pd.errors.EmptyDataError:
                 print(f"El archivo '{csv_file}' no tiene datos o está vacío.\n")
         else:
             print(f"Nombre de archivo no esperado: {csv_file}\n")
     
+    # Restaura el índice a columnas antes de guardar
+    dataset_df = dataset_df.reset_index()
+
     # Guardar el dataset actualizado en el archivo CSV
     dataset_df.to_csv(dataset_path, index=False)
-    # dataset_merged_df.to_csv(dataset_path, index=False)
     print(f"El archivo '{dataset_path}' ha sido actualizado.")
+
 
 dataset_path = input_dataset_path() + ".csv"
 data_path = input_data_path()
