@@ -169,7 +169,6 @@ def read_csv_files(folder_path, dataset_df):
 
     # Delete row with null or undefined columns and Save the data in a CSV file
     dataset_df = dataset_df.dropna()
-    # Convertir todas las columnas a string y eliminar filas que contengan "undefined"
     dataset_df = dataset_df[~dataset_df.astype(str).apply(lambda x: x.str.contains('undefined', na=False)).any(axis=1)]
     dataset_df.to_csv(dataset_path, index=False)
     print(f"The file '{dataset_path}' has been updated.")

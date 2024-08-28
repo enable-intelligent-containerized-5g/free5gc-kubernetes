@@ -5,7 +5,7 @@ import re
 import subprocess
 import argparse
 
-result_querys = "result-querys/"
+result_querys = "data/"
 
 
 def parse_duration(duration_str):
@@ -18,8 +18,7 @@ def parse_duration(duration_str):
         return value * 60
     else:
         raise ValueError(
-            "Formato de duración no válido. Use 'h' para horas o 'm' para minutos.")
-
+            "Invalid duration format. Use 'h' for hours or 'm' for minutes.")
 
 def get_epoch_range(duration):
     """Calcula el rango de tiempo en epoch basado en la duración"""
