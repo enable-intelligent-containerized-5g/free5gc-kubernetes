@@ -78,7 +78,7 @@ uninstall_k8s() {
 reset_k8s_cluster(){
   cecho "RED" "Deleting Kubernetes cluster..."
   if [ -f "/etc/kubernetes/admin.conf" ]; then
-    sudo kubeadm reset -f -q
+    sudo kubeadm reset -f
     cecho "GREEN" "Kubernetes cluster has been deleted."
   else
     cecho "YELLOW" "Kubernetes cluster is not running."
@@ -91,7 +91,7 @@ reset_k8s_cluster(){
   sudo rm -rf 
   sudo rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/lib/etcd2/ /var/run/kubernetes 
   sudo rm -rf /var/lib/docker /etc/docker /var/run/docker.sock
-  sudo rm -f /etc/apparmor.d/docker /etc/systemd/system/etcd* 
+  #sudo rm -f /etc/apparmor.d/docker /etc/systemd/system/etcd* 
 }
 
 uninstall_cni() {
@@ -174,7 +174,7 @@ uninstall_cni
 reset_k8s_cluster
 uninstall_k8s
 uninstall_containerd
-uninstall_docker
-cleanup
+#uninstall_docker
+#cleanup
 
 cecho "GREEN" "Uninstallation completed."
