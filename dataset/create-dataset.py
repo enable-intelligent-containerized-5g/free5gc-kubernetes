@@ -167,9 +167,14 @@ def read_csv_files(folder_path, dataset_df):
     # Reset the column indexes
     dataset_df = dataset_df.reset_index()
 
-    # Save the data in a CSV file
+    # Delete row with null or undefined columns and Save the data in a CSV file
+    dataset_df = dataset_df.dropna()
+    # Convertir todas las columnas a string y eliminar filas que contengan "undefined"
+    dataset_df = dataset_df[~dataset_df.astype(str).apply(lambda x: x.str.contains('undefined', na=False)).any(axis=1)]
     dataset_df.to_csv(dataset_path, index=False)
     print(f"The file '{dataset_path}' has been updated.")
+
+# -------- SCRIPT BEGINING --------
 
 print(f"ENTER THE 'dataset' and 'data' PATH.")
 if not yes_no_question("Do you want to use the default values? (y/n): ", "Using default values.\n", "Enter the custom values:"):

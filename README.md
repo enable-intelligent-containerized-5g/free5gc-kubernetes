@@ -69,7 +69,7 @@ To deploy Free5GC and its components, follow the deployment steps below:
 
 5. Change the **Free5GC-Vanilla** and **Go** paths in `resources/pv.yaml and resources/pvc.yaml` files.
 
-6. Deploy Free5GC using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state. 
+6. Deploy Free5GC using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state. This is the order to start: nrf, [amf y upf], ausf, smf, pcf, udm, udr, nssf.
 
 7. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
 
