@@ -1,6 +1,9 @@
+# debug
 __pycache__
 graph.egg-info
 dist
+
+# data
 data/*
 data-filtered/*
 result/*
