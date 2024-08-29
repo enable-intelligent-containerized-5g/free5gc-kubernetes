@@ -6,4 +6,4 @@ dist
 # data
 data/*
 data-filtered/*
-resultd/*
+result/*
