@@ -4,6 +4,6 @@ graph.egg-info
 dist
 
 # data
-data/
-data-filtered/
-result
+data/*
+data-filtered/*
+result/*
