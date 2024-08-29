@@ -162,7 +162,7 @@ def main():
             else:
                 print(f"  Error: Name file '{filename}' isn't JSON file.\n")
         else:
-            print(f"  Error: Name file '{filename}' unexpected. Required name: 'namespace_metric_date_time.json'.\n")
+            print(f"  Error: Name file '{filename}' unexpected. Required name: 'namespace_metric_duration_date_time.json'.\n")
 
     # Reset the column indexes
     df_final = df_final.reset_index(drop=True)

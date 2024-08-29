@@ -1,1 +1,0 @@
-time,pod,namespace,cpu_request,cpu_limit,cpu_usage,memory_request,memory_limit,memory_usage,packets_receive,packets_transmit,packets_total,packets_receive_dropped,packets_transmit_dropped,packets_total_dropped

@@ -129,6 +129,18 @@ uninstall_openebs() {
   cecho "GREEN" "OpenEBS has been uninstalled."
 }
 
+unistall_kube_state_metrics() {
+  cecho "RED" "Removing kube-state-metrics..."
+  if kubectl get pods -n kube-system | grep kube-state-metrics; then
+		helm uninstall kube-state-metrics -n kube-system
+	else
+		cecho "YELLOW" "kube-state-metrics is not installed."
+    return
+	fi
+
+  cecho "GREEN" "kube-state-metrics has been uninstalled."
+}
+
 remove_ovs_cni() {
   cecho "RED" "Removing OVS CNI setup..."
 

@@ -226,6 +226,16 @@ install-openebs() {
 	fi
 }
 
+install-kube-state-metrics(){
+  if kubectl get pods -n kube-system | grep kube-state-metrics; then
+    cecho "YELLOW" "kube-state-metrics is already running. Skipping installation."
+  else
+	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+	helm repo update
+	helm install kube-state-metrics prometheus-community/kube-state-metrics --namespace kube-system
+  fi
+}
+
 setup-ovs-cni() {
 	if [ -x "$(command -v ovs-vsctl)" ]; then
 		cecho "YELLOW" "OpenVSwitch is already installed."
@@ -282,6 +292,7 @@ install-cni
 install-multus
 install-helm
 install-openebs
+install-kube-state-metrics
 setup-ovs-cni
 #autocompletion
 #finish

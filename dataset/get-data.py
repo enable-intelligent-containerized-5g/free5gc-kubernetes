@@ -80,14 +80,14 @@ def main():
     parser.add_argument('-n', '--namespace', dest='namespace', type=str, required=False, 
                         help=f'Namespace name (default is "{default_namespace}").', 
                         default=default_namespace)
-    parser.add_argument('-t', '--duration', dest='duration', type=str, required=False, 
+    parser.add_argument('-t', '--time', dest='time', type=str, required=False, 
                         help=f"Duration in minutes or hours (e.g., '1h' for one hour, '30m' for 30 minutes). Default is '{default_duration}').", 
                         default=default_duration)
 
     """Parse the args"""
     args = parser.parse_args()
     arg_namespace = args.namespace
-    arg_duration = args.duration
+    arg_duration = args.time
 
     """Run the kubectl comand and get the output in a JSON format"""
     result = subprocess.run(['kubectl', 'get', 'pods', '-n',
@@ -165,7 +165,7 @@ def main():
             fetch_and_save_query(base_url, params, query_info, namespace, arg_duration, timestamp)
 
     print(
-        f"\nTime range used: From '{datetime.fromtimestamp(start_epoch, timezone.utc)}' to '{datetime.fromtimestamp(end_epoch, timezone.utc)}'")
+        f"\nTime range used '{arg_duration}': From '{datetime.fromtimestamp(start_epoch, timezone.utc)}' to '{datetime.fromtimestamp(end_epoch, timezone.utc)}'")
     
 if __name__ == '__main__':
     main()
