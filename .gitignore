@@ -1,9 +1,3 @@
 build/
 .vagrant
 *.log
-free5gcgraph.png
-kubectldata.json
-kubectlresults.pkl
-tcpdumpdata.log
-tcpdumpresults.pkl
-free5gcgraph.gexf
