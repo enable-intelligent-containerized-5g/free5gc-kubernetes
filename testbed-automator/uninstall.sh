@@ -91,7 +91,7 @@ reset_k8s_cluster(){
   sudo rm -rf 
   sudo rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/lib/etcd2/ /var/run/kubernetes 
   sudo rm -rf /var/lib/docker /etc/docker /var/run/docker.sock
-  #sudo rm -f /etc/apparmor.d/docker /etc/systemd/system/etcd* 
+  sudo rm -f /etc/apparmor.d/docker /etc/systemd/system/etcd* 
 }
 
 uninstall_cni() {

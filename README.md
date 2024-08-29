@@ -149,13 +149,22 @@ Some convenience scripts are available in the `bin` folder:
 
 - no IP addresses available in range set:
 
-  ```bash
+  ```sh
   sudo su
   cd /var/lib/cni/networks/cbr0
   ls
   ```
 
   And delete folders named after IPs not used by pods. To see de IPs run `kubectl get po -o wide`
+
+- pod no running:
+
+  ```sh
+  for pod in $(kubectl get pods -n <namespace>); do kubectl logs $pod -n <namespace> -f; done
+  ```
+
+  See the error and fix the problem.
+
 
 ## License
 
