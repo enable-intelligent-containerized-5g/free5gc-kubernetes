@@ -109,8 +109,11 @@ def main():
         """Create a dictionary and store the list of pod and container names under the key pods"""
         pods_dict = {"pods": pods_containers}
 
-        """print the dictionay in JSON format"""
-        # print(f"Pods: {json.dumps(pods_dict, indent=4)}")
+        """Save pod list in JSON format"""
+        pod_list = json.dumps(pods_dict, indent=4)
+        with open(data_path + "pod-data.json", "w") as file:
+            file.write(pod_list)
+        print(f"Pods: {pod_list}")
     else:
         print(f"Error running kubectl comand: {result.stderr}")
 
