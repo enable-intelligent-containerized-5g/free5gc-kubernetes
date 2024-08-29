@@ -7,3 +7,7 @@ dist
 data/*
 data-filtered/*
 result/*
+
+!data/.gitkeep
+!data-filtered/.gitkeep
+!result/.gitkeep
