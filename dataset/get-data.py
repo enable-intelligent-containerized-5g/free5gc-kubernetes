@@ -133,6 +133,11 @@ def main():
                     "unit": "core"
                 },
                 {
+                    "resource": "memory-limit",
+                    "query": 'sum(avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~"wait-.*", unit="bytes"}})) by (pod, container)',
+                    "unit": "bytes"
+                },
+                {
                     "resource": "cpu-usage",
                     "query": 'sum(rate(container_cpu_usage_seconds_total{{namespace="{namespace}", container!~"wait-.*"}}[1m])) by (pod, container)',
                     "unit": "core"
