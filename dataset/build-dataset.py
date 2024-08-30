@@ -188,7 +188,7 @@ def main():
     df_final = df_final.dropna()
     df_final = df_final[~df_final.astype(str).apply(lambda x: x.str.contains('undefined', na=False)).any(axis=1)]
     
-    # Separate the columns to exclude from the sorting
+    """Separate the columns to exclude from the sorting"""
     excluded_df = df_final[indexes]
 
     # Sort the remaining columns alphabetically
