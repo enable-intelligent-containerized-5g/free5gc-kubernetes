@@ -33,7 +33,7 @@ spec:
           value: nrf-nnrf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;"]
       containers:
-      - name: upf1
+      - name: upf
         image: edierbra/free5gc-dev:v3.2.5.7
         imagePullPolicy: Always
         command: [ "/free5gc/src/NFs/upf/config/wrapper.sh" ]
@@ -48,13 +48,13 @@ spec:
         - containerPort: 8805
           name: n4
           protocol: UDP
-        resources:
-          requests:
-            memory: "100Mi"
-            cpu: "100m"
-          limits:
-            memory: "512Mi"
-            cpu: "250m"
+        # resources:
+        #   requests:
+        #     memory: "100Mi"
+        #     cpu: "100m"
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "250m"
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]

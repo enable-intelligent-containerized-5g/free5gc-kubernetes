@@ -160,7 +160,7 @@ Some convenience scripts are available in the `bin` folder:
 - pod no running:
 
   ```sh
-  for pod in $(kubectl get pods -n <namespace>); do kubectl logs $pod -n <namespace> -f; done
+  for pod in $(kubectl get pods -n free5gc); do kubectl logs $pod -n free5gc -f; done
   ```
 
   See the error and fix the problem.

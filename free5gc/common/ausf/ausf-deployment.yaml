@@ -49,13 +49,13 @@ spec:
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/ausf/config/
           name: ausf-volume
-        resources:
-          requests:
-            memory: "100Mi"
-            cpu: "100m"
-          limits:
-            memory: "300Mi"
-            cpu: "250m"
+        # resources:
+        #   requests:
+        #     memory: "100Mi"
+        #     cpu: "100m"
+        #   limits:
+        #     memory: "300Mi"
+        #     cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

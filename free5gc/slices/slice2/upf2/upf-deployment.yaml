@@ -48,13 +48,13 @@ spec:
         - containerPort: 8805
           name: n4
           protocol: UDP
-        resources:
-          requests:
-            memory: "100Mi"
-            cpu: "100m"
-          limits:
-            memory: "512Mi"
-            cpu: "250m"
+        # resources:
+        #   requests:
+        #     memory: "100Mi"
+        #     cpu: "100m"
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "250m"
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]

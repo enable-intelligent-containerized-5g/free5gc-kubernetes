@@ -123,9 +123,14 @@ def main():
             "pods": pods_dict["pods"],
             "queries": [
                 {
-                    "resource": "memory-usage",
-                    "query": 'sum(container_memory_usage_bytes{{namespace="{namespace}", container!~".*wait-.*"}}) by (pod, container)',
-                    "unit": "bytes"
+                    "resource": "cpu-request",
+                    "query": 'avg(kube_pod_container_resource_requests{{namespace="{namespace}", container!~"wait-.*", unit="core"}}) by (pod, container)',
+                    "unit": "core"
+                },
+                {
+                    "resource": "cpu-limit",
+                    "query": 'avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~"wait-.*", unit="core"}}) by (pod, container)',
+                    "unit": "core"
                 },
                 {
                     "resource": "memory-limit",
@@ -135,12 +140,13 @@ def main():
                 {
                     "resource": "cpu-usage",
                     "query": 'sum(rate(container_cpu_usage_seconds_total{{namespace="{namespace}", container!~"wait-.*"}}[1m])) by (pod, container)',
-                    "unit": "cores"
+                    "unit": "core"
                 },
                 {
-                    "resource": "cpu-limit",
-                    "query": 'sum(avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~"wait-.*", unit="core"}})) by (pod, container)',
-                    "unit": "cores"
+                    "resource": "memory-request",
+                    "query": 'avg(kube_pod_container_resource_requests{{namespace="{namespace}", container!~".*wait-.*", unit="byte"}}) by (pod, container)',
+                    "unit": "byte"
+                },
                 {
                     "resource": "memory-limit",
                     "query": 'avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~".*wait-.*", unit="byte"}}) by (pod, container)',
