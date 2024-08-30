@@ -109,8 +109,11 @@ def main():
         """Create a dictionary and store the list of pod and container names under the key pods"""
         pods_dict = {"pods": pods_containers}
 
-        """print the dictionay in JSON format"""
-        # print(f"Pods: {json.dumps(pods_dict, indent=4)}")
+        """Save pod list in JSON format"""
+        pod_list = json.dumps(pods_dict, indent=4)
+        with open(data_path + "pod-data.json", "w") as file:
+            file.write(pod_list)
+        print(f"Pods: {pod_list}")
     else:
         print(f"Error running kubectl comand: {result.stderr}")
 
@@ -138,6 +141,45 @@ def main():
                     "resource": "cpu-limit",
                     "query": 'sum(avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~"wait-.*", unit="core"}})) by (pod, container)',
                     "unit": "cores"
+                {
+                    "resource": "memory-limit",
+                    "query": 'avg(kube_pod_container_resource_limits{{namespace="{namespace}", container!~".*wait-.*", unit="byte"}}) by (pod, container)',
+                    "unit": "byte"
+                },
+                {
+                    "resource": "memory-usage",
+                    "query": 'sum(container_memory_usage_bytes{{namespace="{namespace}", container!~".*wait-.*"}}) by (pod, container)',
+                    "unit": "byte"
+                },
+                {
+                    "resource": "receive-packets",
+                    "query": 'sum(rate(container_network_receive_packets_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
+                },
+                {
+                    "resource": "transmit-packets",
+                    "query": 'sum(rate(container_network_transmit_packets_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
+                },
+                {
+                    "resource": "total-packets",
+                    "query": 'sum(rate(container_network_receive_packets_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container) + sum(rate(container_network_transmit_packets_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
+                },
+                {
+                    "resource": "receive-packets-dropped",
+                    "query": 'sum(rate(container_network_receive_packets_dropped_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
+                },
+                {
+                    "resource": "transmit-packets-dropped",
+                    "query": 'sum(rate(container_network_transmit_packets_dropped_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
+                },
+                {
+                    "resource": "total-packets-dropped",
+                    "query": 'sum(rate(container_network_receive_packets_dropped_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container) + sum(rate(container_network_transmit_packets_dropped_total{{namespace="{namespace}", container!~".*wait-.*"}}[1m])) by (pod, container)',
+                    "unit": "packets/s"
                 }
             ]
         }
