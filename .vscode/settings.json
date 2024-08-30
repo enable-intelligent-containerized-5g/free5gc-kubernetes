@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/kustomization.json": "file:///home/edier/Tesis/5g-monarch2/free5gc-kubernetes/free5gc/slices/kustomization.yaml"
+    }
+}

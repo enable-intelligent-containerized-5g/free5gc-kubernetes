@@ -44,6 +44,20 @@ def duplicated_indexes(data_frame):
     # Find all duplicate indices, including the first occurrence
     return data_frame.index.duplicated(keep='first')
 
+def load_container_if_not_exist(pod_data_path, metric_info, pod):
+    if not 'container' in metric_info:
+        print("  Warning: Container property not in metric info, loading it from pod list...")
+        with open(pod_data_path, 'r') as file:
+            json_pod_data = json.load(file)
+            if pod in json_pod_data["pods"]:
+                value = json_pod_data["pods"][pod][0]
+                print(f"    Using '{pod}': {value}, from {pod_data_path}.")
+                return value
+            else:
+                print(f"  Error: Key '{pod}' not found in {pod_data_path}. Container name not loaded")
+    else:
+        return metric_info['container']
+
 def main():
     # Create the parser
     parser = argparse.ArgumentParser(description='Build the dataset.')
@@ -62,6 +76,7 @@ def main():
     args = parser.parse_args()
     arg_output = args.output
     arg_data = args.data.rstrip('/')
+    pod_data_path = f"{arg_data}/pod-data.json"
 
     if not exist_dataset(arg_output):
         # Create the CSV file and write the head row
@@ -109,11 +124,10 @@ def main():
                     """Extract the pod, container, time, and value"""
                     for result in results:
                         metric_info = result['metric']
-                        if 'container' in metric_info:
+                        if 'pod' in metric_info:
                             pod = metric_info['pod']
-                            container = metric_info['container']
+                            container = load_container_if_not_exist(pod_data_path, metric_info, pod)
                             values = result['values']
-                            
                             """Add value to rows"""
                             for value in values:
                                 timestamp, metric_value = value
@@ -125,12 +139,15 @@ def main():
                                     'container': container,
                                     metric: metric_value
                                 })
+                        else:
+                            print(f"  Error: The pod property is not in the metric property of the '{filename}' file.")
                     
                     # Create a temporal DataFrame
                     temp_df = pd.DataFrame(rows)
                     
                     # Set the index to temporal DataFrame
-                    temp_df.set_index(indexes)
+                    if not temp_df.empty:
+                        temp_df.set_index(indexes)
 
                     # Duplicated indexes
                     duplicated_indexes_temp_df = duplicated_indexes(temp_df)
@@ -171,6 +188,16 @@ def main():
     df_final = df_final.dropna()
     df_final = df_final[~df_final.astype(str).apply(lambda x: x.str.contains('undefined', na=False)).any(axis=1)]
     
+    # Separate the columns to exclude from the sorting
+    excluded_df = df_final[indexes]
+
+    # Sort the remaining columns alphabetically
+    df_final = df_final[[col for col in df_final.columns if col not in indexes]]
+    df_final = df_final[sorted(df_final.columns)]
+
+    # Combine the excluded and sorted columns
+    df_final = pd.concat([excluded_df, df_final], axis=1)
+
     # Save the dataset like a CSV file
     df_final.to_csv(arg_output, index=False)
     print(f"The file '{arg_output}' has been updated.")

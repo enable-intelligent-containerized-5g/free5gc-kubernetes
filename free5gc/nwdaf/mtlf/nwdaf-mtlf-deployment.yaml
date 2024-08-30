@@ -52,13 +52,13 @@ spec:
               name: free5gc-vanilla-volume
             - mountPath: /free5gc/src/NFs/nwdaf-mtlf/config/
               name: nwdaf-mtlf-volume
-          resources:
-            requests:
-              memory: "250Mi"
-              cpu: "700m"
-            limits:
-              memory: "300Mi"
-              cpu: "1000m"
+          # resources:
+          #   requests:
+          #     memory: "250Mi"
+          #     cpu: "700m"
+          #   limits:
+          #     memory: "300Mi"
+          #     cpu: "1000m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
