@@ -43,13 +43,13 @@ spec:
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/nssf/config/
           name: nssf-volume
-        # resources:
-        #   requests:
-        #     memory: "200Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "250Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "100m"
+          limits:
+            memory: "250Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

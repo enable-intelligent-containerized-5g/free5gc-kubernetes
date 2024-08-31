@@ -47,31 +47,13 @@ spec:
           name: nrf-volume
         - mountPath: /free5gc/config/
           name: nrf-volume
-        # readinessProbe:
-        #   initialDelaySeconds: 0
-        #   periodSeconds: 1
-        #   timeoutSeconds: 1
-        #   failureThreshold:  40
-        #   successThreshold: 1
-        #   httpGet:
-        #     scheme: "HTTP"
-        #     port: 8000
-        # livenessProbe:
-        #   initialDelaySeconds: 120
-        #   periodSeconds: 10
-        #   timeoutSeconds: 10
-        #   failureThreshold: 3
-        #   successThreshold: 1
-        #   httpGet:
-        #     scheme: "HTTP"
-        #     port: 8000
-        # resources:
-        #   requests:
-        #     memory: "150Mi"
-        #     cpu: "150m"
-        #   limits:
-        #     memory: "400Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "150Mi"
+            cpu: "150m"
+          limits:
+            memory: "400Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
