@@ -47,13 +47,13 @@ spec:
           name: nrf-volume
         - mountPath: /free5gc/config/
           name: nrf-volume
-        resources:
-          requests:
-            memory: "150Mi"
-            cpu: "150m"
-          limits:
-            memory: "400Mi"
-            cpu: "250m"
+        # resources:
+        #   requests:
+        #     memory: "150Mi"
+        #     cpu: "150m"
+        #   limits:
+        #     memory: "400Mi"
+        #     cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

@@ -30,6 +30,6 @@ spec:
   storageClassName: manual
   hostPath:
     # path: "/home/jnicolaschc/go/"
-    path: "/home/edier/go/"
+    # path: "/home/edier/go/"
     # path: "/home/vagrant/go/"
     type: Directory
