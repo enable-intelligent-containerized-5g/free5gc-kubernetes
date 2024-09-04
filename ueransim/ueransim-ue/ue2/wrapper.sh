@@ -3,4 +3,5 @@
 mkdir /dev/net
 mknod /dev/net/tun c 10 200
 
-/ueransim/nr-ue -c /ueransim/config/ue2.yaml 
+nohup /ueransim/config/ue-iptables.sh &
+nohup /ueransim/nr-ue -c /ueransim/config/ue2.yaml 

@@ -22,7 +22,7 @@ spec:
         name: ue3
     spec:
       containers:
-      - image: edierbra/ueransim:v3.2.6
+      - image: edierbra/ueransim:v3.2.6-ditg
         imagePullPolicy: Always
         name: ue
         securityContext:
@@ -52,12 +52,20 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
-      - name: ue3-volume
-        configMap:
-          name: ue3-configmap
-          items:
-          - key: ue3.yaml
-            path: ue3.yaml
-          - key: wrapper.sh
-            path: wrapper.sh
-            mode: 0755
+        - name: ue3-volume
+          projected:
+            sources:
+              - configMap:
+                  name: ue3-configmap
+                  items:
+                    - key: ue3.yaml
+                      path: ue3.yaml
+                    - key: wrapper.sh
+                      path: wrapper.sh
+                      mode: 0755
+              - configMap:
+                  name: ue-iptables-configmap
+                  items:
+                    - key: ue-iptables.sh
+                      path: ue-iptables.sh
+                      mode: 0755
