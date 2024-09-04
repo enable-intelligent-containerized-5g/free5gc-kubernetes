@@ -13,13 +13,20 @@ spec:
       labels:
         app: grafana
     spec:
+      initContainers:
+        - name: init-permissions
+          image: busybox
+          command: ["sh", "-c", "chmod -R 777 /data"]
+          volumeMounts:
+            - name: grafana-storage-volume
+              mountPath: /data
       containers:
       - name: grafana
         image: grafana/grafana:11.1.4
         ports:
         - containerPort: 3000
         volumeMounts:
-        - name: grafana-volume
+        - name: grafana-storage-volume
           mountPath: /var/lib/grafana
         resources:
             requests:
@@ -29,6 +36,6 @@ spec:
               cpu: 300m
               memory: 900Mi
       volumes:
-      - name: grafana-volume
+      - name: grafana-storage-volume
         persistentVolumeClaim:
           claimName: grafana-volume-claim

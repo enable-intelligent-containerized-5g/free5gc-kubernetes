@@ -1,3 +1,2 @@
 data/*
-data/grafana.db
 !data/.gitkeep
