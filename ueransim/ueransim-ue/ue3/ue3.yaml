@@ -43,6 +43,11 @@ sessions:
     slice:
       sst: 1
       sd: 000001
+  - type: 'IPv4'
+    apn: 'streaming'
+    slice:
+      sst: 1
+      sd: 000002
 
 # Configured NSSAI for this UE by HPLMN
 configured-nssai:
