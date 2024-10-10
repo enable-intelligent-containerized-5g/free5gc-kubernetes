@@ -155,7 +155,7 @@ Some convenience scripts are available in the `bin` folder:
   ls
   ```
 
-  And delete folders named after IPs not used by pods. To see de IPs run `kubectl get po -o wide`
+  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -o wide`
 
 - pod no running:
 
@@ -165,6 +165,16 @@ Some convenience scripts are available in the `bin` folder:
 
   See the error and fix the problem.
 
+- kubectl with sudo.
+
+  Run the following commands from the create-k8s-cluster() section of [testbed-automator/install.sh](testbed-automator/install.sh).
+
+  ```sh
+  # Setup kubectl without sudo
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  ```
 
 ## License
 

@@ -114,9 +114,9 @@ EOF
 
 	# Configure sysctl parameters for Kubernetes
 	cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-iptables = 1
-net.bridge.bridge-nf-call-ip6tables = 1
-net.ipv4.ip_forward = 1
+	net.bridge.bridge-nf-call-iptables = 1
+	net.bridge.bridge-nf-call-ip6tables = 1
+	net.ipv4.ip_forward = 1
 EOF
 
 	# Apply sysctl parameters without reboot
@@ -153,8 +153,8 @@ create-k8s-cluster() {
 
 		# Setup kubectl without sudo
 		mkdir -p $HOME/.kube
-    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 		timer=60
 		cecho "YELLOW" "Waiting $timer secs for cluster to be ready"
