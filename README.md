@@ -188,4 +188,6 @@ These manifest files are heavily inspired from [towards5gs-helm](https://github.
 
 If you use the code in this repository in your research work or project, please consider citing the following publication.
 
-> N. Saha, A. James, N. Shahriar, R. Boutaba and A. Saleh. (2022). Demonstrating Network Slice KPI Monitoring in a 5G Testbed. In Proceedings of the IEEE/IFIP Network Operations and Management Symposium (NOMS). Budapest, Hungary, 25 - 29 April, 2022.
+> INTELLIGENT 5G
+
+<!-- > N. Saha, A. James, N. Shahriar, R. Boutaba and A. Saleh. (2022). Demonstrating Network Slice KPI Monitoring in a 5G Testbed. In Proceedings of the IEEE/IFIP Network Operations and Management Symposium (NOMS). Budapest, Hungary, 25 - 29 April, 2022. -->
