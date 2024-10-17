@@ -176,6 +176,8 @@ Some convenience scripts are available in the `bin` folder:
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   ```
 
+  Or run `uninstall.sh` and `install.sh` with `sudo bash <script.sh>`.
+
 ## License
 
 This repository is licensed under the [MIT License](LICENSE).
