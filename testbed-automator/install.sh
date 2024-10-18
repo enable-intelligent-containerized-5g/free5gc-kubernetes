@@ -114,9 +114,9 @@ EOF
 
 	# Configure sysctl parameters for Kubernetes
 	cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-iptables = 1
-net.bridge.bridge-nf-call-ip6tables = 1
-net.ipv4.ip_forward = 1
+	net.bridge.bridge-nf-call-iptables = 1
+	net.bridge.bridge-nf-call-ip6tables = 1
+	net.ipv4.ip_forward = 1
 EOF
 
 	# Apply sysctl parameters without reboot
@@ -133,7 +133,7 @@ install-k8s() {
 		sudo apt-get update
 		# apt-transport-https may be a dummy package; if so, you can skip that package
 		sudo apt-get install -y apt-transport-https ca-certificates curl gpg
-		# curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+		curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 		
 		# This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
 		echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -153,8 +153,8 @@ create-k8s-cluster() {
 
 		# Setup kubectl without sudo
 		mkdir -p $HOME/.kube
-    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 		timer=60
 		cecho "YELLOW" "Waiting $timer secs for cluster to be ready"

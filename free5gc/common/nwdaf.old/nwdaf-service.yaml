@@ -5,9 +5,14 @@ metadata:
   labels:
     app: free5gc
     nf: nwdaf
+    name: module1
 spec:
+  type: NodePort
   ports:
-    - port: 29531
+    - name: nwdaf
+      port: 8000
+      nodePort: 30081
   selector:
     app: free5gc
     nf: nwdaf
+    name: module1

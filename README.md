@@ -155,7 +155,7 @@ Some convenience scripts are available in the `bin` folder:
   ls
   ```
 
-  And delete folders named after IPs not used by pods. To see de IPs run `kubectl get po -o wide`
+  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -o wide`
 
 - pod no running:
 
@@ -165,6 +165,18 @@ Some convenience scripts are available in the `bin` folder:
 
   See the error and fix the problem.
 
+- kubectl with sudo.
+
+  Run the following commands from the create-k8s-cluster() section of [testbed-automator/install.sh](testbed-automator/install.sh).
+
+  ```sh
+  # Setup kubectl without sudo
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  ```
+
+  Or run `uninstall.sh` and `install.sh` with `sudo bash <script.sh>`.
 
 ## License
 
@@ -178,4 +190,6 @@ These manifest files are heavily inspired from [towards5gs-helm](https://github.
 
 If you use the code in this repository in your research work or project, please consider citing the following publication.
 
-> N. Saha, A. James, N. Shahriar, R. Boutaba and A. Saleh. (2022). Demonstrating Network Slice KPI Monitoring in a 5G Testbed. In Proceedings of the IEEE/IFIP Network Operations and Management Symposium (NOMS). Budapest, Hungary, 25 - 29 April, 2022.
+> INTELLIGENT 5G
+
+<!-- > N. Saha, A. James, N. Shahriar, R. Boutaba and A. Saleh. (2022). Demonstrating Network Slice KPI Monitoring in a 5G Testbed. In Proceedings of the IEEE/IFIP Network Operations and Management Symposium (NOMS). Budapest, Hungary, 25 - 29 April, 2022. -->
