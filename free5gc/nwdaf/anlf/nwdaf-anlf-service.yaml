@@ -11,9 +11,9 @@ spec:
   ports:
     - name: nwdaf
       port: 8000
-    - name: openapi 
-      port: 8080
       nodePort: 30080
+    # - name: openapi 
+    #   port: 8000
   selector:
     app: free5gc
     nf: nwdaf

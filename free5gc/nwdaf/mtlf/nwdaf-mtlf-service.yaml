@@ -11,9 +11,9 @@ spec:
   ports:
     - name: mtlf
       port: 8000
-    - name: openapi 
-      port: 8081
       nodePort: 30081
+    # - name: openapi 
+    #   port: 8081
   selector:
     app: free5gc
     nf: nwdaf

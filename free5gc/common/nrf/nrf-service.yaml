@@ -6,8 +6,11 @@ metadata:
     app: free5gc
     nf: nrf
 spec:
+  type: NodePort
   ports:
-    - port: 8000
+    - name: nrf
+      port: 8000
+      nodePort: 30050
   selector:
     app: free5gc
     nf: nrf

@@ -7,15 +7,16 @@ metadata:
 data:
   nwdafcfg.yaml: |
     info:
-      version: 1.0.0
+      version: 1.0.1
       description: NWDAF initial local configuration
 
     configuration:
-      nwdafName: NWDAF # the name of this NWDAF
+      name: nwdaf-mtlf
+      nwdafName: NWDAF-MTLF # the name of this NWDAF
       
       sbi: # Service-based interface information
         scheme: http # the protocol for sbi (http or https)
-        registerIPv4: nwdaf-nnwdaf # IP used to register to NRF
+        registerIPv4: nwdaf-nnwdaf-mtlf # IP used to register to NRF
         bindingIPv4: 0.0.0.0  # IP used to bind the service
         port: 8000 # port used to bind the service
 
