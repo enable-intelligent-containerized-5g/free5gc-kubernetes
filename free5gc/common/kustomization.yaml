@@ -8,4 +8,4 @@ resources:
   - pcf
   - udr
   - udm
-  - nwdaf.old
+  #- nwdaf.old

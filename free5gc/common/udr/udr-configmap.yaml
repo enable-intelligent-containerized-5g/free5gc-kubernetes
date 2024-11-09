@@ -11,6 +11,7 @@ data:
       description: UDR initial local configuration
 
     configuration:
+      containerName: udr
       sbi: # Service-based interface information
         scheme: http # the protocol for sbi (http or https)
         registerIPv4: udr-nudr # IP used to register to NRF

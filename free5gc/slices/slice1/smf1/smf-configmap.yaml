@@ -13,6 +13,7 @@ data:
       description: SMF initial local configuration
 
     configuration:
+      containerName: smf
       smfName: SMF # the name of this SMF
       sbi: # Service-based interface information
         scheme: http # the protocol for sbi (http or https)
