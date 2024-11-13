@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - slice1
   # - slice2
-  
+

@@ -20,7 +20,7 @@ spec:
         name: anlf
     spec:
       initContainers:
-        - name: wait-nrf
+        - name: wait-pcf
           image: busybox:1.32.0
           env:
             - name: DEPENDENCIES
@@ -68,11 +68,11 @@ spec:
           configMap:
             name: nwdaf-anlf-configmap
             items:
-            - key: nwdafcfg-anlf.yaml
-              path: nwdafcfg-anlf.yaml
-            - key: wrapper.sh
-              path: wrapper.sh
-              mode: 0755
+              - key: nwdafcfg-anlf.yaml
+                path: nwdafcfg-anlf.yaml
+              - key: wrapper.sh
+                path: wrapper.sh
+                mode: 0755
         - name: free5gc-vanilla-volume
           persistentVolumeClaim:
             claimName: free5gc-vanilla-volume-claim
@@ -92,4 +92,3 @@ spec:
       #     - key: nwdaf
       #       path: nwdaf
       #       # mode: 0755
-

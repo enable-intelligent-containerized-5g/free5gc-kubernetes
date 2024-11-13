@@ -12,6 +12,7 @@ data:
       description: NRF initial local configuration
     
     configuration:
+      containerName: nrf
       MongoDBName: free5gc
       MongoDBUrl: mongodb://mongodb:27017
       sbi:
