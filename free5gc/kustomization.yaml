@@ -8,4 +8,4 @@ resources:
   # - balancer
   - common
   - slices
-  # - nwdaf
+  - nwdaf
