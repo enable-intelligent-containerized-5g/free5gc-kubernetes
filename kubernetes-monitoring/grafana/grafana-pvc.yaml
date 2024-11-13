@@ -11,3 +11,6 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: manual
+  selector:
+    matchLabels:
+      app: grafana

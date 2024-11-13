@@ -11,3 +11,6 @@ spec:
     requests:
       storage: 2Gi
   storageClassName: manual
+  selector:
+    matchLabels:
+      app: prometheus

@@ -25,7 +25,7 @@ spec:
           value: pcf-npcf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the SMF; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc-dev:v3.2.5.7
+      - image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
         name: udm
         ports:
         - containerPort: 8000
@@ -43,6 +43,8 @@ spec:
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/udm/config/
           name: udm-volume
+        - mountPath: /free5gc/openapi/
+          name: openapi-volume
         # resources:
         #   requests:
         #     memory: "100Mi"
@@ -64,3 +66,6 @@ spec:
       - name: go-path-volume
         persistentVolumeClaim:
           claimName: go-path-volume-claim
+      - name: openapi-volume
+        persistentVolumeClaim:
+          claimName: openapi-volume-claim

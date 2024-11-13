@@ -29,7 +29,7 @@ spec:
         image: appropriate/curl
         command: ['sh', '-c', 'until curl -s -o /dev/null -w "%{http_code}" http://nrf-nnrf:8000 | grep "200"; do sleep 1; done;']
       containers:
-      - image: edierbra/free5gc-dev:v3.2.5.5
+      - image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.5
         imagePullPolicy: Always
         name: amf
         ports:
@@ -52,6 +52,12 @@ spec:
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/amf/config/
           name: amf-volume
+        - mountPath: /free5gc/nas/
+          name: nas-volume
+        - mountPath: /free5gc/ngap/
+          name: ngap-volume
+        - mountPath: /free5gc/openapi/
+          name: openapi-volume
         # resources:
         #   requests:
         #     memory: "100Mi"
@@ -70,6 +76,15 @@ spec:
       - name: free5gc-vanilla-volume
         persistentVolumeClaim:
           claimName: free5gc-vanilla-volume-claim
+      - name: nas-volume
+        persistentVolumeClaim:
+          claimName: nas-volume-claim
+      - name: ngap-volume
+        persistentVolumeClaim:
+          claimName: ngap-volume-claim
       - name: go-path-volume
         persistentVolumeClaim:
           claimName: go-path-volume-claim
+      - name: openapi-volume
+        persistentVolumeClaim:
+          claimName: openapi-volume-claim

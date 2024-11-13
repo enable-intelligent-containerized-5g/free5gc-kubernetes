@@ -1,5 +1,7 @@
 # testbed-automator
 
+## Summary
+
 `Vagrantfile`: create the ubuntu 20.04 VM.
 
 `install.sh`: automates the deployment of a single-node k8s cluster, configures cluster, installs various CNIs, configures ovs bridges and sets everything up for deployment of 5G core.
@@ -8,12 +10,22 @@
 
 `kubeadm-config.yaml`: is use for the `install.sh` script to create the K8s cluster.
 
-# troubleshooting
+## Deploying
+
+```sh
+# Create the cluster
+bash install.sh
+
+# Delete the cluster
+bash uninstall.sh
+```
+
+## troubleshooting
 
 ## kudeadm init hangs
 
 Check kubelet status
-```bash
+```sh
 sudo systemctl status --no-pager --full kubelet.service
 ```
 
