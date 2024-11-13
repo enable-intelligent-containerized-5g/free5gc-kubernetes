@@ -15,11 +15,10 @@ RUN apt update \
 ENV PATH="/usr/local/go/bin:${PATH}"
 
 # Clonar el repositorio openapi
-RUN git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-containerized-5g/openapi ./openapi
+# RUN git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-containerized-5g/openapi ./openapi
 
 # Instalar dependencias de Go
-RUN go install github.com/air-verse/air@latest
-
+RUN go install github.com/air-verse/air@v1.52.3
 
 # Configurar el PATH de dependencias de go
 ENV PATH="/root/go/bin:${PATH}"

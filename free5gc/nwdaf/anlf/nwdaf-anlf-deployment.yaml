@@ -52,6 +52,8 @@ spec:
               name: free5gc-vanilla-volume
             - mountPath: /free5gc/src/NFs/nwdaf-anlf/config/
               name: nwdaf-anlf-volume
+            - mountPath: /free5gc/openapi/
+              name: openapi-volume
           # resources:
           #   requests:
           #     memory: "1000Mi"
@@ -77,6 +79,9 @@ spec:
         - name: go-path-volume
           persistentVolumeClaim:
             claimName: go-path-volume-claim
+        - name: openapi-volume
+          persistentVolumeClaim:
+            claimName: openapi-volume-claim
       # volumes:
       # - name: nwdaf-mtlf-volume
       #   configMap:

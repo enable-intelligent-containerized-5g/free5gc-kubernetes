@@ -10,6 +10,57 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: manual
+  selector:
+    matchLabels:
+      app: vanilla
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nas-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: manual
+  selector:
+    matchLabels:
+      app: nas
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ngap-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: manual
+  selector:
+    matchLabels:
+      app: ngap
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: openapi-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: manual
+  selector:
+    matchLabels:
+      app: openapi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -23,3 +74,6 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: manual
+  selector:
+    matchLabels:
+      app: gopath

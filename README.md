@@ -176,7 +176,9 @@ Some convenience scripts are available in the `bin` folder:
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   ```
 
-  Or run `uninstall.sh` and `install.sh` with `sudo bash <script.sh>`.
+  Or 
+  
+  Run `uninstall.sh` and `install.sh` with `bash <script.sh>`.
 
 ## License
 

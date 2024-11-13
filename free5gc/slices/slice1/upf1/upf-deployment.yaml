@@ -34,7 +34,7 @@ spec:
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;"]
       containers:
       - name: upf
-        image: edierbra/free5gc-dev:v3.2.5.7
+        image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
         imagePullPolicy: Always
         command: [ "/free5gc/src/NFs/upf/config/wrapper.sh" ]
         volumeMounts:
@@ -44,6 +44,8 @@ spec:
           name: free5gc-vanilla-volume
         - mountPath: /free5gc/src/NFs/upf/config/
           name: upf-volume
+        - mountPath: /free5gc/openapi/
+          name: openapi-volume
         ports:
         - containerPort: 8805
           name: n4
@@ -75,3 +77,6 @@ spec:
       - name: go-path-volume
         persistentVolumeClaim:
           claimName: go-path-volume-claim
+      - name: openapi-volume
+        persistentVolumeClaim:
+          claimName: openapi-volume-claim
