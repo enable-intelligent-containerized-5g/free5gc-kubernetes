@@ -7,12 +7,13 @@ metadata:
 data:
   nwdafcfg-mtlf.yaml: |
     info:
-      version: 1.0.1
+      version: 1.0.0
       description: NWDAF initial local configuration
 
     configuration:
       containerName: nwdaf-mtlf
-      nwdafName: NWDAF # the name of this NWDAF
+      name: nwdaf-mtlf
+      nwdafName: NWDAF-MTLF # the name of this NWDAF
       
       sbi: # Service-based interface information
         scheme: http # the protocol for sbi (http or https)
@@ -28,6 +29,8 @@ data:
       oamUri: http://prometheus-service.monitoring:8080 # a valid URI of PCM (Packet Capture Module)
       ksmInstance: "kube-state-metrics.kube-system.svc.cluster.local:8080" # a valid kube-state-metrics instance
       namespace: "free5gc" # namespace of 5GC
+
+      sqlLiteDB: ml_model_info.db # a valid PATH of the SqlLite
 
       networkName:  # the name of this core network
         full: free5GC
