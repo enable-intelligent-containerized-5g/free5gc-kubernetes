@@ -32,7 +32,7 @@ spec:
               "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/nwdaf-anlf:v3.0.5-dev # edierbra/nwdaf-anlf:v3.0.5 # edierbra/free5gc:v3.2.2
+        - image: edierbra/free5gc-nwdaf-dev:v3.2.5.9 # edierbra/nwdaf-anlf:v3.0.5 # edierbra/free5gc:v3.2.2
           imagePullPolicy: IfNotPresent
           name: nwdaf-anlf
           ports:
