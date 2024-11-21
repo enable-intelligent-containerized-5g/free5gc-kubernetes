@@ -45,6 +45,8 @@ spec:
           volumeMounts:
             - mountPath: /free5gc/config/
               name: nwdaf-anlf-volume
+            - mountPath: /free5gc/models/
+              name: models-volume
           resources:
             requests:
               memory: "250Mi"
@@ -64,3 +66,6 @@ spec:
               - key: wrapper.sh
                 path: wrapper.sh
                 mode: 0755
+        - name: models-volume
+          persistentVolumeClaim:
+            claimName: models-volume-claim

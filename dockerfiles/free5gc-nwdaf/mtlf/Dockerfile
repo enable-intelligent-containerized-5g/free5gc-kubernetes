@@ -25,18 +25,18 @@ RUN cd $GOPATH/src \
 # Build stage for NWDAF
 # python:3.7.7-stretch
 FROM python:3.7.16-slim-buster 
-LABEL description="NWDAF v3.0.5"
+LABEL description="NWDAF v3.2.01"
 ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /free5gc
 
 # Copy files from builder
-RUN mkdir -p config/ log/ data/ models/ ml_model_training_scripts/
+RUN mkdir -p config/ log/ models/ ml_model_training_scripts/ \
+    data/ data/raw/ data/preprocessed/ data/processed/ data/labeled/ 
 
 # Copy artifacts from builder stage
 COPY --from=builder /go/src/free5gc/bin/* ./
 COPY --from=builder /go/src/free5gc/config/. ./config/
-COPY --from=builder /go/src/free5gc/NFs/nwdaf-mtlf/data/. ./data/
 COPY --from=builder /go/src/free5gc/NFs/nwdaf-mtlf/ml_model_training_scripts/. ./ml_model_training_scripts/
 
 # Install dependencies for building Free5GC

@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - resources
   - mtlf
-  # - anlf
+  - anlf
