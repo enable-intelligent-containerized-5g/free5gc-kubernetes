@@ -32,7 +32,7 @@ spec:
           value: ausf-nausf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AUSF; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
+      - image: edierbra/free5gc-smf:v3.2.01
         name: smf
         imagePullPolicy: Always
         ports:
@@ -41,33 +41,21 @@ spec:
         - name: pfcp
           containerPort: 8805
           protocol: UDP
-        command: ["/bin/sh", "-c"]
-        args: ["cd ./src/NFs/smf && air"]
-        # command: ["./smf"]
-        # args: ["--config", "config/smfcfg.yaml"]   
+        command: ["./smf"]
+        args: ["--config", "config/smfcfg.yaml"]   
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/smf/config/
+        - mountPath: /free5gc/config/
           name: smf-volume
-        - mountPath: /free5gc/nas/
-          name: nas-volume
-        - mountPath: /free5gc/ngap/
-          name: ngap-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
-        # resources:
-        #   requests:
-        #     memory: "100Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "512Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -81,18 +69,3 @@ spec:
                 path: smfcfg.yaml
               - key: uerouting.yaml
                 path: uerouting.yaml
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: nas-volume
-        persistentVolumeClaim:
-          claimName: nas-volume-claim
-      - name: ngap-volume
-        persistentVolumeClaim:
-          claimName: ngap-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

@@ -47,8 +47,4 @@ data:
   wrapper.sh: |
     #!/bin/bash
 
-    # Cambiar al directorio deseado
-    cd /free5gc/src/NFs/nwdaf-mtlf/ || { echo "Directorio no encontrado"; exit 1; }
-
-    # Run mtlf
-    air cmd/main.go
+    ./nwdaf-mtlf --config config/nwdafcfg-mtlf.yaml

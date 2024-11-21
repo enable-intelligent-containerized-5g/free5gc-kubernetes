@@ -1,4 +1,0 @@
-resources:
-- nwdaf-deployment.yaml
-- nwdaf-service.yaml
-- nwdaf-configmap.yaml

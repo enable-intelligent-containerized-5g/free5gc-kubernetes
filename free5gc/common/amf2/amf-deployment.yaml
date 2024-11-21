@@ -28,14 +28,8 @@ spec:
       - name: wait-nrf
         image: appropriate/curl
         command: ['sh', '-c', 'until curl -s -o /dev/null -w "%{http_code}" http://nrf-nnrf:8000 | grep "200"; do sleep 1; done;']
-      # - name: wait-amf
-      #   image: busybox:1.32.0
-      #   env:
-      #   - name: DEPENDENCIES
-      #     value: amf-namf:8000
-      #   command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.5
+      - image: edierbra/free5gc-amf:v3.2.01 
         imagePullPolicy: Always
         name: amf2
         ports:
@@ -44,33 +38,21 @@ spec:
         - name: n2
           containerPort: 38412
           protocol: SCTP
-        command: ["/bin/sh", "-c"]
-        args: ["cd ./src/NFs/amf && air"]
-        # command: ["./amf"]
-        # args: ["--config", "config/amfcfg.yaml"]
+        command: ["./amf"]
+        args: ["--config", "config/amfcfg.yaml"]
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/amf/config/
+        - mountPath: /free5gc/config/
           name: amf2-volume
-        - mountPath: /free5gc/nas/
-          name: nas-volume
-        - mountPath: /free5gc/ngap/
-          name: ngap-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
-        # resources:
-        #   requests:
-        #     memory: "100Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "512Mi"
-            # cpu: "250m"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "250Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -79,18 +61,3 @@ spec:
           sources:
           - configMap:
               name: amf2-configmap
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: nas-volume
-        persistentVolumeClaim:
-          claimName: nas-volume-claim
-      - name: ngap-volume
-        persistentVolumeClaim:
-          claimName: ngap-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

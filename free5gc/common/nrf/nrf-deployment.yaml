@@ -25,37 +25,28 @@ spec:
           value: mongodb:27017
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MongoDB; sleep 2; done;"]
       containers:
-      - image:  edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
+      - image:  edierbra/free5gc-nrf:v3.2.01
         imagePullPolicy: Always
         name: nrf
         ports:
         - containerPort: 8000
-        command: ["/bin/sh", "-c"]
-        args: ["cd ./src/NFs/nrf && air"]
-        # args: ["sleep infinity"]
+        command: ["./nrf"]
+        args: ["--config", "config/nrfcfg.yaml"]
         env: 
           - name: DB_URI
             value: mongodb://mongodb/free5gc
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/nrf/config/
-          name: nrf-volume
         - mountPath: /free5gc/config/
           name: nrf-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
-        # resources:
-        #   requests:
-        #     memory: "500Mi"
-        #     cpu: "200m"
-        #   limits:
-        #     memory: "600Mi"
-        #     cpu: "400m"
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "200m"
+          limits:
+            memory: "600Mi"
+            cpu: "400m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -64,12 +55,3 @@ spec:
           sources:
           - configMap:
               name: nrf-configmap
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

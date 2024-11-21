@@ -34,29 +34,23 @@ spec:
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;"]
       containers:
       - name: upf
-        image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
+        image: edierbra/free5gc-upf:v3.2.01
         imagePullPolicy: Always
-        command: [ "/free5gc/src/NFs/upf/config/wrapper.sh" ]
+        command: [ "/free5gc/config/wrapper.sh" ]
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/upf/config/
+        - mountPath: /free5gc/config/
           name: upf-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
         ports:
         - containerPort: 8805
           name: n4
           protocol: UDP
-        # resources:
-        #   requests:
-        #     memory: "100Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "512Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]
@@ -71,12 +65,3 @@ spec:
           - key: wrapper.sh
             path: wrapper.sh
             mode: 0777
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

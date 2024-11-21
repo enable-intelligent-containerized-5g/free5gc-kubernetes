@@ -24,40 +24,32 @@ spec:
         - name: DEPENDENCIES
           value: amf-namf:8000
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF; sleep 2; done;"]
-      # - name: wait-amf2
-      #   image: busybox:1.32.0
-      #   env:
-      #   - name: DEPENDENCIES
-      #     value: amf2-namf:8000
-      #   command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF2; sleep 2; done;"]
+      - name: wait-amf2
+        image: busybox:1.32.0
+        env:
+        - name: DEPENDENCIES
+          value: amf2-namf:8000
+        command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF2; sleep 2; done;"]
       containers:
-      - image: edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
+      - image: edierbra/free5gc-ausf:v3.2.01 
         name: ausf
         ports:
         - containerPort: 8000
-        command: ["/bin/sh", "-c"]
-        args: ["cd ./src/NFs/ausf && air"]
-        # command: ["./ausf"]
-        # args: ["--config", "config/ausfcfg.yaml"]  
+        command: ["./ausf"]
+        args: ["--config", "config/ausfcfg.yaml"]  
         env:
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/ausf/config/
+        - mountPath: /free5gc/config/
           name: ausf-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
-        # resources:
-        #   requests:
-        #     memory: "100Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "300Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "300Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -66,12 +58,3 @@ spec:
           sources:
           - configMap:
               name: ausf-configmap
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

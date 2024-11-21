@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: models-volume
+  labels:
+    app: nwdaf
+    name: models
+spec:
+  capacity:
+    storage: 4Gi # Ajusta el tamaño según tus necesidades
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  hostPath:
+    # path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-kubernetes/free5gc/nwdaf/models/"
+    # path: "/vagrant-data/free5gc-kubernetes/free5gc/nwdaf/models/" 
+    path: "/home/edier/Tesis/5g-monarch2/free5gc-kubernetes/free5gc/nwdaf/models/"
+    type: Directory

@@ -8,7 +8,6 @@ RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list \
     && sed -i '/stretch-updates/d' /etc/apt/sources.list
 
 
-
 # Install dependencies for building Free5GC
 RUN apt-get update \
     && apt-get -y install gcc cmake autoconf libtool pkg-config libmnl-dev libyaml-dev apt-transport-https ca-certificates \
@@ -19,11 +18,11 @@ RUN apt-get update \
     && apt-get install -y nodejs yarn \
     && apt-get clean
 
-    # Get and build Free5GC
+# Get and build Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -b v1.0.4 -j `nproc` https://github.com/enable-intelligent-containerized-5g/openapi ./openapi \
-    && git clone --recursive -b v3.2.5 -j `nproc` https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla ./free5gc \
+    && git clone --recursive -b v3.2.01 -j `nproc` https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
+    # webconsole
     && make webconsole 
 
 # Final stage based on Ubuntu 20.04

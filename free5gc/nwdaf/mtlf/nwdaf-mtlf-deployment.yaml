@@ -20,47 +20,40 @@ spec:
         name: mtlf
     spec:
       initContainers:
-        - name: wait-nrf
+        - name: wait-nssf
           image: busybox:1.32.0
           env:
             - name: DEPENDENCIES
-              value: nrf-nnrf:8000
+              value: nssf-nnssf:8000
           command:
             [
               "sh",
               "-c",
-              "until nc -z $DEPENDENCIES; do echo waiting for the NRF; sleep 2; done;",
+              "until nc -z $DEPENDENCIES; do echo waiting for the NSSF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/free5gc-nwdaf-dev:v3.2.5.9 # edierbra/nwdaf-mtlf:v3.0.5 # edierbra/free5gc:v3.2.2
-          imagePullPolicy: IfNotPresent
+        - image: edierbra/nwdaf-mtlf:v3.2.01
+          imagePullPolicy: Always
           name: nwdaf-mtlf
           ports:
             - containerPort: 8000
             - containerPort: 8081
-          command: ["/bin/bash", "-c"]
-          args: ["cd /free5gc/config/ && ./wrapper.sh"]
+          command: ["/free5gc/config/wrapper.sh"]
           env:
             - name: GIN_MODE
               value: release
           volumeMounts:
-            - mountPath: /root/go/
-              name: go-path-volume
             - mountPath: /free5gc/config/
               name: nwdaf-mtlf-volume
-            - mountPath: /free5gc/src/
-              name: free5gc-vanilla-volume
-            - mountPath: /free5gc/src/NFs/nwdaf-mtlf/config/
-              name: nwdaf-mtlf-volume
-            - mountPath: /free5gc/openapi/
-              name: openapi-volume
-          # resources:
-          #   requests:
-          #     memory: "250Mi"
-          #     cpu: "700m"
-          #   limits:
-          #     memory: "300Mi"
-          #     cpu: "1000m"
+            - mountPath: /free5gc/models/
+              name: models-volume
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "400m"
+            limits:
+              memory: "300Mi"
+              cpu: "600m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -73,23 +66,6 @@ spec:
             - key: wrapper.sh
               path: wrapper.sh
               mode: 0755
-        - name: free5gc-vanilla-volume
+        - name: models-volume
           persistentVolumeClaim:
-            claimName: free5gc-vanilla-volume-claim
-        - name: go-path-volume
-          persistentVolumeClaim:
-            claimName: go-path-volume-claim
-        - name: openapi-volume
-          persistentVolumeClaim:
-            claimName: openapi-volume-claim
-      # volumes:
-      # - name: nwdaf-mtlf-volume
-      #   configMap:
-      #     name: nwdaf-mtlf-configmap
-      #     items:
-      #     - key: nwdafcfg.yaml
-      #       path: nwdafcfg.yaml
-      #     - key: nwdaf
-      #       path: nwdaf
-      #       # mode: 0755
-
+            claimName: models-volume-claim

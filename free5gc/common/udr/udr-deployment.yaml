@@ -23,37 +23,29 @@ spec:
         env:
         - name: DEPENDENCIES
           value: udm-nudm:8000
-        command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the SMF; sleep 2; done;"]
+        command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the UDM; sleep 2; done;"]
       containers:
-      - image:  edierbra/free5gc-dev:v3.2.5.8 # edierbra/free5gc-dev:v3.2.5.7
+      - image:  edierbra/free5gc-udr:v3.2.01
         name: udr
         ports:
         - containerPort: 8000
-        command: ["/bin/sh", "-c"]
-        args: ["cd ./src/NFs/udr && air"]
-        # command: ["./udr"]
-        # args: ["--config", "config/udrcfg.yaml"]   
+        command: ["./udr"]
+        args: ["--config", "config/udrcfg.yaml"]   
         env: 
           - name: DB_URI
             value: mongodb://mongodb/free5gc
           - name: GIN_MODE
             value: release
         volumeMounts:
-        - mountPath: /root/go/
-          name: go-path-volume
-        - mountPath: /free5gc/src/
-          name: free5gc-vanilla-volume
-        - mountPath: /free5gc/src/NFs/udr/config/
+        - mountPath: /free5gc/config/
           name: udr-volume
-        - mountPath: /free5gc/openapi/
-          name: openapi-volume
-        # resources:
-        #   requests:
-        #     memory: "100Mi"
-        #     cpu: "100m"
-        #   limits:
-        #     memory: "512Mi"
-        #     cpu: "250m"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
@@ -62,12 +54,3 @@ spec:
           sources:
           - configMap:
               name: udr-configmap
-      - name: free5gc-vanilla-volume
-        persistentVolumeClaim:
-          claimName: free5gc-vanilla-volume-claim
-      - name: go-path-volume
-        persistentVolumeClaim:
-          claimName: go-path-volume-claim
-      - name: openapi-volume
-        persistentVolumeClaim:
-          claimName: openapi-volume-claim

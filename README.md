@@ -155,7 +155,7 @@ Some convenience scripts are available in the `bin` folder:
   ls
   ```
 
-  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -o wide`
+  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -A -o wide`
 
 - pod no running:
 
