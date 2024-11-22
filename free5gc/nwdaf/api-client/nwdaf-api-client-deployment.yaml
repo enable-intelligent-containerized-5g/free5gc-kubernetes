@@ -30,7 +30,7 @@ spec:
               "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/nwdaf-api-client:v1.0.0
+        - image: edierbra/nwdaf-api-client:v1.0.2
           imagePullPolicy: Always
           name: nwdaf-api-client
           ports:
@@ -38,8 +38,12 @@ spec:
           # Run the apk
           command: ["npx", "serve", "-s", "dist", "-l", "3000"]
           env:
-            - name: GIN_MODE
-              value: release
+            # - name: VITE_NWDAF_API_CLIENT_CONFIG_FILE
+            #   value: "./config/apiclientcfg.yaml"
+          volumeMounts:
+            - name: nwdaf-api-client-volume
+              mountPath: /free5gc/dist/config/apiclientcfg.yaml
+              subPath: apiclientcfg.yaml
           resources:
             requests:
               memory: "100Mi"
@@ -49,3 +53,10 @@ spec:
               cpu: "80m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
+      volumes:
+        - name: nwdaf-api-client-volume
+          configMap:
+            name: nwdaf-api-client-configmap
+            items:
+              - key: apiclientcfg.yaml
+                path: apiclientcfg.yaml 

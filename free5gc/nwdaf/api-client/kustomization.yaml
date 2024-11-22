@@ -1,3 +1,4 @@
 resources:
 - nwdaf-api-client-deployment.yaml
 - nwdaf-api-client-service.yaml
+- nwdaf-api-client-configmap.yaml
