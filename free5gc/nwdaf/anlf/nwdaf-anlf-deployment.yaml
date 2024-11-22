@@ -50,10 +50,10 @@ spec:
           resources:
             requests:
               memory: "250Mi"
-              cpu: "400m"
+              cpu: "250m"
             limits:
-              memory: "300Mi"
-              cpu: "600m"
+              memory: "400Mi"
+              cpu: "400m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

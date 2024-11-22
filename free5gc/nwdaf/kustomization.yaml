@@ -5,3 +5,4 @@ resources:
   - resources
   - mtlf
   - anlf
+  - api-client
