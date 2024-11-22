@@ -42,11 +42,11 @@ spec:
           name: nrf-volume
         resources:
           requests:
-            memory: "500Mi"
-            cpu: "200m"
+            memory: "100Mi"
+            cpu: "100m"
           limits:
-            memory: "600Mi"
-            cpu: "400m"
+            memory: "250Mi"
+            cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
