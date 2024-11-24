@@ -25,7 +25,7 @@ spec:
           value: mongodb:27017
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MongoDB; sleep 2; done;"]
       containers:
-      - image:  edierbra/free5gc-webui:v3.2.01
+      - image:  edierbra/free5gc-webui:v3.2.0-1
         imagePullPolicy: Always
         name: webui
         ports:

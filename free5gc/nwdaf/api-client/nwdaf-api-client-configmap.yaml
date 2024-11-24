@@ -5,11 +5,8 @@ metadata:
   labels:
     app: free5gc
 data:
-  apiclientcfg.yaml: |
-    nwdafAnlfUri: http://anlf-nanlf.free5gc:8000
-    nwdafMtlfUri: http://mtlf-nmtlf.free5gc:8000
+  apiclientcfg.yaml: | # Don't change this value
+    # Only nodePort values
+    nwdafAnlfUri: http://127.0.0.1:30080
+    nwdafMtlfUri: http://127.0.0.1:30081
 
-    # nwdafAnlfUri: http://127.0.0.1:30080
-    # nwdafMtlfUri: http://127.0.0.1:30081
-
-  # VITE_NWDAF_API_CLIENT_CONFIG_FILE: "config/apiclientcfg.yaml"

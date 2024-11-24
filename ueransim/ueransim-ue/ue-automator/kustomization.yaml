@@ -2,9 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - resources
-- default-ue1
-- default-ue2
-- default-ue3
 - automator-ue1
 - automator-ue2
 - automator-ue3
@@ -19,9 +16,9 @@ resources:
 - automator-ue12
 - automator-ue13
 - automator-ue14
-- automator-ue15
-- automator-ue16
 - automator-ue17
 - automator-ue18
 - automator-ue19
 - automator-ue20
+- automator-ue15
+- automator-ue16

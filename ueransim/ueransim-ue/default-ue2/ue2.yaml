@@ -6,9 +6,9 @@ mcc: '001'
 mnc: '01'
 
 # Permanent subscription key
-key: 'B199B49F465B5CE8E238A6BCAA5F0A2E'
+key: '465B5CE8B199B49FAA5F0A2EE238A6BC'
 # Operator code (OP or OPC) of the UE
-op: '283B54E8E8ED289D8E6183CAEBA952E4'
+op: 'E8ED289DEBA952E4283B54E88E6183CA'
 # This value specifies the OP type and it can be either 'OP' or 'OPC'
 opType: 'OPC'
 # Authentication Management Field (AMF) value

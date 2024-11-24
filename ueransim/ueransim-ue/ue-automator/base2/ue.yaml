@@ -1,16 +1,16 @@
 # IMSI number of the UE. IMSI = [MCC|MNC|MSISDN] (In total 15 digits)
-supi: 'imsi-001010000000003'
+supi: 'CODE_IMSI_UE'
 # Mobile Country Code value of HPLMN
-mcc: '001'
+mcc: 'CODE_MCC'
 # Mobile Network Code value of HPLMN (2 or 3 digits)
-mnc: '01'
+mnc: 'CODE_MNC'
 
 # Permanent subscription key
-key: '565B5CE8B199B49FAA5F0A2EE238A6BD'
+key: 'CODE_KEY'
 # Operator code (OP or OPC) of the UE
-op: 'F8ED289DEBA952E4283B54E88E6183CB'
+op: 'CODE_OP'
 # This value specifies the OP type and it can be either 'OP' or 'OPC'
-opType: 'OPC'
+opType: 'CODE_OP_TYPE'
 # Authentication Management Field (AMF) value
 amf: '8000'
 # IMEI number of the device. It is used if no SUPI is provided
@@ -39,25 +39,25 @@ uacAcc:
 # Initial PDU sessions to be established
 sessions:
   - type: 'IPv4'
-    apn: 'internet'
+    apn: 'CODE_APN_1'
     slice:
-      sst: 1
-      sd: 000001
+      sst: CODE_SST_1
+      sd: CODE_SD_1
   - type: 'IPv4'
-    apn: 'streaming'
+    apn: 'CODE_APN_2'
     slice:
-      sst: 1
-      sd: 000002
+      sst: CODE_SST_2
+      sd: CODE_SD_2
 
 # Configured NSSAI for this UE by HPLMN
 configured-nssai:
-  - sst: 1
-    sd: 000001
+  - sst: CODE_SST_2
+    sd: CODE_SD_2
 
 # Default Configured NSSAI for this UE
 default-nssai:
-  - sst: 1
-    sd: 000001
+  - sst: CODE_SST_2
+    sd: CODE_SD_2
 
 # Supported integrity algorithms by this UE
 integrity:
