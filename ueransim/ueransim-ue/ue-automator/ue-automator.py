@@ -48,18 +48,24 @@ slice = sys.argv[3]
 # Files
 source_path = "base/"
 output_path = "../"
-ue_config_file = "ue.yaml"
+ue_config_file = "ue_base1.yaml"
+ue_config_base = "ue.yaml"
 ue_deployment_file = "ue-deployment.yaml"
 ue_wrapper_file = "wrapper.sh"
 ue_kustomization_file = "kustomization.yaml"
-files_to_replace = [ue_config_file, ue_deployment_file, ue_wrapper_file, ue_kustomization_file]
 
 if slice == "slice1": # Slice 1
-    source_path = "base1"
+    ue_config_file = "ue_base1.yaml"
 elif slice == "slice2": # Slice 2
-    source_path = "base1"
+    ue_config_file = "ue_base2.yaml"
 else: # Both slices
-    source_path = "base3"
+    ue_config_file = "ue_base3.yaml"
+    
+    
+shutil.copy(os.path.join(source_path, ue_config_file), os.path.join(source_path, ue_config_base))
+    
+files_to_replace = [ue_config_base, ue_deployment_file, ue_wrapper_file, ue_kustomization_file]
+
 
 # Validate <start_ue> and <end_ue>
 validate_num(start_ue, "start_ue")
@@ -82,7 +88,7 @@ ue_map_values = {
     "CODE_MNC": "01",
     "CODE_KEY": "465B5CE8B199B49FAA5F0A2EE238A6BC",
     "CODE_OP": "E8ED289DEBA952E4283B54E88E6183CA",
-    "CODE_OP_TYPE": "OPC",
+    "CODE_TYPE_OP": "OPC",
     "CODE_APN_1": "internet",
     "CODE_SST_1": "1",
     "CODE_SD_1": "000001",
@@ -129,9 +135,9 @@ else:
         "kind": "Kustomization",
         "resources": [
             "resources",
-            "default-ue1",
-            "default-ue2",
-            "default-ue3",
+            # "default-ue1",
+            # "default-ue2",
+            # "default-ue3",
         ]
 }
 
