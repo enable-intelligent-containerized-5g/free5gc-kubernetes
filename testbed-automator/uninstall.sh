@@ -97,7 +97,8 @@ reset_k8s_cluster(){
 uninstall_cni() {
   cecho "RED" "Uninstalling Flannel CNI ..."
   if kubectl get pods -n kube-flannel -l app=flannel | grep -q '1/1'; then
-    kubectl delete -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+    # kubectl delete -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+    kubectl delete -f kube-flannel.yaml
     cecho "GREEN" "Uninstalled Flannel CNI."
   else 
     cecho "YELLOW" "Flannel CNI is not installed."

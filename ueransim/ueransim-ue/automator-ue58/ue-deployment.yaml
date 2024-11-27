@@ -44,11 +44,11 @@ spec:
           name: ue58-volume
         resources:
           requests:
-            memory: "8Mi"
-            cpu: "15m"
+            memory: "4Mi"
+            cpu: "8m"
           limits:
-            memory: "16Mi"
-            cpu: "20m"
+            memory: "8Mi"
+            cpu: "12m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

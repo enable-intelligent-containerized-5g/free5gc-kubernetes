@@ -5,7 +5,7 @@ resources:
 - ue-deployment.yaml
 
 configMapGenerator:
-  - name: ue1-configmap
+  - name: default-ue1-configmap
     files:
-      - ue1.yaml
+      - ue.yaml
       - wrapper.sh

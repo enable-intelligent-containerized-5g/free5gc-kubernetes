@@ -125,21 +125,29 @@ print(f"¡Created {str(end_ue - start_ue + 1)} UEs!")
 ue_folders = [f"{ue_prefix}{i}" for i in range(start_ue, end_ue + 1)]
 kustomiation_path = os.path.join(output_path, "kustomization.yaml")
 
-if os.path.exists(kustomiation_path):
-    with open(kustomiation_path, "r") as file:
-        kustomization = yaml.safe_load(file)
-else:
-    # Crear la estructura básica si el archivo no existe
-    kustomization = {
+default_kustomization = {
         "apiVersion": "kustomize.config.k8s.io/v1beta1",
         "kind": "Kustomization",
         "resources": [
             "resources",
-            # "default-ue1",
-            # "default-ue2",
-            # "default-ue3",
+            "default-ue1",
+            "default-ue2",
+            "default-ue3",
         ]
 }
+kustomization = default_kustomization
+
+if os.path.exists(kustomiation_path):
+    with open(kustomiation_path, "r") as file:
+        kustomization = yaml.safe_load(file)
+        
+        # Verifica si el archivo está vacío
+        if kustomization is None:
+            kustomization = default_kustomization
+        else:
+            # Verifica si el contenido cargado es un diccionario vacío
+            if isinstance(kustomization, dict) and not kustomization:
+                kustomization = default_kustomization
 
 # Filtrar los UEs que ya existen en el archivo kustomization.yaml
 existing_ues = set(kustomization.get("resources", []))

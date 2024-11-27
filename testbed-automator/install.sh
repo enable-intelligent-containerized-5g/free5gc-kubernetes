@@ -172,7 +172,8 @@ install-cni() {
 		cecho "YELLOW" "Flannel is already running. Skipping installation."
 	else
 		cecho "GREEN" "Installing Flannel as primary CNI ..."
-		kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+		# kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+		kubectl apply -f kube-flannel.yaml
 		timer-sec 60
 		kubectl wait pods -n kube-flannel -l app=flannel --for condition=Ready --timeout=120s
 	fi

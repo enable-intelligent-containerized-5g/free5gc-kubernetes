@@ -39,11 +39,11 @@ spec:
           name: pcf-volume
         resources:
           requests:
-            memory: "100Mi"
-            cpu: "100m"
+            memory: "64Mi"
+            cpu: "50m"
           limits:
-            memory: "250Mi"
-            cpu: "250m"
+            memory: "128Mi"
+            cpu: "100m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

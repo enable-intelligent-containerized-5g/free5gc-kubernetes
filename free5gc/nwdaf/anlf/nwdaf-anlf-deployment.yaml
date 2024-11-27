@@ -49,11 +49,11 @@ spec:
               name: models-volume
           resources:
             requests:
-              memory: "250Mi"
-              cpu: "250m"
+              memory: "200Mi"
+              cpu: "150m"
             limits:
-              memory: "400Mi"
-              cpu: "400m"
+              memory: "300Mi"
+              cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

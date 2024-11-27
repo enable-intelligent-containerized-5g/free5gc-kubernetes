@@ -178,7 +178,15 @@ Some convenience scripts are available in the `bin` folder:
 
   Or 
   
-  Run `uninstall.sh` and `install.sh` with `bash <script.sh>`.
+  Run `bash uninstall.sh` and `bash install.sh`
+
+- "Failed to set bridge addr: "cni0" already has an IP address different from 10.244.0.1/18" in tesbet automator.
+
+  ```bash
+  sudo ip link delete cni0
+  bash uninstall.sh
+  bash install.sh
+  ```
 
 ## License
 

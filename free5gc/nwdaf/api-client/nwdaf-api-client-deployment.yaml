@@ -43,11 +43,11 @@ spec:
               subPath: apiclientcfg.yaml
           resources:
             requests:
-              memory: "100Mi"
+              memory: "64Mi"
               cpu: "50m"
             limits:
-              memory: "150Mi"
-              cpu: "80m"
+              memory: "128Mi"
+              cpu: "100m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

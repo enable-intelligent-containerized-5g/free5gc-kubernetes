@@ -5,4 +5,9 @@ cgroupDriver: systemd
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
 networking:
-  podSubnet: "10.244.0.0/16" # --pod-network-cidr
+  serviceSubnet: "10.96.0.0/16" # --service-network-cidr --> 65,536 IP addresses for services.
+  podSubnet: "10.244.0.0/16" # --pod-network-cidr --> 65,536 total IP addresses for pods
+controllerManager:
+  extraArgs:
+    # 2^(18-16) = 4 nodes,  2^(32-18) = 16,384 IP addresses per node
+    "node-cidr-mask-size": "18" # --node-cidr-mask-size 

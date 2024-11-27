@@ -30,11 +30,11 @@ spec:
           mountPath: /var/lib/grafana
         resources:
             requests:
-              cpu: 250m
-              memory: 750Mi
+              cpu: 100m
+              memory: 300Mi
             limits:
-              cpu: 300m
-              memory: 900Mi
+              cpu: 200m
+              memory: 600Mi
       volumes:
       - name: grafana-storage-volume
         persistentVolumeClaim:

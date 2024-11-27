@@ -2,29 +2,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ueransim-ue2
+  name: ueransim-default-ue2
   labels:
     app: ueransim
     component: ue
-    name: ue2
+    name: default-ue2
 spec:
   selector:
     matchLabels:
       app: ueransim
       component: ue
-      name: ue2
+      name: default-ue2
   replicas: 
   template:
     metadata:
       labels:
         app: ueransim
         component: ue
-        name: ue2
+        name: default-ue2
     spec:
       containers:
       - image: edierbra/ueransim:v3.2.6-ditg
         imagePullPolicy: Always
-        name: ue
+        name: default-ue2
         securityContext:
           capabilities:
             add: ["NET_ADMIN"]
@@ -38,7 +38,7 @@ spec:
             fi
         volumeMounts:
         - mountPath: /ueransim/config
-          name: ue2-volume
+          name: default-ue2-volume
         resources:
           requests:
             memory: "100Mi"
@@ -49,14 +49,14 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
-        - name: ue2-volume
+        - name: default-ue2-volume
           projected:
             sources:
               - configMap:
-                  name: ue2-configmap
+                  name: default-ue2-configmap
                   items:
-                    - key: ue2.yaml
-                      path: ue2.yaml
+                    - key: ue.yaml
+                      path: ue.yaml
                     - key: wrapper.sh
                       path: wrapper.sh
                       mode: 0755
