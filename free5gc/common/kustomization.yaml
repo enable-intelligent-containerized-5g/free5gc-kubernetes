@@ -1,8 +1,9 @@
 resources:
   # NFs:
   - nrf
-  - amf
-  - amf2
+  - amf-v3.3.0
+  # - amf
+  # - amf2
   - ausf
   - nssf
   - pcf

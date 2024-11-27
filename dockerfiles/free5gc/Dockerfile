@@ -19,10 +19,10 @@ RUN apt-get update \
 
 # Get and build Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -b v3.2.01 -j `nproc` https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla ./free5gc \
+    && git clone --recursive -b v3.2.0-2 -j `nproc` https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla ./free5gc \
     && cd free5gc \
     # nfs (amf ausf nrf nssf pcf smf udm udr upf nwdaf-anlf nwdaf-mtlf)
-    && make nfs 
+    && make amf 
 
 # Final stage based on Ubuntu 20.04
 FROM ubuntu:20.04

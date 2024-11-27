@@ -2,6 +2,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys, time, math, subprocess
 
+def percentil(a, b):
+    return round(a/b*100, 2)
+
+def plot_graph(x,y,p):
+    # Personalizar la gráfica
+    plt.plot(x, y, linestyle='dashed', marker='o', label=f"p2={p}")
+    plt.title("Sintetic trafic", fontsize=14)
+    plt.xlabel("DecaMinutes", fontsize=12)
+    plt.ylabel("Num of UEs", fontsize=12)
+    plt.grid(True, linestyle="--", alpha=0.7)
+    plt.axhline(0, color="black", linewidth=0.8)
+    plt.legend(fontsize=12)
+    plt.tight_layout()
+
+    # Mostrar la gráfica
+    # plt.show()
+    plt.savefig(f"sintetic_trafic_{p}.png", dpi=300)  
+    
+
 if len(sys.argv) != 3:
     print("Use: python3 run-ues.py <num-ues> <period>")
     sys.exit(1)
@@ -26,6 +45,10 @@ for p in periods:
     # Función para calcular el número de pods
     y = a1 * np.sin((x * 2 * np.pi) / p1) + a2 * \
         np.sin((x * 2 * np.pi) / p) + (a1+a2)
+        
+    y_size = len(y)
+        
+    plot_graph(x,y,p)
 
     # Variables iniciales
     ue_prefix = "automator-ue"
@@ -48,7 +71,7 @@ for p in periods:
         start_time = time.time()
         
         if init_state == 0:  # En el  ciclo, crear los pods iniciales
-            print(f"Inicializando con {y_value} pods...")
+            print(f"{percentil(t, y_size)}%, Inicializando con {y_value} pods...")
             for ue in range(1, y_value + 1):
                 actual_user = ue_prefix+f"{ue}"
                 comand = ["kubectl", "apply", "-k",
@@ -64,7 +87,7 @@ for p in periods:
             
         else:
             if y_value > y_value_previous:  # Escalar hacia arriba
-                print(f"Scaling from {y_value_previous} to {y_value} pods...")
+                print(f"{percentil(t, y_size)}%, Scaling from {y_value_previous} to {y_value} pods...")
                 for ue in range(y_value_previous + 1, y_value + 1):
                     actual_user = ue_prefix + f"{ue}"
                     comand = ["kubectl", "apply", "-k",
@@ -75,7 +98,7 @@ for p in periods:
                         print(f"Error creating pod {actual_user}:", e)
                         
             elif y_value < y_value_previous:  # Escalar hacia abajo
-                print(f"Reducing from {y_value_previous} to {y_value} pods...")
+                print(f"{percentil(t, y_size)}%, Reducing from {y_value_previous} to {y_value} pods...")
                 for ue in range(y_value + 1, y_value_previous + 1):
                     actual_user = ue_prefix + f"{ue}"
                     comand = ["kubectl", "delete", "-k",
@@ -86,7 +109,7 @@ for p in periods:
                         print(f"Error deleting pod {actual_user}:", e)
                         
             else:
-                print(f"Don't scale from {y_value_previous} to {y_value} pods...")
+                print(f"{percentil(t, y_size)}%, Don't scale from {y_value_previous} to {y_value} pods...")
 
 
             end_time = time.time()  # Guardar el tiempo de fin
@@ -103,18 +126,3 @@ for p in periods:
                 
         y_value_previous = y_value
         
-            
-    plt.plot(x, y, linestyle='dashed', marker='o', label=f"p2={p}")
-    
-
-# Personalizar la gráfica
-plt.title("Sintetic trafic", fontsize=14)
-plt.xlabel("DecaMinutes", fontsize=12)
-plt.ylabel("Num of UEs", fontsize=12)
-plt.grid(True, linestyle="--", alpha=0.7)
-plt.axhline(0, color="black", linewidth=0.8)
-plt.legend(fontsize=12)
-plt.tight_layout()
-
-# Mostrar la gráfica
-plt.show()

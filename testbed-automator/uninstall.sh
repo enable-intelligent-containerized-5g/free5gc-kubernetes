@@ -165,8 +165,9 @@ remove_ovs_cni() {
 uninstall_multus() {
   cecho "RED" "Uninstalling multus ..."
   if kubectl get pods -n kube-system -l app=multus | grep -q '1/1'; then
-    cd build/multus-cni
-    cat ./deployments/multus-daemonset-thick.yml | kubectl delete -f -
+    # cd build/multus-cni
+    # cat ./deployments/multus-daemonset-thick.yml | kubectl delete -f -
+    kubectl delete -f multus-daemonset-thick.yaml
     cecho "GREEN" "Uninstalled multus."
   else
     cecho "YELLOW" "Multus is not installed."

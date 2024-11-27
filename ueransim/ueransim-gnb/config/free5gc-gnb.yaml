@@ -14,8 +14,8 @@ amfConfigs:
   # Without loxilb
   - address: 10.10.2.2
     port: 38412
-  - address: 10.10.2.3
-    port: 38412
+  # - address: 10.10.2.3
+  #   port: 38412
 
   # With loxilb
   # - address: 20.20.20.1
