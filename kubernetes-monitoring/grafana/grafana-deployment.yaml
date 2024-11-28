@@ -33,8 +33,8 @@ spec:
               cpu: 100m
               memory: 300Mi
             limits:
-              cpu: 200m
-              memory: 600Mi
+              cpu: 100m
+              memory: 300Mi
       volumes:
       - name: grafana-storage-volume
         persistentVolumeClaim:

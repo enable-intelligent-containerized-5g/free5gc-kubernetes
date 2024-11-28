@@ -72,11 +72,11 @@ spec:
             failureThreshold: 6
           resources:
             requests:
-              cpu: 50m
-              memory: 200Mi
+              cpu: 150m
+              memory: 300Mi
             limits:
-              cpu: 100m
-              memory: 250Mi
+              cpu: 150m
+              memory: 300Mi
           volumeMounts:
             - name: datadir
               mountPath: /bitnami/mongodb/data/db/

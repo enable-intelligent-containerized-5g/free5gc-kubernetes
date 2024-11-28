@@ -51,11 +51,11 @@ spec:
           name: smf-volume
         resources:
           requests:
-            memory: "100Mi"
+            memory: "128Mi"
             cpu: "100m"
           limits:
-            memory: "150Mi"
-            cpu: "150m"
+            memory: "128Mi"
+            cpu: "100m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

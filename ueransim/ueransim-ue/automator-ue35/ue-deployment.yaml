@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - image: edierbra/ueransim:v3.2.6-ditg
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: ue35
         securityContext:
           capabilities:
