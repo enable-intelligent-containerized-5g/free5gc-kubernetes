@@ -130,14 +130,14 @@ default_kustomization = {
         "kind": "Kustomization",
         "resources": [
             "resources",
-            "default-ue1",
-            "default-ue2",
-            "default-ue3",
+            # "default-ue1",
+            # "default-ue2",
+            # "default-ue3",
         ]
 }
 kustomization = default_kustomization
 
-if os.path.exists(kustomiation_path):
+if (os.path.exists(kustomiation_path) & False) :
     with open(kustomiation_path, "r") as file:
         kustomization = yaml.safe_load(file)
         

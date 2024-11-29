@@ -1,7 +1,7 @@
 FROM gcc:9.4.0 AS builder
 
 LABEL maintainer="Niloy Saha <niloysaha.ns@gmail.com>"
-LABEL description="UERANSIM v3.2.6"
+LABEL description="UERANSIM v3.2.6-1"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -11,7 +11,7 @@ RUN apt-get update \
     && wget https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.sh -O cmake_installer.sh \
     && chmod +x cmake_installer.sh \
     && ./cmake_installer.sh --skip-license \
-    && git clone -b v3.2.6 -j `nproc` https://github.com/aligungr/UERANSIM \
+    && git clone -b v3.2.6-1 -j `nproc` https://github.com/enable-intelligent-containerized-5g/ueransim.git UERANSIM\
     && cd ./UERANSIM \
     && make
 

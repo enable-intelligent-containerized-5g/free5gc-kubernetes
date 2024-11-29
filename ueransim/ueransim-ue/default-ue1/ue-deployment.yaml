@@ -22,7 +22,7 @@ spec:
         name: default-ue1
     spec:
       containers:
-      - image: edierbra/ueransim:v3.2.6-ditg
+      - image: edierbra/ueransim:v3.2.6-1
         imagePullPolicy: Always
         name: ue
         securityContext:

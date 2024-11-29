@@ -22,7 +22,7 @@ spec:
         name: ue35
     spec:
       containers:
-      - image: edierbra/ueransim:v3.2.6-ditg
+      - image: edierbra/ueransim:v3.2.6-1
         imagePullPolicy: IfNotPresent
         name: ue35
         securityContext:
@@ -44,11 +44,11 @@ spec:
           name: ue35-volume
         resources:
           requests:
-            memory: "4Mi"
-            cpu: "8m"
+            memory: "16Mi"
+            cpu: "10m"
           limits:
-            memory: "8Mi"
-            cpu: "12m"
+            memory: "16Mi"
+            cpu: "10m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

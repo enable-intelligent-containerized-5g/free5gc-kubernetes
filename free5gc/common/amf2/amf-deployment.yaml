@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: free5gc-amf2
+  labels:
+    app: free5gc
+    nf: amf
+    name: amf2
+spec:
+  selector:
+    matchLabels:
+      app: free5gc
+      nf: amf
+      name: amf2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: free5gc
+        nf: amf
+        name: amf2
+      annotations:
+        k8s.v1.cni.cncf.io/networks: '[
+          { "name": "n2network", "interface": "n2", "ips": [ "10.10.2.3/24" ] }
+          ]'
+    spec:
+      initContainers:
+      - name: wait-nrf
+        image: appropriate/curl
+        command: ['sh', '-c', 'until curl -s -o /dev/null -w "%{http_code}" http://nrf-nnrf:8000 | grep "200"; do sleep 1; done;']
+      containers:
+      - image: edierbra/free5gc-amf:v3.3.0-2 # edierbra/free5gc-amf:v3.2.01
+        imagePullPolicy: Always
+        name: amf2
+        ports:
+        - name: namf
+          containerPort: 8000
+        - name: n2
+          containerPort: 38412
+          protocol: SCTP
+        command: ["./amf"]
+        args: ["--config", "config/amfcfg.yaml"]
+        env:
+          - name: GIN_MODE
+            value: release
+        volumeMounts:
+        - mountPath: /free5gc/config/
+          name: amf2-volume
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "25m"
+          limits:
+            memory: "32Mi"
+            cpu: "25m"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: amf2-volume
+        projected:
+          sources:
+          - configMap:
+              name: amf2-configmap

@@ -58,7 +58,7 @@ for p in periods:
 points = 5
 scale = 600 # In seconds
 
-seconds_general = p1*sum(periods)*scale
+seconds_general = p2*sum(periods)*scale
 minutes_g, seconds_g = get_minutes(seconds_general) 
 print(f"Total time required: {minutes_g}:{seconds_g} minutes\n")
 

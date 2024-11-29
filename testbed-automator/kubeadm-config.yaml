@@ -1,6 +1,7 @@
 kind: KubeletConfiguration
 apiVersion: kubelet.config.k8s.io/v1beta1
 cgroupDriver: systemd
+maxPods: 250 # --max-pods
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration

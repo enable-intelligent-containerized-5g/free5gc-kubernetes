@@ -52,16 +52,16 @@ spec:
         command: ["sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the AMF2; sleep 2; done;"]     
       containers:
       - name: loxilb
-        image: ghcr.io/loxilb-io/loxilb:latest
-        imagePullPolicy: IfNotPresent
-        lifecycle:
-          postStart:
-            exec:
-              command: [ "/bin/sh","-c","sleep 10; for i in /proc/sys/net/ipv4/conf/*/rp_filter; do echo 0 > $i; done; loxicmd create lb 20.20.20.1 --sctp=38412:38412 --endpoints=10.10.2.2:1,10.10.2.3:1 --mode=onearm" ]
+        image: ghcr.io/loxilb-io/loxilb:latest # ghcr.io/loxilb-io/loxilb:latest
+        imagePullPolicy: Always
+        securityContext:
+          capabilities:
+            add:
+              - SYS_ADMIN
+          privileged: true
+        command: [ "/bin/sh","-c","sleep 10; for i in /proc/sys/net/ipv4/conf/*/rp_filter; do echo 0 > $i; done; loxicmd create lb 20.20.20.1 --sctp=38412:38412 --endpoints=10.10.2.2:1,10.10.2.3:1 --mode=onearm" ]
         ports:
         - containerPort: 8091
           name: restapi-one
         - containerPort: 11111
           name: restapi-two           
-        securityContext:
-          privileged: true

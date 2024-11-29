@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- gnb-deployment.yaml
+- gnb-service.yaml
+- pv.yaml
+
+configMapGenerator:
+  - name: gnb-dev-configmap
+    files:
+      - config/free5gc-gnb.yaml
+      - config/wrapper.sh
+      - config/iptables.sh

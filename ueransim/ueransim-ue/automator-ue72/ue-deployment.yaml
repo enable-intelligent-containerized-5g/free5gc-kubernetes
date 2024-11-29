@@ -22,8 +22,8 @@ spec:
         name: ue72
     spec:
       containers:
-      - image: edierbra/ueransim:v3.2.6-ditg
-        imagePullPolicy: Always
+      - image: edierbra/ueransim:v3.2.6-1
+        imagePullPolicy: IfNotPresent
         name: ue72
         securityContext:
           capabilities:
@@ -44,11 +44,11 @@ spec:
           name: ue72-volume
         resources:
           requests:
-            memory: "4Mi"
-            cpu: "8m"
+            memory: "16Mi"
+            cpu: "10m"
           limits:
-            memory: "8Mi"
-            cpu: "12m"
+            memory: "16Mi"
+            cpu: "10m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
