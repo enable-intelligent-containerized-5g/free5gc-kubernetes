@@ -23,10 +23,10 @@ def plot_graph(x, y, scale, name):
     plt.figure(figsize=(10, 6)) # Initialize the figure
     
     # Personalizar la gráfica
-    plt.plot(x, y, linestyle='dashed', marker='o', label=f"p2={p}")
+    plt.plot(x, y, label=f"p2={p}")
     plt.title("Sintetic trafic", fontsize=14)
-    plt.xlabel(f"Minutes (x{scale/60})", fontsize=12)
-    plt.ylabel("Num of UEs", fontsize=12)
+    plt.xlabel(f"Time (x{scale/60} Minutes)", fontsize=12)
+    plt.ylabel("Number of UEs", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.7)
     plt.axhline(0, color="black", linewidth=0.8)
     plt.legend(fontsize=12)
@@ -55,8 +55,8 @@ for p in periods:
     mcm_list.append(mcm)
 
 # Function
-points = 5
-scale = 600 # In seconds
+points = 6
+scale = 1500 # In seconds
 
 seconds_general = p2*sum(periods)*scale
 minutes_g, seconds_g = get_minutes(seconds_general) 
@@ -112,7 +112,7 @@ for tp, p in enumerate(periods):
         wait_time_sub = wait_time
         if y_value_dif != 0:
             wait_time_sub = wait_time/y_value_dif # |a b c d e|    
-        print("Dif: ", wait_time_sub)
+        print(f"Dif: {wait_time_sub} seconds")
         
         if init_state == 0:  # En el  ciclo, crear los pods iniciales
             print(f"Initializing with {y_value} pods...")
