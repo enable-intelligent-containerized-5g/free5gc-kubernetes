@@ -235,6 +235,7 @@ install-kube-state-metrics(){
 	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 	helm repo update
 	helm install kube-state-metrics prometheus-community/kube-state-metrics --namespace kube-system
+	# helm install prometheus-nginx-exporter prometheus-community/prometheus-nginx-exporter --namespace kube-system
   fi
 }
 

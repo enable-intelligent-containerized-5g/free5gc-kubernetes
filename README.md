@@ -121,7 +121,7 @@ You should be able to ping from the UEs.
 ### Deploying components
 We use [kustomize](https://kustomize.io/) to deploy the components.
 
-Deploy all components in the free5gc namespace. Create the namespace if needed (`kubectl create namespace free5gc`). Use the following command for deployment, replacing <component> (e.g., free5gc-webui, free5gc) as needed:
+Deploy all components in the free5gc namespace. Create the namespace if needed (`kubectl create namespace free5gc`). Use the following command for deployment, replacing <component> (e.g., mongodb, networks5g, kubernetes-monitoring, free5gc, free5gc-webui, ueransim) as needed:
 
 ```bash
 kubectl apply -k <component> -n free5gc

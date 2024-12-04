@@ -10,7 +10,7 @@ key: 'CODE_KEY'
 # Operator code (OP or OPC) of the UE
 op: 'CODE_OP'
 # This value specifies the OP type and it can be either 'OP' or 'OPC'
-opType: 'CODE_OP_TYPE'
+opType: 'CODE_TYPE_OP'
 # Authentication Management Field (AMF) value
 amf: '8000'
 # IMEI number of the device. It is used if no SUPI is provided
@@ -38,11 +38,6 @@ uacAcc:
 
 # Initial PDU sessions to be established
 sessions:
-  - type: 'IPv4'
-    apn: 'CODE_APN_1'
-    slice:
-      sst: CODE_SST_1
-      sd: CODE_SD_1
   - type: 'IPv4'
     apn: 'CODE_APN_2'
     slice:
