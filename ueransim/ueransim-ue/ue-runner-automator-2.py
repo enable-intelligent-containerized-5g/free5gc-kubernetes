@@ -104,7 +104,7 @@ for t, y_value in enumerate(y):
     if y_value_dif != 0:
         wait_time_sub = wait_time/y_value_dif # |a b c d e|
     if init_state == 0:  # En el  ciclo, crear los pods iniciales
-        wait_time_sub = 0.05
+        wait_time_sub = 2
         wait_time = wait_time_sub*y_value_dif 
         
     print(f"\n--------Progress: {percentil(t, y_size-1)}%, Time: {minutes_p}:{seconds_p} minutes. (Wait: {wait_time} seconds)")
