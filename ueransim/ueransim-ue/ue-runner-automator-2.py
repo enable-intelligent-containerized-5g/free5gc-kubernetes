@@ -121,10 +121,10 @@ for t, y_value in enumerate(y):
             actual_user = ue_prefix+f"{ue}"
             comand = ["kubectl", "apply", "-k",
                         actual_user, "-n", "free5gc"]
-            # try:
-            #     subprocess.run(comand, check=True)
-            # except subprocess.CalledProcessError as e:
-            #     print(f"Error applying pod {actual_user}:", e)
+            try:
+                subprocess.run(comand, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Error applying pod {actual_user}:", e)
             
             end_time2 = time.time()
             execute_wait_time(start_time2, end_time2, wait_time_sub)
@@ -141,10 +141,10 @@ for t, y_value in enumerate(y):
                 actual_user = ue_prefix + f"{ue}"
                 comand = ["kubectl", "apply", "-k",
                             actual_user, "-n", "free5gc"]
-                # try:
-                #     subprocess.run(comand, check=True)
-                # except subprocess.CalledProcessError as e:
-                #     print(f"Error creating pod {actual_user}:", e)
+                try:
+                    subprocess.run(comand, check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error creating pod {actual_user}:", e)
                 
                 end_time2 = time.time()
                 execute_wait_time(start_time2, end_time2, wait_time_sub)
@@ -157,10 +157,10 @@ for t, y_value in enumerate(y):
                 actual_user = ue_prefix + f"{ue}"
                 comand = ["kubectl", "delete", "-k",
                             actual_user, "-n", "free5gc"]
-                # try:
-                #     subprocess.run(comand, check=True)
-                # except subprocess.CalledProcessError as e:
-                #     print(f"Error deleting pod {actual_user}:", e)
+                try:
+                    subprocess.run(comand, check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error deleting pod {actual_user}:", e)
                     
                 end_time2 = time.time()
                 execute_wait_time(start_time2, end_time2, wait_time_sub)
