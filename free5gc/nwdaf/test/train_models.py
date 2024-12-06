@@ -165,7 +165,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
     # Scale the data between 0 and 1
     scaler = MinMaxScaler(feature_range=(0, 1))
     data_scaled = scaler.fit_transform(data_values) # Comun Dataset
-    time_steps = 4 # Steps
+    time_steps = 13 # Steps
     
     # Función para crear las secuencias
     def create_sequences_multivariate(data, time_steps):
@@ -342,8 +342,9 @@ def main():
     
     # Params
     # dataset_name = "dataset-old"
+    # dataset_name = "dataset_NF_LOAD_AMF_60s_1733380080_1733399405_200_300_7_2"
     # dataset_name = "dataset_NF_LOAD_AMF_60s_1733380800_1733416214_150_300_5_4"
-    dataset_name = "dataset_NF_LOAD_AMF_60s_1733380080_1733399405_200_300_7_2"
+    dataset_name = "dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6"
     dataset_extension = "csv"
     cpu_column = "cpu-average"
     mem_column = "mem-average"

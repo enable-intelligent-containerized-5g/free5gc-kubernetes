@@ -1,0 +1,93 @@
+[
+    {
+        "name": "LSTM",
+        "uri": "saved_models/model_LSTM_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.h5",
+        "size": 901384,
+        "figure": "figures/figure_LSTM_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.1943048791974501,
+        "mse": 0.00966880712882306,
+        "r2_cpu": 0.8400682344209883,
+        "r2_mem": -0.4514584760260887,
+        "mse_cpu": 0.018330887993582907,
+        "mse_mem": 0.0010067262640632122,
+        "training_time": 8.461167335510254
+    },
+    {
+        "name": "GRU",
+        "uri": "saved_models/model_GRU_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.h5",
+        "size": 691720,
+        "figure": "figures/figure_GRU_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.2821695816163222,
+        "mse": 0.005117407600166365,
+        "r2_cpu": 0.9189011959543494,
+        "r2_mem": -0.3545620327217056,
+        "mse_cpu": 0.009295295953197696,
+        "mse_mem": 0.0009395192471350332,
+        "training_time": 9.146968126296997
+    },
+    {
+        "name": "XGBoost",
+        "uri": "saved_models/model_XGBoost_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.json",
+        "size": 352264,
+        "figure": "figures/figure_XGBoost_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.7761861995673296,
+        "mse": 0.015416430529865702,
+        "r2_cpu": 0.7526865322075784,
+        "r2_mem": 0.7996858669270808,
+        "mse_cpu": 0.030359711663021264,
+        "mse_mem": 0.0004731493967101443,
+        "training_time": 0.30199337005615234
+    },
+    {
+        "name": "RF",
+        "uri": "saved_models/model_RF_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.pkl",
+        "size": 1938144,
+        "figure": "figures/figure_RF_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.8294745959357174,
+        "mse": 0.011088069116414915,
+        "r2_cpu": 0.8224977026352929,
+        "r2_mem": 0.8364514892361419,
+        "mse_cpu": 0.021789830596849927,
+        "mse_mem": 0.00038630763597989723,
+        "training_time": 0.15158939361572266
+    },
+    {
+        "name": "DT",
+        "uri": "saved_models/model_DT_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.pkl",
+        "size": 31448,
+        "figure": "figures/figure_DT_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.5416595055982448,
+        "mse": 0.02976904906812875,
+        "r2_cpu": 0.5234652999578424,
+        "r2_mem": 0.5598537112386472,
+        "mse_cpu": 0.05849845631070625,
+        "mse_mem": 0.001039641825551236,
+        "training_time": 0.0015761852264404297
+    },
+    {
+        "name": "LR",
+        "uri": "saved_models/model_LR_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.pkl",
+        "size": 966,
+        "figure": "figures/figure_LR_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.837259396509836,
+        "mse": 0.009410695921033302,
+        "r2_cpu": 0.8500565158953995,
+        "r2_mem": 0.8244622771242727,
+        "mse_cpu": 0.018406765243311893,
+        "mse_mem": 0.00041462659875471006,
+        "training_time": 0.0005486011505126953
+    },
+    {
+        "name": "MLP",
+        "uri": "saved_models/model_MLP_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.h5",
+        "size": 64568,
+        "figure": "figures/figure_MLP_dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6_steps-5.png",
+        "r2": 0.8407359694731464,
+        "mse": 0.009075798443247718,
+        "r2_cpu": 0.8554833694373682,
+        "r2_mem": 0.8259885695089246,
+        "mse_cpu": 0.01774057544684719,
+        "mse_mem": 0.0004110214396482457,
+        "training_time": 2.1393909454345703
+    }
+]

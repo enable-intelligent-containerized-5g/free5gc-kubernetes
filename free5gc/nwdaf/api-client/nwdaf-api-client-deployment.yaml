@@ -17,18 +17,14 @@ spec:
         app: free5gc
         name: nwdaf-api-client
     spec:
-      initContainers:
-        - name: wait-nwdaf-anlf
-          image: busybox:1.32.0
-          env:
-            - name: DEPENDENCIES
-              value: anlf-nanlf:8000
-          command:
-            [
-              "sh",
-              "-c",
-              "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",
-            ]
+      # initContainers:
+      #   - name: wait-nwdaf-anlf
+      #     image: busybox:1.32.0
+      #     env:
+      #       - name: DEPENDENCIES
+      #         value: anlf-nanlf:8000
+      #     command:
+      #       [ "sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",]
       containers:
         - image: edierbra/nwdaf-api-client:v1.0.2
           imagePullPolicy: Always
