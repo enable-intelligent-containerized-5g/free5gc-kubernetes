@@ -45,11 +45,11 @@ spec:
           name: ue5-volume
         resources:
           requests:
-            memory: "16Mi"
-            cpu: "10m"
+            memory: "8Mi"
+            cpu: "6m"
           limits:
-            memory: "16Mi"
-            cpu: "10m"
+            memory: "8Mi"
+            cpu: "6m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:

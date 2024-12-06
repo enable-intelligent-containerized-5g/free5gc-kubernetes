@@ -1,4 +1,4 @@
-namespace,pod,container,timestamp,cpu_usage,mem_usage
+namespace,pod,container,timestamp,cpu-average,mem-average
 free5gc,free5gc-amf-7cbccff989-bbx5m,amf,1731603060000,0.833345429813001,0.2625370025634765
 free5gc,free5gc-amf-7cbccff989-bbx5m,amf,1731603120000,0.9998419962631208,0.6411946614583334
 free5gc,free5gc-amf-7cbccff989-bbx5m,amf,1731603180000,1.0010794057879442,0.6543350219726562

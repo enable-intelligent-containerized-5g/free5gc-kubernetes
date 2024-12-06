@@ -22,6 +22,9 @@ else
   git checkout "$GTP5G_BRANCH" || exit 1  # Ensure the correct branch is checked out
 fi
 
+# Clean the gtp5g module
+make clean || echo "Error: Failed to clean gtp5g."
+
 # Compile the gtp5g module
 make || echo "Error: Failed to compile gtp5g."
 

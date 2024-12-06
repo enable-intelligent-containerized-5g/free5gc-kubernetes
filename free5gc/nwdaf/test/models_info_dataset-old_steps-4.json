@@ -1,0 +1,93 @@
+[
+    {
+        "name": "LSTM",
+        "uri": "saved_models/model_LSTM_dataset-old_steps-4.h5",
+        "size": 901384,
+        "figure": "figures/figure_LSTM_dataset-old_steps-4.png",
+        "r2": 0.6554459390397951,
+        "mse": 0.02072181169306054,
+        "r2_cpu": 0.4470403418253238,
+        "r2_mem": 0.8638515362542656,
+        "mse_cpu": 0.03992133577476964,
+        "mse_mem": 0.001522287611351468,
+        "training_time": 15.663960456848145
+    },
+    {
+        "name": "GRU",
+        "uri": "saved_models/model_GRU_dataset-old_steps-4.h5",
+        "size": 691720,
+        "figure": "figures/figure_GRU_dataset-old_steps-4.png",
+        "r2": 0.6905539774448162,
+        "mse": 0.01973948040869671,
+        "r2_cpu": 0.46637291822019444,
+        "r2_mem": 0.914735036669437,
+        "mse_cpu": 0.038525605973795236,
+        "mse_mem": 0.0009533548435982243,
+        "training_time": 15.732450485229492
+    },
+    {
+        "name": "XGBoost",
+        "uri": "saved_models/model_XGBoost_dataset-old_steps-4.json",
+        "size": 686628,
+        "figure": "figures/figure_XGBoost_dataset-old_steps-4.png",
+        "r2": 0.6117146165596051,
+        "mse": 0.016734858338970503,
+        "r2_cpu": 0.5470615296549848,
+        "r2_mem": 0.6763677034642253,
+        "mse_cpu": 0.0313873692664145,
+        "mse_mem": 0.0020823474115265134,
+        "training_time": 1.6943488121032715
+    },
+    {
+        "name": "RF",
+        "uri": "saved_models/model_RF_dataset-old_steps-4.pkl",
+        "size": 6353152,
+        "figure": "figures/figure_RF_dataset-old_steps-4.png",
+        "r2": 0.624462511142252,
+        "mse": 0.016358653093707858,
+        "r2_cpu": 0.5564209912299459,
+        "r2_mem": 0.692504031054558,
+        "mse_cpu": 0.03073878475478237,
+        "mse_mem": 0.001978521432633337,
+        "training_time": 0.5197751522064209
+    },
+    {
+        "name": "DT",
+        "uri": "saved_models/model_DT_dataset-old_steps-4.pkl",
+        "size": 101432,
+        "figure": "figures/figure_DT_dataset-old_steps-4.png",
+        "r2": 0.2484342621914496,
+        "mse": 0.026520883948317076,
+        "r2_cpu": 0.31008326941600095,
+        "r2_mem": 0.18678525496689846,
+        "mse_cpu": 0.04780929994624313,
+        "mse_mem": 0.005232467950390984,
+        "training_time": 0.0072422027587890625
+    },
+    {
+        "name": "LR",
+        "uri": "saved_models/model_LR_dataset-old_steps-4.pkl",
+        "size": 918,
+        "figure": "figures/figure_LR_dataset-old_steps-4.png",
+        "r2": 0.5422886108345155,
+        "mse": 0.017700199596673075,
+        "r2_cpu": 0.530561067285169,
+        "r2_mem": 0.5540161543838622,
+        "mse_cpu": 0.03253080516196446,
+        "mse_mem": 0.002869594031381679,
+        "training_time": 0.0007977485656738281
+    },
+    {
+        "name": "MLP",
+        "uri": "saved_models/model_MLP_dataset-old_steps-4.h5",
+        "size": 63032,
+        "figure": "figures/figure_MLP_dataset-old_steps-4.png",
+        "r2": 0.5523252187465916,
+        "mse": 0.017483650084735094,
+        "r2_cpu": 0.5353960639106121,
+        "r2_mem": 0.5692543735825706,
+        "mse_cpu": 0.03219575341780802,
+        "mse_mem": 0.002771546751662189,
+        "training_time": 3.8197364807128906
+    }
+]

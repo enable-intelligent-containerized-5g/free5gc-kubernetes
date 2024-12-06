@@ -64,7 +64,7 @@ To deploy Free5GC and its components, follow the deployment steps below:
 
     ```bash
     cd bin
-    ./install-gtp5g.sh
+    sudo ./install-gtp5g.sh
     ```
 
 5. Change the **Free5GC-Vanilla** and **Go** paths in `resources/pv.yaml and resources/pvc.yaml` files.
@@ -144,6 +144,9 @@ Some convenience scripts are available in the `bin` folder:
   ```
 
 - **install-gtp5g.sh**: Use this script to install gtp5g v0.8.2 on nodes where UPF should run.
+  ```bash
+  sudo ./install-gtp5g.sh
+  ```
 
 ## Troubleshots
 

@@ -1,4 +1,4 @@
-import time, datetime, joblib, os, json
+import time, datetime, joblib, os, json, csv
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,10 +14,10 @@ from tensorflow.keras.layers import LSTM, GRU, Dense
 from collections import namedtuple
 
 
-def switch_case(fig_name, model, model_type, models_path):
+def save_model_switch(fig_name, model, model_type, models_path):
     if model_type == 'xgboost':
         format = '.json'
-        name = f"{fig_name}{format}"
+        name = f"model_{fig_name}{format}"
         uri = f"{models_path}{name}"
         model.save_model(uri)
         size = os.path.getsize(uri)
@@ -25,7 +25,7 @@ def switch_case(fig_name, model, model_type, models_path):
     
     elif model_type == 'sklearn':
         format = '.pkl'
-        name = f"{fig_name}{format}"
+        name = f"model_{fig_name}{format}"
         uri = f"{models_path}{name}"
         joblib.dump(model, uri)
         size = os.path.getsize(uri)
@@ -33,7 +33,7 @@ def switch_case(fig_name, model, model_type, models_path):
     
     elif model_type == 'keras':
         format = '.h5'
-        name = f"{fig_name}{format}"
+        name = f"model_{fig_name}{format}"
         uri = f"{models_path}{name}"
         model.save(uri)
         size = os.path.getsize(uri)
@@ -42,7 +42,7 @@ def switch_case(fig_name, model, model_type, models_path):
     else:
         return "none", 0
 
-def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type):
+def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_step, dataset_name):
     # Evaluate the model
     mse = mean_squared_error(y_test_invertido, y_pred_invertido)
     r2 = r2_score(y_test_invertido, y_pred_invertido)
@@ -88,14 +88,17 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     
     # Save plot
     fig_path = "figures/"
-    fig_format = "svg"
-    fig_name, fig_uri = save_figure(plt, fig_path, name, fig_format)
+    fig_format = "png"
+    base_name =  f"{dataset_name}_steps-{time_step}"
+    full_name, fig_uri = save_figure(plt, fig_path, name, fig_format, base_name)
     
     # Save model
     models_path = "saved_models/"
-    info_models_path = "models_info.json"
-    model_uri, size = switch_case(fig_name, model, model_type, models_path)
+    model_uri, size = save_model_switch(full_name, model, model_type, models_path)
     
+    # Save info
+    info_models_path = f"models_info_{base_name}.json"
+    info_models_path_csv = f"models_info_{base_name}.csv"
     if model_uri != "none":
         # Save info
         new_model = {
@@ -103,42 +106,51 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             'uri': model_uri,
             'size': size,
             'figure': fig_uri,
-            'mse': mse,
             'r2':r2,
-            'mse_cpu': mse_cpu,
+            'mse': mse,
             'r2_cpu':r2_cpu,
-            'mse_mem': mse_mem,
             'r2_mem':r2_mem,
+            'mse_cpu': mse_cpu,
+            'mse_mem': mse_mem,
+            'training_time': training_time,
         }
         
         try:
             with open(info_models_path, 'r') as json_file:
                 models_info = json.load(json_file)
-        except FileNotFoundError:
-            models_info = [] 
+                # models_info = []    
+        except:
+            models_info = []
 
         models_info.append(new_model)
 
         with open(info_models_path, 'w') as json_file:
             json.dump(models_info, json_file, indent=4)
+            
+        with open(info_models_path_csv, 'w', newline='') as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=models_info[0].keys())
+            writer.writeheader()
+            writer.writerows(models_info)
 
     
-def save_figure(plot, fig_path, model_name, format):
+def save_figure(plot, fig_path, model_name, format, base_name):
     time.sleep(1)
-    current_date = datetime.datetime.now()
-    formated_current_date = current_date.strftime("%Y-%m-%d") + "_" + current_date.strftime("%H-%M-%S") + "_" + str(current_date.microsecond)
+    # current_date = datetime.datetime.now()
+    # formated_current_date = current_date.strftime("%Y-%m-%d") + "_" + current_date.strftime("%H-%M-%S") + "_" + str(current_date.microsecond)
     
-    fig_name = f"{model_name}_{formated_current_date}"
-    fig_uri = f"{fig_path}{fig_name}.{format}"
+    full_name = f"{model_name}_{base_name}"
+    fig_uri = f"{fig_path}figure_{full_name}.{format}"
     plot.savefig(fig_uri, format=format, bbox_inches='tight')
     
-    return fig_name, fig_uri
+    return full_name, fig_uri
 
 
-def ml_model_training(data_path, cpu_column, mem_column):
+def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
     ##################################################################
     ###                   Common configuration                     ###
     ##################################################################
+    
+    data_path = f"{dataset_name}.{dataset_ext}"
     
     # Load data from a CSV file
     def load_data_from_csv(csv_file):
@@ -184,7 +196,10 @@ def ml_model_training(data_path, cpu_column, mem_column):
         lstm_model.add(Dense(2))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
+        start_time = time.time()
         history = lstm_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+        end_time = time.time()
+        training_time_lstm = end_time - start_time
         
         # Defining the GRU model
         gru_model = Sequential()
@@ -193,10 +208,13 @@ def ml_model_training(data_path, cpu_column, mem_column):
         gru_model.add(Dense(2)) 
         gru_model.compile(optimizer='adam', loss='mse')
         # Train the model
+        start_time = time.time()
         history = gru_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+        end_time = time.time()
+        training_time_gru = end_time - start_time
         
         #Evaluate the models
-        for model, name, large_name, model_type in zip([lstm_model, gru_model], ['LSTM', 'GRU'], ['Long Short-Term Memory', 'Gated Recurrent Unit'], ['keras', 'keras']):
+        for model, name, large_name, model_type, training_time in zip([lstm_model, gru_model], ['LSTM', 'GRU'], ['Long Short-Term Memory', 'Gated Recurrent Unit'], ['keras', 'keras'], [training_time_lstm, training_time_gru]):
             print()
             print(f"MODEL: {large_name}")
 
@@ -207,7 +225,7 @@ def ml_model_training(data_path, cpu_column, mem_column):
             y_test_invertido = scaler.inverse_transform(y_test)
             
             # Plot
-            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type)
+            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_steps, dataset_name)
 
             # # Graficar la pérdida durante el entrenamiento
             # plt.figure(figsize=(10, 6))
@@ -236,13 +254,28 @@ def ml_model_training(data_path, cpu_column, mem_column):
         lr_model = LinearRegression()
 
         # Train the model
+        start_time = time.time()
         xgb_model.fit(X_train, y_train)
+        end_time = time.time()
+        training_time_xgb = end_time - start_time
+        
+        start_time = time.time()
         rf_model.fit(X_train, y_train)
+        end_time = time.time()
+        training_time_rf = end_time - start_time
+        
+        start_time = time.time()
         dt_model.fit(X_train, y_train)
+        end_time = time.time()
+        training_time_dt = end_time - start_time
+        
+        start_time = time.time()
         lr_model.fit(X_train, y_train)
+        end_time = time.time()
+        training_time_lr = end_time - start_time
 
         # Evaluate the models
-        for model, name, large_name, model_type in zip([xgb_model, rf_model, dt_model, lr_model], ['XGBoost', 'RF', 'DT', 'LR'], ['Extreme Gradient Boosting', 'Random Forest', 'Decision Tree', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn', 'sklearn']):
+        for model, name, large_name, model_type, training_time in zip([xgb_model, rf_model, dt_model, lr_model], ['XGBoost', 'RF', 'DT', 'LR'], ['Extreme Gradient Boosting', 'Random Forest', 'Decision Tree', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn', 'sklearn'], [training_time_xgb, training_time_rf, training_time_dt, training_time_lr]):
             print()
             print(f"MODEL: {large_name}")
 
@@ -253,7 +286,7 @@ def ml_model_training(data_path, cpu_column, mem_column):
             y_test_invertido = scaler.inverse_transform(y_test)
             
             # Plot
-            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type)
+            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_steps, dataset_name)
             
         
         
@@ -284,7 +317,10 @@ def ml_model_training(data_path, cpu_column, mem_column):
         mlp_model.compile(optimizer='adam', loss='mse')
 
         # Train the model
+        start_time = time.time()
         history = mlp_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_split=0.2)
+        end_time = time.time()
+        training_time_mlp = end_time - start_time
 
         print()
         name = "MLP"
@@ -299,17 +335,20 @@ def ml_model_training(data_path, cpu_column, mem_column):
         y_test_invertido = scaler.inverse_transform(y_test)
         
         # Plot
-        plot_results(y_test_invertido, y_pred_invertido, name, large_name, mlp_model, model_type)
+        plot_results(y_test_invertido, y_pred_invertido, name, large_name, mlp_model, model_type, training_time_mlp, lag, dataset_name)
 
 def main():
     print("Ml Model Training")
     
     # Params
-    data_path = "dataset_NF_LOAD_AMF_60s_1732924800_1732950961.csv"
+    # dataset_name = "dataset-old"
+    # dataset_name = "dataset_NF_LOAD_AMF_60s_1733380800_1733416214_150_300_5_4"
+    dataset_name = "dataset_NF_LOAD_AMF_60s_1733380080_1733399405_200_300_7_2"
+    dataset_extension = "csv"
     cpu_column = "cpu-average"
     mem_column = "mem-average"
         
-    ml_model_training(data_path, cpu_column, mem_column)
+    ml_model_training(dataset_name, dataset_extension, cpu_column, mem_column)
 
 if __name__ == "__main__":
     main()

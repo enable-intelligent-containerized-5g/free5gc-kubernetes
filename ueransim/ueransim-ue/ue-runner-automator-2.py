@@ -45,7 +45,7 @@ if len(sys.argv) != 4:
 n  = int(sys.argv[1])
 a1 = n/4 # Amplitude 1
 a2 = n/4 # Amplitude 2
-p1 = 7 # Period 1
+p1 = 5 # Period 1
 p2 = int(sys.argv[2]) # Period 2 
 total_time = int(sys.argv[3])
 # p3 = 7 # Period 3
@@ -110,8 +110,6 @@ for t, y_value in enumerate(y):
     print(f"\n--------Progress: {percentil(t, y_size-1)}%, Time: {minutes_p}:{seconds_p} minutes. (Wait: {wait_time} seconds)")
     
     if init_state == 0:  # En el  ciclo, crear los pods iniciales
-        wait_time_sub = 0
-        wait_time = wait_time_sub*y_value_dif 
         print(f"Dif: {wait_time_sub} seconds")
             
         print(f"Initializing with {y_value} pods...")
