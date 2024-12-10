@@ -7,8 +7,8 @@ metadata:
 data:
   apiclientcfg.yaml: | # Don't change this value
     # Only nodePort values
-    # nwdafAnlfUri: http://127.0.0.1:30080
-    # nwdafMtlfUri: http://127.0.0.1:30081
-    nwdafAnlfUri: http://127.0.0.1:4203
-    nwdafMtlfUri: http://127.0.0.1:4202
+    nwdafAnlfUri: http://127.0.0.1:30080
+    nwdafMtlfUri: http://127.0.0.1:30081
+    # nwdafAnlfUri: http://127.0.0.1:4203
+    # nwdafMtlfUri: http://127.0.0.1:4202
 

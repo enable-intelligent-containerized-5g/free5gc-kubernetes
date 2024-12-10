@@ -193,7 +193,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         lstm_model = Sequential()
         lstm_model.add(LSTM(100, return_sequences=True, input_shape=(time_steps, X.shape[2])))
         lstm_model.add(LSTM(50))
-        lstm_model.add(Dense(2))
+        lstm_model.add(Dense(3))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
         start_time = time.time()
@@ -205,7 +205,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         gru_model = Sequential()
         gru_model.add(GRU(100, return_sequences=True, input_shape=(time_steps, X.shape[2])))
         gru_model.add(GRU(50))
-        gru_model.add(Dense(2)) 
+        gru_model.add(Dense(3)) 
         gru_model.compile(optimizer='adam', loss='mse')
         # Train the model
         start_time = time.time()
@@ -313,7 +313,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         mlp_model = Sequential()
         mlp_model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
         mlp_model.add(Dense(32, activation='relu'))
-        mlp_model.add(Dense(2))  # Salida para predecir tanto CPU como Memoria
+        mlp_model.add(Dense(3))  # Salida para predecir tanto CPU como Memoria
         mlp_model.compile(optimizer='adam', loss='mse')
 
         # Train the model

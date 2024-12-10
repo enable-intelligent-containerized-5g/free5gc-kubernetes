@@ -25,7 +25,7 @@ def plot_graph(x, y, scale, name):
     # Personalizar la gráfica
     plt.plot(x, y, label=f"p2={p2}", marker="o")
     plt.title("Sintetic trafic", fontsize=14)
-    plt.xlabel(f"Time (x{scale/60} Minutes)", fontsize=12)
+    plt.xlabel(f"Period of time (x{scale/60} Minutes)", fontsize=12)
     plt.ylabel("Number of UEs", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.7)
     plt.axhline(0, color="black", linewidth=0.8)
@@ -84,7 +84,7 @@ try:
     subprocess.run(["kubectl", "apply", "-k", "resources",
                     "-n", "free5gc"], check=True)
 except subprocess.CalledProcessError as e:
-    print("Error al aplicar la configuración inicial de Kubernetes:", e)
+    print("Error applying the initial config:", e)
     sys.exit(1)
     
 init_state = 0

@@ -32,7 +32,7 @@ spec:
               "until nc -z $DEPENDENCIES; do echo waiting for the NSSF; sleep 2; done;",
             ]
       containers:
-        - image: edierbra/nwdaf-mtlf:v3.2.0-3-lr
+        - image: edierbra/nwdaf-mtlf:v3.2.0-4-lr
           imagePullPolicy: Always
           name: nwdaf-mtlf
           ports:
