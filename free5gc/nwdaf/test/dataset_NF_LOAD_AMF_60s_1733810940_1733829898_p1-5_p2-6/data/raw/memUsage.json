@@ -1,0 +1,332 @@
+[
+    {
+        "timestamp": 1733810940000,
+        "value": 0.1475830078125,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733811540000,
+        "value": 0.3907572428385416,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733812140000,
+        "value": 0.4104033679496951,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733812740000,
+        "value": 0.46953667534722227,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733813340000,
+        "value": 0.4129974365234375,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733813940000,
+        "value": 0.42774427259290543,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733814540000,
+        "value": 0.4238787395198171,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733815140000,
+        "value": 0.42393092105263164,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733815740000,
+        "value": 0.4201378455528846,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733816340000,
+        "value": 0.42034301757812503,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733816940000,
+        "value": 0.42925876524390244,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733817540000,
+        "value": 0.44696044921875,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733818140000,
+        "value": 0.449822998046875,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733818740000,
+        "value": 0.424530029296875,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733819340000,
+        "value": 0.43420410156249994,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733819940000,
+        "value": 0.423061273036859,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733820540000,
+        "value": 0.42933959960937496,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733821140000,
+        "value": 0.4385807688643293,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733821740000,
+        "value": 0.4265631598395271,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733822340000,
+        "value": 0.47040100097656257,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733822940000,
+        "value": 0.44394293064024387,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733823540000,
+        "value": 0.4429128546463816,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733824140000,
+        "value": 0.44828387004573167,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733824740000,
+        "value": 0.44580383300781246,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733825340000,
+        "value": 0.43796997070312493,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733825940000,
+        "value": 0.45478210449218753,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733826540000,
+        "value": 0.45579075168918914,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733827140000,
+        "value": 0.4563582982772436,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733827740000,
+        "value": 0.4538417718349359,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733828340000,
+        "value": 0.4764529497195513,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733828940000,
+        "value": 0.49339599609374996,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733829540000,
+        "value": 0.4458414713541667,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733830140000,
+        "value": 0.6890716552734375,
+        "metric": "mem-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf-76c54f56c9-pg77v",
+        "container": "amf",
+        "phase": "",
+        "uid": ""
+    }
+]
