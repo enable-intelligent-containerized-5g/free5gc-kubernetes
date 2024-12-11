@@ -1,0 +1,3052 @@
+[
+    {
+        "timestamp": 1733791080000,
+        "value": 10205.128293024565,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791140000,
+        "value": 2613.1156451995766,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791200000,
+        "value": 12852.921047719778,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791260000,
+        "value": 15734.791704750878,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791320000,
+        "value": 13922.649024814576,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791380000,
+        "value": 13685.202288589515,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791500000,
+        "value": 12126.295722625995,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791560000,
+        "value": 3530.811400361643,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791620000,
+        "value": 257.7812678469446,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791680000,
+        "value": 355.6195536135456,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791740000,
+        "value": 332.5132269372292,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791800000,
+        "value": 324.6827461180736,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791860000,
+        "value": 322.3648253896459,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791920000,
+        "value": 193.07500000000002,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733791980000,
+        "value": 314.5616581982418,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792040000,
+        "value": 167.12525421701162,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792100000,
+        "value": 3541.095467457083,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792160000,
+        "value": 8477.143325757399,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792220000,
+        "value": 6904.308451716967,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792280000,
+        "value": 2564.337276048009,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792340000,
+        "value": 3586.9516032826677,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792400000,
+        "value": 3730.4119377889874,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792460000,
+        "value": 4447.597112736252,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792520000,
+        "value": 4568.301245012321,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792580000,
+        "value": 4038.9154920078236,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792640000,
+        "value": 5926.3097901802685,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792700000,
+        "value": 4623.8836038052605,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792760000,
+        "value": 3124.689255916908,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792820000,
+        "value": 1630.0820101203979,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792880000,
+        "value": 1129.4724854896776,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733792940000,
+        "value": 1153.541244276374,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793000000,
+        "value": 1092.2918171499327,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793060000,
+        "value": 915.5678986710964,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793120000,
+        "value": 947.5901539439866,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793180000,
+        "value": 1439.3879952922716,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793240000,
+        "value": 8546.411806994543,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793300000,
+        "value": 3740.039138943249,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793360000,
+        "value": 3414.259483183304,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793420000,
+        "value": 3669.880729333272,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793480000,
+        "value": 2498.5049416813135,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793540000,
+        "value": 2326.841969357893,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793600000,
+        "value": 1824.4386253562907,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793660000,
+        "value": 1088.6212133997128,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793720000,
+        "value": 787.6873045968589,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793780000,
+        "value": 983.5931091058245,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793840000,
+        "value": 901.5107996323529,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793900000,
+        "value": 952.4561680619177,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733793960000,
+        "value": 976.9673704414587,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794020000,
+        "value": 855.0843729231937,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794080000,
+        "value": 1270.6240969799487,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794140000,
+        "value": 1029.5001762132804,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794200000,
+        "value": 2233.6377884667354,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794260000,
+        "value": 2982.9885499855673,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794320000,
+        "value": 3605.5242629209774,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794380000,
+        "value": 2741.3091136861885,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794440000,
+        "value": 2127.7625068719076,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794500000,
+        "value": 1252.514344999894,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794560000,
+        "value": 904.3583932735573,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794620000,
+        "value": 828.8194395272776,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794680000,
+        "value": 1290.559246954596,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794740000,
+        "value": 982.4341850781586,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794800000,
+        "value": 954.9970549886622,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794860000,
+        "value": 1028.4606416949669,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794920000,
+        "value": 1628.4729743034359,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733794980000,
+        "value": 3049.003215766006,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795040000,
+        "value": 3771.329315527027,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795100000,
+        "value": 6039.01605231867,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795160000,
+        "value": 7921.796730819933,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795220000,
+        "value": 4125.831545645626,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795280000,
+        "value": 2381.4755345220988,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795340000,
+        "value": 742.231075697211,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795400000,
+        "value": 982.9756884147855,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795460000,
+        "value": 1091.2219604629724,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795520000,
+        "value": 1378.9532605653512,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795580000,
+        "value": 1689.9556675938807,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795640000,
+        "value": 1512.239088360238,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795700000,
+        "value": 2666.1490056875477,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795760000,
+        "value": 4951.750101750102,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795820000,
+        "value": 4130.807845174774,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795880000,
+        "value": 4710.4018686220825,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733795940000,
+        "value": 4748.1478155448785,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796000000,
+        "value": 5068.654019873532,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796060000,
+        "value": 6683.85174800666,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796120000,
+        "value": 8705.370456378794,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796180000,
+        "value": 6804.885827273886,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796240000,
+        "value": 10261.565067012536,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796300000,
+        "value": 5182.376361107114,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796360000,
+        "value": 319.49261718362897,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796420000,
+        "value": 270.57749915686315,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796480000,
+        "value": 1069.2312447200873,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796540000,
+        "value": 2341.447629267319,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796600000,
+        "value": 1980.9087350021878,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796660000,
+        "value": 2521.836727364149,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796720000,
+        "value": 2033.0346202820554,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796780000,
+        "value": 3489.805634327586,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796840000,
+        "value": 1802.7165212002271,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796900000,
+        "value": 2897.864463164672,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733796960000,
+        "value": 3376.635531512645,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797020000,
+        "value": 3279.4616126877304,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797080000,
+        "value": 4179.608282036934,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797140000,
+        "value": 4980.90475107979,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797200000,
+        "value": 5780.039992728594,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797260000,
+        "value": 2684.1945090537574,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797320000,
+        "value": 6377.874596683039,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797380000,
+        "value": 5834.608130762783,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797440000,
+        "value": 6098.245128903925,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797500000,
+        "value": 8600.34945221005,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797560000,
+        "value": 6952.814460990913,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797620000,
+        "value": 6866.291659146576,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797680000,
+        "value": 7881.692705820161,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797740000,
+        "value": 9404.201579601493,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797800000,
+        "value": 9631.118774723602,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797860000,
+        "value": 10300.933506283624,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797920000,
+        "value": 10009.708483115111,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733797980000,
+        "value": 10332.770507949908,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798040000,
+        "value": 10139.003019652493,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798100000,
+        "value": 10612.618724559023,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798160000,
+        "value": 9560.77494130835,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798220000,
+        "value": 977.9188636608199,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798280000,
+        "value": 326.7887115031812,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798340000,
+        "value": 280.2101972864617,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798400000,
+        "value": 1231.6179415298357,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798460000,
+        "value": 2298.0407626561473,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798520000,
+        "value": 2927.0470829068577,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798580000,
+        "value": 11335.370347071193,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798640000,
+        "value": 17317.26849576455,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798700000,
+        "value": 14724.305965641863,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798760000,
+        "value": 16085.530833676692,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798820000,
+        "value": 14638.196297113516,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798880000,
+        "value": 11733.141112163386,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733798940000,
+        "value": 12487.208981319593,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799000000,
+        "value": 6990.729907299074,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799060000,
+        "value": 11889.868454631927,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799120000,
+        "value": 11949.51093794391,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799180000,
+        "value": 12151.175499383764,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799240000,
+        "value": 13109.79381443299,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799300000,
+        "value": 7854.819626992494,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799360000,
+        "value": 7013.441023429332,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799420000,
+        "value": 12061.26786654447,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799480000,
+        "value": 12148.167594245511,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799540000,
+        "value": 14515.008951246931,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799600000,
+        "value": 11741.789454997335,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799660000,
+        "value": 13362.800336765755,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799720000,
+        "value": 10658.05562688192,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799780000,
+        "value": 14875.974258808434,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799840000,
+        "value": 15201.071428571428,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799900000,
+        "value": 10478.296261625188,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733799960000,
+        "value": 4679.079801604903,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800020000,
+        "value": 5308.234797297297,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800080000,
+        "value": 4337.706825232679,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800140000,
+        "value": 7931.457946594315,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800200000,
+        "value": 6762.558897301859,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800260000,
+        "value": 7515.576985110609,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800320000,
+        "value": 6360.18111740305,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800380000,
+        "value": 8942.71587903875,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800440000,
+        "value": 10380.26703954436,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800500000,
+        "value": 9483.027022490769,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800560000,
+        "value": 6548.719376391982,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800620000,
+        "value": 6359.226677860928,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800680000,
+        "value": 5565.806833174105,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800740000,
+        "value": 5623.756046863189,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800800000,
+        "value": 5910.046112551332,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800860000,
+        "value": 2382.2421364720567,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800920000,
+        "value": 1285.1970832695933,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733800980000,
+        "value": 5657.000318921135,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801040000,
+        "value": 12413.1149627681,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801100000,
+        "value": 16236.643105576124,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801160000,
+        "value": 15480.415520928813,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801220000,
+        "value": 14141.04530194388,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801280000,
+        "value": 1239.25993027533,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801340000,
+        "value": 1505.1432770022043,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801400000,
+        "value": 4466.291873025255,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801460000,
+        "value": 16348.794376573562,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801520000,
+        "value": 2429.236138037999,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801580000,
+        "value": 797.5817418553776,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801640000,
+        "value": 521.3556808647636,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801700000,
+        "value": 13851.527825196314,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801760000,
+        "value": 9122.067894639331,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801820000,
+        "value": 8806.009079324627,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801880000,
+        "value": 5473.450713988632,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733801940000,
+        "value": 6408.480844344719,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802000000,
+        "value": 14334.075473816163,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802060000,
+        "value": 16506.893076906585,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802120000,
+        "value": 14259.020075810757,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802180000,
+        "value": 8050.7155647382915,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802240000,
+        "value": 2632.1262402601046,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802300000,
+        "value": 965.0709446503897,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802360000,
+        "value": 436.19728550654384,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802540000,
+        "value": 8109.562144119379,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802600000,
+        "value": 13734.282575629542,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802660000,
+        "value": 10207.318372274698,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802720000,
+        "value": 6212.875,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802780000,
+        "value": 8817.746983445859,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802840000,
+        "value": 9026.80017670446,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802900000,
+        "value": 8178.868682360817,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733802960000,
+        "value": 2296.9889875005806,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803020000,
+        "value": 5297.481384143671,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803080000,
+        "value": 6244.667278019217,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803140000,
+        "value": 10569.705404778473,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803200000,
+        "value": 12738.812423380421,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803260000,
+        "value": 4722.4570887333375,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803320000,
+        "value": 1170.1759377815715,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803380000,
+        "value": 1404.0698320916267,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803440000,
+        "value": 12477.593459391084,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803500000,
+        "value": 1709.0575472839455,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803560000,
+        "value": 420.67574797316763,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803620000,
+        "value": 437.0528640706775,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803680000,
+        "value": 12472.422730096174,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803740000,
+        "value": 5433.970526636456,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803800000,
+        "value": 517.3837614148175,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803860000,
+        "value": 207.43930133950084,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803920000,
+        "value": 5588.335813902211,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733803980000,
+        "value": 7028.639675016926,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804040000,
+        "value": 2741.606943629847,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804100000,
+        "value": 941.2127314196479,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804160000,
+        "value": 1139.5321135887175,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804220000,
+        "value": 3320.059453768502,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804280000,
+        "value": 9135.648700951126,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804340000,
+        "value": 17548.703939273873,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804400000,
+        "value": 7052.430248404142,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804460000,
+        "value": 446.2970418965967,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804520000,
+        "value": 335.07885406903296,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804580000,
+        "value": 13646.421698070984,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804640000,
+        "value": 5095.525024024102,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804700000,
+        "value": 276.06174112878415,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804760000,
+        "value": 165.42066823854162,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804820000,
+        "value": 3356.5605999578033,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804880000,
+        "value": 1938.0740460183695,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733804940000,
+        "value": 5900.357237047159,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805000000,
+        "value": 5692.466714713803,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805060000,
+        "value": 5747.714356313318,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805120000,
+        "value": 5625.019072737973,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805180000,
+        "value": 5502.854897852278,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805240000,
+        "value": 4652.42209194693,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805300000,
+        "value": 2775.8306296675037,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805360000,
+        "value": 2436.1649961751955,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805420000,
+        "value": 2030.5562611125224,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805480000,
+        "value": 1683.4616035182678,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805540000,
+        "value": 2830.941736371503,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805600000,
+        "value": 5073.386228268753,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805660000,
+        "value": 5865.456183184392,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805720000,
+        "value": 11442.644380156435,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805780000,
+        "value": 972.2421386868791,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805840000,
+        "value": 934.3927864705523,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805900000,
+        "value": 806.7297385468612,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733805960000,
+        "value": 12794.383346425768,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806020000,
+        "value": 616.222593648609,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806080000,
+        "value": 777.3892094577528,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806140000,
+        "value": 570.0066187251275,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806200000,
+        "value": 13339.037574159524,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806260000,
+        "value": 1352.4059492563429,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806320000,
+        "value": 581.2588690862736,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806380000,
+        "value": 362.27834734016807,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806440000,
+        "value": 2046.9296931757972,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806500000,
+        "value": 7846.437552388936,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806560000,
+        "value": 1490.5337559251675,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806620000,
+        "value": 1073.2916895285525,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733806680000,
+        "value": 1211.0659921508131,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807460000,
+        "value": 6428.214567446752,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807520000,
+        "value": 708.7491407305569,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807580000,
+        "value": 764.4786074507889,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807640000,
+        "value": 3148.632692363849,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807700000,
+        "value": 3205.9982645165956,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807760000,
+        "value": 668.1451442571706,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807820000,
+        "value": 835.6328276142959,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807880000,
+        "value": 2564.7257119338337,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733807940000,
+        "value": 4232.123522233886,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808000000,
+        "value": 7835.956333863999,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808060000,
+        "value": 3988.7237782190878,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808120000,
+        "value": 2577.1875209961704,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808180000,
+        "value": 4603.2405484004985,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808240000,
+        "value": 3249.9297191369424,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808300000,
+        "value": 2533.186714035978,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808360000,
+        "value": 2567.699026396562,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808420000,
+        "value": 7978.45267705197,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808480000,
+        "value": 8446.161823657287,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808540000,
+        "value": 6753.21196487921,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808600000,
+        "value": 7540.106834318876,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808660000,
+        "value": 6214.154072981939,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808720000,
+        "value": 898.0481521846824,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808780000,
+        "value": 299.2297179773885,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808840000,
+        "value": 149.73821989528798,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808900000,
+        "value": 3820.1212047012737,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733808960000,
+        "value": 4626.967453073877,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809020000,
+        "value": 2543.4905813140235,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809080000,
+        "value": 6196.680745765605,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809140000,
+        "value": 5852.864112757499,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809200000,
+        "value": 1418.2035730494695,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809260000,
+        "value": 2224.3454778469427,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809320000,
+        "value": 4969.357892924772,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809380000,
+        "value": 6083.30302662949,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809440000,
+        "value": 4684.62799754048,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809500000,
+        "value": 4074.678586807193,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809560000,
+        "value": 4514.238893662942,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809620000,
+        "value": 1951.9487679714998,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809680000,
+        "value": 1204.1897423549242,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809740000,
+        "value": 293.1545876751356,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809800000,
+        "value": 4146.338169881147,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809860000,
+        "value": 4789.173902652752,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809920000,
+        "value": 2578.9715683542345,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733809980000,
+        "value": 3114.7213612630794,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733810040000,
+        "value": 337.6414718126757,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733810100000,
+        "value": 1893.2041259771722,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733810160000,
+        "value": 2037.4523122731928,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    },
+    {
+        "timestamp": 1733810220000,
+        "value": 539.2817275491743,
+        "metric": "throughput-average",
+        "namespace": "free5gc",
+        "pod": "free5gc-amf2-775858f5f6-rsns6",
+        "container": "amf2",
+        "phase": "",
+        "uid": ""
+    }
+]

@@ -192,7 +192,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         # Define the LSTM model
         lstm_model = Sequential()
         lstm_model.add(LSTM(100, return_sequences=True, input_shape=(time_steps, X.shape[2])))
-        lstm_model.add(LSTM(50))
+        lstm_model.add(Dense(50))
         lstm_model.add(Dense(3))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
