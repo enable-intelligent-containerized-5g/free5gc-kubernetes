@@ -10,7 +10,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, GRU, Dense, Dropout
+from tensorflow.keras.layers import LSTM, GRU, Dense
 from collections import namedtuple
 
 
@@ -191,10 +191,9 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
 
         # Define the LSTM model
         lstm_model = Sequential()
-        lstm_model.add(LSTM(100, return_sequences=True, input_shape=(time_steps, X.shape[2])))
-        # gru_model.add(Dropout(0.3))
-        lstm_model.add(LSTM(50))
-        lstm_model.add(Dense(2))
+        lstm_model.add(LSTM(100, return_sequences=True, input_shape=(time_steps, X.shape[3])))
+        lstm_model.add(Dense(50))
+        lstm_model.add(Dense(3))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
         start_time = time.time()
@@ -206,7 +205,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         gru_model = Sequential()
         gru_model.add(GRU(100, return_sequences=True, input_shape=(time_steps, X.shape[3])))
         gru_model.add(GRU(50))
-        gru_model.add(Dense(2)) 
+        gru_model.add(Dense(3)) 
         gru_model.compile(optimizer='adam', loss='mse')
         # Train the model
         start_time = time.time()
@@ -249,8 +248,6 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
 
         # Create the models
-        # model = XGBRegressor(n_estimators=1000, max_depth=7, eta=0.1, subsample=0.7, colsample_bytree=0.8)
-        # objective='reg:squarederror'
         xgb_model = XGBRegressor(n_estimators=100, random_state=42)
         rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
         dt_model = DecisionTreeRegressor(random_state=42)
@@ -316,7 +313,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         mlp_model = Sequential()
         mlp_model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
         mlp_model.add(Dense(32, activation='relu'))
-        mlp_model.add(Dense(2))  # Salida para predecir tanto CPU como Memoria
+        mlp_model.add(Dense(3))  # Salida para predecir tanto CPU como Memoria
         mlp_model.compile(optimizer='adam', loss='mse')
 
         # Train the model
