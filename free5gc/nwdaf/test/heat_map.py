@@ -15,8 +15,8 @@ df['mse'] = np.sqrt(df['mse'])
 # Create the structure
 # ascending -> better Top, descending -> better Bottom, 
 metrics_structure = [
-    {'column': 'size', 'title': 'Size', 'trend': 'descending', 'decimals': 0},
-    # {'column': 'r2', 'title': 'R2', 'trend': 'ascending', 'decimals': 3},
+    # {'column': 'size', 'title': 'Size', 'trend': 'descending', 'decimals': 0},
+    {'column': 'r2', 'title': 'R2', 'trend': 'ascending', 'decimals': 3},
     # {'column': 'mse', 'title': 'MSE', 'trend': 'descending', 'decimals': 2},
     # {'column': 'r2-cpu', 'title': 'R2 CPU', 'trend': 'ascending', 'decimals': 3},
     # {'column': 'r2-mem', 'title': 'R2 Memory', 'trend': 'ascending', 'decimals': 3},
@@ -50,5 +50,5 @@ for metric in metrics_structure:
     plt.ylabel('Time sequence length')
     # Show the plot
     # plt.show()
-    plt.savefig(f"figures-heat-map/figure_{dataset_name}_metric-{metric_column}.svg")
+    plt.savefig(f"figures-heat-map/figure_{dataset_name}_metric-{metric_column}.pdf", bbox_inches='tight', pad_inches=0.01)
     

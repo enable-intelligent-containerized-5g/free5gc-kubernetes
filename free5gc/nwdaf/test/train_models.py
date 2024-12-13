@@ -45,7 +45,7 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     # Evaluate the model
     mse = math.sqrt(mean_squared_error(y_test_invertido, y_pred_invertido))
     r2 = r2_score(y_test_invertido, y_pred_invertido)
-    print(f'MSE: {mse:.4f}, R²: {r2:.4f}')
+    print(f'RMSE: {mse:.4f}, R²: {r2:.4f}')
         
     # Evaluate the model: MSE and R² for each output (CPU, Memory and Throughput)
     mse_cpu = math.sqrt(mean_squared_error(y_test_invertido[:, 0], y_pred_invertido[:, 0]))  # For CPU
@@ -55,9 +55,9 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     r2_mem = r2_score(y_test_invertido[:, 1], y_pred_invertido[:, 1])  # R² para Memoria
     r2_thrpt = r2_score(y_test_invertido[:, 2], y_pred_invertido[:, 2])  # R² para Throughput
     
-    print(f'CPU -> R²: {r2_cpu:.4f}, MSE: {mse_cpu:.4f}')
-    print(f'Memory -> R²: {r2_mem:.4f}, MSE: {mse_mem:.4f}')
-    print(f'Throughput -> R²: {r2_thrpt:.4f}, MSE: {mse_thrpt:.4f}')
+    print(f'CPU -> R²: {r2_cpu:.4f}, RMSE: {mse_cpu:.4f}')
+    print(f'Memory -> R²: {r2_mem:.4f}, RMSE: {mse_mem:.4f}')
+    print(f'Throughput -> R²: {r2_thrpt:.4f}, RMSE: {mse_thrpt:.4f}')
     
     
     # Create the figure
@@ -69,7 +69,7 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             [min(y_test_invertido[:, 0]), max(y_test_invertido[:, 0])], color='red', linestyle='--', label='CPU reference line')
     ax1.set_xlabel('Real CPU Usage')
     ax1.set_ylabel('Predicted CPU Usage')
-    ax1.set_title(f'CPU Predictions (MSE: {mse_cpu:.4f}, R²: {r2_cpu:.4f})')
+    ax1.set_title(f'CPU Predictions (RMSE: {mse_cpu:.4f}, R²: {r2_cpu:.4f})')
     ax1.legend()
     ax1.grid(True)
     # Memory graph
@@ -78,7 +78,7 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             [min(y_test_invertido[:, 1]), max(y_test_invertido[:, 1])], color='orange', linestyle='--', label='Memory reference line')
     ax2.set_xlabel('Real Memory Usage')
     ax2.set_ylabel('Predicted Memory Usage')
-    ax2.set_title(f'Memory Predictions (MSE: {mse_mem:.4f}, R²: {r2_mem:.4f})')
+    ax2.set_title(f'Memory Predictions (RMSE: {mse_mem:.4f}, R²: {r2_mem:.4f})')
     ax2.legend()
     ax2.grid(True)
     # Throughput graph
