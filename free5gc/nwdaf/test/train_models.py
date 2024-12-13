@@ -1,4 +1,4 @@
-import time, datetime, joblib, os, json, csv, sys, math
+import time, joblib, os, json, csv, sys, math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -203,14 +203,14 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
 
         # Define the LSTM model
         lstm_model = Sequential()
-        lstm_model.add(LSTM(128, return_sequences=True, input_shape=(time_steps, X.shape[2])))
-        lstm_model.add(LSTM(64, return_sequences=False))
+        lstm_model.add(LSTM(64, return_sequences=True, input_shape=(time_steps, X.shape[2])))
+        lstm_model.add(LSTM(32, return_sequences=False))
         # lstm_model.add(LSTM(50))
         lstm_model.add(Dense(3))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
         start_time = time.time()
-        history = lstm_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+        history = lstm_model.fit(X_train, y_train, epochs=50, batch_size=16, validation_data=(X_test, y_test))
         end_time = time.time()
         training_time_lstm = end_time - start_time
         
@@ -257,7 +257,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ###                    and LinearRegression                    ###
     ##################################################################
 
-    if True :
+    if False :
         X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
 
         # Create the models
@@ -308,7 +308,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ##################################################################
             
     # Create the lags features
-    if True :
+    if False :
         def create_lagged_features(data, lag):
             X, y = [], []
             for i in range(lag, len(data)):
@@ -352,14 +352,16 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
 def main():
     print("Ml Model Training")
     
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 4:
         print("Usage: python3 train-models.py <directory-path> <dataset-name> <time-steps>")
         sys.exit(1)
 
     # Parameters
-    directory_path = sys.argv[2]
-    dataset_name = sys.argv[3]
-    time_steps = int(sys.argv[4])
+    # print(sys.argv[0], sys.argv[1], sys.argv[2],sys.argv[3])
+    directory_path = sys.argv[1]
+    dataset_name = sys.argv[2]
+    # from_step = int(sys.argv[3])
+    time_steps = int(sys.argv[3])
     
     # Params
     dataset_extension = "csv"
@@ -381,6 +383,11 @@ def main():
         current_time_steps = i+1
         base_name_full =  f"{dataset_name}_total-steps-{current_time_steps}"
         
+        if current_time_steps != 6:
+            continue
+        
+        print(f"\n######## CURRENTE TIMESTEP: {current_time_steps} #############")
+                
         ml_model_training(directory_path, dataset_name, dataset_extension, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, current_time_steps, base_name_full)
         
         # Load data
