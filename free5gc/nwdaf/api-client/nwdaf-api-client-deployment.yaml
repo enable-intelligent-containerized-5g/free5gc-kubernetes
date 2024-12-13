@@ -26,7 +26,7 @@ spec:
           command:
             [ "sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",]
       containers:
-        - image: edierbra/nwdaf-api-client:v1.0.1
+        - image: edierbra/nwdaf-api-client:v1.0.2
           imagePullPolicy: Always
           name: nwdaf-api-client
           ports:
