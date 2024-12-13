@@ -4,7 +4,7 @@ FROM node:20.13.1 AS builder
 WORKDIR /free5gc
 
 # Clone the repository
-RUN git clone --recursive -b v1.0.1 -j `nproc` https://github.com/enable-intelligent-containerized-5g/nwdaf-api-client ./nwdaf-api-client \
+RUN git clone --recursive -b v1.0.2 -j `nproc` https://github.com/enable-intelligent-containerized-5g/nwdaf-api-client ./nwdaf-api-client \
     && cd nwdaf-api-client \
     && npm install \
     && npm run build
@@ -12,7 +12,7 @@ RUN git clone --recursive -b v1.0.1 -j `nproc` https://github.com/enable-intelli
 
 # Build stage
 FROM node:20-alpine
-LABEL description="NWDAF-API-CLIENT v1.0.0"
+LABEL description="NWDAF-API-CLIENT v1.0.2"
 ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /free5gc
