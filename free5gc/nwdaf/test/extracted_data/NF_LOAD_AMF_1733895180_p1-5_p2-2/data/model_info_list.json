@@ -1,19 +1,5 @@
 [
     {
-        "name": "model_LR_NF_LOAD_AMF_60s_1733895240_1734001395",
-        "uri": "./models/model_LR_NF_LOAD_AMF_60s_1733895240_1734001395.pkl",
-        "size": 1118,
-        "figureUri": "./models/figures/figure_LR_NF_LOAD_AMF_60s_1733895240_1734001395.png",
-        "mse": 4532859.703323563,
-        "r2": 0.3694557531595612,
-        "mseCpu": 0.04178041123779312,
-        "r2Cpu": 0.01652604525408785,
-        "mseMem": 0.0006038590787401738,
-        "r2Mem": 0.8746231803311093,
-        "mseThrpt": 13598579.06758642,
-        "r2Thrpt": 0.21721803389348693
-    },
-    {
         "name": "model_LR_NF_LOAD_AMF_60s_1733895180_1734001435",
         "uri": "./models/model_LR_NF_LOAD_AMF_60s_1733895180_1734001435.pkl",
         "size": 1118,
