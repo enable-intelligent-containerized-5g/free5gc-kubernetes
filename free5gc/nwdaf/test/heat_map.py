@@ -7,7 +7,7 @@ import sys
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: python3 heat_map.py <info_models_path_csv>")
+        print("Usage: python3 heat_map.py <directory-path> <info_models_path_csv>")
         sys.exit(1)
             
     directory_path = sys.argv[1]
@@ -17,9 +17,9 @@ def main():
     data_path = f"{directory_path}{info_file_name}.csv"
     df = pd.read_csv(data_path)
 
-    df['mse-cpu'] = np.sqrt(df['mse-cpu'])
-    df['mse-mem'] = np.sqrt(df['mse-mem'])
-    df['mse'] = np.sqrt(df['mse'])
+    # df['mse-cpu'] = np.sqrt(df['mse-cpu'])
+    # df['mse-mem'] = np.sqrt(df['mse-mem'])
+    # df['mse'] = np.sqrt(df['mse'])
 
     # Create the structure
     # ascending -> better Top, descending -> better Bottom, 
@@ -58,7 +58,7 @@ def main():
         plt.ylabel('Time sequence length')
         # Save the plot
         # plt.show()
-        plt.savefig(f"figures-heat-map/figure_{info_file_name}_metric-{metric_column}.png", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"figures-heat-map/figure_{info_file_name}_metric-{metric_column}.pdf", bbox_inches='tight', pad_inches=0.05)
        
 if __name__ == "__main__":
     main()

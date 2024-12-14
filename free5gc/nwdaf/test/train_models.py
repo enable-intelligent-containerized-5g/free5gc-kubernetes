@@ -96,14 +96,14 @@ def save_model_switch(fig_name, model, model_type, models_path):
 
 def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, base_name, info_models_path, info_models_path_csv, time_steps):
     # Evaluate the model
-    mse = math.sqrt(mean_squared_error(y_test_invertido, y_pred_invertido))
+    mse = np.sqrt(mean_squared_error(y_test_invertido, y_pred_invertido))
     r2 = r2_score(y_test_invertido, y_pred_invertido)
     print(f'RMSE: {mse:.4f}, R²: {r2:.4f}')
         
     # Evaluate the model: MSE and R² for each output (CPU, Memory and Throughput)
-    mse_cpu = math.sqrt(mean_squared_error(y_test_invertido[:, 0], y_pred_invertido[:, 0]))  # For CPU
-    mse_mem = math.sqrt(mean_squared_error(y_test_invertido[:, 1], y_pred_invertido[:, 1]))  # For Memory
-    mse_thrpt = math.sqrt(mean_squared_error(y_test_invertido[:, 2], y_pred_invertido[:, 2]))  # For Throughput
+    mse_cpu = np.sqrt(mean_squared_error(y_test_invertido[:, 0], y_pred_invertido[:, 0]))  # For CPU
+    mse_mem = np.sqrt(mean_squared_error(y_test_invertido[:, 1], y_pred_invertido[:, 1]))  # For Memory
+    mse_thrpt = np.sqrt(mean_squared_error(y_test_invertido[:, 2], y_pred_invertido[:, 2]))  # For Throughput
     r2_cpu = r2_score(y_test_invertido[:, 0], y_pred_invertido[:, 0])  # R² para CPU
     r2_mem = r2_score(y_test_invertido[:, 1], y_pred_invertido[:, 1])  # R² para Memoria
     r2_thrpt = r2_score(y_test_invertido[:, 2], y_pred_invertido[:, 2])  # R² para Throughput
