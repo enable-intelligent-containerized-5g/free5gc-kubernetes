@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-dataset_name = "models_info_dataset_NF_LOAD_AMF_60s_1733807760_1733914918_total-steps-30"
+dataset_name = "models_info_dataset_NF_LOAD_AMF_60s_1733807760_1733915795_total-steps-30"
 data_path = f"models-info/{dataset_name}.csv"
 df = pd.read_csv(data_path)
 
@@ -17,14 +17,14 @@ df['mse'] = np.sqrt(df['mse'])
 metrics_structure = [
     # {'column': 'size', 'title': 'Size', 'trend': 'descending', 'decimals': 0},
     {'column': 'r2', 'title': 'R2', 'trend': 'ascending', 'decimals': 3},
-    # {'column': 'mse', 'title': 'MSE', 'trend': 'descending', 'decimals': 2},
-    # {'column': 'r2-cpu', 'title': 'R2 CPU', 'trend': 'ascending', 'decimals': 3},
-    # {'column': 'r2-mem', 'title': 'R2 Memory', 'trend': 'ascending', 'decimals': 3},
-    # {'column': 'r2-thrpt', 'title': 'R2 Throughput', 'trend': 'ascending', 'decimals': 2},
-    # {'column': 'mse-cpu', 'title': 'MSE CPU', 'trend': 'descending', 'decimals': 8},
-    # {'column': 'mse-mem', 'title': 'MSE Memory', 'trend': 'descending', 'decimals': 8},
-    # {'column': 'mse-thrpt', 'title': 'MSE Throughput', 'trend': 'descending', 'decimals': 2},
-    # {'column': 'training-time', 'title': 'Training time', 'trend': 'descending', 'decimals': 4}
+    {'column': 'mse', 'title': 'MSE', 'trend': 'descending', 'decimals': 2},
+    {'column': 'r2-cpu', 'title': 'R2 CPU', 'trend': 'ascending', 'decimals': 3},
+    {'column': 'r2-mem', 'title': 'R2 Memory', 'trend': 'ascending', 'decimals': 3},
+    {'column': 'r2-thrpt', 'title': 'R2 Throughput', 'trend': 'ascending', 'decimals': 2},
+    {'column': 'mse-cpu', 'title': 'MSE CPU', 'trend': 'descending', 'decimals': 8},
+    {'column': 'mse-mem', 'title': 'MSE Memory', 'trend': 'descending', 'decimals': 8},
+    {'column': 'mse-thrpt', 'title': 'MSE Throughput', 'trend': 'descending', 'decimals': 2},
+    {'column': 'training-time', 'title': 'Training time', 'trend': 'descending', 'decimals': 4}
 ]
 
 
@@ -50,5 +50,5 @@ for metric in metrics_structure:
     plt.ylabel('Time sequence length')
     # Show the plot
     # plt.show()
-    plt.savefig(f"figures-heat-map/figure_{dataset_name}_metric-{metric_column}.pdf", bbox_inches='tight', pad_inches=0.01)
+    plt.savefig(f"figures-heat-map/figure_{dataset_name}_metric-{metric_column}.png", bbox_inches='tight', pad_inches=0.01)
     

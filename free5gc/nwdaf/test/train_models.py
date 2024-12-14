@@ -10,8 +10,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, GRU, Dense
+from tensorflow.keras.layers import LSTM, GRU, Dense, Dropout
 from collections import namedtuple
+from keras.regularizers import l2
 
 def save_model_switch(fig_name, model, model_type, models_path):
     if model_type == 'xgboost':
@@ -195,7 +196,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ###                         LSTM, GRU                          ###
     ##################################################################
 
-    if True :
+    if False :
         # Split data
         train_size = int(len(X) * 0.7)
         X_train, X_test = X[:train_size], X[train_size:]
@@ -210,7 +211,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
         start_time = time.time()
-        history = lstm_model.fit(X_train, y_train, epochs=50, batch_size=16, validation_data=(X_test, y_test))
+        history = lstm_model.fit(X_train, y_train, epochs=1, batch_size=32, validation_data=(X_test, y_test))
         end_time = time.time()
         training_time_lstm = end_time - start_time
         
@@ -257,7 +258,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ###                    and LinearRegression                    ###
     ##################################################################
 
-    if False :
+    if True :
         X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
 
         # Create the models
@@ -323,8 +324,8 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         
         # Define the MLP model
         mlp_model = Sequential()
-        mlp_model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
-        mlp_model.add(Dense(32, activation='relu'))
+        mlp_model.add(Dense(128, activation='relu', input_shape=(X_train.shape[1],)))
+        mlp_model.add(Dense(64, activation='relu'))
         mlp_model.add(Dense(3))  # Salida para predecir tanto CPU como Memoria
         mlp_model.compile(optimizer='adam', loss='mse')
 
@@ -383,10 +384,10 @@ def main():
         current_time_steps = i+1
         base_name_full =  f"{dataset_name}_total-steps-{current_time_steps}"
         
-        if current_time_steps != 6:
+        if current_time_steps > 100:
             continue
         
-        print(f"\n######## CURRENTE TIMESTEP: {current_time_steps} #############")
+        print(f"\n######## CURRENT TIMESTEP: {current_time_steps} #############")
                 
         ml_model_training(directory_path, dataset_name, dataset_extension, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, current_time_steps, base_name_full)
         
