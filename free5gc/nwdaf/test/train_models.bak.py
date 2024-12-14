@@ -1,4 +1,4 @@
-import time, datetime, joblib, os, json, csv
+import time, joblib, os, json, csv, sys, math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,7 +12,39 @@ from sklearn.metrics import mean_squared_error, r2_score
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, GRU, Dense, Dropout
 from collections import namedtuple
+from keras.regularizers import l2
+import subprocess
 
+def create_bar_plots(info_models_path_csv, base_name_full):
+    # Load data
+    df = pd.read_csv(info_models_path_csv)
+    # Columns
+    columns = ['size', 'r2', 'mse', 'r2-cpu', 'r2-mem', 'r2-thrpt', 'mse-cpu', 'mse-mem', 'mse-thrpt', 'training-time']
+    # Titles
+    titles = ['Size', 'R2', 'MSE', 'R2 CPU', 'R2 Memory', 'R2 Throughput', 'MSE CPU', 'MSE Memory', 'MSE Throughput', 'Training time']
+    # Create the plots
+    for i, col in enumerate(columns):
+        # Crear una figura
+        plt.close('all')
+        plt.figure(figsize=(10, 6))
+
+        # Graficar la columna específica
+        plt.bar(df['name'], df[col], color='skyblue')
+        plt.title(titles[i])
+        plt.xlabel('Model')
+        plt.ylabel(titles[i])
+
+        # Mostrar la gráfica
+        # plt.show()
+        plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{titles[i]}.png")
+
+def delete_files(file_paths):
+    for file_path in file_paths:
+        if os.path.exists(file_path):  # Verifica si el archivo existe
+            os.remove(file_path)      # Elimina el archivo
+            print(f"File deleted: {file_path}")
+        else:
+            print(f"File dont'n deleted: {file_path}")
 
 def save_model_switch(fig_name, model, model_type, models_path):
     if model_type == 'xgboost':
@@ -42,23 +74,27 @@ def save_model_switch(fig_name, model, model_type, models_path):
     else:
         return "none", 0
 
-def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_step, dataset_name):
+def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, base_name, info_models_path, info_models_path_csv, time_steps):
     # Evaluate the model
-    mse = mean_squared_error(y_test_invertido, y_pred_invertido)
+    mse = math.sqrt(mean_squared_error(y_test_invertido, y_pred_invertido))
     r2 = r2_score(y_test_invertido, y_pred_invertido)
-    print(f'MSE: {mse:.4f}, R²: {r2:.4f}')
-    
-    # Evaluate the model: MSE and R² for each output (CPU and Memory)
-    mse_cpu = mean_squared_error(y_test_invertido[:, 0], y_pred_invertido[:, 0])  # Para la columna de CPU
-    mse_mem = mean_squared_error(y_test_invertido[:, 1], y_pred_invertido[:, 1])  # Para la columna de Memoria
+    print(f'RMSE: {mse:.4f}, R²: {r2:.4f}')
+        
+    # Evaluate the model: MSE and R² for each output (CPU, Memory and Throughput)
+    mse_cpu = math.sqrt(mean_squared_error(y_test_invertido[:, 0], y_pred_invertido[:, 0]))  # For CPU
+    mse_mem = math.sqrt(mean_squared_error(y_test_invertido[:, 1], y_pred_invertido[:, 1]))  # For Memory
+    mse_thrpt = math.sqrt(mean_squared_error(y_test_invertido[:, 2], y_pred_invertido[:, 2]))  # For Throughput
     r2_cpu = r2_score(y_test_invertido[:, 0], y_pred_invertido[:, 0])  # R² para CPU
     r2_mem = r2_score(y_test_invertido[:, 1], y_pred_invertido[:, 1])  # R² para Memoria
+    r2_thrpt = r2_score(y_test_invertido[:, 2], y_pred_invertido[:, 2])  # R² para Throughput
     
-    print(f'CPU - R²: {r2_cpu:.4f}, MSE: {mse_cpu:.4f}')
-    print(f'Memory - R²: {r2_mem:.4f}, MSE: {mse_mem:.4f}')
+    print(f'CPU -> R²: {r2_cpu:.4f}, RMSE: {mse_cpu:.4f}')
+    print(f'Memory -> R²: {r2_mem:.4f}, RMSE: {mse_mem:.4f}')
+    print(f'Throughput -> R²: {r2_thrpt:.4f}, RMSE: {mse_thrpt:.4f}')
+    
     
     # Create the figure
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6))
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 8))
 
     # CPU Graph
     ax1.scatter(y_test_invertido[:, 0], y_pred_invertido[:, 0], color='blue', label='Prediction vs Real CPU')
@@ -66,7 +102,7 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             [min(y_test_invertido[:, 0]), max(y_test_invertido[:, 0])], color='red', linestyle='--', label='CPU reference line')
     ax1.set_xlabel('Real CPU Usage')
     ax1.set_ylabel('Predicted CPU Usage')
-    ax1.set_title(f'CPU Predictions (MSE: {mse_cpu:.4f}, R²: {r2_cpu:.4f})')
+    ax1.set_title(f'CPU Predictions (RMSE: {mse_cpu:.4f}, R²: {r2_cpu:.4f})')
     ax1.legend()
     ax1.grid(True)
     # Memory graph
@@ -75,9 +111,18 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             [min(y_test_invertido[:, 1]), max(y_test_invertido[:, 1])], color='orange', linestyle='--', label='Memory reference line')
     ax2.set_xlabel('Real Memory Usage')
     ax2.set_ylabel('Predicted Memory Usage')
-    ax2.set_title(f'Memory Predictions (MSE: {mse_mem:.4f}, R²: {r2_mem:.4f})')
+    ax2.set_title(f'Memory Predictions (RMSE: {mse_mem:.4f}, R²: {r2_mem:.4f})')
     ax2.legend()
     ax2.grid(True)
+    # Throughput graph
+    ax3.scatter(y_test_invertido[:, 2], y_pred_invertido[:, 2], color='green', label='Prediction vs Real Throughput')
+    ax3.plot([min(y_test_invertido[:, 2]), max(y_test_invertido[:, 2])], 
+            [min(y_test_invertido[:, 2]), max(y_test_invertido[:, 2])], color='blue', linestyle='--', label='Throughput reference line')
+    ax3.set_xlabel('Real Throughput Usage')
+    ax3.set_ylabel('Predicted Throughput')
+    ax3.set_title(f'Throughput Predictions (MSE: {mse_thrpt:.4f}, R²: {r2_thrpt:.4f})')
+    ax3.legend()
+    ax3.grid(True)
 
     # Title
     fig.suptitle(f'{large_name} ({name}) model\nMSE: {mse:.4f}, R²: {r2:.4f}', fontsize=14)
@@ -89,7 +134,6 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     # Save plot
     fig_path = "figures/"
     fig_format = "png"
-    base_name =  f"{dataset_name}_steps-{time_step}"
     full_name, fig_uri = save_figure(plt, fig_path, name, fig_format, base_name)
     
     # Save model
@@ -97,8 +141,6 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     model_uri, size = save_model_switch(full_name, model, model_type, models_path)
     
     # Save info
-    info_models_path = f"models_info_{base_name}.json"
-    info_models_path_csv = f"models_info_{base_name}.csv"
     if model_uri != "none":
         # Save info
         new_model = {
@@ -108,11 +150,14 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             'figure': fig_uri,
             'r2':r2,
             'mse': mse,
-            'r2_cpu':r2_cpu,
-            'r2_mem':r2_mem,
-            'mse_cpu': mse_cpu,
-            'mse_mem': mse_mem,
-            'training_time': training_time,
+            'r2-cpu':r2_cpu,
+            'r2-mem':r2_mem,
+            'r2-thrpt':r2_thrpt,
+            'mse-cpu': mse_cpu,
+            'mse-mem': mse_mem,
+            'mse-thrpt': mse_thrpt,
+            'training-time': training_time,
+            'time-step' : time_steps,
         }
         
         try:
@@ -131,6 +176,8 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
             writer = csv.DictWriter(csv_file, fieldnames=models_info[0].keys())
             writer.writeheader()
             writer.writerows(models_info)
+        
+        
 
     
 def save_figure(plot, fig_path, model_name, format, base_name):
@@ -144,13 +191,12 @@ def save_figure(plot, fig_path, model_name, format, base_name):
     
     return full_name, fig_uri
 
-
-def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
+def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, time_steps, base_name):
     ##################################################################
     ###                   Common configuration                     ###
     ##################################################################
     
-    data_path = f"{dataset_name}.{dataset_ext}"
+    data_path = f"{directory_path}{dataset_name}.{dataset_ext}"
     
     # Load data from a CSV file
     def load_data_from_csv(csv_file):
@@ -160,19 +206,27 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
     # Load dataset from a CSV file
     df = load_data_from_csv(data_path)
     
+    # plt.close("all")
+    # plt.plot(df[cpu_column], label="CPU")
+    # plt.title("CPU usage")
+    # plt.xlabel("Time (minutes)")
+    # plt.ylabel("Cores")
+    # plt.legend()
+    # plt.grid(True)
+    # plt.show()
+    
     # We select the columns that we are going to use for the prediction
-    data_values = df[[cpu_column, mem_column]].values
+    data_values = df[[cpu_column, mem_column, thrpt_column]].values
     # Scale the data between 0 and 1
     scaler = MinMaxScaler(feature_range=(0, 1))
     data_scaled = scaler.fit_transform(data_values) # Comun Dataset
-    time_steps = 13 # Steps
     
-    # Función para crear las secuencias
+    # Create secuences
     def create_sequences_multivariate(data, time_steps):
         X, y = [], []
         for i in range(len(data) - time_steps):
-            X.append(data[i:i + time_steps])  # Seleccionamos las últimas 'time_steps' filas (como secuencia)
-            y.append(data[i + time_steps])  # Valores para predecir
+            X.append(data[i:i + time_steps]) 
+            y.append(data[i + time_steps]) 
         return np.array(X), np.array(y)
     
     X, y = create_sequences_multivariate(data_scaled, time_steps)
@@ -183,30 +237,30 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
     ###                         LSTM, GRU                          ###
     ##################################################################
 
-    if True :
-        # Dividir los datos en entrenamiento (70%) y prueba (30%) de forma secuencial
+    if False :
+        # Split data
         train_size = int(len(X) * 0.7)
         X_train, X_test = X[:train_size], X[train_size:]
         y_train, y_test = y[:train_size], y[train_size:]
 
         # Define the LSTM model
         lstm_model = Sequential()
-        lstm_model.add(LSTM(100, return_sequences=True, input_shape=(time_steps, X.shape[2])))
-        # gru_model.add(Dropout(0.3))
-        lstm_model.add(LSTM(50))
-        lstm_model.add(Dense(2))
+        lstm_model.add(LSTM(64, return_sequences=True, input_shape=(time_steps, X.shape[2])))
+        lstm_model.add(LSTM(32, return_sequences=False))
+        # lstm_model.add(LSTM(50))
+        lstm_model.add(Dense(3))
         lstm_model.compile(optimizer='adam', loss='mse')
         #  Train the model
         start_time = time.time()
-        history = lstm_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+        history = lstm_model.fit(X_train, y_train, epochs=1, batch_size=32, validation_data=(X_test, y_test))
         end_time = time.time()
         training_time_lstm = end_time - start_time
         
         # Defining the GRU model
         gru_model = Sequential()
-        gru_model.add(GRU(100, return_sequences=True, input_shape=(time_steps, X.shape[3])))
-        gru_model.add(GRU(50))
-        gru_model.add(Dense(2)) 
+        gru_model.add(GRU(128, return_sequences=True, input_shape=(time_steps, X.shape[2])))
+        gru_model.add(GRU(64))
+        gru_model.add(Dense(3)) 
         gru_model.compile(optimizer='adam', loss='mse')
         # Train the model
         start_time = time.time()
@@ -226,7 +280,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
             y_test_invertido = scaler.inverse_transform(y_test)
             
             # Plot
-            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_steps, dataset_name)
+            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, base_name, info_models_path, info_models_path_csv, time_steps)
 
             # # Graficar la pérdida durante el entrenamiento
             # plt.figure(figsize=(10, 6))
@@ -241,7 +295,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
     
     
     ##################################################################
-    ### XGBRegressor, RandomForestRegressor, DecisionTreeRegressor ###
+    ###             XGBRegressor, RandomForestRegressor            ###
     ###                    and LinearRegression                    ###
     ##################################################################
 
@@ -249,13 +303,10 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
 
         # Create the models
-        # model = XGBRegressor(n_estimators=1000, max_depth=7, eta=0.1, subsample=0.7, colsample_bytree=0.8)
-        # objective='reg:squarederror'
-        xgb_model = XGBRegressor(n_estimators=100, random_state=42)
-        rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
-        dt_model = DecisionTreeRegressor(random_state=42)
+        xgb_model = XGBRegressor(n_estimators=200, random_state=42)
+        rf_model = RandomForestRegressor(n_estimators=200, random_state=42)
+        # dt_model = DecisionTreeRegressor(random_state=42)
         lr_model = LinearRegression()
-
         # Train the model
         start_time = time.time()
         xgb_model.fit(X_train, y_train)
@@ -267,10 +318,10 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         end_time = time.time()
         training_time_rf = end_time - start_time
         
-        start_time = time.time()
-        dt_model.fit(X_train, y_train)
-        end_time = time.time()
-        training_time_dt = end_time - start_time
+        # start_time = time.time()
+        # dt_model.fit(X_train, y_train)
+        # end_time = time.time()
+        # training_time_dt = end_time - start_time
         
         start_time = time.time()
         lr_model.fit(X_train, y_train)
@@ -278,7 +329,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         training_time_lr = end_time - start_time
 
         # Evaluate the models
-        for model, name, large_name, model_type, training_time in zip([xgb_model, rf_model, dt_model, lr_model], ['XGBoost', 'RF', 'DT', 'LR'], ['Extreme Gradient Boosting', 'Random Forest', 'Decision Tree', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn', 'sklearn'], [training_time_xgb, training_time_rf, training_time_dt, training_time_lr]):
+        for model, name, large_name, model_type, training_time in zip([xgb_model, rf_model, lr_model], ['XGBoost', 'RF', 'LR'], ['eXtreme Gradient Boosting', 'Random Forest', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn'], [training_time_xgb, training_time_rf, training_time_lr]):
             print()
             print(f"MODEL: {large_name}")
 
@@ -289,7 +340,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
             y_test_invertido = scaler.inverse_transform(y_test)
             
             # Plot
-            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, time_steps, dataset_name)
+            plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, base_name, info_models_path, info_models_path_csv, time_steps)
             
         
         
@@ -306,17 +357,16 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
                 y.append(data[i])
             return np.array(X), np.array(y)
         
-        lag = time_steps
-        X, y = create_lagged_features(data_scaled, lag)
+        X, y = create_lagged_features(data_scaled, time_steps)
         
         # Divide the data
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
         
         # Define the MLP model
         mlp_model = Sequential()
-        mlp_model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
-        mlp_model.add(Dense(32, activation='relu'))
-        mlp_model.add(Dense(2))  # Salida para predecir tanto CPU como Memoria
+        mlp_model.add(Dense(128, activation='relu', input_shape=(X_train.shape[1],)))
+        mlp_model.add(Dense(64, activation='relu'))
+        mlp_model.add(Dense(3))  # Salida para predecir tanto CPU como Memoria
         mlp_model.compile(optimizer='adam', loss='mse')
 
         # Train the model
@@ -330,7 +380,7 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         model_type = 'keras'
         large_name = "Multilayer Perceptron"
         print(f"MODEL: {name}")
-        # Make the predictions
+        # Make tdirectory_pathhe predictions
         y_pred = mlp_model.predict(X_test)
         
         # Invert teh data to get the real values
@@ -338,21 +388,48 @@ def ml_model_training(dataset_name, dataset_ext, cpu_column, mem_column):
         y_test_invertido = scaler.inverse_transform(y_test)
         
         # Plot
-        plot_results(y_test_invertido, y_pred_invertido, name, large_name, mlp_model, model_type, training_time_mlp, lag, dataset_name)
+        plot_results(y_test_invertido, y_pred_invertido, name, large_name, mlp_model, model_type, training_time_mlp, base_name, info_models_path, info_models_path_csv, time_steps)
 
 def main():
     print("Ml Model Training")
     
+    if len(sys.argv) != 4:
+        print("Usage: python3 train-models.py <directory-path> <dataset-name> <time-steps>")
+        sys.exit(1)
+
+    # Parameters
+    # print(sys.argv[0], sys.argv[1], sys.argv[2],sys.argv[3])
+    directory_path = sys.argv[1]
+    dataset_name = sys.argv[2]
+    # from_step = int(sys.argv[3])
+    time_steps = int(sys.argv[3])
+    
     # Params
-    # dataset_name = "dataset-old"
-    # dataset_name = "dataset_NF_LOAD_AMF_60s_1733380080_1733399405_200_300_7_2"
-    # dataset_name = "dataset_NF_LOAD_AMF_60s_1733380800_1733416214_150_300_5_4"
-    dataset_name = "dataset_NF_LOAD_AMF_60s_1733446200_1733464830_150_300_5_6"
     dataset_extension = "csv"
     cpu_column = "cpu-average"
     mem_column = "mem-average"
+    thrpt_column = "throughput-average"
+    base_name =  f"{dataset_name}_total-steps-{time_steps}"
+    info_models_path = f"models-info/models_info_{base_name}.json"
+    info_models_path_csv = f"models-info/models_info_{base_name}.csv"
+    
+    delete_files([info_models_path, info_models_path_csv])
+    
+    for i in range(time_steps):
+        current_time_steps = i+1
+        base_name_full =  f"{dataset_name}_total-steps-{current_time_steps}"
         
-    ml_model_training(dataset_name, dataset_extension, cpu_column, mem_column)
+        if current_time_steps > 100:
+            continue
+        
+        print(f"\n######## CURRENT TIMESTEP: {current_time_steps} #############")
+                
+        ml_model_training(directory_path, dataset_name, dataset_extension, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, current_time_steps, base_name_full)
+        
+        create_bar_plots(info_models_path_csv, base_name_full)
+    
+    # Create Heatmap        
+    subprocess.run(["python", "heat_map.py", info_models_path_csv])
 
 if __name__ == "__main__":
     main()

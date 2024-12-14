@@ -1,0 +1,18 @@
+[
+    {
+        "name": "GRU",
+        "uri": "saved_models/model_GRU_dataset_NF_LOAD_AMF_60s_1733807760_1733915795_p1-5_p2-6_total-steps-1.h5",
+        "size": 1105640,
+        "figure": "figures/figure_GRU_dataset_NF_LOAD_AMF_60s_1733807760_1733915795_p1-5_p2-6_total-steps-1.png",
+        "r2": 0.11545916156715648,
+        "mse": 1306.502683360841,
+        "r2-cpu": 0.6305762874641434,
+        "r2-mem": -0.668551294023658,
+        "r2-thrpt": 0.38435249126098314,
+        "mse-cpu": 0.15116429653233873,
+        "mse-mem": 0.028050769741065493,
+        "mse-thrpt": 2262.929022583286,
+        "training-time": 11.098294019699097,
+        "time-step": 1
+    }
+]

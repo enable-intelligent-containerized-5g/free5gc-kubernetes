@@ -10,9 +10,40 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, GRU, Dense, Dropout
+from tensorflow.keras.layers import LSTM, GRU, Dense
 from collections import namedtuple
-from keras.regularizers import l2
+import subprocess
+
+def create_bar_plots(info_models_path_csv, base_name_full):
+    # Load data
+    df = pd.read_csv(info_models_path_csv)
+    # Columns
+    columns = ['size', 'r2', 'mse', 'r2-cpu', 'r2-mem', 'r2-thrpt', 'mse-cpu', 'mse-mem', 'mse-thrpt', 'training-time']
+    # Titles
+    titles = ['Size', 'R2', 'MSE', 'R2 CPU', 'R2 Memory', 'R2 Throughput', 'MSE CPU', 'MSE Memory', 'MSE Throughput', 'Training time']
+    # Create the plots
+    for i, col in enumerate(columns):
+        # Crear una figura
+        plt.close('all')
+        plt.figure(figsize=(10, 6))
+
+        # Graficar la columna específica
+        plt.bar(df['name'], df[col], color='skyblue')
+        plt.title(titles[i])
+        plt.xlabel('Model')
+        plt.ylabel(titles[i])
+
+        # Mostrar la gráfica
+        # plt.show()
+        plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{titles[i]}.png")
+
+def delete_files(file_paths):
+    for file_path in file_paths:
+        if os.path.exists(file_path):  # Verifica si el archivo existe
+            os.remove(file_path)      # Elimina el archivo
+            print(f"File deleted: {file_path}")
+        else:
+            print(f"File dont'n deleted: {file_path}")
 
 def save_model_switch(fig_name, model, model_type, models_path):
     if model_type == 'xgboost':
@@ -174,6 +205,15 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     # Load dataset from a CSV file
     df = load_data_from_csv(data_path)
     
+    # plt.close("all")
+    # plt.plot(df[cpu_column], label="CPU")
+    # plt.title("CPU usage")
+    # plt.xlabel("Time (minutes)")
+    # plt.ylabel("Cores")
+    # plt.legend()
+    # plt.grid(True)
+    # plt.show()
+    
     # We select the columns that we are going to use for the prediction
     data_values = df[[cpu_column, mem_column, thrpt_column]].values
     # Scale the data between 0 and 1
@@ -196,24 +236,11 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ###                         LSTM, GRU                          ###
     ##################################################################
 
-    if False :
+    if True :
         # Split data
         train_size = int(len(X) * 0.7)
         X_train, X_test = X[:train_size], X[train_size:]
         y_train, y_test = y[:train_size], y[train_size:]
-
-        # Define the LSTM model
-        lstm_model = Sequential()
-        lstm_model.add(LSTM(64, return_sequences=True, input_shape=(time_steps, X.shape[2])))
-        lstm_model.add(LSTM(32, return_sequences=False))
-        # lstm_model.add(LSTM(50))
-        lstm_model.add(Dense(3))
-        lstm_model.compile(optimizer='adam', loss='mse')
-        #  Train the model
-        start_time = time.time()
-        history = lstm_model.fit(X_train, y_train, epochs=1, batch_size=32, validation_data=(X_test, y_test))
-        end_time = time.time()
-        training_time_lstm = end_time - start_time
         
         # Defining the GRU model
         gru_model = Sequential()
@@ -221,14 +248,15 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         gru_model.add(GRU(64))
         gru_model.add(Dense(3)) 
         gru_model.compile(optimizer='adam', loss='mse')
-        # Train the model
+        
+        # Train the model GRU
         start_time = time.time()
         history = gru_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
         end_time = time.time()
         training_time_gru = end_time - start_time
         
         #Evaluate the models
-        for model, name, large_name, model_type, training_time in zip([lstm_model, gru_model], ['LSTM', 'GRU'], ['Long Short-Term Memory', 'Gated Recurrent Unit'], ['keras', 'keras'], [training_time_lstm, training_time_gru]):
+        for model, name, large_name, model_type, training_time in zip([gru_model], ['GRU'], ['Gated Recurrent Unit'], ['keras'], [training_time_gru]):
             print()
             print(f"MODEL: {large_name}")
 
@@ -264,10 +292,9 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         # Create the models
         xgb_model = XGBRegressor(n_estimators=200, random_state=42)
         rf_model = RandomForestRegressor(n_estimators=200, random_state=42)
-        # dt_model = DecisionTreeRegressor(random_state=42)
         lr_model = LinearRegression()
-
-        # Train the model
+        
+        # Train the models
         start_time = time.time()
         xgb_model.fit(X_train, y_train)
         end_time = time.time()
@@ -277,11 +304,6 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         rf_model.fit(X_train, y_train)
         end_time = time.time()
         training_time_rf = end_time - start_time
-        
-        # start_time = time.time()
-        # dt_model.fit(X_train, y_train)
-        # end_time = time.time()
-        # training_time_dt = end_time - start_time
         
         start_time = time.time()
         lr_model.fit(X_train, y_train)
@@ -309,7 +331,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ##################################################################
             
     # Create the lags features
-    if False :
+    if True :
         def create_lagged_features(data, lag):
             X, y = [], []
             for i in range(lag, len(data)):
@@ -370,15 +392,12 @@ def main():
     mem_column = "mem-average"
     thrpt_column = "throughput-average"
     base_name =  f"{dataset_name}_total-steps-{time_steps}"
-    info_models_path = f"models-info/models_info_{base_name}.json"
-    info_models_path_csv = f"models-info/models_info_{base_name}.csv"
-    for file_path in [info_models_path, info_models_path_csv]:
-        if os.path.exists(file_path):  # Verifica si el archivo existe
-            os.remove(file_path)      # Elimina el archivo
-            print(f"File deleted: {file_path}")
-        else:
-            print(f"File dont'n deleted: {file_path}")
+    models_info_directory = "models-info/"
+    base_models_file = f"models_info_{base_name}"
+    info_models_path = f"{models_info_directory}{base_models_file}.json"
+    info_models_path_csv = f"{models_info_directory}{base_models_file}.csv"
     
+    delete_files([info_models_path, info_models_path_csv])
     
     for i in range(time_steps):
         current_time_steps = i+1
@@ -391,28 +410,10 @@ def main():
                 
         ml_model_training(directory_path, dataset_name, dataset_extension, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, current_time_steps, base_name_full)
         
-        # Load data
-        df = pd.read_csv(info_models_path_csv)
-        # Columns
-        columns = ['size', 'r2', 'mse', 'r2-cpu', 'r2-mem', 'r2-thrpt', 'mse-cpu', 'mse-mem', 'mse-thrpt', 'training-time']
-        # Titles
-        titles = ['Size', 'R2', 'MSE', 'R2 CPU', 'R2 Memory', 'R2 Throughput', 'MSE CPU', 'MSE Memory', 'MSE Throughput', 'Training time']
-        # Create the plots
-        for i, col in enumerate(columns):
-            # Crear una figura
-            plt.close('all')
-            plt.figure(figsize=(10, 6))
-
-            # Graficar la columna específica
-            plt.bar(df['name'], df[col], color='skyblue')
-            plt.title(titles[i])
-            plt.xlabel('Model')
-            plt.ylabel(titles[i])
-
-            # Mostrar la gráfica
-            # plt.show()
-            plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{titles[i]}.png")
-
+        create_bar_plots(info_models_path_csv, base_name_full)
+    
+    # Create Heatmap        
+    subprocess.run(["python", "heat_map.py", models_info_directory, base_models_file])
 
 if __name__ == "__main__":
     main()
