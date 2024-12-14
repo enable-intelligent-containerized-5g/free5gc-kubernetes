@@ -262,8 +262,8 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
 
         # Create the models
-        xgb_model = XGBRegressor(n_estimators=100, random_state=42)
-        rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+        xgb_model = XGBRegressor(n_estimators=200, random_state=42)
+        rf_model = RandomForestRegressor(n_estimators=200, random_state=42)
         # dt_model = DecisionTreeRegressor(random_state=42)
         lr_model = LinearRegression()
 
@@ -289,7 +289,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         training_time_lr = end_time - start_time
 
         # Evaluate the models
-        for model, name, large_name, model_type, training_time in zip([xgb_model, rf_model, lr_model], ['XGBoost', 'RF', 'LR'], ['Extreme Gradient Boosting', 'Random Forest', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn'], [training_time_xgb, training_time_rf, training_time_lr]):
+        for model, name, large_name, model_type, training_time in zip([xgb_model, rf_model, lr_model], ['XGBoost', 'RF', 'LR'], ['eXtreme Gradient Boosting', 'Random Forest', 'Linear Regression'], ['xgboost', 'sklearn', 'sklearn'], [training_time_xgb, training_time_rf, training_time_lr]):
             print()
             print(f"MODEL: {large_name}")
 
@@ -411,7 +411,7 @@ def main():
 
             # Mostrar la gráfica
             # plt.show()
-            plt.savefig(f"figures-comparation/figure-comparation_{base_name}_metric-{titles[i]}.png")
+            plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{titles[i]}.png")
 
 
 if __name__ == "__main__":
