@@ -14,28 +14,49 @@ from tensorflow.keras.layers import LSTM, GRU, Dense
 from collections import namedtuple
 import subprocess
 
-def create_bar_plots(info_models_path_csv, base_name_full):
+def plot_dataset(data, title, label, xlabel, ylabel, fig_name):
+    plt.close("all")
+    plt.plot(data, label=label, color="red")
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.legend()
+    plt.grid(True)
+    plt.savefig(f"figures-dataset/{fig_name}.pdf", bbox_inches='tight', pad_inches=0.05)
+
+def create_bar_plots(info_models_path_csv, base_name_full, time_step):
     # Load data
     df = pd.read_csv(info_models_path_csv)
-    # Columns
-    columns = ['size', 'r2', 'mse', 'r2-cpu', 'r2-mem', 'r2-thrpt', 'mse-cpu', 'mse-mem', 'mse-thrpt', 'training-time']
-    # Titles
-    titles = ['Size', 'R2', 'MSE', 'R2 CPU', 'R2 Memory', 'R2 Throughput', 'MSE CPU', 'MSE Memory', 'MSE Throughput', 'Training time']
+    df_filtered = df[df['time-step'] == time_step]
+    # Create the structure
+    metrics_structure = [
+        {'column': 'size', 'title': 'Size', 'unit': 'Bytes', 'decimals': 0},
+        {'column': 'r2', 'title': 'R2', 'unit': 'R2', 'decimals': 3},
+        {'column': 'mse', 'title': 'MSE', 'unit': 'MSE', 'decimals': 2},
+        {'column': 'r2-cpu', 'title': 'R2 CPU', 'unit': 'R2 CPU', 'decimals': 3},
+        {'column': 'r2-mem', 'title': 'R2 Memory', 'unit': 'R2 Memory', 'decimals': 3},
+        {'column': 'r2-thrpt', 'title': 'R2 Throughput', 'unit': 'R2 Throughput', 'decimals': 2},
+        {'column': 'mse-cpu', 'title': 'MSE CPU', 'unit': 'CPU usage (%)', 'decimals': 8},
+        {'column': 'mse-mem', 'title': 'MSE Memory', 'unit': 'Memory usage (%)', 'decimals': 8},
+        {'column': 'mse-thrpt', 'title': 'MSE Throughput', 'unit': 'Bytes/s', 'decimals': 2},
+        {'column': 'training-time', 'title': 'Training time', 'unit': 'Seconds', 'decimals': 4}
+    ]
+    
     # Create the plots
-    for i, col in enumerate(columns):
+    for metric in metrics_structure:
         # Crear una figura
         plt.close('all')
         plt.figure(figsize=(10, 6))
 
         # Graficar la columna específica
-        plt.bar(df['name'], df[col], color='skyblue')
-        plt.title(titles[i])
+        plt.bar(df_filtered['name'], df_filtered[metric['column']], color="#0000A3")
+        plt.title(f"{metric['title']} comparison")
         plt.xlabel('Model')
-        plt.ylabel(titles[i])
+        plt.ylabel(metric['unit'])
 
-        # Mostrar la gráfica
+        # Save the figure
         # plt.show()
-        plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{titles[i]}.png")
+        plt.savefig(f"figures-comparation/figure-comparation_{base_name_full}_metric-{metric['column']}.pdf", bbox_inches='tight', pad_inches=0.05)
 
 def delete_files(file_paths):
     for file_path in file_paths:
@@ -132,7 +153,7 @@ def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, mo
     
     # Save plot
     fig_path = "figures/"
-    fig_format = "png"
+    fig_format = "pdf"
     full_name, fig_uri = save_figure(plt, fig_path, name, fig_format, base_name)
     
     # Save model
@@ -205,14 +226,11 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     # Load dataset from a CSV file
     df = load_data_from_csv(data_path)
     
-    # plt.close("all")
-    # plt.plot(df[cpu_column], label="CPU")
-    # plt.title("CPU usage")
-    # plt.xlabel("Time (minutes)")
-    # plt.ylabel("Cores")
-    # plt.legend()
-    # plt.grid(True)
-    # plt.show()
+    # Plot database
+    if time_steps == 1:
+        plot_dataset(df[cpu_column], "CPU data", "CPU", "Time (minutes)", "CPU usage (%)", f"{dataset_name}_{cpu_column}")
+        plot_dataset(df[mem_column], "Memory data", "Memory", "Time (minutes)", "Memory usage (%)", f"{dataset_name}_{mem_column}")
+        plot_dataset(df[thrpt_column], "Throughput data", "Throughput", "Time (minutes)", "Bytes/s", f"{dataset_name}_{thrpt_column}")
     
     # We select the columns that we are going to use for the prediction
     data_values = df[[cpu_column, mem_column, thrpt_column]].values
@@ -410,7 +428,7 @@ def main():
                 
         ml_model_training(directory_path, dataset_name, dataset_extension, info_models_path, info_models_path_csv, cpu_column, mem_column, thrpt_column, current_time_steps, base_name_full)
         
-        create_bar_plots(info_models_path_csv, base_name_full)
+        create_bar_plots(info_models_path_csv, base_name_full, current_time_steps)
     
     # Create Heatmap        
     subprocess.run(["python", "heat_map.py", models_info_directory, base_models_file])

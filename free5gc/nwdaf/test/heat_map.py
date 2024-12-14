@@ -58,7 +58,7 @@ def main():
         plt.ylabel('Time sequence length')
         # Save the plot
         # plt.show()
-        plt.savefig(f"figures-heat-map/figure_{info_file_name}_metric-{metric_column}.png", bbox_inches='tight', pad_inches=0.01)
+        plt.savefig(f"figures-heat-map/figure_{info_file_name}_metric-{metric_column}.png", bbox_inches='tight', pad_inches=0.05)
        
 if __name__ == "__main__":
     main()
