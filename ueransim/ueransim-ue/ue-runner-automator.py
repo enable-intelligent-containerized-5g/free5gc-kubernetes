@@ -23,9 +23,9 @@ def plot_graph(x, y, scale, name):
     plt.figure(figsize=(10, 6)) # Initialize the figure
     
     # Personalizar la gráfica
-    plt.plot(x, y, label=f"p2={p}")
+    plt.plot(x, y, label=f"p2={p2}", marker="o")
     plt.title("Sintetic trafic", fontsize=14)
-    plt.xlabel(f"Time (x{scale/60} Minutes)", fontsize=12)
+    plt.xlabel(f"Period of time (x{scale/60} Minutes)", fontsize=12)
     plt.ylabel("Number of UEs", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.7)
     plt.axhline(0, color="black", linewidth=0.8)
@@ -37,139 +37,136 @@ def plot_graph(x, y, scale, name):
     plt.savefig(f"sintetic_trafic_{name}.png", dpi=300)  
     
 
-if len(sys.argv) != 3:
-    print("Use: python3 run-ues.py <num-ues> <period>")
+if len(sys.argv) != 5:
+    print("Use: python3 run-ues.py <num-ues> <p1> <p2> <time>")
     sys.exit(1)
 
 # Params
 n  = int(sys.argv[1])
+total_time = int(sys.argv[2])
+p1 = int(sys.argv[3])
+p2 = int(sys.argv[4])
+perions = [p2]
 a1 = n/4 # Amplitude 1
 a2 = n/4 # Amplitude 2
-p1 = int(sys.argv[2]) # Period 1
-p2 = 5 # Period 2 
-# p3 = 7 # Period 3
-periods = [p1]
-mcm_list = []
-for p in periods:
-    mcm = abs(p*p2) // math.gcd(p, p2)
-    mcm_list.append(mcm)
+# mcm = abs(p1*p2) // math.gcd(p1, p2)
+mcm = total_time
 
 # Function
-points = 6
-scale = 1500 # In seconds
+points = 10
+scale = 180 # In seconds
 
-seconds_general = p2*sum(periods)*scale
-minutes_g, seconds_g = get_minutes(seconds_general) 
-print(f"Total time required: {minutes_g}:{seconds_g} minutes\n")
+# mnc = min(mcm_list)
+points_total = mcm*points
 
-for tp, p in enumerate(periods):
-    print(f"\n##### ({percentil(tp+1, len(periods))}%) UE runner automator with P2: {p} and {n} Pods #####\n")
+# Time values
+x = np.linspace(0, mcm, mcm*points)
+# Calulate the sintetic trafic
+y = a1 * np.sin((x * 2 * np.pi) / p1) + a2 * \
+    np.sin((x * 2 * np.pi) / p2) + (a1+a2)
 
-    mnc = min(mcm_list)
-    points_total = mcm*points
+seconds_total = len(x)*scale/points
+minutes, seconds = get_minutes(seconds_total) 
+print(f"Time required: {minutes}:{seconds} minutes\n")
     
-    # Time values
-    x = np.linspace(0, mcm, mcm*points)
-    # Calulate the sintetic trafic
-    y = a1 * np.sin((x * 2 * np.pi) / p) + a2 * \
-        np.sin((x * 2 * np.pi) / p2) + (a1+a2)
+y_size = len(y)
 
-    seconds_total = len(x)*scale/points
-    minutes, seconds = get_minutes(seconds_total) 
-    print(f"Time required: {minutes}:{seconds} minutes\n")
-      
-    y_size = len(y)
+prefix_name = f"ue-{n}_p1-{p1}_p2-{p2}_scale-{scale}_time-{total_time}"
+plot_graph(x, y, scale, prefix_name)
+
+# Variables iniciales
+ue_prefix = "automator-ue"
+y_value_previous = 0 
+
+# Apply the resources
+try:
+    subprocess.run(["kubectl", "apply", "-k", "resources",
+                    "-n", "free5gc"], check=True)
+except subprocess.CalledProcessError as e:
+    print("Error applying the initial config:", e)
+    sys.exit(1)
     
-    prefix_name = f"{p}_{p2}_{scale}_{points}"
-    plot_graph(x, y, scale, prefix_name)
+init_state = 0
 
-    # Variables iniciales
-    ue_prefix = "automator-ue"
+# Loop for Y values
+for t, y_value in enumerate(y):
     wait_time = (points_total*scale)/(points*y_size-1)
-    y_value_previous = 0 
-    print(f"Wait time: {wait_time} seconds\n")
-
-    # Apply the resources
-    try:
-        subprocess.run(["kubectl", "apply", "-k", "resources",
-                       "-n", "free5gc"], check=True)
-    except subprocess.CalledProcessError as e:
-        print("Error al aplicar la configuración inicial de Kubernetes:", e)
-        sys.exit(1)
+    
+    seconds_partial = x[t]*scale
+    minutes_p, seconds_p = get_minutes(seconds_partial) 
+    
+    y_value = math.ceil(y_value)  # Redondear número de pods
+    start_time = time.time()
+    
+    y_value_dif = abs(y_value_previous - y_value)
+    wait_time_sub = wait_time
+    if y_value_dif != 0:
+        wait_time_sub = wait_time/y_value_dif # |a b c d e|
+    if init_state == 0:  # En el  ciclo, crear los pods iniciales
+        wait_time_sub = 0
+        wait_time = wait_time_sub*y_value_dif 
         
-    init_state = 0
-
-    # Loop for Y values
-    for t, y_value in enumerate(y):
-        seconds_partial = x[t]*scale
-        minutes_p, seconds_p = get_minutes(seconds_partial) 
-        print(f"\n--------Progress: {percentil(t, y_size-1)}%, Time: {minutes_p}:{seconds_p} minutes. (Wait: {wait_time} seconds)")
-        
-        y_value = math.ceil(y_value)  # Redondear número de pods
-        start_time = time.time()
-        
-        y_value_dif = abs(y_value_previous - y_value)
-        wait_time_sub = wait_time
-        if y_value_dif != 0:
-            wait_time_sub = wait_time/y_value_dif # |a b c d e|    
+    print(f"\n--------Progress: {percentil(t, y_size-1)}%, Time: {minutes_p}:{seconds_p} minutes. (Wait: {wait_time} seconds)")
+    
+    if init_state == 0:  # En el  ciclo, crear los pods iniciales
         print(f"Dif: {wait_time_sub} seconds")
+            
+        print(f"Initializing with {y_value} pods...")
+        for ue in range(1, y_value + 1):
+            start_time2 = time.time()
+            
+            actual_user = ue_prefix+f"{ue}"
+            comand = ["kubectl", "apply", "-k",
+                        actual_user, "-n", "free5gc"]
+            try:
+                subprocess.run(comand, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Error applying pod {actual_user}:", e)
+            
+            end_time2 = time.time()
+            execute_wait_time(start_time2, end_time2, wait_time_sub)
         
-        if init_state == 0:  # En el  ciclo, crear los pods iniciales
-            print(f"Initializing with {y_value} pods...")
-            for ue in range(1, y_value + 1):
+        init_state = 1                
+        
+    else:
+        print(f"Dif: {wait_time_sub} seconds")
+        if y_value > y_value_previous:  # Escalar hacia arriba
+            print(f"Scaling from {y_value_previous} to {y_value} pods...")
+            for ue in range(y_value_previous + 1, y_value + 1):
                 start_time2 = time.time()
                 
-                actual_user = ue_prefix+f"{ue}"
+                actual_user = ue_prefix + f"{ue}"
                 comand = ["kubectl", "apply", "-k",
                             actual_user, "-n", "free5gc"]
                 try:
                     subprocess.run(comand, check=True)
                 except subprocess.CalledProcessError as e:
-                    print(f"Error applying pod {actual_user}:", e)
+                    print(f"Error creating pod {actual_user}:", e)
                 
                 end_time2 = time.time()
                 execute_wait_time(start_time2, end_time2, wait_time_sub)
-            
-            init_state = 1                
+                    
+        elif y_value < y_value_previous:  # Escalar hacia abajo
+            print(f"Scaling from {y_value_previous} to {y_value} pods...")
+            for ue in range(y_value + 1, y_value_previous + 1):
+                start_time2 = time.time()
+                
+                actual_user = ue_prefix + f"{ue}"
+                comand = ["kubectl", "delete", "-k",
+                            actual_user, "-n", "free5gc"]
+                try:
+                    subprocess.run(comand, check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error deleting pod {actual_user}:", e)
+                    
+                end_time2 = time.time()
+                execute_wait_time(start_time2, end_time2, wait_time_sub)
             
         else:
-            if y_value > y_value_previous:  # Escalar hacia arriba
-                print(f"Scaling from {y_value_previous} to {y_value} pods...")
-                for ue in range(y_value_previous + 1, y_value + 1):
-                    start_time2 = time.time()
-                    
-                    actual_user = ue_prefix + f"{ue}"
-                    comand = ["kubectl", "apply", "-k",
-                                actual_user, "-n", "free5gc"]
-                    try:
-                        subprocess.run(comand, check=True)
-                    except subprocess.CalledProcessError as e:
-                        print(f"Error creating pod {actual_user}:", e)
-                    
-                    end_time2 = time.time()
-                    execute_wait_time(start_time2, end_time2, wait_time_sub)
-                        
-            elif y_value < y_value_previous:  # Escalar hacia abajo
-                print(f"Scaling from {y_value_previous} to {y_value} pods...")
-                for ue in range(y_value + 1, y_value_previous + 1):
-                    start_time2 = time.time()
-                    
-                    actual_user = ue_prefix + f"{ue}"
-                    comand = ["kubectl", "delete", "-k",
-                                actual_user, "-n", "free5gc"]
-                    try:
-                        subprocess.run(comand, check=True)
-                    except subprocess.CalledProcessError as e:
-                        print(f"Error deleting pod {actual_user}:", e)
-                        
-                    end_time2 = time.time()
-                    execute_wait_time(start_time2, end_time2, wait_time_sub)
-                
-            else:
-                print(f"Scaling from {y_value_previous} to {y_value} pods...")
+            print(f"Scaling from {y_value_previous} to {y_value} pods...")
 
 
-        end_time = time.time()  # Save the end time
-        execute_wait_time(start_time, end_time, wait_time)
-                
-        y_value_previous = y_value
+    end_time = time.time()  # Save the end time
+    execute_wait_time(start_time, end_time, wait_time)
+            
+    y_value_previous = y_value
