@@ -11,52 +11,54 @@ from matplotlib.cm import ScalarMappable
 def get_averages(df, metric_structure, info_file_name):
     # Seleccionar las columnas de métricas
     columns_to_plot = [metric['column'] for metric in metric_structure]
-    # columns_to_plot = ["r2", "mse", "r2-cpu", "r2-mem", "r2-thrpt", "mse-cpu", "mse-mem", "mse-thrpt"]
 
     # Calcular los promedios agrupados por modelo
     averages = df.groupby("name")[columns_to_plot].mean()
 
     # Crear un gráfico por cada métrica
     for metric in metric_structure:
-        plt.close('all')
-        plt.figure(figsize=(10, 6))
-        metric_decimals = metric['decimals']
-        position = 2
+        # Crear figura y ejes
+        fig, ax = plt.subplots(figsize=(10, 6))
 
         # Normalización para el colormap
         norm = Normalize(vmin=averages[metric['column']].min(), vmax=averages[metric['column']].max())
-        cmap = plt.cm.RdYlGn
-        if metric['trend'] == 'descending':
-            cmap = plt.cm.RdYlGn_r
+        cmap = plt.cm.RdYlGn if metric['trend'] != 'descending' else plt.cm.RdYlGn_r
 
         # Graficar barras
         colors = [cmap(norm(value)) for value in averages[metric['column']]]
-        bars = plt.bar(averages.index, 
-                       averages[metric['column']], 
-                       color=colors, 
-                       edgecolor="black")
+        bars = ax.bar(
+            averages.index, 
+            averages[metric['column']], 
+            color=colors, 
+            edgecolor="black"
+        )
+
+        # Añadir etiquetas a las barras
         for bar in bars:
-            height = bar.get_height() / position
-            plt.text(
-                bar.get_x() + bar.get_width() / 2,  # Posición horizontal (centro de la barra)
-                height,  # Posición vertical (altura de la barra)
-                f"{height*position:.{metric_decimals}f}",  # Texto con dos decimales
-                ha='center', va='bottom', fontsize=12, color='black'  # Estilo del texto
+            height = bar.get_height()
+            ax.text(
+                bar.get_x() + bar.get_width() / 2, 
+                height, 
+                f"{height:.{metric['decimals']}f}", 
+                ha='center', va='bottom', fontsize=12, color='black'
             )
+
         # Añadir título y etiquetas
-        plt.title(f"Average {metric['title']} by model", fontsize=14)
-        plt.xlabel("Model", fontsize=12)
-        plt.ylabel(metric['unit'], fontsize=12)
-        
+        ax.set_title(f"Average {metric['title']} by model", fontsize=14)
+        ax.set_xlabel("Model", fontsize=12)
+        ax.set_ylabel(metric['unit'], fontsize=12)
+
         # Añadir barra de color
         sm = ScalarMappable(cmap=cmap, norm=norm)
-        sm.set_array([])
-        cbar = plt.colorbar(sm)
+        sm.set_array([])  # Asociar datos al ScalarMappable
+        cbar = plt.colorbar(sm, ax=ax)
+        cbar.set_label(metric['unit'], fontsize=12)
 
-        # Mostrar el gráfico
+        # Ajustar el diseño y guardar la figura
         plt.tight_layout()
-        # plt.show()
-        plt.savefig(f"figures-average/figure_{info_file_name}_metric-{metric['column']}.pdf", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"figures-average/figure_{info_file_name}_metric-{metric['column']}.pdf", 
+                    bbox_inches='tight', pad_inches=0.05)
+        plt.close(fig)  # Cerrar la figura para liberar memoria
 
 def custom_fmt(val, decimals):
     if val == 0:
