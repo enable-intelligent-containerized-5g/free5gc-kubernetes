@@ -256,9 +256,21 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
 
     if True :
         # Split data
-        train_size = int(len(X) * 0.7)
-        X_train, X_test = X[:train_size], X[train_size:]
-        y_train, y_test = y[:train_size], y[train_size:]
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        
+        # Define the LSTM model
+        lstm_model = Sequential()
+        lstm_model.add(LSTM(128, return_sequences=True, input_shape=(time_steps, X.shape[2])))
+        lstm_model.add(LSTM(64, return_sequences=False))
+        # lstm_model.add(LSTM(50))
+        lstm_model.add(Dense(3))
+        lstm_model.compile(optimizer='adam', loss='mse')
+        
+        #  Train the model
+        start_time = time.time()
+        history = lstm_model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
+        end_time = time.time()
+        training_time_lstm = end_time - start_time
         
         # Defining the GRU model
         gru_model = Sequential()
@@ -267,14 +279,15 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         gru_model.add(Dense(3)) 
         gru_model.compile(optimizer='adam', loss='mse')
         
-        # Train the model GRU
+        # Train the model
         start_time = time.time()
         history = gru_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
         end_time = time.time()
         training_time_gru = end_time - start_time
         
         #Evaluate the models
-        for model, name, large_name, model_type, training_time in zip([gru_model], ['GRU'], ['Gated Recurrent Unit'], ['keras'], [training_time_gru]):
+        # for model, name, large_name, model_type, training_time in zip([gru_model], ['GRU'], ['Gated Recurrent Unit'], ['keras'], [training_time_gru]):
+        for model, name, large_name, model_type, training_time in zip([lstm_model, gru_model], ['LSTM', 'GRU'], ['Long Short-Term Memory', 'Gated Recurrent Unit'], ['keras', 'keras'], [training_time_lstm, training_time_gru]):
             print()
             print(f"MODEL: {large_name}")
 
