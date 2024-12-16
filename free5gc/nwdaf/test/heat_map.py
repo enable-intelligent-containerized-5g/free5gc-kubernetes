@@ -8,7 +8,7 @@ from matplotlib.colors import LogNorm
 from matplotlib.colors import Normalize
 from matplotlib.cm import ScalarMappable
 
-def get_averages(df, metric_structure, info_file_name):
+def plot_averages(df, metric_structure, info_file_name):
     # Seleccionar las columnas de métricas
     columns_to_plot = [metric['column'] for metric in metric_structure]
 
@@ -18,6 +18,7 @@ def get_averages(df, metric_structure, info_file_name):
     # Crear un gráfico por cada métrica
     for metric in metric_structure:
         # Crear figura y ejes
+        plt.close('all')
         fig, ax = plt.subplots(figsize=(10, 6))
 
         # Normalización para el colormap
@@ -88,7 +89,7 @@ def main():
     metrics_structure = [
         {'column': 'size', 'title': 'Size', 'trend': 'descending', 'decimals': 0, 'unit': 'Bytes'},
         {'column': 'r2', 'title': 'R2', 'trend': 'ascending', 'decimals': 3, 'unit': 'R2'},
-        {'column': 'mse', 'title': 'RMSE', 'trend': 'descending', 'decimals': 2, 'unit': 'MSE'},
+        {'column': 'mse', 'title': 'RMSE', 'trend': 'descending', 'decimals': 2, 'unit': 'RMSE'},
         {'column': 'r2-cpu', 'title': 'R2 CPU', 'trend': 'ascending', 'decimals': 3, 'unit': 'R2 CPU'},
         {'column': 'r2-mem', 'title': 'R2 Memory', 'trend': 'ascending', 'decimals': 3, 'unit': 'R2 Memory'},
         {'column': 'r2-thrpt', 'title': 'R2 Throughput', 'trend': 'ascending', 'decimals': 3, 'unit': 'R2 Throughput'},
@@ -98,7 +99,20 @@ def main():
         {'column': 'training-time', 'title': 'Training time', 'trend': 'descending', 'decimals': 4, 'unit': 'Seconds'}
     ]
 
-    get_averages(df, metrics_structure, info_file_name)
+    plot_averages(df, metrics_structure, info_file_name)
+    
+    plt.close('all')
+    df['rolling_mse'] = df.groupby('name')['mse'].transform(lambda x: x.rolling(window=2, min_periods=1).mean())
+
+    # Graficando
+    sns.lineplot(data=df, x="time-step", y="rolling_mse", hue="name", marker="o")
+
+    plt.title("Tendencia Suavizada (Promedio Móvil) por Modelo", fontsize=16)
+    plt.xlabel("Time-Step", fontsize=14)
+    plt.ylabel("MSE (Promedio Móvil)", fontsize=14)
+    plt.legend(title="Modelo")
+    plt.show()
+    plt.show()
     
 
     for metric in metrics_structure:
