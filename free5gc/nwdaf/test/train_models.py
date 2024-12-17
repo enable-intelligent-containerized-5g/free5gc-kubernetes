@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from xgboost import XGBRegressor
-from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -13,6 +12,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, GRU, Dense
 from collections import namedtuple
 import subprocess
+from sklearn.model_selection import GridSearchCV
 
 def plot_dataset(data, title, label, xlabel, ylabel, fig_name):
     plt.close("all")
@@ -95,6 +95,7 @@ def save_model_switch(fig_name, model, model_type, models_path):
         return "none", 0
 
 def plot_results(y_test_invertido, y_pred_invertido, name, large_name, model, model_type, training_time, base_name, info_models_path, info_models_path_csv, time_steps):
+    print(f'Timestep: {time_steps}')
     # Evaluate the model
     mse = np.sqrt(mean_squared_error(y_test_invertido, y_pred_invertido))
     r2 = r2_score(y_test_invertido, y_pred_invertido)
@@ -256,7 +257,8 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
 
     if True :
         # Split data
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42)
+        X_test, X_val, y_test, y_val = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
         
         # Define the LSTM model
         lstm_model = Sequential()
@@ -268,7 +270,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         
         #  Train the model
         start_time = time.time()
-        history = lstm_model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
+        history = lstm_model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_val, y_val))
         end_time = time.time()
         training_time_lstm = end_time - start_time
         
@@ -281,7 +283,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         
         # Train the model
         start_time = time.time()
-        history = gru_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+        history = gru_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_val, y_val))
         end_time = time.time()
         training_time_gru = end_time - start_time
         
@@ -318,7 +320,19 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
     ##################################################################
 
     if True :
-        X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.3, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X.reshape(X.shape[0], -1), y, test_size=0.30, random_state=42)
+
+        # rf = RandomForestRegressor()
+        # param_grid = {
+        #     'n_estimators': [100, 200, 500],
+        #     'max_depth': [5, 10, 15],
+        #     'min_samples_split': [2, 5, 10]
+        # }
+        # # Realizar una búsqueda en cuadrícula
+        # grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5)
+        # grid_search.fit(X_train, y_train)
+        # best_params = grid_search.best_params_
+        # print(best_params)
 
         # Create the models
         xgb_model = XGBRegressor(n_estimators=100, random_state=42)
@@ -373,7 +387,8 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
         X, y = create_lagged_features(data_scaled, time_steps)
         
         # Divide the data
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42)
+        X_test, X_val, y_test, y_val = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
         
         # Define the MLP model
         mlp_model = Sequential()
@@ -384,7 +399,7 @@ def ml_model_training(directory_path, dataset_name, dataset_ext, info_models_pat
 
         # Train the model
         start_time = time.time()
-        history = mlp_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_split=0.2)
+        history = mlp_model.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_val, y_val))
         end_time = time.time()
         training_time_mlp = end_time - start_time
 

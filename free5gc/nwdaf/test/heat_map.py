@@ -101,18 +101,16 @@ def main():
 
     plot_averages(df, metrics_structure, info_file_name)
     
-    plt.close('all')
-    df['rolling_mse'] = df.groupby('name')['mse'].transform(lambda x: x.rolling(window=2, min_periods=1).mean())
-
-    # Graficando
-    sns.lineplot(data=df, x="time-step", y="rolling_mse", hue="name", marker="o")
-
-    plt.title("Tendencia Suavizada (Promedio Móvil) por Modelo", fontsize=16)
-    plt.xlabel("Time-Step", fontsize=14)
-    plt.ylabel("MSE (Promedio Móvil)", fontsize=14)
-    plt.legend(title="Modelo")
-    plt.show()
-    plt.show()
+    # plt.close('all')
+    # df['rolling_mse'] = df.groupby('name')['mse'].transform(lambda x: x.rolling(window=2, min_periods=1).mean())
+    # # Graficando
+    # sns.lineplot(data=df, x="time-step", y="rolling_mse", hue="name", marker="o")
+    # plt.title("Tendencia Suavizada (Promedio Móvil) por Modelo", fontsize=16)
+    # plt.xlabel("Time-Step", fontsize=14)
+    # plt.ylabel("MSE (Promedio Móvil)", fontsize=14)
+    # plt.legend(title="Modelo")
+    # plt.show()
+    # plt.show()
     
 
     for metric in metrics_structure:
