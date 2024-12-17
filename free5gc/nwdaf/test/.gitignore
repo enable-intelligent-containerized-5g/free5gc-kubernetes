@@ -1,0 +1,2 @@
+parallel-logs/*
+!parallel-logs/.gitkeep
