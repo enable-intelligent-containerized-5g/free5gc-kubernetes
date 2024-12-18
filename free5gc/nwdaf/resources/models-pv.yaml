@@ -14,7 +14,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: manual
   hostPath:
-    # path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-kubernetes/free5gc/nwdaf/models/"
+    path: "/home/jnicolaschc/Development/TrabajoGrado_restored/free5gc-kubernetes/free5gc/nwdaf/models/"
     # path: "/vagrant-data/free5gc-kubernetes/free5gc/nwdaf/models/" 
-    path: "/home/edier/Tesis/5g-monarch2/free5gc-kubernetes/free5gc/nwdaf/models/"
+    # path: "/home/edier/Tesis/5g-monarch2/free5gc-kubernetes/free5gc/nwdaf/models/"
     type: Directory
