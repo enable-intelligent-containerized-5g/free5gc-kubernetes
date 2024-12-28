@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: free5gc-nwdaf-api-client
+  labels:
+    app: free5gc
+    name: nwdaf-api-client
+spec:
+  selector:
+    matchLabels:
+      app: free5gc
+      name: nwdaf-api-client
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: free5gc
+        name: nwdaf-api-client
+    spec:
+      initContainers:
+        - name: wait-nwdaf-anlf
+          image: busybox:1.32.0
+          env:
+            - name: DEPENDENCIES
+              value: anlf-nanlf:8000
+          command:
+            [ "sh", "-c", "until nc -z $DEPENDENCIES; do echo waiting for the MTLF; sleep 2; done;",]
+      containers:
+        - image: edierbra/nwdaf-api-client:v1.0.2
+          imagePullPolicy: Always
+          name: nwdaf-api-client
+          ports:
+            - containerPort: 3000
+          # Run the apk
+          command: ["npx", "serve", "-s", "dist", "-l", "3000"]
+          volumeMounts:
+            - name: nwdaf-api-client-volume
+              mountPath: /free5gc/dist/config/apiclientcfg.yaml
+              subPath: apiclientcfg.yaml
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - name: nwdaf-api-client-volume
+          configMap:
+            name: nwdaf-api-client-configmap
+            items:
+              - key: apiclientcfg.yaml
+                path: apiclientcfg.yaml 

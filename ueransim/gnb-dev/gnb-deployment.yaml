@@ -1,0 +1,70 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ueransim-gnb-dev
+  labels:
+    app: ueransim
+    component: gnb
+    name: gnb-dev
+spec:
+  selector:
+    matchLabels:
+      app: ueransim
+      component: gnb
+      name: gnb-dev
+  replicas: 
+  template:
+    metadata:
+      labels:
+        app: ueransim
+        component: gnb
+        name: gnb-dev
+      annotations:
+        k8s.v1.cni.cncf.io/networks: '[
+          { "name": "n2network", "interface": "n2", "ips": [ "10.10.2.22/24" ] },
+          { "name": "n3network", "interface": "n3", "ips": [ "10.10.3.22/24" ] }
+          ]'
+    spec:
+      containers:
+      - image: edierbra/ueransim:v3.2.6
+        name: gnb-dev
+        ports:
+        - name: gnb-ue
+          containerPort: 4997
+          protocol: UDP
+        securityContext:
+          capabilities:
+            add: ["NET_ADMIN"]
+          privileged: true
+        command: [ "/ueransim/config/wrapper.sh" ]
+        volumeMounts:
+        - mountPath: /ueransim/config
+          name: gnb-dev-volume
+        - mountPath: /ueransim/build
+          name: ueransim-volume
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: gnb-dev-volume
+        configMap:
+          name: gnb-dev-configmap
+          items:
+          - key: free5gc-gnb.yaml
+            path: free5gc-gnb.yaml
+          - key: wrapper.sh
+            path: wrapper.sh
+            mode: 0777
+          - key: iptables.sh
+            path: iptables.sh
+            mode: 0777
+      - name: ueransim-volume
+        persistentVolumeClaim:
+          claimName: ueransim-volume-claim

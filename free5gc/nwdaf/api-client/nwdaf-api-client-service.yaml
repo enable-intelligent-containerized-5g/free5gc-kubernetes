@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nwdaf-api-client
+  labels:
+    app: free5gc
+    name: nwdaf-api-client
+spec:
+  type: NodePort
+  ports:
+    - name: nwdaf-api-client
+      port: 3000
+      nodePort: 30030
+  selector:
+    app: free5gc
+    name: nwdaf-api-client
+    

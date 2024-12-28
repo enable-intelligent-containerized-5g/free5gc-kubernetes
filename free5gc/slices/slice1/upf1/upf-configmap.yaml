@@ -46,5 +46,4 @@ data:
     iptables -A FORWARD -j ACCEPT
     iptables -t nat -A POSTROUTING -s 10.1.0.0/16 -o eth0 -j MASQUERADE  # route traffic comming from the UE SUBNET to the interface N6    
 
-    cd ./src/NFs/upf
-    /bin/sh -c air
+    ./upf --config config/upfcfg.yaml

@@ -1,0 +1,3 @@
+resources:
+- models-pv.yaml
+- models-pvc.yaml

@@ -45,8 +45,4 @@ data:
   wrapper.sh: |
     #!/bin/bash
 
-    # Cambiar al directorio deseado
-    cd /free5gc/src/NFs/nwdaf-anlf/ || { echo "Directorio no encontrado"; exit 1; }
-
-    # Run anlf
-    air cmd/main.go
+    ./nwdaf-anlf --config config/nwdafcfg-anlf.yaml

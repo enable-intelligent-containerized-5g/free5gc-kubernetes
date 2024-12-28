@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nwdaf-api-client-configmap
+  labels:
+    app: free5gc
+data:
+  apiclientcfg.yaml: | # Don't change this value
+    # Only nodePort values
+    nwdafAnlfUri: http://127.0.0.1:30080
+    nwdafMtlfUri: http://127.0.0.1:30081
+    # nwdafAnlfUri: http://127.0.0.1:4203
+    # nwdafMtlfUri: http://127.0.0.1:4202
+

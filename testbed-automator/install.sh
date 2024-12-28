@@ -172,7 +172,8 @@ install-cni() {
 		cecho "YELLOW" "Flannel is already running. Skipping installation."
 	else
 		cecho "GREEN" "Installing Flannel as primary CNI ..."
-		kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+		# kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+		kubectl apply -f kube-flannel.yaml
 		timer-sec 60
 		kubectl wait pods -n kube-flannel -l app=flannel --for condition=Ready --timeout=120s
 	fi
@@ -184,9 +185,10 @@ install-multus() {
 		cecho "YELLOW" "Multus is already running. Skipping installation."
 	else
 		cecho "GREEN" "Installing Multus as meta CNI ..."
-		git -C build/multus-cni pull || git clone https://github.com/k8snetworkplumbingwg/multus-cni.git build/multus-cni
-		cd build/multus-cni
-		cat ./deployments/multus-daemonset-thick.yml | kubectl apply -f -
+		# git -C build/multus-cni pull || git clone https://github.com/k8snetworkplumbingwg/multus-cni.git build/multus-cni
+		# cd build/multus-cni
+		# cat ./deployments/multus-daemonset-thick.yml | kubectl apply -f -
+		kubectl apply -f multus-daemonset-thick.yaml
 		timer-sec 30
 		kubectl wait pods -n kube-system -l app=multus --for condition=Ready --timeout=120s
 	fi
@@ -233,6 +235,7 @@ install-kube-state-metrics(){
 	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 	helm repo update
 	helm install kube-state-metrics prometheus-community/kube-state-metrics --namespace kube-system
+	# helm install prometheus-nginx-exporter prometheus-community/prometheus-nginx-exporter --namespace kube-system
   fi
 }
 

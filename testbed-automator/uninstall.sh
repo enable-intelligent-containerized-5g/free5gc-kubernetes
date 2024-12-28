@@ -97,7 +97,8 @@ reset_k8s_cluster(){
 uninstall_cni() {
   cecho "RED" "Uninstalling Flannel CNI ..."
   if kubectl get pods -n kube-flannel -l app=flannel | grep -q '1/1'; then
-    kubectl delete -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+    # kubectl delete -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+    kubectl delete -f kube-flannel.yaml
     cecho "GREEN" "Uninstalled Flannel CNI."
   else 
     cecho "YELLOW" "Flannel CNI is not installed."
@@ -164,8 +165,9 @@ remove_ovs_cni() {
 uninstall_multus() {
   cecho "RED" "Uninstalling multus ..."
   if kubectl get pods -n kube-system -l app=multus | grep -q '1/1'; then
-    cd build/multus-cni
-    cat ./deployments/multus-daemonset-thick.yml | kubectl delete -f -
+    # cd build/multus-cni
+    # cat ./deployments/multus-daemonset-thick.yml | kubectl delete -f -
+    kubectl delete -f multus-daemonset-thick.yaml
     cecho "GREEN" "Uninstalled multus."
   else
     cecho "YELLOW" "Multus is not installed."

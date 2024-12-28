@@ -64,7 +64,7 @@ To deploy Free5GC and its components, follow the deployment steps below:
 
     ```bash
     cd bin
-    ./install-gtp5g.sh
+    sudo ./install-gtp5g.sh
     ```
 
 5. Change the **Free5GC-Vanilla** and **Go** paths in `resources/pv.yaml and resources/pvc.yaml` files.
@@ -121,7 +121,7 @@ You should be able to ping from the UEs.
 ### Deploying components
 We use [kustomize](https://kustomize.io/) to deploy the components.
 
-Deploy all components in the free5gc namespace. Create the namespace if needed (`kubectl create namespace free5gc`). Use the following command for deployment, replacing <component> (e.g., free5gc-webui, free5gc) as needed:
+Deploy all components in the free5gc namespace. Create the namespace if needed (`kubectl create namespace free5gc`). Use the following command for deployment, replacing <component> (e.g., mongodb, networks5g, kubernetes-monitoring, free5gc, free5gc-webui, ueransim) as needed:
 
 ```bash
 kubectl apply -k <component> -n free5gc
@@ -144,6 +144,9 @@ Some convenience scripts are available in the `bin` folder:
   ```
 
 - **install-gtp5g.sh**: Use this script to install gtp5g v0.8.2 on nodes where UPF should run.
+  ```bash
+  sudo ./install-gtp5g.sh
+  ```
 
 ## Troubleshots
 
@@ -155,7 +158,7 @@ Some convenience scripts are available in the `bin` folder:
   ls
   ```
 
-  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -o wide`
+  And delete folders named after IPs not used by pods. To see de IPs, run `kubectl get po -A -o wide`
 
 - pod no running:
 
@@ -178,7 +181,15 @@ Some convenience scripts are available in the `bin` folder:
 
   Or 
   
-  Run `uninstall.sh` and `install.sh` with `bash <script.sh>`.
+  Run `bash uninstall.sh` and `bash install.sh`
+
+- "Failed to set bridge addr: "cni0" already has an IP address different from 10.244.0.1/18" in tesbet automator.
+
+  ```bash
+  sudo ip link delete cni0
+  bash uninstall.sh
+  bash install.sh
+  ```
 
 ## License
 

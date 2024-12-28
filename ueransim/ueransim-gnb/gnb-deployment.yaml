@@ -27,7 +27,7 @@ spec:
           ]'
     spec:
       containers:
-      - image: edierbra/ueransim:v3.2.6
+      - image: edierbra/ueransim:v3.2.6-1
         name: gnb
         ports:
         - name: gnb-ue
