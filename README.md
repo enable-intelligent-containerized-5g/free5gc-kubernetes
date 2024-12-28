@@ -71,6 +71,8 @@ To deploy Intelligent 5G and its components, follow the deployment steps below:
 
 6. Deploy the kubernetes-monitoring using the Kubernetes manifest files in the `kubernetes-monitoring/` directory.
 
+5. Change the **NWDAF models** volume path in the `free5gc/nwdaf/resources/models-pv.yaml` file.
+
 7. Deploy the 5GC components using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state.
 
 8. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
