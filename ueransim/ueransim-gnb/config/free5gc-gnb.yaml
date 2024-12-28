@@ -17,10 +17,6 @@ amfConfigs:
   - address: 10.10.2.3
     port: 38412
 
-  # With loxilb
-  # - address: 20.20.20.1
-  #   port: 38412
-
 
 # List of supported S-NSSAIs by this gNB
 slices:
