@@ -67,7 +67,6 @@ def main():
     
     if test_type == "s":
         start_time = current_time_utc5 + timedelta(minutes=-tp)
-        
         url = f"{anlf_url}nnwdaf-analyticsinfo/v1/analyticsinfo/request"
         method = "POST"
         json_data = {
