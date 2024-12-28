@@ -129,7 +129,6 @@ default_kustomization = {
         "apiVersion": "kustomize.config.k8s.io/v1beta1",
         "kind": "Kustomization",
         "resources": [
-            "resources",
             # "default-ue1",
             # "default-ue2",
             # "default-ue3",

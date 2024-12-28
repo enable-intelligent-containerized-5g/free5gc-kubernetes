@@ -2,7 +2,7 @@
 
 ## Summary
 
-`install.sh`: automates the deployment of a single-node k8s cluster, configures cluster, installs various CNIs, configures ovs bridges and sets everything up for deployment of 5G core.
+`install.sh`: automates the deployment of a single-node k8s cluster, configures cluster, installs various CNIs, configures ovs bridges and sets everything up for deployment of Intelligent 5G.
 
 `uninstall.sh`: reverses install.sh
 
@@ -24,7 +24,7 @@ bash uninstall.sh
 
 ## troubleshooting
 
-## kudeadm init hangs
+### kudeadm init hangs
 
 Check kubelet status
 ```sh

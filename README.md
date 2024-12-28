@@ -1,26 +1,26 @@
-# free5gc-k8s
+# Intelligent 5G - k8s
 
-This repository contains the necessary files and resources to deploy and operate Free5GC, an open-source 5G core network implementation. It provides Kubernetes manifest files for deploying Free5GC using microservices, and Free5GC WebUI. Additionally, there are manifest files for deploying the MongoDB database and network attachment definitions for Free5GC.
+This repository contains the necessary files and resources to deploy and operate Intelligent 5G, an open-source 5G testebd based in [Free5GC](https://github.com/free5gc/free5gc) and [UERANSIM](https://github.com/aligungr/UERANSIM). It provides Kubernetes manifest files for deploying a NWDAF, Free5GC and UERANSIM using microservices, MongoDB database and network attachment definitions.
 
-For more information about Free5GC, please visit the [Free5GC GitHub repository](https://github.com/free5gc/free5gc).
+**Note**: The Free5GC and UERANSIM projects were modified to integrate the NWDAF. In [free5gc-vanilla](https://github.com/enable-intelligent-containerized-5g/free5gc-vanilla) you will find the source code of 5GC based on Free5GC and in uransim the modified version of [UERANSIM](https://github.com/enable-intelligent-containerized-5g/ueransim).
+
 
 ![Static Badge](https://img.shields.io/badge/stable-v1.0.0-green)
 ![Static Badge](https://img.shields.io/badge/free5gc-v3.2.0-green)
 ![Static Badge](https://img.shields.io/badge/ueransim-v3.2.6-green)
 ![Static Badge](https://img.shields.io/badge/k8s-v1.28.2-green)
 ![Static Badge](https://img.shields.io/badge/kernel-v5.4.0-green)
+![Static Badge](https://img.shields.io/badge/gtp5g-v0.8.9-green)
 
 ## Directory Structure
 
 The repository is organized as follows:
 - [bin](bin/): Contains some useful tools like installing **gpt5g**.
-- [dockerfiles](dockerfiles/): Contains the dockerfiles to create the images of each of the **free5gc** and **ueransim** components..
-- [free5gc](free5gc/): Contains Kubernetes manifest files for deploying Free5GC using a microservices architecture.
-- [free5gc-metrics](free5gc-metrics/): Contains Kubernetes manifest files for deploying Free5GC with custom UPF and SMF which expose metrics.
+- [dockerfiles](dockerfiles/): Contains the dockerfiles to create the images of each of the **NWDAF**, **Free5GC** and **UERANSIM** components.
+- [free5gc](free5gc/): Contains Kubernetes manifest files for deploying Intelligent 5G using a microservices architecture.
 - [free5gc-webui](free5gc-webui/): Contains Kubernetes manifest files for deploying the Free5GC WebUI.
-- [graph](graph/): Contains the files to create the free5gc graph.
-- [mongodb](mongodb/): Contains Kubernetes manifest files for deploying the MongoDB database, which is a prerequisite for deploying Free5GC.
-- [networks5g](networks5g/): Contains network attachment definitions for Free5GC.
+- [mongodb](mongodb/): Contains Kubernetes manifest files for deploying the MongoDB database, which is a prerequisite for deploying Intelligent 5G.
+- [networks5g](networks5g/): Contains network attachment definitions for Intelligent 5G.
 - [testbed-automator](testbed-automator/): Contains the files to prepare the Kubernetes cluster.
 - [ueransim](ueransim/): Contains Kubernetes files for running UERANSIM-based simulated gNB and UEs.
 
@@ -40,7 +40,7 @@ kubectl config set-context <context-name> --namespace=<namespace-name> --cluster
 kubectl config use-context <context-name> # Set teh new context as default. 
 ```
 
-To deploy Free5GC and its components, follow the deployment steps below:
+To deploy Intelligent 5G and its components, follow the deployment steps below:
 
 1. Set up OVS bridges. On each K8s cluster node, add the OVS bridges: n2br, n3br, and n4br. Connect nodes using these bridges and OVS-based VXLAN tunnels. See [ovs-cni docs](https://github.com/k8snetworkplumbingwg/ovs-cni/blob/main/docs/demo.md#connect-bridges-using-vxlan).
 
@@ -58,45 +58,49 @@ To deploy Free5GC and its components, follow the deployment steps below:
 
 2. Deploy the MongoDB database using the Kubernetes manifest files provided in the `mongodb/` directory. See [deploying components](#deploying-components). Wait for the mongodb pod to be in the `Running` state before proceeding to the next step.
 
-3. Deploy the network attachment definitions using manifest files in the `networks5g/` directory. This are used for the secondary interfaces of the UPF, SMF, etc.
+3. Deploy the network attachment definitions using manifest files in the `networks5g/` directory. This are used for the secondary interfaces of the UPF, SMF, AMF, gNB etc.
 
-4. Install the gtp5g kernel module for Free5GC. Use the `install-gtp5g.sh` script to install gtp5g v0.8.2 on nodes where UPF should run. This is a prerequisite for deploying the UPF. 
+4. Install the gtp5g kernel module for Free5GC. Use the `install-gtp5g.sh` script to install gtp5g v0.8.9 on nodes where UPF should run. This is a prerequisite for deploying the UPF. 
 
     ```bash
     cd bin
     sudo ./install-gtp5g.sh
     ```
 
-5. Change the **Free5GC-Vanilla** and **Go** paths in `resources/pv.yaml and resources/pvc.yaml` files.
+5. Change the **kubernetes-monitoring** volume paths in `kubernetes-monitoring/prometheus/prometheus-pv.yaml and kubernetes-monitoring/grafana/grafana-pv.yaml` files.
 
-6. Deploy Free5GC using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state. This is the order to start: nrf, [amf y upf], ausf, smf, pcf, udm, udr, nssf.
+6. Deploy the kubernetes-monitoring using the Kubernetes manifest files in the `kubernetes-monitoring/` directory.
 
-7. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
+7. Deploy the 5GC components using the Kubernetes manifest files in the `free5gc/` directory. The pods should eventually be in the `Running` state.
 
-8. The `ueransim` directory contains Kubernetes manifest files for both gNB and UEs. First, deploy UERANSIM gNB using `ueransim/ueransim-gnb` directory and wait for NGAP connection to succeed. You should see the following in the gNB log.
+8. Deploy the Free5GC WebUI, use the Kubernetes manifest files in the `free5gc-webui/` directory.
+
+9. The `ueransim` directory contains Kubernetes manifest files for both gNB and UEs. First, deploy UERANSIM gNB using `ueransim/ueransim-gnb` directory and wait for NGAP connection to succeed. You should see the following in the gNB log.
 
     <details>
     <summary>gNB log</summary>
 
-    ![NGAP connection success](images/gnb-log.png)
+    ![NGAP connection success](images/gnb-log.jpeg)
 
     </details>
 
 <br>
 
-7. Ensure correct UE subscriber information is inserted. You can enter subscription information using the web UI (see [accessing the Free5GC webui](#accessing-the-Free5GC-webui)). Subscriber details can be found in UE config files (e.g., [ue1.yaml](ueransim/ueransim-ue/ue1/ue1.yaml)).
+10. Ensure correct UE subscriber information is inserted. You can enter subscription information using the web UI see [accessing the Free5GC webui](#accessing-the-free5gc-webui). Subscriber details can be found in UE config files (e.g., [ue.yaml](ueransim/ueransim-ue/default-ue1/ue.yaml)).
 
-8. Deploy UERANSIM UEs using `ueransim/ueransim-ue/` directory. Once the UE is connected, you should see the following logs:
+11. Deploy UERANSIM UEs using `ueransim/ueransim-ue/` directory. Once the UE is connected, you should see the following logs:
 
 
     <details>
     <summary>UE log</summary>
 
-    ![UE connection success](images/ue-log.png)
+    ![UE connection success](images/ue-log.jpeg)
 
     </details>
 
-<br>
+    **Note**: In this same directory, automation scripts are provided. The [ue-automator.py](ueransim/ueransim-ue/ue-automator/ue-automator.py) script automatically generates Kubernetes manifests for the UEs, while the [ue-runner-automator.py](ueransim/ueransim-ue/ue-runner-automator.py) script automates the deployment of the generated UEs.
+
+
 
 ### Check successful deployment
 
@@ -104,7 +108,7 @@ All pods should be in the `Running` state.
 <details>
 <summary>Summary of all pods</summary>
 
-![all-pods](images/all-pods.png)
+![all-pods](images/all-pods.jpeg)
 
 </details>
 
@@ -114,7 +118,7 @@ You should be able to ping from the UEs.
 <details>
 <summary>Ping test</summary>
 
-![ping-test](images/ping-test.png)
+![ping-test](images/ping-test.jpeg)
 
 </details>
 
@@ -128,7 +132,7 @@ kubectl apply -k <component> -n free5gc
 ```
 
 ### Accessing the Free5GC webui
-1. Subscribers can be added using the Free5GC WebUI. The WebUI is accessible at `http://<node-ip>:30505`. The default username and password are `admin` and `free5gc`, respectively.
+1. Subscribers can be added using the Intelligent 5G WebUI. The WebUI is accessible at `http://<node-ip>:30505`. The default username and password are `admin` and `free5gc`, respectively.
 
 ## Convenience Scripts
 Some convenience scripts are available in the `bin` folder:
@@ -195,14 +199,11 @@ Some convenience scripts are available in the `bin` folder:
 
 This repository is licensed under the [MIT License](LICENSE).
 
-## Credits
-These manifest files are heavily inspired from [towards5gs-helm](https://github.com/Orange-OpenSource/towards5gs-helm) and the Docker images used are based on [free5gc-compose](https://github.com/free5gc/free5gc-compose).
 
-## Citation
-![GitHub](https://img.shields.io/badge/IEEE%20NOMS-2022-green)
+<!-- ## Citation -->
 
-If you use the code in this repository in your research work or project, please consider citing the following publication.
+<!-- If you use the code in this repository in your research work or project, please consider citing the following publication. -->
 
-> INTELLIGENT 5G
+<!-- > INTELLIGENT 5G -->
 
 <!-- > N. Saha, A. James, N. Shahriar, R. Boutaba and A. Saleh. (2022). Demonstrating Network Slice KPI Monitoring in a 5G Testbed. In Proceedings of the IEEE/IFIP Network Operations and Management Symposium (NOMS). Budapest, Hungary, 25 - 29 April, 2022. -->

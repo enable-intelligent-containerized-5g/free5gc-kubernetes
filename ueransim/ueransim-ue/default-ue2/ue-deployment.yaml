@@ -61,9 +61,3 @@ spec:
                     - key: wrapper.sh
                       path: wrapper.sh
                       mode: 0755
-              - configMap:
-                  name: ue-iptables-configmap
-                  items:
-                    - key: ue-iptables.sh
-                      path: ue-iptables.sh
-                      mode: 0755
