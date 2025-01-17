@@ -24,9 +24,9 @@ def plot_graph(x, y, scale, name):
     
     # Personalizar la gráfica
     plt.plot(x, y, label=f"p2={p2}", marker="o")
-    plt.title("Sintetic trafic", fontsize=14)
-    plt.xlabel(f"Period of time (x{scale/60} Minutes)", fontsize=12)
-    plt.ylabel("Number of UEs", fontsize=12)
+    plt.title("Trafico sintético", fontsize=14)
+    plt.xlabel(f"Periodo de tiempo (x{scale/60} Minutos)", fontsize=12)
+    plt.ylabel("Número de UE", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.7)
     plt.axhline(0, color="black", linewidth=0.8)
     plt.legend(fontsize=12)
@@ -41,9 +41,14 @@ if len(sys.argv) != 5:
     print("Use: python3 run-ues.py <num-ues> <p1> <p2> <time>")
     sys.exit(1)
 
+# Function
+points = 10
+scale = 180 # In seconds
+
 # Params
 n  = int(sys.argv[1])
 total_time = int(sys.argv[2])
+total_time = int(total_time/(scale/60))
 p1 = int(sys.argv[3])
 p2 = int(sys.argv[4])
 perions = [p2]
@@ -51,10 +56,6 @@ a1 = n/4 # Amplitude 1
 a2 = n/4 # Amplitude 2
 # mcm = abs(p1*p2) // math.gcd(p1, p2)
 mcm = total_time
-
-# Function
-points = 10
-scale = 180 # In seconds
 
 # mnc = min(mcm_list)
 points_total = mcm*points
